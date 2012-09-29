@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20111024</FitNesseVersion>
+  <rootPath>SuiteTearDown</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>23</exceptions>
+    </counts>
+    <content><![CDATA[<div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('72');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img72"/>
+	</a>
+&nbsp;
+	<span class="meta">Precompiled Libraries</span>
+	<div class="hidden" id="72"><br/></div>
+</div>
+<table border="1" cellspacing="0" _TABLENUMBER=8482968018402453385>
+	<tr>
+		<td colspan="3">Action Fixture. <span class="error">Could not invoke constructor for ActionFixture[0]</span></td>
+	</tr>
+	<tr>
+		<td>start</td>
+		<td colspan="2">smartrics.rest.test.fitnesse.fixture.HttpServerFixture</td>
+	</tr>
+	<tr>
+		<td>check <span class="error">The instance decisionTable_0. does not exist</span></td>
+		<td>is started <span class="error">The instance decisionTable_0. does not exist</span></td>
+		<td>true</td>
+	</tr>
+	<tr>
+		<td>press <span class="error">The instance decisionTable_0. does not exist</span></td>
+		<td colspan="2">stop server <span class="error">The instance decisionTable_0. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>check <span class="error">The instance decisionTable_0. does not exist</span></td>
+		<td>is stopped <span class="error">The instance decisionTable_0. does not exist</span></td>
+		<td>true</td>
+	</tr>
+</table>
+]]></content>
+    <relativePageName>SuiteTearDown</relativePageName>
+    
+        <tables>
+            <table>
+        <name>decisionTable_0</name>
+                <row>
+                    <col><![CDATA[Action Fixture. error(Could not invoke constructor for ActionFixture[0])]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[start]]></col>
+                    <col><![CDATA[smartrics.rest.test.fitnesse.fixture.HttpServerFixture]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_0. does not exist)]]></col>
+                    <col><![CDATA[is started error(The instance decisionTable_0. does not exist)]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[press error(The instance decisionTable_0. does not exist)]]></col>
+                    <col><![CDATA[stop server error(The instance decisionTable_0. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_0. does not exist)]]></col>
+                    <col><![CDATA[is stopped error(The instance decisionTable_0. does not exist)]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+        
+      </table>
+      
+    </tables>
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_0, make, decisionTable_0, ActionFixture]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for ActionFixture[0]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for ActionFixture[0]]]></actual>
+                              <expected><![CDATA[Action Fixture.]]></expected>
+                              <evaluationMessage><![CDATA[Action Fixture. error(Could not invoke constructor for ActionFixture[0])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_1, call, decisionTable_0, table, [[start, smartrics.rest.test.fitnesse.fixture.HttpServerFixture], [check, is started, true], [press, stop server], [check, is stopped, true]]]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_2, call, decisionTable_0, beginTable]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_3, call, decisionTable_0, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_4, call, decisionTable_0, setStart, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_4</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_0. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_0. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_5, call, decisionTable_0, setSmartricsRestTestFitnesseFixtureHttpServerFixture, is started]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_5</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_0. does not exist]]></actual>
+                              <expected><![CDATA[is started]]></expected>
+                              <evaluationMessage><![CDATA[is started error(The instance decisionTable_0. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_6, call, decisionTable_0, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_7, call, decisionTable_0, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_8, call, decisionTable_0, setStart, press]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_8</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_0. does not exist]]></actual>
+                              <expected><![CDATA[press]]></expected>
+                              <evaluationMessage><![CDATA[press error(The instance decisionTable_0. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_9, call, decisionTable_0, setSmartricsRestTestFitnesseFixtureHttpServerFixture, stop server]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_9</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_0. does not exist]]></actual>
+                              <expected><![CDATA[stop server]]></expected>
+                              <evaluationMessage><![CDATA[stop server error(The instance decisionTable_0. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_10, call, decisionTable_0, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_11, call, decisionTable_0, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_12, call, decisionTable_0, setStart, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_12</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_0. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_0. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_13, call, decisionTable_0, setSmartricsRestTestFitnesseFixtureHttpServerFixture, is stopped]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_13</instructionId>
+          <col>1</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_0. does not exist]]></actual>
+                              <expected><![CDATA[is stopped]]></expected>
+                              <evaluationMessage><![CDATA[is stopped error(The instance decisionTable_0. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_14, call, decisionTable_0, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_15, call, decisionTable_0, endTable]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

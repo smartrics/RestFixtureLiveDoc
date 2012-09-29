@@ -1,0 +1,1550 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20111024</FitNesseVersion>
+  <rootPath>GetTests</rootPath>
+    <result>
+    <counts>
+      <right>25</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('51');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img51"/>
+	</a>
+&nbsp;
+	<span class="meta">Precompiled Libraries</span>
+	<div class="hidden" id="51"><br/></div>
+</div>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('52');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img52"/>
+	</a>
+&nbsp;
+	<span class="meta">Included page: <a href="RestFixtureTests.SetUp">.RestFixtureTests.SetUp</a> <a href="RestFixtureTests.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="52"><br/><table border="1" cellspacing="0" _TABLENUMBER=211655501644899694>
+	<tr>
+		<td>script</td>
+		<td colspan="2"><span class="pass">smartrics.rest.test.fitnesse.fixture.HttpServerFixture</span></td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>is started</td>
+		<td><span class="pass">true</span></td>
+	</tr>
+	<tr>
+		<td colspan="3"><span class="pass">reset resources database</span></td>
+	</tr>
+</table>
+<br/></div>
+</div>
+<br/><h3>GET</h3>
+<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=3585620962809786491>
+	<tr>
+		<td>script</td>
+		<td><span class="pass">smartrics.rest.fitnesse.fixture.ext.RestScriptFixture</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>get</td>
+		<td colspan="2">/resources/0</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td><span class="pass">200</span></td>
+	</tr>
+	<tr>
+		<td><span class="pass">ensure</span></td>
+		<td>has header</td>
+		<td>Content-Length : [\d]+</td>
+	</tr>
+	<tr>
+		<td><span class="pass">ensure</span></td>
+		<td>has body</td>
+		<td>
+ /resource/name[text()='a funky name'] <br/>
+ /resource/data[text()='an important message']
+</td>
+	</tr>
+</table>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('53');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img53"/>
+	</a>
+&nbsp;
+	<span class="meta">Absolute resource paths</span>
+	<div class="collapsable" id="53">A GET (as all other verbs) accepts absolute resource paths.  <br/></div>
+</div>
+<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=6101359696368346238>
+	<tr>
+		<td>script</td>
+		<td><span class="pass">smartrics.rest.fitnesse.fixture.ext.RestScriptFixture</span></td>
+		<td>http://localhost:8765</td>
+	</tr>
+	<tr>
+		<td>get</td>
+		<td colspan="2">http://localhost:8765/resources/0</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td><span class="pass">200</span></td>
+	</tr>
+	<tr>
+		<td><span class="pass">ensure</span></td>
+		<td>has headers</td>
+		<td>Content-Length : [\d]+</td>
+	</tr>
+	<tr>
+		<td><span class="pass">ensure</span></td>
+		<td>has body</td>
+		<td>
+ /resource/name[text()='a funky name'] <br/>
+ /resource/data[text()='an important message']
+</td>
+	</tr>
+</table>
+<br/>A GET request properly handles query strings. In this example the stub resource echoes the query string in a Query-String header<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=6074207812655935432>
+	<tr>
+		<td>script</td>
+		<td><span class="pass">smartrics.rest.fitnesse.fixture.ext.RestScriptFixture</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>get</td>
+		<td colspan="2">/resources/0?param=echome</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td><span class="pass">200</span></td>
+	</tr>
+	<tr>
+		<td><span class="pass">ensure</span></td>
+		<td>has headers</td>
+		<td>Content-Length : [\d]+
+Query-String : param=echome </td>
+	</tr>
+	<tr>
+		<td><span class="pass">ensure</span></td>
+		<td>has body</td>
+		<td>
+ /resource/name[text()='a funky name'] <br/>
+ /resource/data[text()='an important message']
+</td>
+	</tr>
+</table>
+<br/>Get a non existing resource should not find it<br/><br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('54');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img54"/>
+	</a>
+&nbsp;
+	<span class="meta">Note</span>
+	<div class="collapsable" id="54">Instead of XPaths you can specify 'no-body' if the operation is expected to return an empty body<br/></div>
+</div>
+<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=8346953741751803425>
+	<tr>
+		<td>script</td>
+		<td><span class="pass">smartrics.rest.fitnesse.fixture.ext.RestScriptFixture</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>get</td>
+		<td colspan="2">/resources/20</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td><span class="pass">404</span></td>
+	</tr>
+	<tr>
+		<td><span class="pass">ensure</span></td>
+		<td>has headers</td>
+		<td>Content-Length : 0</td>
+	</tr>
+	<tr>
+		<td><span class="pass">ensure</span></td>
+		<td>has body</td>
+		<td>no-body</td>
+	</tr>
+	<tr>
+		<td>get</td>
+		<td colspan="2">/resources/20.json</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td><span class="pass">404</span></td>
+	</tr>
+	<tr>
+		<td><span class="pass">ensure</span></td>
+		<td>has header</td>
+		<td>Content-Length : 0</td>
+	</tr>
+	<tr>
+		<td><span class="pass">ensure</span></td>
+		<td>has body</td>
+		<td>no-body</td>
+	</tr>
+</table>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('55');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img55"/>
+	</a>
+&nbsp;
+	<span class="meta">XPaths and namespaces</span>
+	<div class="collapsable" id="55">Namespaces are supported by declaring the alias/uri map in the RestFixtureConfig<a title="create page" href="RestFixtureTests.ScriptFixtureTests.RestFixtureConfig?edit&nonExistent=true">[?]</a>, using the key restfixture.xml.namespace.context (See SuiteSetup<a title="create page" href="RestFixtureTests.ScriptFixtureTests.SuiteSetup?edit&nonExistent=true">[?]</a>)<br/></div>
+</div>
+<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=1654262138195736200>
+	<tr>
+		<td>script</td>
+		<td><span class="pass">smartrics.rest.fitnesse.fixture.ext.RestScriptFixture</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>get</td>
+		<td colspan="2">/resources/0</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td><span class="pass">200</span></td>
+	</tr>
+	<tr>
+		<td><span class="pass">ensure</span></td>
+		<td>has headers</td>
+		<td>Content-Length : [\d]+</td>
+	</tr>
+	<tr>
+		<td><span class="pass">ensure</span></td>
+		<td>has body</td>
+		<td>
+ /resource/nstag/ns1alias:number[text()='3']
+</td>
+	</tr>
+</table>
+<br/><br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('56');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img56"/>
+	</a>
+&nbsp;
+	<span class="meta">Json</span>
+	<div class="collapsable" id="56">Expectations can be asserted also in json format for responses whose content type is 'application/json' or 'application/x-javascript'<br/></div>
+</div>
+<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=3385070991642016855>
+	<tr>
+		<td>script</td>
+		<td><span class="pass">smartrics.rest.fitnesse.fixture.ext.RestScriptFixture</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>get</td>
+		<td colspan="2">/resources/1.json</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td><span class="pass">200</span></td>
+	</tr>
+	<tr>
+		<td><span class="pass">ensure</span></td>
+		<td>has headers</td>
+		<td>Content-Type : application/json;charset=ISO-8859-1</td>
+	</tr>
+	<tr>
+		<td><span class="pass">ensure</span></td>
+		<td>has body</td>
+		<td>
+ /resource/name[text()='a funky name'] <br/>
+ /resource/data[text()='an important message']
+</td>
+	</tr>
+</table>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('57');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img57"/>
+	</a>
+&nbsp;
+	<span class="meta">Rest requests with query string containing array parameters</span>
+	<div class="collapsable" id="57">A query string can contain parameter arrays and they are correctly handled by Rest Fixture.<br/></div>
+</div>
+<br/><br/>To allow correct handling of array parameters a new configuration option must be set: *http.client.use.new.http.uri.factory*<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=4127186831200255292>
+	<tr>
+		<td><span class="pass">Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig</span></td>
+		<td>withArrayParametersSupport</td>
+	</tr>
+	<tr>
+		<td>http.client.use.new.http.uri.factory</td>
+		<td><span class="pass">true</span></td>
+	</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=7430568045722181447>
+	<tr>
+		<td>script</td>
+		<td><span class="pass">smartrics.rest.fitnesse.fixture.ext.RestScriptFixture</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+		<td>withArrayParametersSupport</td>
+	</tr>
+	<tr>
+		<td>get</td>
+		<td colspan="3">/resources/0?a[0]=2&amp;a[1]=4</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td colspan="2"><span class="pass">200</span></td>
+	</tr>
+</table>
+]]></content>
+    <relativePageName>GetTests</relativePageName>
+    
+        <tables>
+            <table>
+        <name>scriptTable_0</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(smartrics.rest.test.fitnesse.fixture.HttpServerFixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is started]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(reset resources database)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_1</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(smartrics.rest.fitnesse.fixture.ext.RestScriptFixture)]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[get]]></col>
+                    <col><![CDATA[/resources/0]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[pass(200)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(ensure)]]></col>
+                    <col><![CDATA[has header]]></col>
+                    <col><![CDATA[Content-Length : [\d]+]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(ensure)]]></col>
+                    <col><![CDATA[has body]]></col>
+                    <col><![CDATA[
+ /resource/name[text()='a funky name'] <br/>
+ /resource/data[text()='an important message']
+]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_2</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(smartrics.rest.fitnesse.fixture.ext.RestScriptFixture)]]></col>
+                    <col><![CDATA[http://localhost:8765]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[get]]></col>
+                    <col><![CDATA[http://localhost:8765/resources/0]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[pass(200)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(ensure)]]></col>
+                    <col><![CDATA[has headers]]></col>
+                    <col><![CDATA[Content-Length : [\d]+]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(ensure)]]></col>
+                    <col><![CDATA[has body]]></col>
+                    <col><![CDATA[
+ /resource/name[text()='a funky name'] <br/>
+ /resource/data[text()='an important message']
+]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_3</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(smartrics.rest.fitnesse.fixture.ext.RestScriptFixture)]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[get]]></col>
+                    <col><![CDATA[/resources/0?param=echome]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[pass(200)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(ensure)]]></col>
+                    <col><![CDATA[has headers]]></col>
+                    <col><![CDATA[Content-Length : [\d]+
+Query-String : param=echome ]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(ensure)]]></col>
+                    <col><![CDATA[has body]]></col>
+                    <col><![CDATA[
+ /resource/name[text()='a funky name'] <br/>
+ /resource/data[text()='an important message']
+]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_4</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(smartrics.rest.fitnesse.fixture.ext.RestScriptFixture)]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[get]]></col>
+                    <col><![CDATA[/resources/20]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[pass(404)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(ensure)]]></col>
+                    <col><![CDATA[has headers]]></col>
+                    <col><![CDATA[Content-Length : 0]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(ensure)]]></col>
+                    <col><![CDATA[has body]]></col>
+                    <col><![CDATA[no-body]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[get]]></col>
+                    <col><![CDATA[/resources/20.json]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[pass(404)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(ensure)]]></col>
+                    <col><![CDATA[has header]]></col>
+                    <col><![CDATA[Content-Length : 0]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(ensure)]]></col>
+                    <col><![CDATA[has body]]></col>
+                    <col><![CDATA[no-body]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_5</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(smartrics.rest.fitnesse.fixture.ext.RestScriptFixture)]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[get]]></col>
+                    <col><![CDATA[/resources/0]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[pass(200)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(ensure)]]></col>
+                    <col><![CDATA[has headers]]></col>
+                    <col><![CDATA[Content-Length : [\d]+]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(ensure)]]></col>
+                    <col><![CDATA[has body]]></col>
+                    <col><![CDATA[
+ /resource/nstag/ns1alias:number[text()='3']
+]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_6</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(smartrics.rest.fitnesse.fixture.ext.RestScriptFixture)]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[get]]></col>
+                    <col><![CDATA[/resources/1.json]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[pass(200)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(ensure)]]></col>
+                    <col><![CDATA[has headers]]></col>
+                    <col><![CDATA[Content-Type : application/json;charset=ISO-8859-1]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(ensure)]]></col>
+                    <col><![CDATA[has body]]></col>
+                    <col><![CDATA[
+ /resource/name[text()='a funky name'] <br/>
+ /resource/data[text()='an important message']
+]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>tableTable_7</name>
+                <row>
+                    <col><![CDATA[pass(Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig)]]></col>
+                    <col><![CDATA[withArrayParametersSupport]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[http.client.use.new.http.uri.factory]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_8</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(smartrics.rest.fitnesse.fixture.ext.RestScriptFixture)]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+                    <col><![CDATA[withArrayParametersSupport]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[get]]></col>
+                    <col><![CDATA[/resources/0?a[0]=2&amp;a[1]=4]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[pass(200)]]></col>
+          
+        </row>
+        
+      </table>
+      
+    </tables>
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_0, make, scriptTableActor, smartrics.rest.test.fitnesse.fixture.HttpServerFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_0_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[smartrics.rest.test.fitnesse.fixture.HttpServerFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(smartrics.rest.test.fitnesse.fixture.HttpServerFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_1, call, scriptTableActor, isStarted]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_0_1</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_2, call, scriptTableActor, resetResourcesDatabase]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_0_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[reset resources database]]></expected>
+                              <evaluationMessage><![CDATA[pass(reset resources database)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.ext.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_1_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.ext.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(smartrics.rest.fitnesse.fixture.ext.RestScriptFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_1, call, scriptTableActor, get, /resources/0]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[get]]></expected>
+                              <evaluationMessage><![CDATA[get]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_2, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[200]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_1_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[200]]></actual>
+                              <expected><![CDATA[200]]></expected>
+                              <evaluationMessage><![CDATA[pass(200)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_3, call, scriptTableActor, hasHeader, Content-Length : [\d]+]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_1_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[pass(ensure)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_4, call, scriptTableActor, hasBody, 
+ /resource/name[text()='a funky name'] <br/>
+ /resource/data[text()='an important message']
+]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_1_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[pass(ensure)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.ext.RestScriptFixture, http://localhost:8765]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_2_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.ext.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(smartrics.rest.fitnesse.fixture.ext.RestScriptFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_1, call, scriptTableActor, get, http://localhost:8765/resources/0]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[http://localhost:8765]]></expected>
+                              <evaluationMessage><![CDATA[http://localhost:8765]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[get]]></expected>
+                              <evaluationMessage><![CDATA[get]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_2, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[200]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_2_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[200]]></actual>
+                              <expected><![CDATA[200]]></expected>
+                              <evaluationMessage><![CDATA[pass(200)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_3, call, scriptTableActor, hasHeaders, Content-Length : [\d]+]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_2_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[pass(ensure)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_2_4, call, scriptTableActor, hasBody, 
+ /resource/name[text()='a funky name'] <br/>
+ /resource/data[text()='an important message']
+]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_2_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[pass(ensure)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_2_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.ext.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_3_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.ext.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(smartrics.rest.fitnesse.fixture.ext.RestScriptFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_1, call, scriptTableActor, get, /resources/0?param=echome]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[get]]></expected>
+                              <evaluationMessage><![CDATA[get]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_2, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[200]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_3_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[200]]></actual>
+                              <expected><![CDATA[200]]></expected>
+                              <evaluationMessage><![CDATA[pass(200)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_3, call, scriptTableActor, hasHeaders, Content-Length : [\d]+
+Query-String : param=echome ]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_3_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[pass(ensure)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_4, call, scriptTableActor, hasBody, 
+ /resource/name[text()='a funky name'] <br/>
+ /resource/data[text()='an important message']
+]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_3_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[pass(ensure)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.ext.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.ext.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(smartrics.rest.fitnesse.fixture.ext.RestScriptFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_1, call, scriptTableActor, get, /resources/20]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[get]]></expected>
+                              <evaluationMessage><![CDATA[get]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_2, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[404]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[404]]></actual>
+                              <expected><![CDATA[404]]></expected>
+                              <evaluationMessage><![CDATA[pass(404)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_3, call, scriptTableActor, hasHeaders, Content-Length : 0]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[pass(ensure)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_4, call, scriptTableActor, hasBody, no-body]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[pass(ensure)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_5, call, scriptTableActor, get, /resources/20.json]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_5</instructionId>
+          <col>1</col>
+          <row>5</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_5</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[get]]></expected>
+                              <evaluationMessage><![CDATA[get]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_6, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[404]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_6</instructionId>
+          <col>2</col>
+          <row>6</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[404]]></actual>
+                              <expected><![CDATA[404]]></expected>
+                              <evaluationMessage><![CDATA[pass(404)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_7, call, scriptTableActor, hasHeader, Content-Length : 0]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_7</instructionId>
+          <col>0</col>
+          <row>7</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[pass(ensure)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_7</instructionId>
+          <col>2</col>
+          <row>7</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_4_8, call, scriptTableActor, hasBody, no-body]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_4_8</instructionId>
+          <col>0</col>
+          <row>8</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[pass(ensure)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_4_8</instructionId>
+          <col>2</col>
+          <row>8</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.ext.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_5_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.ext.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(smartrics.rest.fitnesse.fixture.ext.RestScriptFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_1, call, scriptTableActor, get, /resources/0]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[get]]></expected>
+                              <evaluationMessage><![CDATA[get]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_2, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[200]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_5_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[200]]></actual>
+                              <expected><![CDATA[200]]></expected>
+                              <evaluationMessage><![CDATA[pass(200)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_3, call, scriptTableActor, hasHeaders, Content-Length : [\d]+]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_5_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[pass(ensure)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_4, call, scriptTableActor, hasBody, 
+ /resource/nstag/ns1alias:number[text()='3']
+]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_5_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[pass(ensure)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.ext.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_6_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.ext.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(smartrics.rest.fitnesse.fixture.ext.RestScriptFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_1, call, scriptTableActor, get, /resources/1.json]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[get]]></expected>
+                              <evaluationMessage><![CDATA[get]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_2, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[200]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_6_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[200]]></actual>
+                              <expected><![CDATA[200]]></expected>
+                              <evaluationMessage><![CDATA[pass(200)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_3, call, scriptTableActor, hasHeaders, Content-Type : application/json;charset=ISO-8859-1]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_6_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[pass(ensure)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_6_4, call, scriptTableActor, hasBody, 
+ /resource/name[text()='a funky name'] <br/>
+ /resource/data[text()='an important message']
+]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_6_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[pass(ensure)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_6_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[tableTable_7_0, make, tableTable_7, smartrics.rest.fitnesse.fixture.RestFixtureConfig, withArrayParametersSupport]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>tableTable_7_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig]]></expected>
+                              <evaluationMessage><![CDATA[pass(Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[tableTable_7_1, call, tableTable_7, doTable, [[http.client.use.new.http.uri.factory, true]]]]]></instruction>
+        <slimResult><![CDATA[[[, pass:true]]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>tableTable_7_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[[[, pass:true]]]]></actual>
+                              <expected><![CDATA[withArrayParametersSupport]]></expected>
+                              <evaluationMessage><![CDATA[withArrayParametersSupport]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.ext.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>, withArrayParametersSupport]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_8_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.ext.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(smartrics.rest.fitnesse.fixture.ext.RestScriptFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_1, call, scriptTableActor, get, /resources/0?a[0]=2&a[1]=4]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_1</instructionId>
+          <col>3</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[withArrayParametersSupport]]></expected>
+                              <evaluationMessage><![CDATA[withArrayParametersSupport]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[get]]></expected>
+                              <evaluationMessage><![CDATA[get]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_2, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[200]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_8_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[200]]></actual>
+                              <expected><![CDATA[200]]></expected>
+                              <evaluationMessage><![CDATA[pass(200)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

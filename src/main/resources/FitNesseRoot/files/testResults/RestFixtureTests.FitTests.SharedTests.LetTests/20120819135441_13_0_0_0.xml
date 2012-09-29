@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20111024</FitNesseVersion>
+  <rootPath>LetTests</rootPath>
+    <result>
+    <counts>
+      <right>13</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('176');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img176"/>
+	</a>
+&nbsp;
+	<span class="meta">Included page: <a href="RestFixtureTests.FitTests.SharedTests.SetUp">.RestFixtureTests.FitTests.SharedTests.SetUp</a> <a href="RestFixtureTests.FitTests.SharedTests.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="176"><table border="1" cellspacing="0">
+	<tr>
+		<td colspan="3">Action Fixture</td>
+	</tr>
+	<tr>
+		<td>start</td>
+		<td colspan="2">smartrics.rest.test.fitnesse.fixture.HttpServerFixture</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>is started</td>
+		<td class="pass">true</td>
+	</tr>
+	<tr>
+		<td>press</td>
+		<td colspan="2">reset resources database</td>
+	</tr>
+</table>
+<br/></div>
+</div>
+<br/><h3>LET</h3>
+<br/><br/>Usages of LET (See also RestFixtureTests.FitTests.PostTests<a title="create page" href="RestFixtureTests.FitTests.SharedTests.RestFixtureTests.FitTests.PostTests?edit&nonExistent=true">[?]</a> for more examples) <br/><br/><i>LET used to extract values from header, using regular expressions</i><br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>setBody</td>
+		<td colspan="4" class="pass">&lt;resource&gt;&lt;name&gt;Bill&lt;/name&gt;&lt;data&gt;Some&nbsp;data&nbsp;on&nbsp;Bill&lt;/data&gt;&lt;/resource&gt;<br/> <span class="fit_label">expected</span><hr/><br/>&lt;resource&gt;&lt;name&gt;Bill&lt;/name&gt;&lt;data&gt;Some&nbsp;data&nbsp;on&nbsp;Bill&lt;/data&gt;&lt;/resource&gt;<br/> <span class="fit_label">actual</span></td>
+	</tr>
+	<tr>
+		<td>POST</td>
+		<td><a href='http://localhost:8765/resources/'>/resources/</a></td>
+		<td class="pass">201</td>
+		<td> <span class="fit_grey">Location&nbsp;:&nbsp;/resources/2<br/>Content-Length&nbsp;:&nbsp;0<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)</span></td>
+		<td class="pass">no-body</td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>id</td>
+		<td>header</td>
+		<td> <span class="fit_grey">Location:/resources/(.+)</span></td>
+		<td> <span class="fit_grey">2</span></td>
+	</tr>
+</table>
+<br/>The regex is applied to each header. On the first match the first group is extracted and<br/>assigned as value to the label <i>id</i>.<br/><br/>Labels are global and can be shared across rest fixture instances.<br/><br/><i>LET used to extract values from XML body via XPath</i><br/><i>Values are re-usable across instances of RestFixture</i> <br/><br/>Here follows an usage of the previously extracted <i>id</i>.<br/>This example also shows how to use let to extract data from the XML body of a response using XPath.<br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/2'>/resources/2</a></td>
+		<td class="pass">200</td>
+		<td> <span class="fit_grey">Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;68<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)</span></td>
+		<td class="pass"><br/>&nbsp;/resource/name[text()='Bill']&lt;br/&gt;<br/>&nbsp;/resource/data[text()='Some&nbsp;data&nbsp;on&nbsp;Bill']<br/><br/> <span class="fit_label">expected</span><hr/><br/>&lt;resource&gt;&lt;name&gt;Bill&lt;/name&gt;&lt;data&gt;Some&nbsp;data&nbsp;on&nbsp;Bill&lt;/data&gt;&lt;/resource&gt;<br/> <span class="fit_label">actual</span></td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>name</td>
+		<td>body</td>
+		<td> <span class="fit_grey">/resource/name/text()</span></td>
+		<td> <span class="fit_grey">Bill</span></td>
+	</tr>
+</table>
+<br/>...or from a JSON body<br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/1.json'>/resources/1.json</a></td>
+		<td class="pass">200</td>
+		<td class="pass">Content-Type&nbsp;:&nbsp;application/json<br/> <span class="fit_label">expected</span><hr/><br/>Content-Type&nbsp;:&nbsp;application/json;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;77<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/> <span class="fit_label">actual</span></td>
+		<td class="pass"><br/>&nbsp;/resource/name[text()='a&nbsp;funky&nbsp;name']&lt;br/&gt;<br/>&nbsp;/resource/data[text()='an&nbsp;important&nbsp;message']<br/>&nbsp;<br/> <span class="fit_label">expected</span><hr/><br/>{&nbsp;"resource"&nbsp;:&nbsp;{&nbsp;"name"&nbsp;:&nbsp;"a&nbsp;funky&nbsp;name",&nbsp;"data"&nbsp;:&nbsp;"an&nbsp;important&nbsp;message"&nbsp;}&nbsp;}<br/> <span class="fit_label">actual</span></td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>name</td>
+		<td>body</td>
+		<td> <span class="fit_grey">/resource/name/text()</span></td>
+		<td> <span class="fit_grey">a funky name</span></td>
+	</tr>
+</table>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('177');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img177"/>
+	</a>
+&nbsp;
+	<span class="meta">Note</span>
+	<div class="collapsable" id="177">Label values can be accessed from code using <b>new Variables().get("labelname");</b><br/></div>
+</div>
+<br/><br/><i>LET resolves names from Fixture Symbol map if not found in the local map</i><br/><br/>LetTestActionFixture allows to get/set values in the Fixture Symbol map<br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td colspan="3">Action Fixture</td>
+	</tr>
+	<tr>
+		<td>start</td>
+		<td colspan="2">smartrics.rest.test.fitnesse.fixture.LetTestActionFixture</td>
+	</tr>
+	<tr>
+		<td>enter</td>
+		<td>symbolName</td>
+		<td>resType</td>
+	</tr>
+	<tr>
+		<td>enter</td>
+		<td>symbolValue</td>
+		<td>/resources</td>
+	</tr>
+</table>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('178');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img178"/>
+	</a>
+&nbsp;
+	<span class="meta">Note</span>
+	<div class="collapsable" id="178">Look at the source code of this page to see that the resource URI<br/>for the GET method below is defined as <b>%resType%/%id%</b><br/></div>
+</div>
+<br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/2'>/resources/2</a></td>
+		<td class="pass">200</td>
+		<td> <span class="fit_grey">Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;68<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)</span></td>
+		<td> <span class="fit_grey">&lt;resource&gt;&lt;name&gt;Bill&lt;/name&gt;&lt;data&gt;Some&nbsp;data&nbsp;on&nbsp;Bill&lt;/data&gt;&lt;/resource&gt;</span></td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>$symName</td>
+		<td>body</td>
+		<td> <span class="fit_grey">/resource/name/text()</span></td>
+		<td> <span class="fit_grey">Bill</span></td>
+	</tr>
+</table>
+<br/>Labels whose name starts with $ are defined in the Symbol map in the <b>fit.Fixture</b> (and not in the local label store). In this way, values extracted with <b>let</b> <br/>can be shared across various fixtures.<br/><br/><i>LET defines symbols in the Fixture Symbol map if label starts with $</i><br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/2'>/resources/2</a></td>
+		<td class="pass">200</td>
+		<td> <span class="fit_grey">Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;68<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)</span></td>
+		<td> <span class="fit_grey">&lt;resource&gt;&lt;name&gt;Bill&lt;/name&gt;&lt;data&gt;Some&nbsp;data&nbsp;on&nbsp;Bill&lt;/data&gt;&lt;/resource&gt;</span></td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>$symName</td>
+		<td>body</td>
+		<td> <span class="fit_grey">/resource/name/text()</span></td>
+		<td> <span class="fit_grey">Bill</span></td>
+	</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+	<tr>
+		<td colspan="3">Action Fixture</td>
+	</tr>
+	<tr>
+		<td>start</td>
+		<td colspan="2">smartrics.rest.test.fitnesse.fixture.LetTestActionFixture</td>
+	</tr>
+	<tr>
+		<td>enter</td>
+		<td>symbolName</td>
+		<td>symName</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>symbolValue</td>
+		<td class="pass">Bill</td>
+	</tr>
+</table>
+<br/>Other fixtures can set a value in the symbol map with <i>Fixture.setSymbol</i>.<br/>The RestFixture<a title="create page" href="RestFixtureTests.FitTests.SharedTests.RestFixture?edit&nonExistent=true">[?]</a> can then pick them up<br/><br/>This fixture sets <i>symbolName=/resources</i>...<br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td colspan="3">Action Fixture</td>
+	</tr>
+	<tr>
+		<td>start</td>
+		<td colspan="2">smartrics.rest.test.fitnesse.fixture.LetTestActionFixture</td>
+	</tr>
+	<tr>
+		<td>enter</td>
+		<td>symbolName</td>
+		<td>aNameOfASymbol</td>
+	</tr>
+	<tr>
+		<td>enter</td>
+		<td>symbolValue</td>
+		<td>/resources</td>
+	</tr>
+</table>
+<br/>... then the value is used by the RestFixture<br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/2'>/resources/2</a></td>
+		<td class="pass">200</td>
+		<td> <span class="fit_grey">Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;68<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)</span></td>
+		<td> <span class="fit_grey">&lt;resource&gt;&lt;name&gt;Bill&lt;/name&gt;&lt;data&gt;Some&nbsp;data&nbsp;on&nbsp;Bill&lt;/data&gt;&lt;/resource&gt;</span></td>
+	</tr>
+</table>
+<br/>]]></content>
+    <relativePageName>LetTests</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

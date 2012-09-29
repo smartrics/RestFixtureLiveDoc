@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20111024</FitNesseVersion>
+  <rootPath>OverrideContentHandlers</rootPath>
+    <result>
+    <counts>
+      <right>8</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('89');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img89"/>
+	</a>
+&nbsp;
+	<span class="meta">Included page: <a href="RestFixtureTests.FitTests.SharedTests.SetUp">.RestFixtureTests.FitTests.SharedTests.SetUp</a> <a href="RestFixtureTests.FitTests.SharedTests.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="89"><table border="1" cellspacing="0">
+	<tr>
+		<td colspan="3">Action Fixture</td>
+	</tr>
+	<tr>
+		<td>start</td>
+		<td colspan="2">smartrics.rest.test.fitnesse.fixture.HttpServerFixture</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>is started</td>
+		<td class="pass">true</td>
+	</tr>
+	<tr>
+		<td>press</td>
+		<td colspan="2">reset resources database</td>
+	</tr>
+</table>
+<br/></div>
+</div>
+<br/><h3>Overriding content handlers</h3>
+<br/><br/>RestFixture uses three content handlers to parse and set expectations used to verify the behaviour of HTTP calls. <br/>These are the handlers currently available:<br/><ul>
+	<li><b>XML</b> interprets the body as an xml string and allows XPath expressions as expectations on that content</li>
+	<li><b>JSON</b> interprets the body as a JSON string and allows expectations to be written in JavaScript<a title="create page" href="RestFixtureTests.FitTests.SharedTests.JavaScript?edit&nonExistent=true">[?]</a>.</li>
+	<li><b>TEXT</b> interprets the body as a string and allows regular expression expectations.</li>
+</ul>
+<br/>These are the defaults<br/><br/><ul>
+	<li>default=XML</li>
+	<li>application/xml=XML</li>
+	<li>application/json=JSON</li>
+	<li>text/plain=TEXT</li>
+</ul>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('90');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img90"/>
+	</a>
+&nbsp;
+	<span class="meta">Note: unrecognised content types.</span>
+	<div class="collapsable" id="90">Content types not recogised will be mapped to the default content handler (XML).<br/></div>
+</div>
+<br/><br/>For example, XML handler is used for for content types of application/xml; hence XPaths can be used to set expectations:<br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/0'>/resources/0</a></td>
+		<td class="pass">200</td>
+		<td class="pass">Content-Type&nbsp;:&nbsp;application/xml;.+<br/> <span class="fit_label">expected</span><hr/><br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/> <span class="fit_label">actual</span></td>
+		<td class="pass"><br/>&nbsp;/resource/name[text()='a&nbsp;funky&nbsp;name']&nbsp;&lt;br/&gt;<br/>&nbsp;/resource/data[text()='an&nbsp;important&nbsp;message']<br/><br/> <span class="fit_label">expected</span><hr/><br/>&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;<br/> <span class="fit_label">actual</span></td>
+	</tr>
+</table>
+<br/>Bespoke mapping can be defined in the config using the config key <b>restfixture.content.handlers.map</b><br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixtureConfig</td>
+		<td>overridesContentHandlerConfig</td>
+	</tr>
+	<tr>
+		<td>restfixture.content.handlers.map</td>
+		<td class="pass">application/xml=TEXT</td>
+	</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+		<td colspan="3">overridesContentHandlerConfig</td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/0'>/resources/0</a></td>
+		<td class="pass">200</td>
+		<td class="pass">Content-Type&nbsp;:&nbsp;application/xml;.+<br/> <span class="fit_label">expected</span><hr/><br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/> <span class="fit_label">actual</span></td>
+		<td class="pass">&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*<br/> <span class="fit_label">expected</span><hr/><br/>&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;<br/> <span class="fit_label">actual</span></td>
+	</tr>
+</table>
+<br/>]]></content>
+    <relativePageName>OverrideContentHandlers</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

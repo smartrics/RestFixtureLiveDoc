@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20111024</FitNesseVersion>
+  <rootPath>GetTests</rootPath>
+    <result>
+    <counts>
+      <right>24</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('76');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img76"/>
+	</a>
+&nbsp;
+	<span class="meta">Included page: <a href="RestFixtureTests.FitTests.SharedTests.SetUp">.RestFixtureTests.FitTests.SharedTests.SetUp</a> <a href="RestFixtureTests.FitTests.SharedTests.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="76"><table border="1" cellspacing="0">
+	<tr>
+		<td colspan="3">Action Fixture</td>
+	</tr>
+	<tr>
+		<td>start</td>
+		<td colspan="2">smartrics.rest.test.fitnesse.fixture.HttpServerFixture</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>is started</td>
+		<td class="pass">true</td>
+	</tr>
+	<tr>
+		<td>press</td>
+		<td colspan="2">reset resources database</td>
+	</tr>
+</table>
+<br/></div>
+</div>
+<br/><h3>GET</h3>
+<br/><br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('77');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img77"/>
+	</a>
+&nbsp;
+	<span class="meta">Notes</span>
+	<div class="collapsable" id="77">A GET request is performed on the resource whose URI is specified in the second cell.<br/>The following cell indicate:<br/>1) the expected return HTTP code,<br/>2) a subset of headers - regular expressions are allowed<br/>3) a list of XPaths to be executed in the body. Each XPath is run and it suceedes only if the result of the execution<br/>returns at least one node<br/></div>
+</div>
+<br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/0'>/resources/0</a></td>
+		<td class="pass">200</td>
+		<td class="pass">Content-Length&nbsp;:&nbsp;[\d]+<br/> <span class="fit_label">expected</span><hr/><br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/> <span class="fit_label">actual</span></td>
+		<td class="pass"><br/>&nbsp;/resource/name[text()='a&nbsp;funky&nbsp;name']&nbsp;&lt;br/&gt;<br/>&nbsp;/resource/data[text()='an&nbsp;important&nbsp;message']<br/><br/> <span class="fit_label">expected</span><hr/><br/>&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;<br/> <span class="fit_label">actual</span></td>
+	</tr>
+</table>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('78');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img78"/>
+	</a>
+&nbsp;
+	<span class="meta">Absolute resource paths</span>
+	<div class="collapsable" id="78">A GET (as all other verbs) accepts absolute resource paths.  <br/></div>
+</div>
+<br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/0'>/resources/0</a></td>
+		<td class="pass">200</td>
+		<td class="pass">Content-Length&nbsp;:&nbsp;[\d]+<br/> <span class="fit_label">expected</span><hr/><br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/> <span class="fit_label">actual</span></td>
+		<td class="pass"><br/>&nbsp;/resource/name[text()='a&nbsp;funky&nbsp;name']&nbsp;&lt;br/&gt;<br/>&nbsp;/resource/data[text()='an&nbsp;important&nbsp;message']<br/><br/> <span class="fit_label">expected</span><hr/><br/>&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;<br/> <span class="fit_label">actual</span></td>
+	</tr>
+</table>
+<br/>A GET request properly handles query strings. In this example the stub resource echoes the query string in a Query-String header<br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/0?param=echome'>/resources/0?param=echome</a></td>
+		<td class="pass">200</td>
+		<td class="pass">Content-Length&nbsp;:&nbsp;[\d]+<br/>Query-String&nbsp;:&nbsp;param=echome&nbsp;<br/> <span class="fit_label">expected</span><hr/><br/>Query-String&nbsp;:&nbsp;param=echome<br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/> <span class="fit_label">actual</span></td>
+		<td class="pass"><br/>&nbsp;/resource/name[text()='a&nbsp;funky&nbsp;name']&nbsp;&lt;br/&gt;<br/>&nbsp;/resource/data[text()='an&nbsp;important&nbsp;message']<br/><br/> <span class="fit_label">expected</span><hr/><br/>&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;<br/> <span class="fit_label">actual</span></td>
+	</tr>
+</table>
+<br/>Get a non existing resource should not find it<br/><br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('79');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img79"/>
+	</a>
+&nbsp;
+	<span class="meta">Note</span>
+	<div class="collapsable" id="79">Instead of XPaths you can specify 'no-body' if the operation is expected to return an empty body<br/></div>
+</div>
+<br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/20'>/resources/20</a></td>
+		<td class="pass">404</td>
+		<td class="pass">Content-Length&nbsp;:&nbsp;0<br/> <span class="fit_label">expected</span><hr/><br/>Content-Length&nbsp;:&nbsp;0<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/> <span class="fit_label">actual</span></td>
+		<td class="pass">no-body</td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/20.json'>/resources/20.json</a></td>
+		<td class="pass">404</td>
+		<td class="pass">Content-Length&nbsp;:&nbsp;0<br/> <span class="fit_label">expected</span><hr/><br/>Content-Length&nbsp;:&nbsp;0<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/> <span class="fit_label">actual</span></td>
+		<td class="pass">no-body</td>
+	</tr>
+</table>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('80');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img80"/>
+	</a>
+&nbsp;
+	<span class="meta">XPaths and namespaces</span>
+	<div class="collapsable" id="80">Namespaces are supported by declaring the alias/uri map in the RestFixtureConfig<a title="create page" href="RestFixtureTests.FitTests.SharedTests.RestFixtureConfig?edit&nonExistent=true">[?]</a>, using the key restfixture.xml.namespace.context (See <a href="RestFixtureTests.FitTests.SharedTests.SuiteSetup">SuiteSetup</a>)<br/></div>
+</div>
+<br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/0'>/resources/0</a></td>
+		<td class="pass">200</td>
+		<td class="pass">Content-Length&nbsp;:&nbsp;[\d]+<br/> <span class="fit_label">expected</span><hr/><br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/> <span class="fit_label">actual</span></td>
+		<td class="pass"><br/>&nbsp;/resource/nstag/ns1alias:number[text()='3']<br/><br/> <span class="fit_label">expected</span><hr/><br/>&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;<br/> <span class="fit_label">actual</span></td>
+	</tr>
+</table>
+<br/><br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('81');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img81"/>
+	</a>
+&nbsp;
+	<span class="meta">Json</span>
+	<div class="collapsable" id="81">Expectations can be asserted also in json format for responses whose content type is 'application/json' or 'application/x-javascript'<br/></div>
+</div>
+<br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/1.json'>/resources/1.json</a></td>
+		<td class="pass">200</td>
+		<td class="pass">Content-Type&nbsp;:&nbsp;application/json;charset=ISO-8859-1<br/> <span class="fit_label">expected</span><hr/><br/>Content-Type&nbsp;:&nbsp;application/json;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;77<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/> <span class="fit_label">actual</span></td>
+		<td class="pass"><br/>&nbsp;/resource/name[text()='a&nbsp;funky&nbsp;name']&nbsp;&lt;br/&gt;<br/>&nbsp;/resource/data[text()='an&nbsp;important&nbsp;message']<br/><br/> <span class="fit_label">expected</span><hr/><br/>{&nbsp;"resource"&nbsp;:&nbsp;{&nbsp;"name"&nbsp;:&nbsp;"a&nbsp;funky&nbsp;name",&nbsp;"data"&nbsp;:&nbsp;"an&nbsp;important&nbsp;message"&nbsp;}&nbsp;}<br/> <span class="fit_label">actual</span></td>
+	</tr>
+</table>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('82');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img82"/>
+	</a>
+&nbsp;
+	<span class="meta">Rest requests with query string containing array parameters</span>
+	<div class="collapsable" id="82">A query string can contain parameter arrays and they are correctly handled by Rest Fixture.<br/></div>
+</div>
+<br/><br/>To allow correct handling of array parameters a new configuration option must be set: *http.client.use.new.http.uri.factory*<br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixtureConfig</td>
+		<td>withArrayParametersSupport</td>
+	</tr>
+	<tr>
+		<td>http.client.use.new.http.uri.factory</td>
+		<td class="pass">true</td>
+	</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+		<td colspan="3">withArrayParametersSupport</td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/0?a[0]=2&a[1]=4'>/resources/0?a[0]=2&a[1]=4</a></td>
+		<td class="pass">200</td>
+		<td> <span class="fit_grey">Query-String&nbsp;:&nbsp;a[0]=2&a[1]=4<br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)</span></td>
+		<td> <span class="fit_grey">&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;</span></td>
+	</tr>
+</table>
+]]></content>
+    <relativePageName>GetTests</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

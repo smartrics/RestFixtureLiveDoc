@@ -1,0 +1,29 @@
+!define ns1 {!-http://smartrics/ns1-!}
+!define defns {!-http://smartrics/defns-!}
+
+
+| script |!-smartrics.rest.test.fitnesse.fixture.HttpServerFixture-!|
+| check | is started | false |
+| start server | ${jettyPort} |
+| check | is started | true |
+ 
+!**** Configure the !-RestFixture-! with named configuration table of key value pairs
+Read more about RestFixtureConfig
+****!
+| !-Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig-!  |
+| http.client.connection.timeout | 5000 |
+| http.client.use.new.http.uri.factory | false |
+| restfixture.display.actual.on.right | true |
+| restfixture.display.toggle.for.cells.larger.than | 200 |
+| restfixture.default.headers | !-defHeader : 1
+anotherDefHeader : 2
+-!|
+| restfixture.xml.namespace.context | ns1alias=${ns1} !-
+-! defalias=${defns} |
+| restfixture.content.default.charset | UTF-8 |
+| restfixture.content.handlers.map | !-application/xml=XML
+application/json=JSON
+text/plain=TEXT
+default=XML
+application/x-javascript=JS
+-!|

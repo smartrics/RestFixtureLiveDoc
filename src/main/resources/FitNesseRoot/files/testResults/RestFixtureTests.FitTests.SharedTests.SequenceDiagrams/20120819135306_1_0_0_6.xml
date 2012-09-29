@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20111024</FitNesseVersion>
+  <rootPath>SequenceDiagrams</rootPath>
+    <result>
+    <counts>
+      <right>1</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>6</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('99');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img99"/>
+	</a>
+&nbsp;
+	<span class="meta">Included page: <a href="RestFixtureTests.FitTests.SharedTests.SetUp">.RestFixtureTests.FitTests.SharedTests.SetUp</a> <a href="RestFixtureTests.FitTests.SharedTests.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="99"><table border="1" cellspacing="0">
+	<tr>
+		<td colspan="3">Action Fixture</td>
+	</tr>
+	<tr>
+		<td>start</td>
+		<td colspan="2">smartrics.rest.test.fitnesse.fixture.HttpServerFixture</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>is started</td>
+		<td class="pass">true</td>
+	</tr>
+	<tr>
+		<td>press</td>
+		<td colspan="2">reset resources database</td>
+	</tr>
+</table>
+<br/></div>
+</div>
+<br/>The RestFixtureWithSeq fixture records the interaction between the fixture client code and the system under test and generates a UML<br/>sequence diagram. The fixture records the following methods:<br/><br/>* GET/PUT/DELETE: the call produces a simple activation against the resource represented as an object. the activation is synchronous and the result of the get operation call is returned to the caller<br/>* POST: the call produces an activation against the resource object and the result (the status code and the ID extracted from the location header) passed to the client.<br/>* comment: the call produces a comment string<br/> <br/>The diagrams are natively generated in SVG format but can be also rendered in GIF or PNG.<br/>If the diagram is generated in GIF or PNG it can be included in the test page via !img wiki command. This will succeed only if the images are stored in a location of the filesystem reachable by the fitnesse server.<br/>If the diagram is stored in SVG format, it can be rendered using the included !svg symbol (see not below).<br/><br/>Sequence diagram events are recorded after the fixture method execution and the file stored after the table completes. So a new version of the diagram is generated *after* a fixture is run.<br/><br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('100');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img100"/>
+	</a>
+&nbsp;
+	<span class="meta">Including SVG diagrams</span>
+	<div class="hidden" id="100">It can be done via !svg symbol. To include the symbol the RestFixture.jar needs to be included in the FitNesse server classpath and the symbol needs to be registered in the plugins.properties file.<br/><ul>
+	<li>Add to the FITNESSE_HOME/plugins.properties (or create the file if it doen't exist) the following line: </li>
+</ul>
+<b>SymbolTypes=smartrics.rest.fitnesse.fixture.SvgImage</b><br/><ul>
+	<li>Add !svg to the beginning of a wiki page line followed by the path to the svg file and optionally by a rendering modifier. </li>
+	<li>The path needs to be relative to the FitNesseRoot<a title="create page" href="RestFixtureTests.FitTests.SharedTests.FitNesseRoot?edit&nonExistent=true">[?]</a> directory and as a child of the /files directory. For example if the </li>
+</ul>
+file is stored in $FitNesseRoot/files/mysequencediagrams/picture.svg, then you can reference the file by providing <br/><b>!svg /files/mysequencediagrams/picture.svg mode</b><br/><ul>
+	<li>optionally add a rendering mode: <b>inline</b>, <b>object</b>, <b>iframe</b>, <b>embed</b>, <b>anchor</b>, <b>img</b>. The modifier will determine what html tag is used to reference the file. <b>inline</b> will in fact inline the whole file using the &amp;lt;svg&gt; tag.</li>
+</ul>
+</div>
+</div>
+<br/><br/><h3>Usage</h3>
+<br/>The filename for the diagram is the second parameter of the fixture, optionally followed by a list of additional attributes that determine how the SVG is generated. <br/><br/>The filename extension determins the format of the sequence diagram image. Accepted extensions are: svg, gif, png<br/><br/>For example <br/><br/>| smartrics.rest.fitnesse.fixture.RestFixtureWithSeq | host | /path/to/file.gif viewBox="0 0 500 500" width="400" height="500" | <br/><br/>or for Slim: <br/>| Table:smartrics.rest.fitnesse.fixture.RestFixtureWithSeq | host | /path/to/file.gif viewBox="0 0 500 500" width="400" height="500" | <br/><br/>Use width and height to determine the final dimensions of the output image and viewBox to further restrict the visible part of the image<br/><br/>In the example, a gif file is generated and the viewBox="0 0 500 500" width="400" height="500" are included in the &amp;lt;svg&gt; root tag.<br/><br/>By default files are generated in the directory <i>FITNESSE_ROOT/files/restfixture</i>. Failure on creating/accessing the directory or storing a file in it should not break<br/>the test. Although a stack trace is shown in standard error (see fixture output).<br/><br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('101');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img101"/>
+	</a>
+&nbsp;
+	<span class="meta">note on file names with spaces</span>
+	<div class="hidden" id="101">Use double quotes around the filename if the path contains spaces<br/></div>
+</div>
+<br/><br/>To override the default directory, use the config property <i>restfixture.graphs.dir</i> to the destination directory of the generated sequence diagrams. The default value is<br/><i>FitNesseRoot/files/restfixture</i>. <br/><br/>For files to be included in the test pages, they need to be under <i>FITNESSE_ROOT/files</i>.<br/><br/><h3>Basic Sequence Diagrams</h3>
+<br/><br/><img src="/files/restfixture/SequenceDiagPost.png"/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td class="error">smartrics.rest.fitnesse.fixture.RestFixtureWithSeq<hr/> <span class="fit_label">Could not find fixture: smartrics.rest.fitnesse.fixture.RestFixtureWithSeq.</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+		<td colspan="3">SequenceDiagPost.png viewBox="0 0 200 200" width="200" height="200" </td>
+	</tr>
+	<tr>
+		<td>setBody</td>
+		<td colspan="4">&lt;resource&gt;&lt;name&gt;test post&lt;/name&gt;&lt;data&gt;some data&lt;/data&gt;&lt;/resource&gt;</td>
+	</tr>
+	<tr>
+		<td>POST</td>
+		<td>/resources/</td>
+		<td>201</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>id1</td>
+		<td>header</td>
+		<td>Location:/resources/(.+)</td>
+		<td></td>
+	</tr>
+</table>
+<br/><img src="/files/restfixture/SequenceDiagGet.png"/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td class="error">smartrics.rest.fitnesse.fixture.RestFixtureWithSeq<hr/> <span class="fit_label">Could not find fixture: smartrics.rest.fitnesse.fixture.RestFixtureWithSeq.</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+		<td colspan="3">SequenceDiagGet.png viewBox="0 0 200 200" width="200" height="200"</td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td>/resources/%id1%</td>
+		<td>200</td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+<br/><img src="/files/restfixture/SequenceDiagPut.png"/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td class="error">smartrics.rest.fitnesse.fixture.RestFixtureWithSeq<hr/> <span class="fit_label">Could not find fixture: smartrics.rest.fitnesse.fixture.RestFixtureWithSeq.</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+		<td colspan="3">SequenceDiagPut.png viewBox="0 0 200 200" width="200" height="200"</td>
+	</tr>
+	<tr>
+		<td>setBody</td>
+		<td colspan="4">&lt;resource&gt;&lt;name&gt;test post&lt;/name&gt;&lt;data&gt;some data&lt;/data&gt;&lt;/resource&gt;</td>
+	</tr>
+	<tr>
+		<td>PUT</td>
+		<td>/resources/%id1%</td>
+		<td>200</td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+<br/><img src="/files/restfixture/SequenceDiagDelete.png"/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td class="error">smartrics.rest.fitnesse.fixture.RestFixtureWithSeq<hr/> <span class="fit_label">Could not find fixture: smartrics.rest.fitnesse.fixture.RestFixtureWithSeq.</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+		<td colspan="3">SequenceDiagDelete.png viewBox="0 0 200 200" width="200" height="200"</td>
+	</tr>
+	<tr>
+		<td>DELETE</td>
+		<td>/resources/%id1%</td>
+		<td>204</td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+<br/><h3>Embedding an image</h3>
+<br/>It's possible to embed a picture in the fixture itself. The picture embedded is the sequence generated to date<br/><table border="1" cellspacing="0">
+	<tr>
+		<td class="error">smartrics.rest.fitnesse.fixture.RestFixtureWithSeq<hr/> <span class="fit_label">Could not find fixture: smartrics.rest.fitnesse.fixture.RestFixtureWithSeq.</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+		<td colspan="3">SequenceDiagForEmbed.png viewBox="0 0 350 500" width="350" height="500" </td>
+	</tr>
+	<tr>
+		<td>setBody</td>
+		<td colspan="4">&lt;resource&gt;&lt;name&gt;test post&lt;/name&gt;&lt;data&gt;some data&lt;/data&gt;&lt;/resource&gt;</td>
+	</tr>
+	<tr>
+		<td>POST</td>
+		<td>/resources/</td>
+		<td>201</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>id1</td>
+		<td>header</td>
+		<td>Location:/resources/(.+)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>embed</td>
+		<td colspan="4">viewBox="0 0 200 200" width="200" height="200"</td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td>/resources/%id1%</td>
+		<td>200</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>comment</td>
+		<td colspan="4">created resource id=%id1%</td>
+	</tr>
+	<tr>
+		<td>POST</td>
+		<td>/resources/</td>
+		<td>201</td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+<br/>This is the picture generated by the fixture above.<br/><img src="/files/restfixture/SequenceDiagForEmbed.png"/><br/><br/>Note:<br/><ul>
+	<li>embed does not generate any file in the filesystem and that the output is inlined either via &amp;lt;SVG&gt; or via &amp;lt;IMG&gt; tags (the latter with a base64 encoded string)</li>
+	<li>attributes can be specified in the embed row, for example ''| embed | viewBox="0 0 200 200" width="200" height="200" |''</li>
+</ul>
+<br/><h3>A more complex Sequence Diagram</h3>
+<br/><br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('102');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img102"/>
+	</a>
+&nbsp;
+	<span class="meta">Expand to see the picture...</span>
+	<div class="hidden" id="102"><img src="/files/restfixture/SequenceDiagComplex.png"/><br/></div>
+</div>
+<br/><table border="1" cellspacing="0">
+	<tr>
+		<td class="error">smartrics.rest.fitnesse.fixture.RestFixtureWithSeq<hr/> <span class="fit_label">Could not find fixture: smartrics.rest.fitnesse.fixture.RestFixtureWithSeq.</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+		<td colspan="3">SequenceDiagComplex.png viewBox="0 0 1500 1400" width="1500" height="1400" </td>
+	</tr>
+	<tr>
+		<td>setBody</td>
+		<td colspan="4">&lt;resource&gt;&lt;name&gt;test post&lt;/name&gt;&lt;data&gt;some data&lt;/data&gt;&lt;/resource&gt;</td>
+	</tr>
+	<tr>
+		<td>POST</td>
+		<td>/resources/</td>
+		<td>201</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>id1</td>
+		<td>header</td>
+		<td>Location:/resources/(.+)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td>/resources/%id1%</td>
+		<td>200</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>comment</td>
+		<td colspan="4">created resource id=%id1%</td>
+	</tr>
+	<tr>
+		<td>POST</td>
+		<td>/resources/</td>
+		<td>201</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>id2</td>
+		<td>header</td>
+		<td>Location:/resources/(.+)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>comment</td>
+		<td colspan="4">about to modify some resources</td>
+	</tr>
+	<tr>
+		<td>PUT</td>
+		<td>/resources/%id1%</td>
+		<td>200</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>PUT</td>
+		<td>/resources/%id2%</td>
+		<td>200</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td>/resources/%id2%</td>
+		<td>200</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>PUT</td>
+		<td>/resources/%id1%</td>
+		<td>200</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>comment</td>
+		<td colspan="4">about to delete some resources</td>
+	</tr>
+	<tr>
+		<td>DELETE</td>
+		<td>/resources/%id1%</td>
+		<td>204</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>DELETE</td>
+		<td>/resources/%id2%</td>
+		<td>204</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>comment</td>
+		<td colspan="4">complete!</td>
+	</tr>
+</table>
+<br/><br/><br/>]]></content>
+    <relativePageName>SequenceDiagrams</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

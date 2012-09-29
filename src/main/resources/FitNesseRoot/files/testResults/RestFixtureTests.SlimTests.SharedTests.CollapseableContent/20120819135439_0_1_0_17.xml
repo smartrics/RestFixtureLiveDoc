@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20111024</FitNesseVersion>
+  <rootPath>CollapseableContent</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>17</exceptions>
+    </counts>
+    <content><![CDATA[<div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('123');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img123"/>
+	</a>
+&nbsp;
+	<span class="meta">Precompiled Libraries</span>
+	<div class="hidden" id="123"><br/></div>
+</div>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('124');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img124"/>
+	</a>
+&nbsp;
+	<span class="meta">Included page: <a href="RestFixtureTests.SlimTests.SharedTests.SetUp">.RestFixtureTests.SlimTests.SharedTests.SetUp</a> <a href="RestFixtureTests.SlimTests.SharedTests.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="124"><table border="1" cellspacing="0" _TABLENUMBER=890181805050599002>
+	<tr>
+		<td colspan="3">Action Fixture <span class="error">Could not invoke constructor for ActionFixture[0]</span></td>
+	</tr>
+	<tr>
+		<td>start</td>
+		<td colspan="2">smartrics.rest.test.fitnesse.fixture.HttpServerFixture</td>
+	</tr>
+	<tr>
+		<td>check <span class="error">The instance decisionTable_0. does not exist</span></td>
+		<td>is started <span class="error">The instance decisionTable_0. does not exist</span></td>
+		<td>true</td>
+	</tr>
+	<tr>
+		<td>press <span class="error">The instance decisionTable_0. does not exist</span></td>
+		<td colspan="2">reset resources database <span class="error">The instance decisionTable_0. does not exist</span></td>
+	</tr>
+</table>
+<br/></div>
+</div>
+<br/><h3>Collapseable content</h3>
+<br/><br/>In the interest of readability, cells with large content can be rendered with a toggle on/off button.<br/>The minimum length in characters of the cell, in order to enable the toggle button, is specified with the property<br/><br/>restfixture.display.toggle.for.cells.larger.than<br/><br/>If the value of the property is negative the toggle button will not be rendered.<br/><br/>Currently only large HTTP response content cells (if the actual value is displayed) are enabled for toggling.<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=1124900341865335738>
+	<tr>
+		<td><span class="fail">smartrics.rest.fitnesse.fixture.RestFixture: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:87)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:314)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:296)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:283)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:227)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:140)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:120)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:106)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:86)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:58)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:47)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Thread.java:662)
+</pre></span></td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td>/resources/100</td>
+		<td>200</td>
+		<td></td>
+		<td>/resource/type[text()='large content']</td>
+	</tr>
+</table>
+]]></content>
+    <relativePageName>CollapseableContent</relativePageName>
+    
+        <tables>
+            <table>
+        <name>decisionTable_0</name>
+                <row>
+                    <col><![CDATA[Action Fixture error(Could not invoke constructor for ActionFixture[0])]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[start]]></col>
+                    <col><![CDATA[smartrics.rest.test.fitnesse.fixture.HttpServerFixture]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_0. does not exist)]]></col>
+                    <col><![CDATA[is started error(The instance decisionTable_0. does not exist)]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[press error(The instance decisionTable_0. does not exist)]]></col>
+                    <col><![CDATA[reset resources database error(The instance decisionTable_0. does not exist)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_1</name>
+                <row>
+                    <col><![CDATA[<span class="fail">smartrics.rest.fitnesse.fixture.RestFixture: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:87)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:314)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:296)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:283)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:227)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:140)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:120)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:106)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:86)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:58)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:47)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Thread.java:662)
+</pre></span>]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[GET]]></col>
+                    <col><![CDATA[/resources/100]]></col>
+                    <col><![CDATA[200]]></col>
+                    <col><![CDATA[]]></col>
+                    <col><![CDATA[/resource/type[text()='large content']]]></col>
+          
+        </row>
+        
+      </table>
+      
+    </tables>
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_0, make, decisionTable_0, ActionFixture]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for ActionFixture[0]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for ActionFixture[0]]]></actual>
+                              <expected><![CDATA[Action Fixture]]></expected>
+                              <evaluationMessage><![CDATA[Action Fixture error(Could not invoke constructor for ActionFixture[0])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_1, call, decisionTable_0, table, [[start, smartrics.rest.test.fitnesse.fixture.HttpServerFixture], [check, is started, true], [press, reset resources database]]]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_2, call, decisionTable_0, beginTable]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_3, call, decisionTable_0, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_4, call, decisionTable_0, setStart, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_4</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_0. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_0. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_5, call, decisionTable_0, setSmartricsRestTestFitnesseFixtureHttpServerFixture, is started]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_5</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_0. does not exist]]></actual>
+                              <expected><![CDATA[is started]]></expected>
+                              <evaluationMessage><![CDATA[is started error(The instance decisionTable_0. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_6, call, decisionTable_0, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_7, call, decisionTable_0, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_8, call, decisionTable_0, setStart, press]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_8</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_0. does not exist]]></actual>
+                              <expected><![CDATA[press]]></expected>
+                              <evaluationMessage><![CDATA[press error(The instance decisionTable_0. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_9, call, decisionTable_0, setSmartricsRestTestFitnesseFixtureHttpServerFixture, reset resources database]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_9</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_0. does not exist]]></actual>
+                              <expected><![CDATA[reset resources database]]></expected>
+                              <evaluationMessage><![CDATA[reset resources database error(The instance decisionTable_0. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_10, call, decisionTable_0, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_11, call, decisionTable_0, endTable]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

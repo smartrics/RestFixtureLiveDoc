@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20111024</FitNesseVersion>
+  <rootPath>DeleteTests</rootPath>
+    <result>
+    <counts>
+      <right>5</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('83');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img83"/>
+	</a>
+&nbsp;
+	<span class="meta">Precompiled Libraries</span>
+	<div class="hidden" id="83"><br/></div>
+</div>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('84');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img84"/>
+	</a>
+&nbsp;
+	<span class="meta">Included page: <a href="RestFixtureTests.SetUp">.RestFixtureTests.SetUp</a> <a href="RestFixtureTests.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="84"><br/><table border="1" cellspacing="0" _TABLENUMBER=401815436481960357>
+	<tr>
+		<td>script</td>
+		<td colspan="2"><span class="pass">smartrics.rest.test.fitnesse.fixture.HttpServerFixture</span></td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>is started</td>
+		<td><span class="pass">true</span></td>
+	</tr>
+	<tr>
+		<td colspan="3"><span class="pass">reset resources database</span></td>
+	</tr>
+</table>
+<br/></div>
+</div>
+<br/><h3>DELETE</h3>
+<br/><br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('85');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img85"/>
+	</a>
+&nbsp;
+	<span class="meta">Note</span>
+	<div class="collapsable" id="85">You may not want to specify any expectation neither in the header cell nor in the body cell, as in the GET below<br/></div>
+</div>
+<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=1046152540523860928>
+	<tr>
+		<td><span class="pass">Table:smartrics.rest.fitnesse.fixture.RestFixture</span></td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>DELETE</td>
+		<td><a href='http://localhost:8765/resources/0'>/resources/0</a></td>
+		<td><span class="pass">204</span></td>
+		<td>Server&nbsp;:&nbsp;Jetty(6.0.2)</td>
+		<td><span class="pass">no-body</span></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/0'>/resources/0</a></td>
+		<td><span class="pass">404</span></td>
+		<td>Content-Length&nbsp;:&nbsp;0<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)</td>
+		<td>no-body</td>
+	</tr>
+</table>
+]]></content>
+    <relativePageName>DeleteTests</relativePageName>
+    
+        <tables>
+            <table>
+        <name>scriptTable_0</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(smartrics.rest.test.fitnesse.fixture.HttpServerFixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is started]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(reset resources database)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>tableTable_1</name>
+                <row>
+                    <col><![CDATA[pass(Table:smartrics.rest.fitnesse.fixture.RestFixture)]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[DELETE]]></col>
+                    <col><![CDATA[<a href='http://localhost:8765/resources/0'>/resources/0</a>]]></col>
+                    <col><![CDATA[pass(204)]]></col>
+                    <col><![CDATA[Server&nbsp;:&nbsp;Jetty(6.0.2)]]></col>
+                    <col><![CDATA[pass(no-body)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[GET]]></col>
+                    <col><![CDATA[<a href='http://localhost:8765/resources/0'>/resources/0</a>]]></col>
+                    <col><![CDATA[pass(404)]]></col>
+                    <col><![CDATA[Content-Length&nbsp;:&nbsp;0<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)]]></col>
+                    <col><![CDATA[no-body]]></col>
+          
+        </row>
+        
+      </table>
+      
+    </tables>
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_0, make, scriptTableActor, smartrics.rest.test.fitnesse.fixture.HttpServerFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_0_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[smartrics.rest.test.fitnesse.fixture.HttpServerFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(smartrics.rest.test.fitnesse.fixture.HttpServerFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_1, call, scriptTableActor, isStarted]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_0_1</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_2, call, scriptTableActor, resetResourcesDatabase]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_0_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[reset resources database]]></expected>
+                              <evaluationMessage><![CDATA[pass(reset resources database)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[tableTable_1_0, make, tableTable_1, smartrics.rest.fitnesse.fixture.RestFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>tableTable_1_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Table:smartrics.rest.fitnesse.fixture.RestFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Table:smartrics.rest.fitnesse.fixture.RestFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[tableTable_1_1, call, tableTable_1, doTable, [[DELETE, /resources/0, 204, , no-body], [GET, /resources/0, 404, , ]]]]]></instruction>
+        <slimResult><![CDATA[[[, report:<a href='http://localhost:8765/resources/0'>/resources/0</a>, pass:204, report:Server&nbsp;:&nbsp;Jetty(6.0.2), pass:no-body], [, report:<a href='http://localhost:8765/resources/0'>/resources/0</a>, pass:404, report:Content-Length&nbsp;:&nbsp;0<br/>Server&nbsp;:&nbsp;Jetty(6.0.2), report:no-body]]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>tableTable_1_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[[[, report:<a href='http://localhost:8765/resources/0'>/resources/0</a>, pass:204, report:Server&nbsp;:&nbsp;Jetty(6.0.2), pass:no-body], [, report:<a href='http://localhost:8765/resources/0'>/resources/0</a>, pass:404, report:Content-Length&nbsp;:&nbsp;0<br/>Server&nbsp;:&nbsp;Jetty(6.0.2), report:no-body]]]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

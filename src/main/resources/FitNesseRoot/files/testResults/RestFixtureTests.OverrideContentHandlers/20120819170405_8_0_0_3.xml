@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20111024</FitNesseVersion>
+  <rootPath>OverrideContentHandlers</rootPath>
+    <result>
+    <counts>
+      <right>8</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>3</exceptions>
+    </counts>
+    <content><![CDATA[<div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('36');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img36"/>
+	</a>
+&nbsp;
+	<span class="meta">Precompiled Libraries</span>
+	<div class="hidden" id="36"><br/></div>
+</div>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('37');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img37"/>
+	</a>
+&nbsp;
+	<span class="meta">Included page: <a href="RestFixtureTests.SetUp">.RestFixtureTests.SetUp</a> <a href="RestFixtureTests.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="37"><br/><table border="1" cellspacing="0" _TABLENUMBER=1850076577421333450>
+	<tr>
+		<td>script</td>
+		<td colspan="2"><span class="pass">smartrics.rest.test.fitnesse.fixture.HttpServerFixture</span></td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>is started</td>
+		<td><span class="pass">true</span></td>
+	</tr>
+	<tr>
+		<td colspan="3"><span class="pass">reset resources database</span></td>
+	</tr>
+</table>
+<br/></div>
+</div>
+<br/><h3>Overriding content handlers</h3>
+<br/><br/>RestFixture uses three content handlers to parse and set expectations used to verify the behaviour of HTTP calls. <br/>These are the handlers currently available:<br/><ul>
+	<li><b>XML</b> interprets the body as an xml string and allows XPath expressions as expectations on that content</li>
+	<li><b>JSON</b> interprets the body as a JSON string and allows expectations to be written in JavaScript<a title="create page" href="RestFixtureTests.JavaScript?edit&nonExistent=true">[?]</a>.</li>
+	<li><b>TEXT</b> interprets the body as a string and allows regular expression expectations.</li>
+</ul>
+<br/>These are the defaults<br/><br/><ul>
+	<li>default=XML</li>
+	<li>application/xml=XML</li>
+	<li>application/json=JSON</li>
+	<li>text/plain=TEXT</li>
+</ul>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('38');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img38"/>
+	</a>
+&nbsp;
+	<span class="meta">Note: unrecognised content types.</span>
+	<div class="collapsable" id="38">Content types not recogised will be mapped to the default content handler (XML).<br/></div>
+</div>
+<br/><br/>For example, XML handler is used for for content types of application/xml; hence XPaths can be used to set expectations:<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=2207210557743054113>
+	<tr>
+		<td><span class="pass">Table:smartrics.rest.fitnesse.fixture.RestFixture</span></td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/0'>/resources/0</a></td>
+		<td><span class="pass">200</span></td>
+		<td><span class="pass">Content-Type&nbsp;:&nbsp;application/xml;.+<br/><i><span class='fit_label'>expected</span></i><hr/><br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/><i><span class='fit_label'>actual</span></i></span></td>
+		<td><span class="pass"><br/>&nbsp;/resource/name[text()='a&nbsp;funky&nbsp;name']&nbsp;&lt;br/&gt;<br/>&nbsp;/resource/data[text()='an&nbsp;important&nbsp;message']<br/><br/><i><span class='fit_label'>expected</span></i><hr/><br/>&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;<br/><i><span class='fit_label'>actual</span></i></span></td>
+	</tr>
+</table>
+<br/>Bespoke mapping can be defined in the config using the config key <b>restfixture.content.handlers.map</b><br/><br/><table border="1" cellspacing="0" _TABLENUMBER=6450087007134708794>
+	<tr>
+		<td><span class="pass">Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig</span></td>
+		<td>overridesContentHandlerConfig</td>
+	</tr>
+	<tr>
+		<td>restfixture.content.handlers.map</td>
+		<td><span class="pass"><br/>application/xml=TEXT<br/></span></td>
+	</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=7796042887222819359>
+	<tr>
+		<td>Table:smartrics.rest.fitnesse.fixture.RestFixture <span class="error">Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestFixture[2]</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+		<td colspan="3">overridesContentHandlerConfig</td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/0'>/resources/0</a></td>
+		<td><span class="pass">200</span></td>
+		<td><span class="pass">Content-Type&nbsp;:&nbsp;application/xml;.+<br/><i><span class='fit_label'>expected</span></i><hr/><br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/><i><span class='fit_label'>actual</span></i></span></td>
+		<td><span class="error">&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*<br/><hr/><br/><code>java.lang.IllegalArgumentException:&nbsp;Cannot&nbsp;extract&nbsp;xpath&nbsp;'&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*'&nbsp;from&nbsp;document&nbsp;&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapter.equals(XPathBodyTypeAdapter.java:80)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.process(RestFixture.java:943)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.completeHttpMethodExecution(RestFixture.java:908)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.doMethod(RestFixture.java:843)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.doMethod(RestFixture.java:831)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.GET(RestFixture.java:574)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.GeneratedMethodAccessor5.invoke(Unknown&nbsp;Source)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.lang.reflect.Method.invoke(Method.java:597)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.processRow(RestFixture.java:773)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.processSlimRow(RestFixture.java:1067)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.doTable(RestFixture.java:343)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.GeneratedMethodAccessor4.invoke(Unknown&nbsp;Source)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.lang.reflect.Method.invoke(Method.java:597)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:43)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:30)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:53)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:189)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.Statement.call(Statement.java:97)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.Statement.execute(Statement.java:77)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.serve(SlimServer.java:30)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.lang.Thread.run(Thread.java:662)<br/>Caused&nbsp;by:&nbsp;java.lang.IllegalArgumentException:&nbsp;xPath&nbsp;expression&nbsp;can&nbsp;not&nbsp;be&nbsp;compiled:&nbsp;&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.Tools.toExpression(Tools.java:169)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.Tools.extractXPath(Tools.java:119)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapter.eval(XPathBodyTypeAdapter.java:93)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapter.equals(XPathBodyTypeAdapter.java:75)<br/>&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;31&nbsp;more<br/>Caused&nbsp;by:&nbsp;javax.xml.xpath.XPathExpressionException<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.jaxp.XPathImpl.compile(XPathImpl.java:393)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.Tools.toExpression(Tools.java:166)<br/>&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;34&nbsp;more<br/>Caused&nbsp;by:&nbsp;com.sun.org.apache.xpath.internal.domapi.XPathStylesheetDOM3Exception:&nbsp;Prefix&nbsp;must&nbsp;resolve&nbsp;to&nbsp;a&nbsp;namespace:&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.XPathParser.errorForDOM3(XPathParser.java:653)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.Lexer.mapNSTokens(Lexer.java:638)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.Lexer.tokenize(Lexer.java:179)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.Lexer.tokenize(Lexer.java:96)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.XPathParser.initXPath(XPathParser.java:110)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.XPath.&lt;init&gt;(XPath.java:176)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.XPath.&lt;init&gt;(XPath.java:264)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.jaxp.XPathImpl.compile(XPathImpl.java:385)<br/>&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;35&nbsp;more<br/></code></span></td>
+	</tr>
+</table>
+<br/>]]></content>
+    <relativePageName>OverrideContentHandlers</relativePageName>
+    
+        <tables>
+            <table>
+        <name>scriptTable_0</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(smartrics.rest.test.fitnesse.fixture.HttpServerFixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is started]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(reset resources database)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>tableTable_1</name>
+                <row>
+                    <col><![CDATA[pass(Table:smartrics.rest.fitnesse.fixture.RestFixture)]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[GET]]></col>
+                    <col><![CDATA[<a href='http://localhost:8765/resources/0'>/resources/0</a>]]></col>
+                    <col><![CDATA[pass(200)]]></col>
+                    <col><![CDATA[pass(Content-Type&nbsp;:&nbsp;application/xml;.+<br/><i><span class='fit_label'>expected)</i><hr/><br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/><i><span class='fit_label'>actual</span></i></span>]]></col>
+                    <col><![CDATA[pass(<br/>&nbsp;/resource/name[text()='a&nbsp;funky&nbsp;name']&nbsp;&lt;br/&gt;<br/>&nbsp;/resource/data[text()='an&nbsp;important&nbsp;message']<br/><br/><i><span class='fit_label'>expected)</i><hr/><br/>&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;<br/><i><span class='fit_label'>actual</span></i></span>]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>tableTable_2</name>
+                <row>
+                    <col><![CDATA[pass(Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig)]]></col>
+                    <col><![CDATA[overridesContentHandlerConfig]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[restfixture.content.handlers.map]]></col>
+                    <col><![CDATA[pass(<br/>application/xml=TEXT<br/>)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>tableTable_3</name>
+                <row>
+                    <col><![CDATA[Table:smartrics.rest.fitnesse.fixture.RestFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestFixture[2])]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+                    <col><![CDATA[overridesContentHandlerConfig]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[GET]]></col>
+                    <col><![CDATA[<a href='http://localhost:8765/resources/0'>/resources/0</a>]]></col>
+                    <col><![CDATA[pass(200)]]></col>
+                    <col><![CDATA[pass(Content-Type&nbsp;:&nbsp;application/xml;.+<br/><i><span class='fit_label'>expected)</i><hr/><br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/><i><span class='fit_label'>actual</span></i></span>]]></col>
+                    <col><![CDATA[<span class="error">&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*<br/><hr/><br/><code>java.lang.IllegalArgumentException:&nbsp;Cannot&nbsp;extract&nbsp;xpath&nbsp;'&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*'&nbsp;from&nbsp;document&nbsp;&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapter.equals(XPathBodyTypeAdapter.java:80)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.process(RestFixture.java:943)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.completeHttpMethodExecution(RestFixture.java:908)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.doMethod(RestFixture.java:843)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.doMethod(RestFixture.java:831)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.GET(RestFixture.java:574)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.GeneratedMethodAccessor5.invoke(Unknown&nbsp;Source)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.lang.reflect.Method.invoke(Method.java:597)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.processRow(RestFixture.java:773)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.processSlimRow(RestFixture.java:1067)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.doTable(RestFixture.java:343)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.GeneratedMethodAccessor4.invoke(Unknown&nbsp;Source)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.lang.reflect.Method.invoke(Method.java:597)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:43)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:30)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:53)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:189)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.Statement.call(Statement.java:97)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.Statement.execute(Statement.java:77)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.serve(SlimServer.java:30)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.lang.Thread.run(Thread.java:662)<br/>Caused&nbsp;by:&nbsp;java.lang.IllegalArgumentException:&nbsp;xPath&nbsp;expression&nbsp;can&nbsp;not&nbsp;be&nbsp;compiled:&nbsp;&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.Tools.toExpression(Tools.java:169)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.Tools.extractXPath(Tools.java:119)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapter.eval(XPathBodyTypeAdapter.java:93)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapter.equals(XPathBodyTypeAdapter.java:75)<br/>&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;31&nbsp;more<br/>Caused&nbsp;by:&nbsp;javax.xml.xpath.XPathExpressionException<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.jaxp.XPathImpl.compile(XPathImpl.java:393)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.Tools.toExpression(Tools.java:166)<br/>&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;34&nbsp;more<br/>Caused&nbsp;by:&nbsp;com.sun.org.apache.xpath.internal.domapi.XPathStylesheetDOM3Exception:&nbsp;Prefix&nbsp;must&nbsp;resolve&nbsp;to&nbsp;a&nbsp;namespace:&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.XPathParser.errorForDOM3(XPathParser.java:653)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.Lexer.mapNSTokens(Lexer.java:638)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.Lexer.tokenize(Lexer.java:179)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.Lexer.tokenize(Lexer.java:96)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.XPathParser.initXPath(XPathParser.java:110)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.XPath.&lt;init&gt;(XPath.java:176)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.XPath.&lt;init&gt;(XPath.java:264)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.jaxp.XPathImpl.compile(XPathImpl.java:385)<br/>&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;35&nbsp;more<br/></code></span>]]></col>
+          
+        </row>
+        
+      </table>
+      
+    </tables>
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_0, make, scriptTableActor, smartrics.rest.test.fitnesse.fixture.HttpServerFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_0_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[smartrics.rest.test.fitnesse.fixture.HttpServerFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(smartrics.rest.test.fitnesse.fixture.HttpServerFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_1, call, scriptTableActor, isStarted]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_0_1</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_2, call, scriptTableActor, resetResourcesDatabase]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_0_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[reset resources database]]></expected>
+                              <evaluationMessage><![CDATA[pass(reset resources database)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[tableTable_1_0, make, tableTable_1, smartrics.rest.fitnesse.fixture.RestFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>tableTable_1_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Table:smartrics.rest.fitnesse.fixture.RestFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Table:smartrics.rest.fitnesse.fixture.RestFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[tableTable_1_1, call, tableTable_1, doTable, [[GET, /resources/0, 200, Content-Type : application/xml;.+, 
+ /resource/name[text()='a funky name'] <br/>
+ /resource/data[text()='an important message']
+]]]]]></instruction>
+        <slimResult><![CDATA[[[, report:<a href='http://localhost:8765/resources/0'>/resources/0</a>, pass:200, pass:Content-Type&nbsp;:&nbsp;application/xml;.+<br/><i><span class='fit_label'>expected</span></i><hr/><br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/><i><span class='fit_label'>actual</span></i>, pass:<br/>&nbsp;/resource/name[text()='a&nbsp;funky&nbsp;name']&nbsp;&lt;br/&gt;<br/>&nbsp;/resource/data[text()='an&nbsp;important&nbsp;message']<br/><br/><i><span class='fit_label'>expected</span></i><hr/><br/>&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;<br/><i><span class='fit_label'>actual</span></i>]]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>tableTable_1_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[[[, report:<a href='http://localhost:8765/resources/0'>/resources/0</a>, pass:200, pass:Content-Type&nbsp;:&nbsp;application/xml;.+<br/><i><span class='fit_label'>expected</span></i><hr/><br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/><i><span class='fit_label'>actual</span></i>, pass:<br/>&nbsp;/resource/name[text()='a&nbsp;funky&nbsp;name']&nbsp;&lt;br/&gt;<br/>&nbsp;/resource/data[text()='an&nbsp;important&nbsp;message']<br/><br/><i><span class='fit_label'>expected</span></i><hr/><br/>&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;<br/><i><span class='fit_label'>actual</span></i>]]]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[tableTable_2_0, make, tableTable_2, smartrics.rest.fitnesse.fixture.RestFixtureConfig, overridesContentHandlerConfig]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>tableTable_2_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig]]></expected>
+                              <evaluationMessage><![CDATA[pass(Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[tableTable_2_1, call, tableTable_2, doTable, [[restfixture.content.handlers.map, 
+application/xml=TEXT
+]]]]]></instruction>
+        <slimResult><![CDATA[[[, pass:<br/>application/xml=TEXT<br/>]]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>tableTable_2_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[[[, pass:<br/>application/xml=TEXT<br/>]]]]></actual>
+                              <expected><![CDATA[overridesContentHandlerConfig]]></expected>
+                              <evaluationMessage><![CDATA[overridesContentHandlerConfig]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[tableTable_3_0, make, tableTable_3, smartrics.rest.fitnesse.fixture.RestFixture, <a href="http://localhost:8765">http://localhost:8765</a>, overridesContentHandlerConfig]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestFixture[2]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>tableTable_3_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestFixture[2]]]></actual>
+                              <expected><![CDATA[Table:smartrics.rest.fitnesse.fixture.RestFixture]]></expected>
+                              <evaluationMessage><![CDATA[Table:smartrics.rest.fitnesse.fixture.RestFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestFixture[2])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[tableTable_3_1, call, tableTable_3, doTable, [[GET, /resources/0, 200, Content-Type : application/xml;.+, &lt;resource&gt;[\s.]*&lt;name&gt;a funky name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*]]]]]></instruction>
+        <slimResult><![CDATA[[[, report:<a href='http://localhost:8765/resources/0'>/resources/0</a>, pass:200, pass:Content-Type&nbsp;:&nbsp;application/xml;.+<br/><i><span class='fit_label'>expected</span></i><hr/><br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/><i><span class='fit_label'>actual</span></i>, error:&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*<br/><hr/><br/><code>java.lang.IllegalArgumentException:&nbsp;Cannot&nbsp;extract&nbsp;xpath&nbsp;'&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*'&nbsp;from&nbsp;document&nbsp;&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapter.equals(XPathBodyTypeAdapter.java:80)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.process(RestFixture.java:943)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.completeHttpMethodExecution(RestFixture.java:908)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.doMethod(RestFixture.java:843)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.doMethod(RestFixture.java:831)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.GET(RestFixture.java:574)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.GeneratedMethodAccessor5.invoke(Unknown&nbsp;Source)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.lang.reflect.Method.invoke(Method.java:597)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.processRow(RestFixture.java:773)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.processSlimRow(RestFixture.java:1067)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.doTable(RestFixture.java:343)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.GeneratedMethodAccessor4.invoke(Unknown&nbsp;Source)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.lang.reflect.Method.invoke(Method.java:597)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:43)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:30)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:53)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:189)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.Statement.call(Statement.java:97)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.Statement.execute(Statement.java:77)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.serve(SlimServer.java:30)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.lang.Thread.run(Thread.java:662)<br/>Caused&nbsp;by:&nbsp;java.lang.IllegalArgumentException:&nbsp;xPath&nbsp;expression&nbsp;can&nbsp;not&nbsp;be&nbsp;compiled:&nbsp;&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.Tools.toExpression(Tools.java:169)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.Tools.extractXPath(Tools.java:119)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapter.eval(XPathBodyTypeAdapter.java:93)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapter.equals(XPathBodyTypeAdapter.java:75)<br/>&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;31&nbsp;more<br/>Caused&nbsp;by:&nbsp;javax.xml.xpath.XPathExpressionException<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.jaxp.XPathImpl.compile(XPathImpl.java:393)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.Tools.toExpression(Tools.java:166)<br/>&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;34&nbsp;more<br/>Caused&nbsp;by:&nbsp;com.sun.org.apache.xpath.internal.domapi.XPathStylesheetDOM3Exception:&nbsp;Prefix&nbsp;must&nbsp;resolve&nbsp;to&nbsp;a&nbsp;namespace:&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.XPathParser.errorForDOM3(XPathParser.java:653)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.Lexer.mapNSTokens(Lexer.java:638)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.Lexer.tokenize(Lexer.java:179)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.Lexer.tokenize(Lexer.java:96)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.XPathParser.initXPath(XPathParser.java:110)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.XPath.&lt;init&gt;(XPath.java:176)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.XPath.&lt;init&gt;(XPath.java:264)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.jaxp.XPathImpl.compile(XPathImpl.java:385)<br/>&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;35&nbsp;more<br/></code>]]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>tableTable_3_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[[[, report:<a href='http://localhost:8765/resources/0'>/resources/0</a>, pass:200, pass:Content-Type&nbsp;:&nbsp;application/xml;.+<br/><i><span class='fit_label'>expected</span></i><hr/><br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/><i><span class='fit_label'>actual</span></i>, error:&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*<br/><hr/><br/><code>java.lang.IllegalArgumentException:&nbsp;Cannot&nbsp;extract&nbsp;xpath&nbsp;'&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*'&nbsp;from&nbsp;document&nbsp;&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapter.equals(XPathBodyTypeAdapter.java:80)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.process(RestFixture.java:943)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.completeHttpMethodExecution(RestFixture.java:908)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.doMethod(RestFixture.java:843)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.doMethod(RestFixture.java:831)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.GET(RestFixture.java:574)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.GeneratedMethodAccessor5.invoke(Unknown&nbsp;Source)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.lang.reflect.Method.invoke(Method.java:597)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.processRow(RestFixture.java:773)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.processSlimRow(RestFixture.java:1067)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.doTable(RestFixture.java:343)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.GeneratedMethodAccessor4.invoke(Unknown&nbsp;Source)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.lang.reflect.Method.invoke(Method.java:597)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:43)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:30)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:53)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:189)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.Statement.call(Statement.java:97)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.Statement.execute(Statement.java:77)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.serve(SlimServer.java:30)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.lang.Thread.run(Thread.java:662)<br/>Caused&nbsp;by:&nbsp;java.lang.IllegalArgumentException:&nbsp;xPath&nbsp;expression&nbsp;can&nbsp;not&nbsp;be&nbsp;compiled:&nbsp;&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.Tools.toExpression(Tools.java:169)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.Tools.extractXPath(Tools.java:119)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapter.eval(XPathBodyTypeAdapter.java:93)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapter.equals(XPathBodyTypeAdapter.java:75)<br/>&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;31&nbsp;more<br/>Caused&nbsp;by:&nbsp;javax.xml.xpath.XPathExpressionException<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.jaxp.XPathImpl.compile(XPathImpl.java:393)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.Tools.toExpression(Tools.java:166)<br/>&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;34&nbsp;more<br/>Caused&nbsp;by:&nbsp;com.sun.org.apache.xpath.internal.domapi.XPathStylesheetDOM3Exception:&nbsp;Prefix&nbsp;must&nbsp;resolve&nbsp;to&nbsp;a&nbsp;namespace:&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.XPathParser.errorForDOM3(XPathParser.java:653)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.Lexer.mapNSTokens(Lexer.java:638)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.Lexer.tokenize(Lexer.java:179)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.Lexer.tokenize(Lexer.java:96)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.XPathParser.initXPath(XPathParser.java:110)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.XPath.&lt;init&gt;(XPath.java:176)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.XPath.&lt;init&gt;(XPath.java:264)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.jaxp.XPathImpl.compile(XPathImpl.java:385)<br/>&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;35&nbsp;more<br/></code>]]]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>tableTable_3_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[[[, report:<a href='http://localhost:8765/resources/0'>/resources/0</a>, pass:200, pass:Content-Type&nbsp;:&nbsp;application/xml;.+<br/><i><span class='fit_label'>expected</span></i><hr/><br/>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;183<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)<br/><i><span class='fit_label'>actual</span></i>, error:&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*<br/><hr/><br/><code>java.lang.IllegalArgumentException:&nbsp;Cannot&nbsp;extract&nbsp;xpath&nbsp;'&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*'&nbsp;from&nbsp;document&nbsp;&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;data&gt;an&nbsp;important&nbsp;message&lt;/data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;nstag&nbsp;xmlns:ns1='http://smartrics/ns1'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:number&gt;3&lt;/ns1:number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nstag&gt;<br/>&lt;/resource&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapter.equals(XPathBodyTypeAdapter.java:80)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.process(RestFixture.java:943)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.completeHttpMethodExecution(RestFixture.java:908)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.doMethod(RestFixture.java:843)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.doMethod(RestFixture.java:831)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.GET(RestFixture.java:574)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.GeneratedMethodAccessor5.invoke(Unknown&nbsp;Source)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.lang.reflect.Method.invoke(Method.java:597)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.processRow(RestFixture.java:773)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.processSlimRow(RestFixture.java:1067)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.RestFixture.doTable(RestFixture.java:343)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.GeneratedMethodAccessor4.invoke(Unknown&nbsp;Source)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.lang.reflect.Method.invoke(Method.java:597)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.MethodExecutor.callMethod(MethodExecutor.java:43)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.MethodExecutor.invokeMethod(MethodExecutor.java:30)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:53)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:189)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.Statement.call(Statement.java:97)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.Statement.execute(Statement.java:77)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.slim.SlimServer.serve(SlimServer.java:30)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;java.lang.Thread.run(Thread.java:662)<br/>Caused&nbsp;by:&nbsp;java.lang.IllegalArgumentException:&nbsp;xPath&nbsp;expression&nbsp;can&nbsp;not&nbsp;be&nbsp;compiled:&nbsp;&lt;resource&gt;[\s.]*&lt;name&gt;a&nbsp;funky&nbsp;name&lt;/name&gt;[\s\w\d&lt;&gt;/=\:'.]*&lt;/resource&gt;[\s]*<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.Tools.toExpression(Tools.java:169)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.Tools.extractXPath(Tools.java:119)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapter.eval(XPathBodyTypeAdapter.java:93)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.XPathBodyTypeAdapter.equals(XPathBodyTypeAdapter.java:75)<br/>&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;31&nbsp;more<br/>Caused&nbsp;by:&nbsp;javax.xml.xpath.XPathExpressionException<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.jaxp.XPathImpl.compile(XPathImpl.java:393)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;smartrics.rest.fitnesse.fixture.support.Tools.toExpression(Tools.java:166)<br/>&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;34&nbsp;more<br/>Caused&nbsp;by:&nbsp;com.sun.org.apache.xpath.internal.domapi.XPathStylesheetDOM3Exception:&nbsp;Prefix&nbsp;must&nbsp;resolve&nbsp;to&nbsp;a&nbsp;namespace:&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.XPathParser.errorForDOM3(XPathParser.java:653)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.Lexer.mapNSTokens(Lexer.java:638)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.Lexer.tokenize(Lexer.java:179)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.Lexer.tokenize(Lexer.java:96)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.compiler.XPathParser.initXPath(XPathParser.java:110)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.XPath.&lt;init&gt;(XPath.java:176)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.XPath.&lt;init&gt;(XPath.java:264)<br/>&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;com.sun.org.apache.xpath.internal.jaxp.XPathImpl.compile(XPathImpl.java:385)<br/>&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;35&nbsp;more<br/></code>]]]]></actual>
+                              <expected><![CDATA[overridesContentHandlerConfig]]></expected>
+                              <evaluationMessage><![CDATA[overridesContentHandlerConfig]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

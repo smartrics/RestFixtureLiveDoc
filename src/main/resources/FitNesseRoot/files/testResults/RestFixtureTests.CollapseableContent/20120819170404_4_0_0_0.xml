@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20111024</FitNesseVersion>
+  <rootPath>CollapseableContent</rootPath>
+    <result>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('14');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img14"/>
+	</a>
+&nbsp;
+	<span class="meta">Precompiled Libraries</span>
+	<div class="hidden" id="14"><br/></div>
+</div>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('15');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img15"/>
+	</a>
+&nbsp;
+	<span class="meta">Included page: <a href="RestFixtureTests.SetUp">.RestFixtureTests.SetUp</a> <a href="RestFixtureTests.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="15"><br/><table border="1" cellspacing="0" _TABLENUMBER=7122459416457998309>
+	<tr>
+		<td>script</td>
+		<td colspan="2"><span class="pass">smartrics.rest.test.fitnesse.fixture.HttpServerFixture</span></td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>is started</td>
+		<td><span class="pass">true</span></td>
+	</tr>
+	<tr>
+		<td colspan="3"><span class="pass">reset resources database</span></td>
+	</tr>
+</table>
+<br/></div>
+</div>
+<br/><h3>Collapseable content</h3>
+<br/><br/>In the interest of readability, cells with large content can be rendered with a toggle on/off button.<br/>The minimum length in characters of the cell, in order to enable the toggle button, is specified with the property<br/><br/>restfixture.display.toggle.for.cells.larger.than<br/><br/>If the value of the property is negative the toggle button will not be rendered.<br/><br/>Currently only large HTTP response content cells (if the actual value is displayed) are enabled for toggling.<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=8015926696090099211>
+	<tr>
+		<td><span class="pass">Table:smartrics.rest.fitnesse.fixture.RestFixture</span></td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/100'>/resources/100</a></td>
+		<td><span class="pass">200</span></td>
+		<td>Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;910<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)</td>
+		<td><span class="pass">/resource/type[text()='large&nbsp;content']<br/><i><span class='fit_label'>expected</span></i><hr/><br/><a href="javascript:toggleCollapsable('1383497694-8843767428185568185');"><img src='/files/images/collapsableClosed.gif' class='left' id='img1383497694-8843767428185568185'/>toggle actual</a><div class='hidden' id='1383497694-8843767428185568185'>&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;name&gt;giant&nbsp;bob&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;type&gt;large&nbsp;content&lt;/type&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;address&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;street&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Regent&nbsp;Street<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/street&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12345<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/number&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;/address&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;part&nbsp;id='0'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source&nbsp;href='http://en.wikipedia.org/wiki/Inferno_(Dante)'&nbsp;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;content&gt;<br/>Inferno&nbsp;(Italian&nbsp;for&nbsp;'Hell')&nbsp;is&nbsp;the&nbsp;first&nbsp;part&nbsp;of&nbsp;Dante&nbsp;Alighieri's&nbsp;14th-century&nbsp;epic&nbsp;poem&nbsp;Divine&nbsp;Comedy.&nbsp;<br/>It&nbsp;is&nbsp;followed&nbsp;by&nbsp;Purgatorio&nbsp;and&nbsp;Paradiso.&nbsp;It&nbsp;is&nbsp;an&nbsp;allegory&nbsp;telling&nbsp;of&nbsp;the&nbsp;journey&nbsp;of&nbsp;Dante&nbsp;through&nbsp;what&nbsp;is&nbsp;<br/>largely&nbsp;the&nbsp;medieval&nbsp;concept&nbsp;of&nbsp;Hell,&nbsp;guided&nbsp;by&nbsp;the&nbsp;Roman&nbsp;poet&nbsp;Virgil.&nbsp;In&nbsp;the&nbsp;poem,&nbsp;Hell&nbsp;is&nbsp;depicted&nbsp;as&nbsp;nine&nbsp;<br/>circles&nbsp;of&nbsp;suffering&nbsp;located&nbsp;within&nbsp;the&nbsp;Earth.&nbsp;Allegorically,&nbsp;the&nbsp;Divine&nbsp;Comedy&nbsp;represents&nbsp;the&nbsp;journey&nbsp;of&nbsp;the&nbsp;soultowards&nbsp;God,&nbsp;with&nbsp;the&nbsp;Inferno&nbsp;describing&nbsp;the&nbsp;recognition&nbsp;and&nbsp;rejection&nbsp;of&nbsp;sin.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/content&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/part&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;/data&gt;<br/>&lt;/resource&gt;<br/></div><br/><i><span class='fit_label'>actual</span></i></span></td>
+	</tr>
+</table>
+]]></content>
+    <relativePageName>CollapseableContent</relativePageName>
+    
+        <tables>
+            <table>
+        <name>scriptTable_0</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(smartrics.rest.test.fitnesse.fixture.HttpServerFixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is started]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[pass(reset resources database)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>tableTable_1</name>
+                <row>
+                    <col><![CDATA[pass(Table:smartrics.rest.fitnesse.fixture.RestFixture)]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[GET]]></col>
+                    <col><![CDATA[<a href='http://localhost:8765/resources/100'>/resources/100</a>]]></col>
+                    <col><![CDATA[pass(200)]]></col>
+                    <col><![CDATA[Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;910<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)]]></col>
+                    <col><![CDATA[pass(/resource/type[text()='large&nbsp;content']<br/><i><span class='fit_label'>expected)</i><hr/><br/><a href="javascript:toggleCollapsable('1383497694-8843767428185568185');"><img src='/files/images/collapsableClosed.gif' class='left' id='img1383497694-8843767428185568185'/>toggle actual</a><div class='hidden' id='1383497694-8843767428185568185'>&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;name&gt;giant&nbsp;bob&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;type&gt;large&nbsp;content&lt;/type&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;address&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;street&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Regent&nbsp;Street<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/street&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12345<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/number&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;/address&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;part&nbsp;id='0'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source&nbsp;href='http://en.wikipedia.org/wiki/Inferno_(Dante)'&nbsp;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;content&gt;<br/>Inferno&nbsp;(Italian&nbsp;for&nbsp;'Hell')&nbsp;is&nbsp;the&nbsp;first&nbsp;part&nbsp;of&nbsp;Dante&nbsp;Alighieri's&nbsp;14th-century&nbsp;epic&nbsp;poem&nbsp;Divine&nbsp;Comedy.&nbsp;<br/>It&nbsp;is&nbsp;followed&nbsp;by&nbsp;Purgatorio&nbsp;and&nbsp;Paradiso.&nbsp;It&nbsp;is&nbsp;an&nbsp;allegory&nbsp;telling&nbsp;of&nbsp;the&nbsp;journey&nbsp;of&nbsp;Dante&nbsp;through&nbsp;what&nbsp;is&nbsp;<br/>largely&nbsp;the&nbsp;medieval&nbsp;concept&nbsp;of&nbsp;Hell,&nbsp;guided&nbsp;by&nbsp;the&nbsp;Roman&nbsp;poet&nbsp;Virgil.&nbsp;In&nbsp;the&nbsp;poem,&nbsp;Hell&nbsp;is&nbsp;depicted&nbsp;as&nbsp;nine&nbsp;<br/>circles&nbsp;of&nbsp;suffering&nbsp;located&nbsp;within&nbsp;the&nbsp;Earth.&nbsp;Allegorically,&nbsp;the&nbsp;Divine&nbsp;Comedy&nbsp;represents&nbsp;the&nbsp;journey&nbsp;of&nbsp;the&nbsp;soultowards&nbsp;God,&nbsp;with&nbsp;the&nbsp;Inferno&nbsp;describing&nbsp;the&nbsp;recognition&nbsp;and&nbsp;rejection&nbsp;of&nbsp;sin.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/content&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/part&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;/data&gt;<br/>&lt;/resource&gt;<br/></div><br/><i><span class='fit_label'>actual</span></i></span>]]></col>
+          
+        </row>
+        
+      </table>
+      
+    </tables>
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_0, make, scriptTableActor, smartrics.rest.test.fitnesse.fixture.HttpServerFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_0_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[smartrics.rest.test.fitnesse.fixture.HttpServerFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(smartrics.rest.test.fitnesse.fixture.HttpServerFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_1, call, scriptTableActor, isStarted]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_0_1</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_2, call, scriptTableActor, resetResourcesDatabase]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_0_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[reset resources database]]></expected>
+                              <evaluationMessage><![CDATA[pass(reset resources database)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[tableTable_1_0, make, tableTable_1, smartrics.rest.fitnesse.fixture.RestFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>tableTable_1_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Table:smartrics.rest.fitnesse.fixture.RestFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(Table:smartrics.rest.fitnesse.fixture.RestFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[tableTable_1_1, call, tableTable_1, doTable, [[GET, /resources/100, 200, , /resource/type[text()='large content']]]]]]></instruction>
+        <slimResult><![CDATA[[[, report:<a href='http://localhost:8765/resources/100'>/resources/100</a>, pass:200, report:Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;910<br/>Server&nbsp;:&nbsp;Jetty(6.0.2), pass:/resource/type[text()='large&nbsp;content']<br/><i><span class='fit_label'>expected</span></i><hr/><br/><a href="javascript:toggleCollapsable('1383497694-8843767428185568185');"><img src='/files/images/collapsableClosed.gif' class='left' id='img1383497694-8843767428185568185'/>toggle actual</a><div class='hidden' id='1383497694-8843767428185568185'>&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;name&gt;giant&nbsp;bob&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;type&gt;large&nbsp;content&lt;/type&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;address&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;street&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Regent&nbsp;Street<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/street&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12345<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/number&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;/address&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;part&nbsp;id='0'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source&nbsp;href='http://en.wikipedia.org/wiki/Inferno_(Dante)'&nbsp;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;content&gt;<br/>Inferno&nbsp;(Italian&nbsp;for&nbsp;'Hell')&nbsp;is&nbsp;the&nbsp;first&nbsp;part&nbsp;of&nbsp;Dante&nbsp;Alighieri's&nbsp;14th-century&nbsp;epic&nbsp;poem&nbsp;Divine&nbsp;Comedy.&nbsp;<br/>It&nbsp;is&nbsp;followed&nbsp;by&nbsp;Purgatorio&nbsp;and&nbsp;Paradiso.&nbsp;It&nbsp;is&nbsp;an&nbsp;allegory&nbsp;telling&nbsp;of&nbsp;the&nbsp;journey&nbsp;of&nbsp;Dante&nbsp;through&nbsp;what&nbsp;is&nbsp;<br/>largely&nbsp;the&nbsp;medieval&nbsp;concept&nbsp;of&nbsp;Hell,&nbsp;guided&nbsp;by&nbsp;the&nbsp;Roman&nbsp;poet&nbsp;Virgil.&nbsp;In&nbsp;the&nbsp;poem,&nbsp;Hell&nbsp;is&nbsp;depicted&nbsp;as&nbsp;nine&nbsp;<br/>circles&nbsp;of&nbsp;suffering&nbsp;located&nbsp;within&nbsp;the&nbsp;Earth.&nbsp;Allegorically,&nbsp;the&nbsp;Divine&nbsp;Comedy&nbsp;represents&nbsp;the&nbsp;journey&nbsp;of&nbsp;the&nbsp;soultowards&nbsp;God,&nbsp;with&nbsp;the&nbsp;Inferno&nbsp;describing&nbsp;the&nbsp;recognition&nbsp;and&nbsp;rejection&nbsp;of&nbsp;sin.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/content&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/part&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;/data&gt;<br/>&lt;/resource&gt;<br/></div><br/><i><span class='fit_label'>actual</span></i>]]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>tableTable_1_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[[[, report:<a href='http://localhost:8765/resources/100'>/resources/100</a>, pass:200, report:Content-Type&nbsp;:&nbsp;application/xml;charset=ISO-8859-1<br/>Content-Length&nbsp;:&nbsp;910<br/>Server&nbsp;:&nbsp;Jetty(6.0.2), pass:/resource/type[text()='large&nbsp;content']<br/><i><span class='fit_label'>expected</span></i><hr/><br/><a href="javascript:toggleCollapsable('1383497694-8843767428185568185');"><img src='/files/images/collapsableClosed.gif' class='left' id='img1383497694-8843767428185568185'/>toggle actual</a><div class='hidden' id='1383497694-8843767428185568185'>&lt;resource&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;name&gt;giant&nbsp;bob&lt;/name&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;type&gt;large&nbsp;content&lt;/type&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;address&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;street&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Regent&nbsp;Street<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/street&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;number&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12345<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/number&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;/address&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;data&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;part&nbsp;id='0'&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source&nbsp;href='http://en.wikipedia.org/wiki/Inferno_(Dante)'&nbsp;/&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;content&gt;<br/>Inferno&nbsp;(Italian&nbsp;for&nbsp;'Hell')&nbsp;is&nbsp;the&nbsp;first&nbsp;part&nbsp;of&nbsp;Dante&nbsp;Alighieri's&nbsp;14th-century&nbsp;epic&nbsp;poem&nbsp;Divine&nbsp;Comedy.&nbsp;<br/>It&nbsp;is&nbsp;followed&nbsp;by&nbsp;Purgatorio&nbsp;and&nbsp;Paradiso.&nbsp;It&nbsp;is&nbsp;an&nbsp;allegory&nbsp;telling&nbsp;of&nbsp;the&nbsp;journey&nbsp;of&nbsp;Dante&nbsp;through&nbsp;what&nbsp;is&nbsp;<br/>largely&nbsp;the&nbsp;medieval&nbsp;concept&nbsp;of&nbsp;Hell,&nbsp;guided&nbsp;by&nbsp;the&nbsp;Roman&nbsp;poet&nbsp;Virgil.&nbsp;In&nbsp;the&nbsp;poem,&nbsp;Hell&nbsp;is&nbsp;depicted&nbsp;as&nbsp;nine&nbsp;<br/>circles&nbsp;of&nbsp;suffering&nbsp;located&nbsp;within&nbsp;the&nbsp;Earth.&nbsp;Allegorically,&nbsp;the&nbsp;Divine&nbsp;Comedy&nbsp;represents&nbsp;the&nbsp;journey&nbsp;of&nbsp;the&nbsp;soultowards&nbsp;God,&nbsp;with&nbsp;the&nbsp;Inferno&nbsp;describing&nbsp;the&nbsp;recognition&nbsp;and&nbsp;rejection&nbsp;of&nbsp;sin.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/content&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/part&gt;<br/>&nbsp;&nbsp;&nbsp;&lt;/data&gt;<br/>&lt;/resource&gt;<br/></div><br/><i><span class='fit_label'>actual</span></i>]]]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

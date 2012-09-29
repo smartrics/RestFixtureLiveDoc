@@ -1,0 +1,2282 @@
+!3 !-slim-!
+|'''Date: '''|!-9:15:02 AM (BST) on Tuesday, September 25, 2012-!|
+|'''Test Page: '''|.RestFixtureTests.GetTests|
+|'''Command: '''|!-java -cp fitnesse.jar;target/classes/;target/test-classes/;target/test-classes/log4j.xml;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\commons-codec-1.2.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\commons-httpclient-3.1.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\commons-logging-1.0.4.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\cos-05Nov2002.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\fitnesse-20111025.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\hamcrest-all-1.3.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\hamcrest-core-1.1.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\jettison-1.3.2.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\jetty-6.0.2.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\jetty-util-6.0.2.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\junit-4.10.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\log4j-1.2.17.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\mockito-all-1.9.0.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\rhino-1.7R3.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\servlet-api-2.5-6.0.2.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\slf4j-api-1.6.6.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\slf4j-log4j12-1.6.6.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\smartrics-RestClient-2.0.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\smartrics-RestFixture-3.0-SNAPSHOT.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\stax-api-1.0.1.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\xmlpull-1.1.3.1.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\xpp3_min-1.1.4c.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\xstream-1.4.2.jar fitnesse.slim.SlimService  8087-!|
+|'''Exit code: '''|!-0-!|
+|'''Time elapsed: '''|!-2.293 seconds-!|
+----'''Standard Output:'''
+{{{09:15:01,159 INFO  [HttpServerFixture] - Starting server on port 8765
+09:15:01,175 DEBUG [HttpServer] - Adding socket connector to Jetty on port 8765
+16 [Thread-1] DEBUG smartrics.rest.test.fitnesse.fixture.HttpServer  - Adding socket connector to Jetty on port 8765
+09:15:01,191 INFO  [log] - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+32 [Thread-1] INFO org.mortbay.log  - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+09:15:01,191 DEBUG [log] - Container Server@8a0d5d + SocketConnector @ 0.0.0.0:8765 as connector
+32 [Thread-1] DEBUG org.mortbay.log  - Container Server@8a0d5d + SocketConnector @ 0.0.0.0:8765 as connector
+09:15:01,191 INFO  [ResourcesServlet] - Resources: Resources:[
+]
+
+32 [Thread-1] INFO smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resources: Resources:[
+]
+
+09:15:01,206 DEBUG [log] - Container Server@8a0d5d + org.mortbay.jetty.servlet.Context@e5855a{null,null} as handler
+47 [Thread-1] DEBUG org.mortbay.log  - Container Server@8a0d5d + org.mortbay.jetty.servlet.Context@e5855a{null,null} as handler
+09:15:01,206 DEBUG [log] - Container SessionHandler@95fd19 + ServletHandler@11b9fb1 as handler
+47 [Thread-1] DEBUG org.mortbay.log  - Container SessionHandler@95fd19 + ServletHandler@11b9fb1 as handler
+09:15:01,206 DEBUG [log] - Container SessionHandler@95fd19 + org.mortbay.jetty.servlet.HashSessionManager@913fe2 as sessionManager
+47 [Thread-1] DEBUG org.mortbay.log  - Container SessionHandler@95fd19 + org.mortbay.jetty.servlet.HashSessionManager@913fe2 as sessionManager
+09:15:01,206 DEBUG [log] - Container org.mortbay.jetty.servlet.Context@e5855a{null,null} + SessionHandler@95fd19 as handler
+47 [Thread-1] DEBUG org.mortbay.log  - Container org.mortbay.jetty.servlet.Context@e5855a{null,null} + SessionHandler@95fd19 as handler
+09:15:01,206 DEBUG [log] - Container ServletHandler@11b9fb1 + smartrics.rest.test.fitnesse.fixture.ResourcesServlet as servlet
+47 [Thread-1] DEBUG org.mortbay.log  - Container ServletHandler@11b9fb1 + smartrics.rest.test.fitnesse.fixture.ResourcesServlet as servlet
+09:15:01,206 DEBUG [log] - Container ServletHandler@11b9fb1 + (S=smartrics.rest.test.fitnesse.fixture.ResourcesServlet,[/*]) as servletMapping
+47 [Thread-1] DEBUG org.mortbay.log  - Container ServletHandler@11b9fb1 + (S=smartrics.rest.test.fitnesse.fixture.ResourcesServlet,[/*]) as servletMapping
+09:15:01,222 DEBUG [log] - filterNameMap=null
+63 [Thread-1] DEBUG org.mortbay.log  - filterNameMap=null
+09:15:01,222 DEBUG [log] - pathFilters=null
+63 [Thread-1] DEBUG org.mortbay.log  - pathFilters=null
+09:15:01,222 DEBUG [log] - servletFilterMap=null
+63 [Thread-1] DEBUG org.mortbay.log  - servletFilterMap=null
+09:15:01,222 DEBUG [log] - servletPathMap={/*=smartrics.rest.test.fitnesse.fixture.ResourcesServlet}
+63 [Thread-1] DEBUG org.mortbay.log  - servletPathMap={/*=smartrics.rest.test.fitnesse.fixture.ResourcesServlet}
+09:15:01,222 DEBUG [log] - servletNameMap={smartrics.rest.test.fitnesse.fixture.ResourcesServlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet}
+63 [Thread-1] DEBUG org.mortbay.log  - servletNameMap={smartrics.rest.test.fitnesse.fixture.ResourcesServlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet}
+09:15:01,222 DEBUG [HttpServer] - Starting jetty in port 8765
+63 [Thread-1] DEBUG smartrics.rest.test.fitnesse.fixture.HttpServer  - Starting jetty in port 8765
+09:15:01,222 INFO  [log] - jetty-6.0.2
+63 [Thread-1] INFO org.mortbay.log  - jetty-6.0.2
+09:15:01,222 DEBUG [log] - Container Server@8a0d5d + org.mortbay.thread.BoundedThreadPool@1662dc8 as threadpool
+63 [Thread-1] DEBUG org.mortbay.log  - Container Server@8a0d5d + org.mortbay.thread.BoundedThreadPool@1662dc8 as threadpool
+09:15:01,222 DEBUG [log] - started org.mortbay.thread.BoundedThreadPool@1662dc8
+63 [Thread-1] DEBUG org.mortbay.log  - started org.mortbay.thread.BoundedThreadPool@1662dc8
+09:15:01,237 DEBUG [log] - Container org.mortbay.jetty.servlet.Context@e5855a{/,null} + ErrorHandler@15e83f9 as errorHandler
+78 [Thread-1] DEBUG org.mortbay.log  - Container org.mortbay.jetty.servlet.Context@e5855a{/,null} + ErrorHandler@15e83f9 as errorHandler
+09:15:01,237 DEBUG [log] - Container Server@8a0d5d + org.mortbay.jetty.servlet.HashSessionIdManager@bb7465 as sessionIdManager
+78 [Thread-1] DEBUG org.mortbay.log  - Container Server@8a0d5d + org.mortbay.jetty.servlet.HashSessionIdManager@bb7465 as sessionIdManager
+09:15:01,269 DEBUG [log] - started org.mortbay.jetty.servlet.HashSessionIdManager@bb7465
+110 [Thread-1] DEBUG org.mortbay.log  - started org.mortbay.jetty.servlet.HashSessionIdManager@bb7465
+09:15:01,269 DEBUG [log] - started org.mortbay.jetty.servlet.HashSessionManager@913fe2
+110 [Thread-1] DEBUG org.mortbay.log  - started org.mortbay.jetty.servlet.HashSessionManager@913fe2
+09:15:01,269 DEBUG [log] - Session scavenger period = 30s
+110 [btpool0-0 - Invalidator - ] DEBUG org.mortbay.log  - Session scavenger period = 30s
+09:15:01,269 DEBUG [log] - filterNameMap=null
+110 [Thread-1] DEBUG org.mortbay.log  - filterNameMap=null
+09:15:01,269 DEBUG [log] - pathFilters=null
+110 [Thread-1] DEBUG org.mortbay.log  - pathFilters=null
+09:15:01,269 DEBUG [log] - servletFilterMap=null
+110 [Thread-1] DEBUG org.mortbay.log  - servletFilterMap=null
+09:15:01,269 DEBUG [log] - servletPathMap={/*=smartrics.rest.test.fitnesse.fixture.ResourcesServlet}
+110 [Thread-1] DEBUG org.mortbay.log  - servletPathMap={/*=smartrics.rest.test.fitnesse.fixture.ResourcesServlet}
+09:15:01,269 DEBUG [log] - servletNameMap={smartrics.rest.test.fitnesse.fixture.ResourcesServlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet}
+110 [Thread-1] DEBUG org.mortbay.log  - servletNameMap={smartrics.rest.test.fitnesse.fixture.ResourcesServlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet}
+09:15:01,269 DEBUG [log] - starting ServletHandler@11b9fb1
+110 [Thread-1] DEBUG org.mortbay.log  - starting ServletHandler@11b9fb1
+09:15:01,269 DEBUG [log] - started ServletHandler@11b9fb1
+110 [Thread-1] DEBUG org.mortbay.log  - started ServletHandler@11b9fb1
+09:15:01,269 DEBUG [log] - starting SessionHandler@95fd19
+110 [Thread-1] DEBUG org.mortbay.log  - starting SessionHandler@95fd19
+09:15:01,269 DEBUG [log] - started SessionHandler@95fd19
+110 [Thread-1] DEBUG org.mortbay.log  - started SessionHandler@95fd19
+09:15:01,269 DEBUG [log] - starting org.mortbay.jetty.servlet.Context@e5855a{/,null}
+110 [Thread-1] DEBUG org.mortbay.log  - starting org.mortbay.jetty.servlet.Context@e5855a{/,null}
+09:15:01,269 DEBUG [log] - starting ErrorHandler@15e83f9
+110 [Thread-1] DEBUG org.mortbay.log  - starting ErrorHandler@15e83f9
+09:15:01,269 DEBUG [log] - started ErrorHandler@15e83f9
+110 [Thread-1] DEBUG org.mortbay.log  - started ErrorHandler@15e83f9
+09:15:01,269 DEBUG [log] - started smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+110 [Thread-1] DEBUG org.mortbay.log  - started smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,269 DEBUG [log] - started org.mortbay.jetty.servlet.Context@e5855a{/,null}
+110 [Thread-1] DEBUG org.mortbay.log  - started org.mortbay.jetty.servlet.Context@e5855a{/,null}
+09:15:01,269 DEBUG [log] - starting Server@8a0d5d
+110 [Thread-1] DEBUG org.mortbay.log  - starting Server@8a0d5d
+09:15:01,269 INFO  [log] - Started SocketConnector @ 0.0.0.0:8765
+110 [Thread-1] INFO org.mortbay.log  - Started SocketConnector @ 0.0.0.0:8765
+09:15:01,269 DEBUG [log] - started SocketConnector @ 0.0.0.0:8765
+110 [Thread-1] DEBUG org.mortbay.log  - started SocketConnector @ 0.0.0.0:8765
+09:15:01,269 DEBUG [log] - Starting org.mortbay.jetty.AbstractConnector$Acceptor@12f0999
+110 [btpool0-1 - Acceptor0 SocketConnector @ 0.0.0.0:8765] DEBUG org.mortbay.log  - Starting org.mortbay.jetty.AbstractConnector$Acceptor@12f0999
+09:15:01,269 DEBUG [log] - started Server@8a0d5d
+110 [Thread-1] DEBUG org.mortbay.log  - started Server@8a0d5d
+09:15:01,331 DEBUG [RestFixture] - Using namespaces: {defalias=http://smartrics/defns, ns1alias=http://smartrics/ns1}
+172 [Thread-1] DEBUG smartrics.rest.fitnesse.fixture.RestFixture  - Using namespaces: {defalias=http://smartrics/defns, ns1alias=http://smartrics/ns1}
+09:15:01,347 DEBUG [DefaultHttpParams] - Set parameter http.useragent = Jakarta Commons-HttpClient/3.1
+188 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.useragent = Jakarta Commons-HttpClient/3.1
+09:15:01,347 DEBUG [DefaultHttpParams] - Set parameter http.protocol.version = HTTP/1.1
+188 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.protocol.version = HTTP/1.1
+09:15:01,347 DEBUG [DefaultHttpParams] - Set parameter http.connection-manager.class = class org.apache.commons.httpclient.SimpleHttpConnectionManager
+188 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.connection-manager.class = class org.apache.commons.httpclient.SimpleHttpConnectionManager
+09:15:01,347 DEBUG [DefaultHttpParams] - Set parameter http.protocol.cookie-policy = default
+188 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.protocol.cookie-policy = default
+09:15:01,347 DEBUG [DefaultHttpParams] - Set parameter http.protocol.element-charset = US-ASCII
+188 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.protocol.element-charset = US-ASCII
+09:15:01,347 DEBUG [DefaultHttpParams] - Set parameter http.protocol.content-charset = ISO-8859-1
+188 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.protocol.content-charset = ISO-8859-1
+09:15:01,347 DEBUG [DefaultHttpParams] - Set parameter http.method.retry-handler = org.apache.commons.httpclient.DefaultHttpMethodRetryHandler@12d3205
+188 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.method.retry-handler = org.apache.commons.httpclient.DefaultHttpMethodRetryHandler@12d3205
+09:15:01,347 DEBUG [DefaultHttpParams] - Set parameter http.dateparser.patterns = [EEE, dd MMM yyyy HH:mm:ss zzz, EEEE, dd-MMM-yy HH:mm:ss zzz, EEE MMM d HH:mm:ss yyyy, EEE, dd-MMM-yyyy HH:mm:ss z, EEE, dd-MMM-yyyy HH-mm-ss z, EEE, dd MMM yy HH:mm:ss z, EEE dd-MMM-yyyy HH:mm:ss z, EEE dd MMM yyyy HH:mm:ss z, EEE dd-MMM-yyyy HH-mm-ss z, EEE dd-MMM-yy HH:mm:ss z, EEE dd MMM yy HH:mm:ss z, EEE,dd-MMM-yy HH:mm:ss z, EEE,dd-MMM-yyyy HH:mm:ss z, EEE, dd-MM-yyyy HH:mm:ss z]
+188 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.dateparser.patterns = [EEE, dd MMM yyyy HH:mm:ss zzz, EEEE, dd-MMM-yy HH:mm:ss zzz, EEE MMM d HH:mm:ss yyyy, EEE, dd-MMM-yyyy HH:mm:ss z, EEE, dd-MMM-yyyy HH-mm-ss z, EEE, dd MMM yy HH:mm:ss z, EEE dd-MMM-yyyy HH:mm:ss z, EEE dd MMM yyyy HH:mm:ss z, EEE dd-MMM-yyyy HH-mm-ss z, EEE dd-MMM-yy HH:mm:ss z, EEE dd MMM yy HH:mm:ss z, EEE,dd-MMM-yy HH:mm:ss z, EEE,dd-MMM-yyyy HH:mm:ss z, EEE, dd-MM-yyyy HH:mm:ss z]
+09:15:01,347 DEBUG [DefaultHttpParams] - Set parameter http.socket.timeout = 3000
+188 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.socket.timeout = 3000
+09:15:01,347 DEBUG [DefaultHttpParams] - Set parameter http.socket.timeout = 5000
+188 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.socket.timeout = 5000
+09:15:01,347 DEBUG [HttpClient] - Java version: 1.6.0_32
+188 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - Java version: 1.6.0_32
+09:15:01,347 DEBUG [HttpClient] - Java vendor: Sun Microsystems Inc.
+188 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - Java vendor: Sun Microsystems Inc.
+09:15:01,347 DEBUG [HttpClient] - Java class path: fitnesse.jar;target/classes/;target/test-classes/;target/test-classes/log4j.xml;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\commons-codec-1.2.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\commons-httpclient-3.1.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\commons-logging-1.0.4.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\cos-05Nov2002.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\fitnesse-20111025.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\hamcrest-all-1.3.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\hamcrest-core-1.1.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\jettison-1.3.2.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\jetty-6.0.2.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\jetty-util-6.0.2.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\junit-4.10.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\log4j-1.2.17.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\mockito-all-1.9.0.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\rhino-1.7R3.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\servlet-api-2.5-6.0.2.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\slf4j-api-1.6.6.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\slf4j-log4j12-1.6.6.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\smartrics-RestClient-2.0.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\smartrics-RestFixture-3.0-SNAPSHOT.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\stax-api-1.0.1.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\xmlpull-1.1.3.1.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\xpp3_min-1.1.4c.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\xstream-1.4.2.jar
+188 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - Java class path: fitnesse.jar;target/classes/;target/test-classes/;target/test-classes/log4j.xml;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\commons-codec-1.2.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\commons-httpclient-3.1.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\commons-logging-1.0.4.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\cos-05Nov2002.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\fitnesse-20111025.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\hamcrest-all-1.3.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\hamcrest-core-1.1.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\jettison-1.3.2.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\jetty-6.0.2.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\jetty-util-6.0.2.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\junit-4.10.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\log4j-1.2.17.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\mockito-all-1.9.0.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\rhino-1.7R3.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\servlet-api-2.5-6.0.2.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\slf4j-api-1.6.6.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\slf4j-log4j12-1.6.6.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\smartrics-RestClient-2.0.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\smartrics-RestFixture-3.0-SNAPSHOT.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\stax-api-1.0.1.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\xmlpull-1.1.3.1.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\xpp3_min-1.1.4c.jar;C:\Users\702161900\Dev\mvn-rest-fixture\RestFixtureLiveDoc\target\dependencies\xstream-1.4.2.jar
+09:15:01,347 DEBUG [HttpClient] - Operating system name: Windows 7
+188 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - Operating system name: Windows 7
+09:15:01,347 DEBUG [HttpClient] - Operating system architecture: x86
+188 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - Operating system architecture: x86
+09:15:01,347 DEBUG [HttpClient] - Operating system version: 6.1
+188 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - Operating system version: 6.1
+09:15:01,378 DEBUG [HttpClient] - SUN 1.6: SUN (DSA key/parameter generation; DSA signing; SHA-1, MD5 digests; SecureRandom; X.509 certificates; JKS keystore; PKIX CertPathValidator; PKIX CertPathBuilder; LDAP, Collection CertStores, JavaPolicy Policy; JavaLoginConfig Configuration)
+219 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - SUN 1.6: SUN (DSA key/parameter generation; DSA signing; SHA-1, MD5 digests; SecureRandom; X.509 certificates; JKS keystore; PKIX CertPathValidator; PKIX CertPathBuilder; LDAP, Collection CertStores, JavaPolicy Policy; JavaLoginConfig Configuration)
+09:15:01,378 DEBUG [HttpClient] - SunRsaSign 1.5: Sun RSA signature provider
+219 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - SunRsaSign 1.5: Sun RSA signature provider
+09:15:01,378 DEBUG [HttpClient] - SunJSSE 1.6: Sun JSSE provider(PKCS12, SunX509 key/trust factories, SSLv3, TLSv1)
+219 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - SunJSSE 1.6: Sun JSSE provider(PKCS12, SunX509 key/trust factories, SSLv3, TLSv1)
+09:15:01,378 DEBUG [HttpClient] - SunJCE 1.6: SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+219 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - SunJCE 1.6: SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC)
+09:15:01,378 DEBUG [HttpClient] - SunJGSS 1.0: Sun (Kerberos v5, SPNEGO)
+219 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - SunJGSS 1.0: Sun (Kerberos v5, SPNEGO)
+09:15:01,378 DEBUG [HttpClient] - SunSASL 1.5: Sun SASL provider(implements client mechanisms for: DIGEST-MD5, GSSAPI, EXTERNAL, PLAIN, CRAM-MD5; server mechanisms for: DIGEST-MD5, GSSAPI, CRAM-MD5)
+219 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - SunSASL 1.5: Sun SASL provider(implements client mechanisms for: DIGEST-MD5, GSSAPI, EXTERNAL, PLAIN, CRAM-MD5; server mechanisms for: DIGEST-MD5, GSSAPI, CRAM-MD5)
+09:15:01,378 DEBUG [HttpClient] - XMLDSig 1.0: XMLDSig (DOM XMLSignatureFactory; DOM KeyInfoFactory)
+219 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - XMLDSig 1.0: XMLDSig (DOM XMLSignatureFactory; DOM KeyInfoFactory)
+09:15:01,378 DEBUG [HttpClient] - SunPCSC 1.6: Sun PC/SC provider
+219 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - SunPCSC 1.6: Sun PC/SC provider
+09:15:01,378 DEBUG [HttpClient] - SunMSCAPI 1.6: Sun's Microsoft Crypto API provider
+219 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - SunMSCAPI 1.6: Sun's Microsoft Crypto API provider
+09:15:01,393 DEBUG [RestClientImpl] - request: Get /resources/0
+anotherDefHeader:2
+defHeader:1
+[empty/null body]
+234 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - request: Get /resources/0
+anotherDefHeader:2
+defHeader:1
+[empty/null body]
+09:15:01,393 DEBUG [HttpMethodBase] - HttpMethodBase.addRequestHeader(Header)
+234 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - HttpMethodBase.addRequestHeader(Header)
+09:15:01,393 DEBUG [HttpMethodBase] - HttpMethodBase.addRequestHeader(Header)
+234 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - HttpMethodBase.addRequestHeader(Header)
+09:15:01,425 DEBUG [HttpClient] - enter HttpClient.executeMethod(HttpMethod)
+266 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HttpMethod)
+09:15:01,425 DEBUG [HttpClient] - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+266 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+09:15:01,425 DEBUG [HttpMethodDirector] - Attempt number 1 to process request
+266 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodDirector  - Attempt number 1 to process request
+09:15:01,425 DEBUG [HttpConnection] - enter HttpConnection.open()
+266 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.open()
+09:15:01,425 DEBUG [HttpConnection] - Open connection to localhost:8765
+266 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - Open connection to localhost:8765
+09:15:01,425 DEBUG [HttpMethodBase] - enter HttpMethodBase.execute(HttpState, HttpConnection)
+266 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.execute(HttpState, HttpConnection)
+09:15:01,425 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+266 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+09:15:01,425 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+266 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+09:15:01,425 DEBUG [HttpMethodBase] - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+266 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+09:15:01,440 DEBUG [header] - >> "GET /resources/0 HTTP/1.1[\r][\n]"
+281 [Thread-1] DEBUG httpclient.wire.header  - >> "GET /resources/0 HTTP/1.1[\r][\n]"
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,440 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+09:15:01,440 DEBUG [HttpMethodBase] - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+09:15:01,440 DEBUG [HttpMethodBase] - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+09:15:01,440 DEBUG [HttpMethodBase] - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+09:15:01,440 DEBUG [HttpMethodBase] - Adding Host request header
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Adding Host request header
+09:15:01,440 DEBUG [HttpMethodBase] - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+09:15:01,440 DEBUG [HttpState] - enter HttpState.getCookies()
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpState  - enter HttpState.getCookies()
+09:15:01,440 DEBUG [CookieSpec] - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+281 [Thread-1] DEBUG org.apache.commons.httpclient.cookie.CookieSpec  - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+09:15:01,440 DEBUG [HttpMethodBase] - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+09:15:01,440 DEBUG [header] - >> "anotherDefHeader: 2[\r][\n]"
+281 [Thread-1] DEBUG httpclient.wire.header  - >> "anotherDefHeader: 2[\r][\n]"
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,440 DEBUG [header] - >> "defHeader: 1[\r][\n]"
+281 [Thread-1] DEBUG httpclient.wire.header  - >> "defHeader: 1[\r][\n]"
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,440 DEBUG [header] - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+281 [Thread-1] DEBUG httpclient.wire.header  - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,440 DEBUG [header] - >> "Host: localhost:8765[\r][\n]"
+281 [Thread-1] DEBUG httpclient.wire.header  - >> "Host: localhost:8765[\r][\n]"
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.writeLine()
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.writeLine()
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,440 DEBUG [header] - >> "[\r][\n]"
+281 [Thread-1] DEBUG httpclient.wire.header  - >> "[\r][\n]"
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.flushRequestOutputStream()
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.flushRequestOutputStream()
+09:15:01,440 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+09:15:01,440 DEBUG [HttpMethodBase] - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+09:15:01,440 DEBUG [HttpConnection] - enter HttpConnection.readLine()
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.readLine()
+09:15:01,440 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,440 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+281 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,471 DEBUG [log] - REQUEST /resources/0 on org.mortbay.jetty.HttpConnection@cb6009
+312 [btpool0-2 - /resources/0] DEBUG org.mortbay.log  - REQUEST /resources/0 on org.mortbay.jetty.HttpConnection@cb6009
+09:15:01,471 DEBUG [log] - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+312 [btpool0-2 - /resources/0] DEBUG org.mortbay.log  - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+09:15:01,471 DEBUG [log] - session=null
+312 [btpool0-2 - /resources/0] DEBUG org.mortbay.log  - session=null
+09:15:01,471 DEBUG [log] - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+312 [btpool0-2 - /resources/0] DEBUG org.mortbay.log  - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,471 DEBUG [log] - chain=null
+312 [btpool0-2 - /resources/0] DEBUG org.mortbay.log  - chain=null
+09:15:01,471 DEBUG [log] - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+312 [btpool0-2 - /resources/0] DEBUG org.mortbay.log  - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,471 DEBUG [ResourcesServlet] - Resource GET REQUEST ========= GET /resources/0 HTTP/1.1
+anotherDefHeader: 2
+defHeader: 1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+312 [btpool0-2 - /resources/0] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET REQUEST ========= GET /resources/0 HTTP/1.1
+anotherDefHeader: 2
+defHeader: 1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+09:15:01,471 DEBUG [ResourcesServlet] - Resource GET RESPONSE ========= HTTP/1.1 200 
+Content-Type: application/xml;charset=ISO-8859-1
+
+
+312 [btpool0-2 - /resources/0] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET RESPONSE ========= HTTP/1.1 200 
+Content-Type: application/xml;charset=ISO-8859-1
+
+
+09:15:01,471 DEBUG [log] - RESPONSE /resources/0  200
+312 [btpool0-2 - /resources/0] DEBUG org.mortbay.log  - RESPONSE /resources/0  200
+09:15:01,471 DEBUG [header] - << "HTTP/1.1 200 OK[\r][\n]"
+312 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 200 OK[\r][\n]"
+09:15:01,471 DEBUG [header] - << "HTTP/1.1 200 OK[\r][\n]"
+312 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 200 OK[\r][\n]"
+09:15:01,471 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+09:15:01,471 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,471 DEBUG [HttpParser] - enter HeaderParser.parseHeaders(InputStream, String)
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HeaderParser.parseHeaders(InputStream, String)
+09:15:01,471 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,471 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,471 DEBUG [header] - << "Content-Type: application/xml;charset=ISO-8859-1[\r][\n]"
+312 [Thread-1] DEBUG httpclient.wire.header  - << "Content-Type: application/xml;charset=ISO-8859-1[\r][\n]"
+09:15:01,471 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,471 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,471 DEBUG [header] - << "Content-Length: 183[\r][\n]"
+312 [Thread-1] DEBUG httpclient.wire.header  - << "Content-Length: 183[\r][\n]"
+09:15:01,471 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,471 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,471 DEBUG [header] - << "Server: Jetty(6.0.2)[\r][\n]"
+312 [Thread-1] DEBUG httpclient.wire.header  - << "Server: Jetty(6.0.2)[\r][\n]"
+09:15:01,471 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,471 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,471 DEBUG [header] - << "[\r][\n]"
+312 [Thread-1] DEBUG httpclient.wire.header  - << "[\r][\n]"
+09:15:01,471 DEBUG [HttpMethodBase] - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+09:15:01,471 DEBUG [HttpMethodBase] - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+09:15:01,471 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+09:15:01,471 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpConnection)
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpConnection)
+09:15:01,471 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,471 DEBUG [HttpMethodBase] - enter HttpMethodBase.canResponseHaveBody(int)
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.canResponseHaveBody(int)
+09:15:01,471 DEBUG [HttpMethodBase] - Buffering response body
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Buffering response body
+09:15:01,471 DEBUG [content] - << "<resource>[\n]"
+312 [Thread-1] DEBUG httpclient.wire.content  - << "<resource>[\n]"
+09:15:01,471 DEBUG [content] - << "    <name>a funky name</name>[\n]"
+312 [Thread-1] DEBUG httpclient.wire.content  - << "    <name>a funky name</name>[\n]"
+09:15:01,471 DEBUG [content] - << "    <data>an important message</data>[\n]"
+312 [Thread-1] DEBUG httpclient.wire.content  - << "    <data>an important message</data>[\n]"
+09:15:01,471 DEBUG [content] - << "    <nstag xmlns:ns1='http://smartrics/ns1'>[\n]"
+312 [Thread-1] DEBUG httpclient.wire.content  - << "    <nstag xmlns:ns1='http://smartrics/ns1'>[\n]"
+09:15:01,471 DEBUG [content] - << "        <ns1:number>3</ns1:number>[\n]"
+312 [Thread-1] DEBUG httpclient.wire.content  - << "        <ns1:number>3</ns1:number>[\n]"
+09:15:01,471 DEBUG [content] - << "    </nstag>[\n]"
+312 [Thread-1] DEBUG httpclient.wire.content  - << "    </nstag>[\n]"
+09:15:01,471 DEBUG [content] - << "</resource>"
+312 [Thread-1] DEBUG httpclient.wire.content  - << "</resource>"
+09:15:01,471 DEBUG [HttpMethodBase] - Resorting to protocol version default close connection policy
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Resorting to protocol version default close connection policy
+09:15:01,471 DEBUG [HttpMethodBase] - Should NOT close connection, using HTTP/1.1
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Should NOT close connection, using HTTP/1.1
+09:15:01,471 DEBUG [HttpConnection] - enter HttpConnection.isResponseAvailable()
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.isResponseAvailable()
+09:15:01,471 DEBUG [HttpConnection] - enter HttpConnection.releaseConnection()
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.releaseConnection()
+09:15:01,471 DEBUG [HttpConnection] - Releasing connection back to connection manager.
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - Releasing connection back to connection manager.
+09:15:01,471 DEBUG [HttpMethodBase] - enter getContentCharSet( Header contentheader )
+312 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter getContentCharSet( Header contentheader )
+09:15:01,487 DEBUG [HeaderElement] - enter HeaderElement.parseElements(String)
+328 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.parseElements(String)
+09:15:01,487 DEBUG [HeaderElement] - enter HeaderElement.parseElements(char[])
+328 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.parseElements(char[])
+09:15:01,487 DEBUG [HeaderElement] - enter HeaderElement.getParameterByName(String)
+328 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.getParameterByName(String)
+09:15:01,487 DEBUG [RestClientImpl] - response: [200] OK
+Content-Type:application/xml;charset=ISO-8859-1
+Content-Length:183
+Server:Jetty(6.0.2)
+
+<resource>
+    <name>a funky name</name>
+    <data>an important message</data>
+    <nstag xmlns:ns1='http://smartrics/ns1'>
+        <ns1:number>3</ns1:number>
+    </nstag>
+</resource>
+328 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - response: [200] OK
+Content-Type:application/xml;charset=ISO-8859-1
+Content-Length:183
+Server:Jetty(6.0.2)
+
+<resource>
+    <name>a funky name</name>
+    <data>an important message</data>
+    <nstag xmlns:ns1='http://smartrics/ns1'>
+        <ns1:number>3</ns1:number>
+    </nstag>
+</resource>
+09:15:01,518 DEBUG [RestFixture] - Using namespaces: {defalias=http://smartrics/defns, ns1alias=http://smartrics/ns1}
+359 [Thread-1] DEBUG smartrics.rest.fitnesse.fixture.RestFixture  - Using namespaces: {defalias=http://smartrics/defns, ns1alias=http://smartrics/ns1}
+09:15:01,518 DEBUG [DefaultHttpParams] - Set parameter http.socket.timeout = 3000
+359 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.socket.timeout = 3000
+09:15:01,518 DEBUG [DefaultHttpParams] - Set parameter http.socket.timeout = 5000
+359 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.socket.timeout = 5000
+09:15:01,518 DEBUG [RestClientImpl] - request: Get /resources/0
+anotherDefHeader:2
+defHeader:1
+[empty/null body]
+359 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - request: Get /resources/0
+anotherDefHeader:2
+defHeader:1
+[empty/null body]
+09:15:01,518 DEBUG [HttpMethodBase] - HttpMethodBase.addRequestHeader(Header)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - HttpMethodBase.addRequestHeader(Header)
+09:15:01,518 DEBUG [HttpMethodBase] - HttpMethodBase.addRequestHeader(Header)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - HttpMethodBase.addRequestHeader(Header)
+09:15:01,518 DEBUG [HttpClient] - enter HttpClient.executeMethod(HttpMethod)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HttpMethod)
+09:15:01,518 DEBUG [HttpClient] - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+09:15:01,518 DEBUG [HttpMethodDirector] - Attempt number 1 to process request
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodDirector  - Attempt number 1 to process request
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.open()
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.open()
+09:15:01,518 DEBUG [HttpConnection] - Open connection to localhost:8765
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - Open connection to localhost:8765
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.execute(HttpState, HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.execute(HttpState, HttpConnection)
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+09:15:01,518 DEBUG [header] - >> "GET /resources/0 HTTP/1.1[\r][\n]"
+359 [Thread-1] DEBUG httpclient.wire.header  - >> "GET /resources/0 HTTP/1.1[\r][\n]"
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+09:15:01,518 DEBUG [HttpMethodBase] - Adding Host request header
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Adding Host request header
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+09:15:01,518 DEBUG [HttpState] - enter HttpState.getCookies()
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpState  - enter HttpState.getCookies()
+09:15:01,518 DEBUG [CookieSpec] - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+359 [Thread-1] DEBUG org.apache.commons.httpclient.cookie.CookieSpec  - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+09:15:01,518 DEBUG [header] - >> "anotherDefHeader: 2[\r][\n]"
+359 [Thread-1] DEBUG httpclient.wire.header  - >> "anotherDefHeader: 2[\r][\n]"
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,518 DEBUG [header] - >> "defHeader: 1[\r][\n]"
+359 [Thread-1] DEBUG httpclient.wire.header  - >> "defHeader: 1[\r][\n]"
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,518 DEBUG [header] - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+359 [Thread-1] DEBUG httpclient.wire.header  - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,518 DEBUG [header] - >> "Host: localhost:8765[\r][\n]"
+359 [Thread-1] DEBUG httpclient.wire.header  - >> "Host: localhost:8765[\r][\n]"
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.writeLine()
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.writeLine()
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,518 DEBUG [header] - >> "[\r][\n]"
+359 [Thread-1] DEBUG httpclient.wire.header  - >> "[\r][\n]"
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.flushRequestOutputStream()
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.flushRequestOutputStream()
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.readLine()
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.readLine()
+09:15:01,518 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,518 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,518 DEBUG [log] - REQUEST /resources/0 on org.mortbay.jetty.HttpConnection@79e304
+359 [btpool0-3 - /resources/0] DEBUG org.mortbay.log  - REQUEST /resources/0 on org.mortbay.jetty.HttpConnection@79e304
+09:15:01,518 DEBUG [log] - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+359 [btpool0-3 - /resources/0] DEBUG org.mortbay.log  - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+09:15:01,518 DEBUG [log] - session=null
+359 [btpool0-3 - /resources/0] DEBUG org.mortbay.log  - session=null
+09:15:01,518 DEBUG [log] - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+359 [btpool0-3 - /resources/0] DEBUG org.mortbay.log  - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,518 DEBUG [log] - chain=null
+359 [btpool0-3 - /resources/0] DEBUG org.mortbay.log  - chain=null
+09:15:01,518 DEBUG [log] - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+359 [btpool0-3 - /resources/0] DEBUG org.mortbay.log  - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,518 DEBUG [ResourcesServlet] - Resource GET REQUEST ========= GET /resources/0 HTTP/1.1
+anotherDefHeader: 2
+defHeader: 1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+359 [btpool0-3 - /resources/0] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET REQUEST ========= GET /resources/0 HTTP/1.1
+anotherDefHeader: 2
+defHeader: 1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+09:15:01,518 DEBUG [ResourcesServlet] - Resource GET RESPONSE ========= HTTP/1.1 200 
+Content-Type: application/xml;charset=ISO-8859-1
+
+
+359 [btpool0-3 - /resources/0] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET RESPONSE ========= HTTP/1.1 200 
+Content-Type: application/xml;charset=ISO-8859-1
+
+
+09:15:01,518 DEBUG [log] - RESPONSE /resources/0  200
+359 [btpool0-3 - /resources/0] DEBUG org.mortbay.log  - RESPONSE /resources/0  200
+09:15:01,518 DEBUG [header] - << "HTTP/1.1 200 OK[\r][\n]"
+359 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 200 OK[\r][\n]"
+09:15:01,518 DEBUG [header] - << "HTTP/1.1 200 OK[\r][\n]"
+359 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 200 OK[\r][\n]"
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,518 DEBUG [HttpParser] - enter HeaderParser.parseHeaders(InputStream, String)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HeaderParser.parseHeaders(InputStream, String)
+09:15:01,518 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,518 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,518 DEBUG [header] - << "Content-Type: application/xml;charset=ISO-8859-1[\r][\n]"
+359 [Thread-1] DEBUG httpclient.wire.header  - << "Content-Type: application/xml;charset=ISO-8859-1[\r][\n]"
+09:15:01,518 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,518 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,518 DEBUG [header] - << "Content-Length: 183[\r][\n]"
+359 [Thread-1] DEBUG httpclient.wire.header  - << "Content-Length: 183[\r][\n]"
+09:15:01,518 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,518 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,518 DEBUG [header] - << "Server: Jetty(6.0.2)[\r][\n]"
+359 [Thread-1] DEBUG httpclient.wire.header  - << "Server: Jetty(6.0.2)[\r][\n]"
+09:15:01,518 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,518 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,518 DEBUG [header] - << "[\r][\n]"
+359 [Thread-1] DEBUG httpclient.wire.header  - << "[\r][\n]"
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpConnection)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpConnection)
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,518 DEBUG [HttpMethodBase] - enter HttpMethodBase.canResponseHaveBody(int)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.canResponseHaveBody(int)
+09:15:01,518 DEBUG [HttpMethodBase] - Buffering response body
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Buffering response body
+09:15:01,518 DEBUG [content] - << "<resource>[\n]"
+359 [Thread-1] DEBUG httpclient.wire.content  - << "<resource>[\n]"
+09:15:01,518 DEBUG [content] - << "    <name>a funky name</name>[\n]"
+359 [Thread-1] DEBUG httpclient.wire.content  - << "    <name>a funky name</name>[\n]"
+09:15:01,518 DEBUG [content] - << "    <data>an important message</data>[\n]"
+359 [Thread-1] DEBUG httpclient.wire.content  - << "    <data>an important message</data>[\n]"
+09:15:01,518 DEBUG [content] - << "    <nstag xmlns:ns1='http://smartrics/ns1'>[\n]"
+359 [Thread-1] DEBUG httpclient.wire.content  - << "    <nstag xmlns:ns1='http://smartrics/ns1'>[\n]"
+09:15:01,518 DEBUG [content] - << "        <ns1:number>3</ns1:number>[\n]"
+359 [Thread-1] DEBUG httpclient.wire.content  - << "        <ns1:number>3</ns1:number>[\n]"
+09:15:01,518 DEBUG [content] - << "    </nstag>[\n]"
+359 [Thread-1] DEBUG httpclient.wire.content  - << "    </nstag>[\n]"
+09:15:01,518 DEBUG [content] - << "</resource>"
+359 [Thread-1] DEBUG httpclient.wire.content  - << "</resource>"
+09:15:01,518 DEBUG [HttpMethodBase] - Resorting to protocol version default close connection policy
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Resorting to protocol version default close connection policy
+09:15:01,518 DEBUG [HttpMethodBase] - Should NOT close connection, using HTTP/1.1
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Should NOT close connection, using HTTP/1.1
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.isResponseAvailable()
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.isResponseAvailable()
+09:15:01,518 DEBUG [HttpConnection] - enter HttpConnection.releaseConnection()
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.releaseConnection()
+09:15:01,518 DEBUG [HttpConnection] - Releasing connection back to connection manager.
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - Releasing connection back to connection manager.
+09:15:01,518 DEBUG [HttpMethodBase] - enter getContentCharSet( Header contentheader )
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter getContentCharSet( Header contentheader )
+09:15:01,518 DEBUG [HeaderElement] - enter HeaderElement.parseElements(String)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.parseElements(String)
+09:15:01,518 DEBUG [HeaderElement] - enter HeaderElement.parseElements(char[])
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.parseElements(char[])
+09:15:01,518 DEBUG [HeaderElement] - enter HeaderElement.getParameterByName(String)
+359 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.getParameterByName(String)
+09:15:01,518 DEBUG [RestClientImpl] - response: [200] OK
+Content-Type:application/xml;charset=ISO-8859-1
+Content-Length:183
+Server:Jetty(6.0.2)
+
+<resource>
+    <name>a funky name</name>
+    <data>an important message</data>
+    <nstag xmlns:ns1='http://smartrics/ns1'>
+        <ns1:number>3</ns1:number>
+    </nstag>
+</resource>
+359 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - response: [200] OK
+Content-Type:application/xml;charset=ISO-8859-1
+Content-Length:183
+Server:Jetty(6.0.2)
+
+<resource>
+    <name>a funky name</name>
+    <data>an important message</data>
+    <nstag xmlns:ns1='http://smartrics/ns1'>
+        <ns1:number>3</ns1:number>
+    </nstag>
+</resource>
+09:15:01,534 DEBUG [RestFixture] - Using namespaces: {defalias=http://smartrics/defns, ns1alias=http://smartrics/ns1}
+375 [Thread-1] DEBUG smartrics.rest.fitnesse.fixture.RestFixture  - Using namespaces: {defalias=http://smartrics/defns, ns1alias=http://smartrics/ns1}
+09:15:01,534 DEBUG [DefaultHttpParams] - Set parameter http.socket.timeout = 3000
+375 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.socket.timeout = 3000
+09:15:01,534 DEBUG [DefaultHttpParams] - Set parameter http.socket.timeout = 5000
+375 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.socket.timeout = 5000
+09:15:01,534 DEBUG [RestClientImpl] - request: Get /resources/0?param=echome
+anotherDefHeader:2
+defHeader:1
+[empty/null body]
+375 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - request: Get /resources/0?param=echome
+anotherDefHeader:2
+defHeader:1
+[empty/null body]
+09:15:01,534 DEBUG [HttpMethodBase] - HttpMethodBase.addRequestHeader(Header)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - HttpMethodBase.addRequestHeader(Header)
+09:15:01,534 DEBUG [HttpMethodBase] - HttpMethodBase.addRequestHeader(Header)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - HttpMethodBase.addRequestHeader(Header)
+09:15:01,534 DEBUG [HttpClient] - enter HttpClient.executeMethod(HttpMethod)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HttpMethod)
+09:15:01,534 DEBUG [HttpClient] - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+09:15:01,534 DEBUG [HttpMethodDirector] - Attempt number 1 to process request
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodDirector  - Attempt number 1 to process request
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.open()
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.open()
+09:15:01,534 DEBUG [HttpConnection] - Open connection to localhost:8765
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - Open connection to localhost:8765
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.execute(HttpState, HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.execute(HttpState, HttpConnection)
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+09:15:01,534 DEBUG [header] - >> "GET /resources/0?param=echome HTTP/1.1[\r][\n]"
+375 [Thread-1] DEBUG httpclient.wire.header  - >> "GET /resources/0?param=echome HTTP/1.1[\r][\n]"
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+09:15:01,534 DEBUG [HttpMethodBase] - Adding Host request header
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Adding Host request header
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+09:15:01,534 DEBUG [HttpState] - enter HttpState.getCookies()
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpState  - enter HttpState.getCookies()
+09:15:01,534 DEBUG [CookieSpec] - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+375 [Thread-1] DEBUG org.apache.commons.httpclient.cookie.CookieSpec  - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+09:15:01,534 DEBUG [header] - >> "anotherDefHeader: 2[\r][\n]"
+375 [Thread-1] DEBUG httpclient.wire.header  - >> "anotherDefHeader: 2[\r][\n]"
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,534 DEBUG [header] - >> "defHeader: 1[\r][\n]"
+375 [Thread-1] DEBUG httpclient.wire.header  - >> "defHeader: 1[\r][\n]"
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,534 DEBUG [header] - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+375 [Thread-1] DEBUG httpclient.wire.header  - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,534 DEBUG [header] - >> "Host: localhost:8765[\r][\n]"
+375 [Thread-1] DEBUG httpclient.wire.header  - >> "Host: localhost:8765[\r][\n]"
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.writeLine()
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.writeLine()
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,534 DEBUG [header] - >> "[\r][\n]"
+375 [Thread-1] DEBUG httpclient.wire.header  - >> "[\r][\n]"
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.flushRequestOutputStream()
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.flushRequestOutputStream()
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.readLine()
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.readLine()
+09:15:01,534 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,534 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,534 DEBUG [log] - REQUEST /resources/0 on org.mortbay.jetty.HttpConnection@e64686
+375 [btpool0-4 - /resources/0?param=echome] DEBUG org.mortbay.log  - REQUEST /resources/0 on org.mortbay.jetty.HttpConnection@e64686
+09:15:01,534 DEBUG [log] - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+375 [btpool0-4 - /resources/0?param=echome] DEBUG org.mortbay.log  - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+09:15:01,534 DEBUG [log] - session=null
+375 [btpool0-4 - /resources/0?param=echome] DEBUG org.mortbay.log  - session=null
+09:15:01,534 DEBUG [log] - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+375 [btpool0-4 - /resources/0?param=echome] DEBUG org.mortbay.log  - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,534 DEBUG [log] - chain=null
+375 [btpool0-4 - /resources/0?param=echome] DEBUG org.mortbay.log  - chain=null
+09:15:01,534 DEBUG [log] - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+375 [btpool0-4 - /resources/0?param=echome] DEBUG org.mortbay.log  - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,534 DEBUG [ResourcesServlet] - Resource GET REQUEST ========= GET /resources/0?param=echome HTTP/1.1
+anotherDefHeader: 2
+defHeader: 1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+375 [btpool0-4 - /resources/0?param=echome] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET REQUEST ========= GET /resources/0?param=echome HTTP/1.1
+anotherDefHeader: 2
+defHeader: 1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+09:15:01,534 DEBUG [ResourcesServlet] - Resource GET RESPONSE ========= HTTP/1.1 200 
+Query-String: param=echome
+Content-Type: application/xml;charset=ISO-8859-1
+
+
+375 [btpool0-4 - /resources/0?param=echome] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET RESPONSE ========= HTTP/1.1 200 
+Query-String: param=echome
+Content-Type: application/xml;charset=ISO-8859-1
+
+
+09:15:01,534 DEBUG [log] - RESPONSE /resources/0  200
+375 [btpool0-4 - /resources/0?param=echome] DEBUG org.mortbay.log  - RESPONSE /resources/0  200
+09:15:01,534 DEBUG [header] - << "HTTP/1.1 200 OK[\r][\n]"
+375 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 200 OK[\r][\n]"
+09:15:01,534 DEBUG [header] - << "HTTP/1.1 200 OK[\r][\n]"
+375 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 200 OK[\r][\n]"
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,534 DEBUG [HttpParser] - enter HeaderParser.parseHeaders(InputStream, String)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HeaderParser.parseHeaders(InputStream, String)
+09:15:01,534 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,534 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,534 DEBUG [header] - << "Query-String: param=echome[\r][\n]"
+375 [Thread-1] DEBUG httpclient.wire.header  - << "Query-String: param=echome[\r][\n]"
+09:15:01,534 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,534 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,534 DEBUG [header] - << "Content-Type: application/xml;charset=ISO-8859-1[\r][\n]"
+375 [Thread-1] DEBUG httpclient.wire.header  - << "Content-Type: application/xml;charset=ISO-8859-1[\r][\n]"
+09:15:01,534 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,534 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,534 DEBUG [header] - << "Content-Length: 183[\r][\n]"
+375 [Thread-1] DEBUG httpclient.wire.header  - << "Content-Length: 183[\r][\n]"
+09:15:01,534 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,534 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,534 DEBUG [header] - << "Server: Jetty(6.0.2)[\r][\n]"
+375 [Thread-1] DEBUG httpclient.wire.header  - << "Server: Jetty(6.0.2)[\r][\n]"
+09:15:01,534 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,534 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,534 DEBUG [header] - << "[\r][\n]"
+375 [Thread-1] DEBUG httpclient.wire.header  - << "[\r][\n]"
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpConnection)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpConnection)
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,534 DEBUG [HttpMethodBase] - enter HttpMethodBase.canResponseHaveBody(int)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.canResponseHaveBody(int)
+09:15:01,534 DEBUG [HttpMethodBase] - Buffering response body
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Buffering response body
+09:15:01,534 DEBUG [content] - << "<resource>[\n]"
+375 [Thread-1] DEBUG httpclient.wire.content  - << "<resource>[\n]"
+09:15:01,534 DEBUG [content] - << "    <name>a funky name</name>[\n]"
+375 [Thread-1] DEBUG httpclient.wire.content  - << "    <name>a funky name</name>[\n]"
+09:15:01,534 DEBUG [content] - << "    <data>an important message</data>[\n]"
+375 [Thread-1] DEBUG httpclient.wire.content  - << "    <data>an important message</data>[\n]"
+09:15:01,534 DEBUG [content] - << "    <nstag xmlns:ns1='http://smartrics/ns1'>[\n]"
+375 [Thread-1] DEBUG httpclient.wire.content  - << "    <nstag xmlns:ns1='http://smartrics/ns1'>[\n]"
+09:15:01,534 DEBUG [content] - << "        <ns1:number>3</ns1:number>[\n]"
+375 [Thread-1] DEBUG httpclient.wire.content  - << "        <ns1:number>3</ns1:number>[\n]"
+09:15:01,534 DEBUG [content] - << "    </nstag>[\n]"
+375 [Thread-1] DEBUG httpclient.wire.content  - << "    </nstag>[\n]"
+09:15:01,534 DEBUG [content] - << "</resource>"
+375 [Thread-1] DEBUG httpclient.wire.content  - << "</resource>"
+09:15:01,534 DEBUG [HttpMethodBase] - Resorting to protocol version default close connection policy
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Resorting to protocol version default close connection policy
+09:15:01,534 DEBUG [HttpMethodBase] - Should NOT close connection, using HTTP/1.1
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Should NOT close connection, using HTTP/1.1
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.isResponseAvailable()
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.isResponseAvailable()
+09:15:01,534 DEBUG [HttpConnection] - enter HttpConnection.releaseConnection()
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.releaseConnection()
+09:15:01,534 DEBUG [HttpConnection] - Releasing connection back to connection manager.
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - Releasing connection back to connection manager.
+09:15:01,534 DEBUG [HttpMethodBase] - enter getContentCharSet( Header contentheader )
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter getContentCharSet( Header contentheader )
+09:15:01,534 DEBUG [HeaderElement] - enter HeaderElement.parseElements(String)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.parseElements(String)
+09:15:01,534 DEBUG [HeaderElement] - enter HeaderElement.parseElements(char[])
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.parseElements(char[])
+09:15:01,534 DEBUG [HeaderElement] - enter HeaderElement.getParameterByName(String)
+375 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.getParameterByName(String)
+09:15:01,534 DEBUG [RestClientImpl] - response: [200] OK
+Query-String:param=echome
+Content-Type:application/xml;charset=ISO-8859-1
+Content-Length:183
+Server:Jetty(6.0.2)
+
+<resource>
+    <name>a funky name</name>
+    <data>an important message</data>
+    <nstag xmlns:ns1='http://smartrics/ns1'>
+        <ns1:number>3</ns1:number>
+    </nstag>
+</resource>
+375 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - response: [200] OK
+Query-String:param=echome
+Content-Type:application/xml;charset=ISO-8859-1
+Content-Length:183
+Server:Jetty(6.0.2)
+
+<resource>
+    <name>a funky name</name>
+    <data>an important message</data>
+    <nstag xmlns:ns1='http://smartrics/ns1'>
+        <ns1:number>3</ns1:number>
+    </nstag>
+</resource>
+09:15:01,549 DEBUG [RestFixture] - Using namespaces: {defalias=http://smartrics/defns, ns1alias=http://smartrics/ns1}
+390 [Thread-1] DEBUG smartrics.rest.fitnesse.fixture.RestFixture  - Using namespaces: {defalias=http://smartrics/defns, ns1alias=http://smartrics/ns1}
+09:15:01,549 DEBUG [DefaultHttpParams] - Set parameter http.socket.timeout = 3000
+390 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.socket.timeout = 3000
+09:15:01,549 DEBUG [DefaultHttpParams] - Set parameter http.socket.timeout = 5000
+390 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.socket.timeout = 5000
+09:15:01,549 DEBUG [RestClientImpl] - request: Get /resources/20
+anotherDefHeader:2
+defHeader:1
+[empty/null body]
+390 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - request: Get /resources/20
+anotherDefHeader:2
+defHeader:1
+[empty/null body]
+09:15:01,549 DEBUG [HttpMethodBase] - HttpMethodBase.addRequestHeader(Header)
+390 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - HttpMethodBase.addRequestHeader(Header)
+09:15:01,549 DEBUG [HttpMethodBase] - HttpMethodBase.addRequestHeader(Header)
+390 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - HttpMethodBase.addRequestHeader(Header)
+09:15:01,549 DEBUG [HttpClient] - enter HttpClient.executeMethod(HttpMethod)
+390 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HttpMethod)
+09:15:01,549 DEBUG [HttpClient] - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+390 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+09:15:01,549 DEBUG [HttpMethodDirector] - Attempt number 1 to process request
+390 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodDirector  - Attempt number 1 to process request
+09:15:01,549 DEBUG [HttpConnection] - enter HttpConnection.open()
+390 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.open()
+09:15:01,549 DEBUG [HttpConnection] - Open connection to localhost:8765
+390 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - Open connection to localhost:8765
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.execute(HttpState, HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.execute(HttpState, HttpConnection)
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+09:15:01,565 DEBUG [header] - >> "GET /resources/20 HTTP/1.1[\r][\n]"
+406 [Thread-1] DEBUG httpclient.wire.header  - >> "GET /resources/20 HTTP/1.1[\r][\n]"
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+09:15:01,565 DEBUG [HttpMethodBase] - Adding Host request header
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Adding Host request header
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+09:15:01,565 DEBUG [HttpState] - enter HttpState.getCookies()
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpState  - enter HttpState.getCookies()
+09:15:01,565 DEBUG [CookieSpec] - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+406 [Thread-1] DEBUG org.apache.commons.httpclient.cookie.CookieSpec  - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+09:15:01,565 DEBUG [header] - >> "anotherDefHeader: 2[\r][\n]"
+406 [Thread-1] DEBUG httpclient.wire.header  - >> "anotherDefHeader: 2[\r][\n]"
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,565 DEBUG [header] - >> "defHeader: 1[\r][\n]"
+406 [Thread-1] DEBUG httpclient.wire.header  - >> "defHeader: 1[\r][\n]"
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,565 DEBUG [header] - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+406 [Thread-1] DEBUG httpclient.wire.header  - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,565 DEBUG [header] - >> "Host: localhost:8765[\r][\n]"
+406 [Thread-1] DEBUG httpclient.wire.header  - >> "Host: localhost:8765[\r][\n]"
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.writeLine()
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.writeLine()
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,565 DEBUG [header] - >> "[\r][\n]"
+406 [Thread-1] DEBUG httpclient.wire.header  - >> "[\r][\n]"
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.flushRequestOutputStream()
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.flushRequestOutputStream()
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.readLine()
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.readLine()
+09:15:01,565 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,565 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,565 DEBUG [log] - REQUEST /resources/20 on org.mortbay.jetty.HttpConnection@df1832
+406 [btpool0-5 - /resources/20] DEBUG org.mortbay.log  - REQUEST /resources/20 on org.mortbay.jetty.HttpConnection@df1832
+09:15:01,565 DEBUG [log] - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+406 [btpool0-5 - /resources/20] DEBUG org.mortbay.log  - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+09:15:01,565 DEBUG [log] - session=null
+406 [btpool0-5 - /resources/20] DEBUG org.mortbay.log  - session=null
+09:15:01,565 DEBUG [log] - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+406 [btpool0-5 - /resources/20] DEBUG org.mortbay.log  - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,565 DEBUG [log] - chain=null
+406 [btpool0-5 - /resources/20] DEBUG org.mortbay.log  - chain=null
+09:15:01,565 DEBUG [log] - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+406 [btpool0-5 - /resources/20] DEBUG org.mortbay.log  - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,565 DEBUG [ResourcesServlet] - Resource GET REQUEST ========= GET /resources/20 HTTP/1.1
+anotherDefHeader: 2
+defHeader: 1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+406 [btpool0-5 - /resources/20] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET REQUEST ========= GET /resources/20 HTTP/1.1
+anotherDefHeader: 2
+defHeader: 1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+09:15:01,565 DEBUG [ResourcesServlet] - Resource GET RESPONSE ========= HTTP/1.1 404 
+
+
+406 [btpool0-5 - /resources/20] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET RESPONSE ========= HTTP/1.1 404 
+
+
+09:15:01,565 DEBUG [log] - RESPONSE /resources/20  404
+406 [btpool0-5 - /resources/20] DEBUG org.mortbay.log  - RESPONSE /resources/20  404
+09:15:01,565 DEBUG [header] - << "HTTP/1.1 404 Not Found[\r][\n]"
+406 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 404 Not Found[\r][\n]"
+09:15:01,565 DEBUG [header] - << "HTTP/1.1 404 Not Found[\r][\n]"
+406 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 404 Not Found[\r][\n]"
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,565 DEBUG [HttpParser] - enter HeaderParser.parseHeaders(InputStream, String)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HeaderParser.parseHeaders(InputStream, String)
+09:15:01,565 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,565 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,565 DEBUG [header] - << "Content-Length: 0[\r][\n]"
+406 [Thread-1] DEBUG httpclient.wire.header  - << "Content-Length: 0[\r][\n]"
+09:15:01,565 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,565 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,565 DEBUG [header] - << "Server: Jetty(6.0.2)[\r][\n]"
+406 [Thread-1] DEBUG httpclient.wire.header  - << "Server: Jetty(6.0.2)[\r][\n]"
+09:15:01,565 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,565 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,565 DEBUG [header] - << "[\r][\n]"
+406 [Thread-1] DEBUG httpclient.wire.header  - << "[\r][\n]"
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpConnection)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpConnection)
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,565 DEBUG [HttpMethodBase] - enter HttpMethodBase.canResponseHaveBody(int)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.canResponseHaveBody(int)
+09:15:01,565 DEBUG [HttpMethodBase] - Buffering response body
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Buffering response body
+09:15:01,565 DEBUG [HttpMethodBase] - Resorting to protocol version default close connection policy
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Resorting to protocol version default close connection policy
+09:15:01,565 DEBUG [HttpMethodBase] - Should NOT close connection, using HTTP/1.1
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Should NOT close connection, using HTTP/1.1
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.isResponseAvailable()
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.isResponseAvailable()
+09:15:01,565 DEBUG [HttpConnection] - enter HttpConnection.releaseConnection()
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.releaseConnection()
+09:15:01,565 DEBUG [HttpConnection] - Releasing connection back to connection manager.
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - Releasing connection back to connection manager.
+09:15:01,565 DEBUG [HttpMethodBase] - enter getContentCharSet( Header contentheader )
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter getContentCharSet( Header contentheader )
+09:15:01,565 DEBUG [HttpMethodBase] - Default charset used: ISO-8859-1
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Default charset used: ISO-8859-1
+09:15:01,565 DEBUG [RestClientImpl] - response: [404] Not Found
+Content-Length:0
+Server:Jetty(6.0.2)
+
+
+406 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - response: [404] Not Found
+Content-Length:0
+Server:Jetty(6.0.2)
+
+
+09:15:01,565 DEBUG [RestClientImpl] - request: Get /resources/20.json
+anotherDefHeader:2
+defHeader:1
+[empty/null body]
+406 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - request: Get /resources/20.json
+anotherDefHeader:2
+defHeader:1
+[empty/null body]
+09:15:01,565 DEBUG [HttpMethodBase] - HttpMethodBase.addRequestHeader(Header)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - HttpMethodBase.addRequestHeader(Header)
+09:15:01,565 DEBUG [HttpMethodBase] - HttpMethodBase.addRequestHeader(Header)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - HttpMethodBase.addRequestHeader(Header)
+09:15:01,565 DEBUG [HttpClient] - enter HttpClient.executeMethod(HttpMethod)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HttpMethod)
+09:15:01,565 DEBUG [HttpClient] - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+09:15:01,565 DEBUG [HttpMethodDirector] - Attempt number 1 to process request
+406 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodDirector  - Attempt number 1 to process request
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.execute(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.execute(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+09:15:01,581 DEBUG [header] - >> "GET /resources/20.json HTTP/1.1[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - >> "GET /resources/20.json HTTP/1.1[\r][\n]"
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - Adding Host request header
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Adding Host request header
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpState] - enter HttpState.getCookies()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpState  - enter HttpState.getCookies()
+09:15:01,581 DEBUG [CookieSpec] - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+422 [Thread-1] DEBUG org.apache.commons.httpclient.cookie.CookieSpec  - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+09:15:01,581 DEBUG [header] - >> "anotherDefHeader: 2[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - >> "anotherDefHeader: 2[\r][\n]"
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,581 DEBUG [header] - >> "defHeader: 1[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - >> "defHeader: 1[\r][\n]"
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,581 DEBUG [header] - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,581 DEBUG [header] - >> "Host: localhost:8765[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - >> "Host: localhost:8765[\r][\n]"
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.writeLine()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.writeLine()
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,581 DEBUG [header] - >> "[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - >> "[\r][\n]"
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.flushRequestOutputStream()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.flushRequestOutputStream()
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.readLine()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.readLine()
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,581 DEBUG [log] - REQUEST /resources/20.json on org.mortbay.jetty.HttpConnection@df1832
+422 [btpool0-5 - /resources/20.json] DEBUG org.mortbay.log  - REQUEST /resources/20.json on org.mortbay.jetty.HttpConnection@df1832
+09:15:01,581 DEBUG [log] - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+422 [btpool0-5 - /resources/20.json] DEBUG org.mortbay.log  - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+09:15:01,581 DEBUG [log] - session=null
+422 [btpool0-5 - /resources/20.json] DEBUG org.mortbay.log  - session=null
+09:15:01,581 DEBUG [log] - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+422 [btpool0-5 - /resources/20.json] DEBUG org.mortbay.log  - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,581 DEBUG [log] - chain=null
+422 [btpool0-5 - /resources/20.json] DEBUG org.mortbay.log  - chain=null
+09:15:01,581 DEBUG [log] - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+422 [btpool0-5 - /resources/20.json] DEBUG org.mortbay.log  - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,581 DEBUG [ResourcesServlet] - Resource GET REQUEST ========= GET /resources/20.json HTTP/1.1
+anotherDefHeader: 2
+defHeader: 1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+422 [btpool0-5 - /resources/20.json] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET REQUEST ========= GET /resources/20.json HTTP/1.1
+anotherDefHeader: 2
+defHeader: 1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+09:15:01,581 DEBUG [ResourcesServlet] - Resource GET RESPONSE ========= HTTP/1.1 404 
+
+
+422 [btpool0-5 - /resources/20.json] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET RESPONSE ========= HTTP/1.1 404 
+
+
+09:15:01,581 DEBUG [log] - RESPONSE /resources/20.json  404
+422 [btpool0-5 - /resources/20.json] DEBUG org.mortbay.log  - RESPONSE /resources/20.json  404
+09:15:01,581 DEBUG [header] - << "HTTP/1.1 404 Not Found[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 404 Not Found[\r][\n]"
+09:15:01,581 DEBUG [header] - << "HTTP/1.1 404 Not Found[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 404 Not Found[\r][\n]"
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,581 DEBUG [HttpParser] - enter HeaderParser.parseHeaders(InputStream, String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HeaderParser.parseHeaders(InputStream, String)
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,581 DEBUG [header] - << "Content-Length: 0[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - << "Content-Length: 0[\r][\n]"
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,581 DEBUG [header] - << "Server: Jetty(6.0.2)[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - << "Server: Jetty(6.0.2)[\r][\n]"
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,581 DEBUG [header] - << "[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - << "[\r][\n]"
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpConnection)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.canResponseHaveBody(int)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.canResponseHaveBody(int)
+09:15:01,581 DEBUG [HttpMethodBase] - Buffering response body
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Buffering response body
+09:15:01,581 DEBUG [HttpMethodBase] - Resorting to protocol version default close connection policy
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Resorting to protocol version default close connection policy
+09:15:01,581 DEBUG [HttpMethodBase] - Should NOT close connection, using HTTP/1.1
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Should NOT close connection, using HTTP/1.1
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.isResponseAvailable()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.isResponseAvailable()
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.releaseConnection()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.releaseConnection()
+09:15:01,581 DEBUG [HttpConnection] - Releasing connection back to connection manager.
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - Releasing connection back to connection manager.
+09:15:01,581 DEBUG [HttpMethodBase] - enter getContentCharSet( Header contentheader )
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter getContentCharSet( Header contentheader )
+09:15:01,581 DEBUG [HttpMethodBase] - Default charset used: ISO-8859-1
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Default charset used: ISO-8859-1
+09:15:01,581 DEBUG [RestClientImpl] - response: [404] Not Found
+Content-Length:0
+Server:Jetty(6.0.2)
+
+
+422 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - response: [404] Not Found
+Content-Length:0
+Server:Jetty(6.0.2)
+
+
+09:15:01,581 DEBUG [RestFixture] - Using namespaces: {defalias=http://smartrics/defns, ns1alias=http://smartrics/ns1}
+422 [Thread-1] DEBUG smartrics.rest.fitnesse.fixture.RestFixture  - Using namespaces: {defalias=http://smartrics/defns, ns1alias=http://smartrics/ns1}
+09:15:01,581 DEBUG [DefaultHttpParams] - Set parameter http.socket.timeout = 3000
+422 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.socket.timeout = 3000
+09:15:01,581 DEBUG [DefaultHttpParams] - Set parameter http.socket.timeout = 5000
+422 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.socket.timeout = 5000
+09:15:01,581 DEBUG [RestClientImpl] - request: Get /resources/0
+anotherDefHeader:2
+defHeader:1
+[empty/null body]
+422 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - request: Get /resources/0
+anotherDefHeader:2
+defHeader:1
+[empty/null body]
+09:15:01,581 DEBUG [HttpMethodBase] - HttpMethodBase.addRequestHeader(Header)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - HttpMethodBase.addRequestHeader(Header)
+09:15:01,581 DEBUG [HttpMethodBase] - HttpMethodBase.addRequestHeader(Header)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - HttpMethodBase.addRequestHeader(Header)
+09:15:01,581 DEBUG [HttpClient] - enter HttpClient.executeMethod(HttpMethod)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HttpMethod)
+09:15:01,581 DEBUG [HttpClient] - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+09:15:01,581 DEBUG [HttpMethodDirector] - Attempt number 1 to process request
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodDirector  - Attempt number 1 to process request
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.open()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.open()
+09:15:01,581 DEBUG [HttpConnection] - Open connection to localhost:8765
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - Open connection to localhost:8765
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.execute(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.execute(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+09:15:01,581 DEBUG [header] - >> "GET /resources/0 HTTP/1.1[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - >> "GET /resources/0 HTTP/1.1[\r][\n]"
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - Adding Host request header
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Adding Host request header
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpState] - enter HttpState.getCookies()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpState  - enter HttpState.getCookies()
+09:15:01,581 DEBUG [CookieSpec] - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+422 [Thread-1] DEBUG org.apache.commons.httpclient.cookie.CookieSpec  - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+09:15:01,581 DEBUG [header] - >> "anotherDefHeader: 2[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - >> "anotherDefHeader: 2[\r][\n]"
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,581 DEBUG [header] - >> "defHeader: 1[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - >> "defHeader: 1[\r][\n]"
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,581 DEBUG [header] - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,581 DEBUG [header] - >> "Host: localhost:8765[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - >> "Host: localhost:8765[\r][\n]"
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.writeLine()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.writeLine()
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,581 DEBUG [header] - >> "[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - >> "[\r][\n]"
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.flushRequestOutputStream()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.flushRequestOutputStream()
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.readLine()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.readLine()
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,581 DEBUG [log] - REQUEST /resources/0 on org.mortbay.jetty.HttpConnection@d3db51
+422 [btpool0-6 - /resources/0] DEBUG org.mortbay.log  - REQUEST /resources/0 on org.mortbay.jetty.HttpConnection@d3db51
+09:15:01,581 DEBUG [log] - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+422 [btpool0-6 - /resources/0] DEBUG org.mortbay.log  - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+09:15:01,581 DEBUG [log] - session=null
+422 [btpool0-6 - /resources/0] DEBUG org.mortbay.log  - session=null
+09:15:01,581 DEBUG [log] - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+422 [btpool0-6 - /resources/0] DEBUG org.mortbay.log  - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,581 DEBUG [log] - chain=null
+422 [btpool0-6 - /resources/0] DEBUG org.mortbay.log  - chain=null
+09:15:01,581 DEBUG [log] - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+422 [btpool0-6 - /resources/0] DEBUG org.mortbay.log  - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,581 DEBUG [ResourcesServlet] - Resource GET REQUEST ========= GET /resources/0 HTTP/1.1
+anotherDefHeader: 2
+defHeader: 1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+422 [btpool0-6 - /resources/0] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET REQUEST ========= GET /resources/0 HTTP/1.1
+anotherDefHeader: 2
+defHeader: 1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+09:15:01,581 DEBUG [ResourcesServlet] - Resource GET RESPONSE ========= HTTP/1.1 200 
+Content-Type: application/xml;charset=ISO-8859-1
+
+
+422 [btpool0-6 - /resources/0] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET RESPONSE ========= HTTP/1.1 200 
+Content-Type: application/xml;charset=ISO-8859-1
+
+
+09:15:01,581 DEBUG [log] - RESPONSE /resources/0  200
+422 [btpool0-6 - /resources/0] DEBUG org.mortbay.log  - RESPONSE /resources/0  200
+09:15:01,581 DEBUG [header] - << "HTTP/1.1 200 OK[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 200 OK[\r][\n]"
+09:15:01,581 DEBUG [header] - << "HTTP/1.1 200 OK[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 200 OK[\r][\n]"
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,581 DEBUG [HttpParser] - enter HeaderParser.parseHeaders(InputStream, String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HeaderParser.parseHeaders(InputStream, String)
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,581 DEBUG [header] - << "Content-Type: application/xml;charset=ISO-8859-1[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - << "Content-Type: application/xml;charset=ISO-8859-1[\r][\n]"
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,581 DEBUG [header] - << "Content-Length: 183[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - << "Content-Length: 183[\r][\n]"
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,581 DEBUG [header] - << "Server: Jetty(6.0.2)[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - << "Server: Jetty(6.0.2)[\r][\n]"
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,581 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,581 DEBUG [header] - << "[\r][\n]"
+422 [Thread-1] DEBUG httpclient.wire.header  - << "[\r][\n]"
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpConnection)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpConnection)
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,581 DEBUG [HttpMethodBase] - enter HttpMethodBase.canResponseHaveBody(int)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.canResponseHaveBody(int)
+09:15:01,581 DEBUG [HttpMethodBase] - Buffering response body
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Buffering response body
+09:15:01,581 DEBUG [content] - << "<resource>[\n]"
+422 [Thread-1] DEBUG httpclient.wire.content  - << "<resource>[\n]"
+09:15:01,581 DEBUG [content] - << "    <name>a funky name</name>[\n]"
+422 [Thread-1] DEBUG httpclient.wire.content  - << "    <name>a funky name</name>[\n]"
+09:15:01,581 DEBUG [content] - << "    <data>an important message</data>[\n]"
+422 [Thread-1] DEBUG httpclient.wire.content  - << "    <data>an important message</data>[\n]"
+09:15:01,581 DEBUG [content] - << "    <nstag xmlns:ns1='http://smartrics/ns1'>[\n]"
+422 [Thread-1] DEBUG httpclient.wire.content  - << "    <nstag xmlns:ns1='http://smartrics/ns1'>[\n]"
+09:15:01,581 DEBUG [content] - << "        <ns1:number>3</ns1:number>[\n]"
+422 [Thread-1] DEBUG httpclient.wire.content  - << "        <ns1:number>3</ns1:number>[\n]"
+09:15:01,581 DEBUG [content] - << "    </nstag>[\n]"
+422 [Thread-1] DEBUG httpclient.wire.content  - << "    </nstag>[\n]"
+09:15:01,581 DEBUG [content] - << "</resource>"
+422 [Thread-1] DEBUG httpclient.wire.content  - << "</resource>"
+09:15:01,581 DEBUG [HttpMethodBase] - Resorting to protocol version default close connection policy
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Resorting to protocol version default close connection policy
+09:15:01,581 DEBUG [HttpMethodBase] - Should NOT close connection, using HTTP/1.1
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Should NOT close connection, using HTTP/1.1
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.isResponseAvailable()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.isResponseAvailable()
+09:15:01,581 DEBUG [HttpConnection] - enter HttpConnection.releaseConnection()
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.releaseConnection()
+09:15:01,581 DEBUG [HttpConnection] - Releasing connection back to connection manager.
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - Releasing connection back to connection manager.
+09:15:01,581 DEBUG [HttpMethodBase] - enter getContentCharSet( Header contentheader )
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter getContentCharSet( Header contentheader )
+09:15:01,581 DEBUG [HeaderElement] - enter HeaderElement.parseElements(String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.parseElements(String)
+09:15:01,581 DEBUG [HeaderElement] - enter HeaderElement.parseElements(char[])
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.parseElements(char[])
+09:15:01,581 DEBUG [HeaderElement] - enter HeaderElement.getParameterByName(String)
+422 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.getParameterByName(String)
+09:15:01,596 DEBUG [RestClientImpl] - response: [200] OK
+Content-Type:application/xml;charset=ISO-8859-1
+Content-Length:183
+Server:Jetty(6.0.2)
+
+<resource>
+    <name>a funky name</name>
+    <data>an important message</data>
+    <nstag xmlns:ns1='http://smartrics/ns1'>
+        <ns1:number>3</ns1:number>
+    </nstag>
+</resource>
+437 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - response: [200] OK
+Content-Type:application/xml;charset=ISO-8859-1
+Content-Length:183
+Server:Jetty(6.0.2)
+
+<resource>
+    <name>a funky name</name>
+    <data>an important message</data>
+    <nstag xmlns:ns1='http://smartrics/ns1'>
+        <ns1:number>3</ns1:number>
+    </nstag>
+</resource>
+09:15:01,596 DEBUG [RestFixture] - Using namespaces: {defalias=http://smartrics/defns, ns1alias=http://smartrics/ns1}
+437 [Thread-1] DEBUG smartrics.rest.fitnesse.fixture.RestFixture  - Using namespaces: {defalias=http://smartrics/defns, ns1alias=http://smartrics/ns1}
+09:15:01,596 DEBUG [DefaultHttpParams] - Set parameter http.socket.timeout = 3000
+437 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.socket.timeout = 3000
+09:15:01,596 DEBUG [DefaultHttpParams] - Set parameter http.socket.timeout = 5000
+437 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.socket.timeout = 5000
+09:15:01,596 DEBUG [RestClientImpl] - request: Get /resources/1.json
+anotherDefHeader:2
+defHeader:1
+[empty/null body]
+437 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - request: Get /resources/1.json
+anotherDefHeader:2
+defHeader:1
+[empty/null body]
+09:15:01,596 DEBUG [HttpMethodBase] - HttpMethodBase.addRequestHeader(Header)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - HttpMethodBase.addRequestHeader(Header)
+09:15:01,596 DEBUG [HttpMethodBase] - HttpMethodBase.addRequestHeader(Header)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - HttpMethodBase.addRequestHeader(Header)
+09:15:01,596 DEBUG [HttpClient] - enter HttpClient.executeMethod(HttpMethod)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HttpMethod)
+09:15:01,596 DEBUG [HttpClient] - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+09:15:01,596 DEBUG [HttpMethodDirector] - Attempt number 1 to process request
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodDirector  - Attempt number 1 to process request
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.open()
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.open()
+09:15:01,596 DEBUG [HttpConnection] - Open connection to localhost:8765
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - Open connection to localhost:8765
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.execute(HttpState, HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.execute(HttpState, HttpConnection)
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+09:15:01,596 DEBUG [header] - >> "GET /resources/1.json HTTP/1.1[\r][\n]"
+437 [Thread-1] DEBUG httpclient.wire.header  - >> "GET /resources/1.json HTTP/1.1[\r][\n]"
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+09:15:01,596 DEBUG [HttpMethodBase] - Adding Host request header
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Adding Host request header
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+09:15:01,596 DEBUG [HttpState] - enter HttpState.getCookies()
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpState  - enter HttpState.getCookies()
+09:15:01,596 DEBUG [CookieSpec] - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+437 [Thread-1] DEBUG org.apache.commons.httpclient.cookie.CookieSpec  - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+09:15:01,596 DEBUG [header] - >> "anotherDefHeader: 2[\r][\n]"
+437 [Thread-1] DEBUG httpclient.wire.header  - >> "anotherDefHeader: 2[\r][\n]"
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,596 DEBUG [header] - >> "defHeader: 1[\r][\n]"
+437 [Thread-1] DEBUG httpclient.wire.header  - >> "defHeader: 1[\r][\n]"
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,596 DEBUG [header] - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+437 [Thread-1] DEBUG httpclient.wire.header  - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,596 DEBUG [header] - >> "Host: localhost:8765[\r][\n]"
+437 [Thread-1] DEBUG httpclient.wire.header  - >> "Host: localhost:8765[\r][\n]"
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.writeLine()
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.writeLine()
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,596 DEBUG [header] - >> "[\r][\n]"
+437 [Thread-1] DEBUG httpclient.wire.header  - >> "[\r][\n]"
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.flushRequestOutputStream()
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.flushRequestOutputStream()
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.readLine()
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.readLine()
+09:15:01,596 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,596 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,596 DEBUG [log] - REQUEST /resources/1.json on org.mortbay.jetty.HttpConnection@15a6029
+437 [btpool0-7 - /resources/1.json] DEBUG org.mortbay.log  - REQUEST /resources/1.json on org.mortbay.jetty.HttpConnection@15a6029
+09:15:01,596 DEBUG [log] - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+437 [btpool0-7 - /resources/1.json] DEBUG org.mortbay.log  - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+09:15:01,596 DEBUG [log] - session=null
+437 [btpool0-7 - /resources/1.json] DEBUG org.mortbay.log  - session=null
+09:15:01,596 DEBUG [log] - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+437 [btpool0-7 - /resources/1.json] DEBUG org.mortbay.log  - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,596 DEBUG [log] - chain=null
+437 [btpool0-7 - /resources/1.json] DEBUG org.mortbay.log  - chain=null
+09:15:01,596 DEBUG [log] - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+437 [btpool0-7 - /resources/1.json] DEBUG org.mortbay.log  - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,596 DEBUG [ResourcesServlet] - Resource GET REQUEST ========= GET /resources/1.json HTTP/1.1
+anotherDefHeader: 2
+defHeader: 1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+437 [btpool0-7 - /resources/1.json] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET REQUEST ========= GET /resources/1.json HTTP/1.1
+anotherDefHeader: 2
+defHeader: 1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+09:15:01,596 DEBUG [ResourcesServlet] - Resource GET RESPONSE ========= HTTP/1.1 200 
+Content-Type: application/json;charset=ISO-8859-1
+
+
+437 [btpool0-7 - /resources/1.json] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET RESPONSE ========= HTTP/1.1 200 
+Content-Type: application/json;charset=ISO-8859-1
+
+
+09:15:01,596 DEBUG [log] - RESPONSE /resources/1.json  200
+437 [btpool0-7 - /resources/1.json] DEBUG org.mortbay.log  - RESPONSE /resources/1.json  200
+09:15:01,596 DEBUG [header] - << "HTTP/1.1 200 OK[\r][\n]"
+437 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 200 OK[\r][\n]"
+09:15:01,596 DEBUG [header] - << "HTTP/1.1 200 OK[\r][\n]"
+437 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 200 OK[\r][\n]"
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,596 DEBUG [HttpParser] - enter HeaderParser.parseHeaders(InputStream, String)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HeaderParser.parseHeaders(InputStream, String)
+09:15:01,596 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,596 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,596 DEBUG [header] - << "Content-Type: application/json;charset=ISO-8859-1[\r][\n]"
+437 [Thread-1] DEBUG httpclient.wire.header  - << "Content-Type: application/json;charset=ISO-8859-1[\r][\n]"
+09:15:01,596 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,596 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,596 DEBUG [header] - << "Content-Length: 77[\r][\n]"
+437 [Thread-1] DEBUG httpclient.wire.header  - << "Content-Length: 77[\r][\n]"
+09:15:01,596 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,596 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,596 DEBUG [header] - << "Server: Jetty(6.0.2)[\r][\n]"
+437 [Thread-1] DEBUG httpclient.wire.header  - << "Server: Jetty(6.0.2)[\r][\n]"
+09:15:01,596 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,596 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,596 DEBUG [header] - << "[\r][\n]"
+437 [Thread-1] DEBUG httpclient.wire.header  - << "[\r][\n]"
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpConnection)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpConnection)
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,596 DEBUG [HttpMethodBase] - enter HttpMethodBase.canResponseHaveBody(int)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.canResponseHaveBody(int)
+09:15:01,596 DEBUG [HttpMethodBase] - Buffering response body
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Buffering response body
+09:15:01,596 DEBUG [content] - << "{ "resource" : { "name" : "a funky name", "data" : "an important message" } }"
+437 [Thread-1] DEBUG httpclient.wire.content  - << "{ "resource" : { "name" : "a funky name", "data" : "an important message" } }"
+09:15:01,596 DEBUG [HttpMethodBase] - Resorting to protocol version default close connection policy
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Resorting to protocol version default close connection policy
+09:15:01,596 DEBUG [HttpMethodBase] - Should NOT close connection, using HTTP/1.1
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Should NOT close connection, using HTTP/1.1
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.isResponseAvailable()
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.isResponseAvailable()
+09:15:01,596 DEBUG [HttpConnection] - enter HttpConnection.releaseConnection()
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.releaseConnection()
+09:15:01,596 DEBUG [HttpConnection] - Releasing connection back to connection manager.
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - Releasing connection back to connection manager.
+09:15:01,596 DEBUG [HttpMethodBase] - enter getContentCharSet( Header contentheader )
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter getContentCharSet( Header contentheader )
+09:15:01,596 DEBUG [HeaderElement] - enter HeaderElement.parseElements(String)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.parseElements(String)
+09:15:01,596 DEBUG [HeaderElement] - enter HeaderElement.parseElements(char[])
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.parseElements(char[])
+09:15:01,596 DEBUG [HeaderElement] - enter HeaderElement.getParameterByName(String)
+437 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.getParameterByName(String)
+09:15:01,596 DEBUG [RestClientImpl] - response: [200] OK
+Content-Type:application/json;charset=ISO-8859-1
+Content-Length:77
+Server:Jetty(6.0.2)
+
+{ "resource" : { "name" : "a funky name", "data" : "an important message" } }
+437 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - response: [200] OK
+Content-Type:application/json;charset=ISO-8859-1
+Content-Length:77
+Server:Jetty(6.0.2)
+
+{ "resource" : { "name" : "a funky name", "data" : "an important message" } }
+09:15:01,643 DEBUG [RestFixture] - Using namespaces: {}
+484 [Thread-1] DEBUG smartrics.rest.fitnesse.fixture.RestFixture  - Using namespaces: {}
+09:15:01,643 DEBUG [DefaultHttpParams] - Set parameter http.socket.timeout = 3000
+484 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.socket.timeout = 3000
+09:15:01,643 DEBUG [DefaultHttpParams] - Set parameter http.socket.timeout = 3000
+484 [Thread-1] DEBUG org.apache.commons.httpclient.params.DefaultHttpParams  - Set parameter http.socket.timeout = 3000
+09:15:01,643 DEBUG [RestClientImpl] - request: Get /resources/0?a[0]=2&amp;a[1]=4
+[empty/null body]
+484 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - request: Get /resources/0?a[0]=2&amp;a[1]=4
+[empty/null body]
+09:15:01,643 DEBUG [HttpClient] - enter HttpClient.executeMethod(HttpMethod)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HttpMethod)
+09:15:01,643 DEBUG [HttpClient] - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpClient  - enter HttpClient.executeMethod(HostConfiguration,HttpMethod,HttpState)
+09:15:01,643 DEBUG [HttpMethodDirector] - Attempt number 1 to process request
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodDirector  - Attempt number 1 to process request
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.open()
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.open()
+09:15:01,643 DEBUG [HttpConnection] - Open connection to localhost:8765
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - Open connection to localhost:8765
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.execute(HttpState, HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.execute(HttpState, HttpConnection)
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequest(HttpState, HttpConnection)
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestLine(HttpState, HttpConnection)
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.generateRequestLine(HttpConnection, String, String, String, String)
+09:15:01,643 DEBUG [header] - >> "GET /resources/0?a[0]=2&amp;a[1]=4 HTTP/1.1[\r][\n]"
+484 [Thread-1] DEBUG httpclient.wire.header  - >> "GET /resources/0?a[0]=2&amp;a[1]=4 HTTP/1.1[\r][\n]"
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.writeRequestHeaders(HttpState,HttpConnection)
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addRequestHeaders(HttpState, HttpConnection)
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addUserAgentRequestHeaders(HttpState, HttpConnection)
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addHostRequestHeader(HttpState, HttpConnection)
+09:15:01,643 DEBUG [HttpMethodBase] - Adding Host request header
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Adding Host request header
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addCookieRequestHeader(HttpState, HttpConnection)
+09:15:01,643 DEBUG [HttpState] - enter HttpState.getCookies()
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpState  - enter HttpState.getCookies()
+09:15:01,643 DEBUG [CookieSpec] - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+484 [Thread-1] DEBUG org.apache.commons.httpclient.cookie.CookieSpec  - enter CookieSpecBase.match(String, int, String, boolean, Cookie[])
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.addProxyConnectionHeader(HttpState, HttpConnection)
+09:15:01,643 DEBUG [header] - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+484 [Thread-1] DEBUG httpclient.wire.header  - >> "User-Agent: Jakarta Commons-HttpClient/3.1[\r][\n]"
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,643 DEBUG [header] - >> "Host: localhost:8765[\r][\n]"
+484 [Thread-1] DEBUG httpclient.wire.header  - >> "Host: localhost:8765[\r][\n]"
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.print(String)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.print(String)
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.writeLine()
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.writeLine()
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.write(byte[])
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[])
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.write(byte[], int, int)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.write(byte[], int, int)
+09:15:01,643 DEBUG [header] - >> "[\r][\n]"
+484 [Thread-1] DEBUG httpclient.wire.header  - >> "[\r][\n]"
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.flushRequestOutputStream()
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.flushRequestOutputStream()
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponse(HttpState, HttpConnection)
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readStatusLine(HttpState, HttpConnection)
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.readLine()
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.readLine()
+09:15:01,643 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,643 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,643 DEBUG [log] - REQUEST /resources/0 on org.mortbay.jetty.HttpConnection@32efa7
+484 [btpool0-8 - /resources/0?a[0]=2&amp;a[1]=4] DEBUG org.mortbay.log  - REQUEST /resources/0 on org.mortbay.jetty.HttpConnection@32efa7
+09:15:01,643 DEBUG [log] - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+484 [btpool0-8 - /resources/0?a[0]=2&amp;a[1]=4] DEBUG org.mortbay.log  - sessionManager=org.mortbay.jetty.servlet.HashSessionManager@913fe2
+09:15:01,643 DEBUG [log] - session=null
+484 [btpool0-8 - /resources/0?a[0]=2&amp;a[1]=4] DEBUG org.mortbay.log  - session=null
+09:15:01,643 DEBUG [log] - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+484 [btpool0-8 - /resources/0?a[0]=2&amp;a[1]=4] DEBUG org.mortbay.log  - servlet=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,643 DEBUG [log] - chain=null
+484 [btpool0-8 - /resources/0?a[0]=2&amp;a[1]=4] DEBUG org.mortbay.log  - chain=null
+09:15:01,643 DEBUG [log] - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+484 [btpool0-8 - /resources/0?a[0]=2&amp;a[1]=4] DEBUG org.mortbay.log  - servelet holder=smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,643 DEBUG [ResourcesServlet] - Resource GET REQUEST ========= GET /resources/0?a[0]=2&amp;a[1]=4 HTTP/1.1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+484 [btpool0-8 - /resources/0?a[0]=2&amp;a[1]=4] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET REQUEST ========= GET /resources/0?a[0]=2&amp;a[1]=4 HTTP/1.1
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8765
+
+
+09:15:01,643 DEBUG [ResourcesServlet] - Resource GET RESPONSE ========= HTTP/1.1 200 
+Query-String: a[0]=2&amp;a[1]=4
+Content-Type: application/xml;charset=ISO-8859-1
+
+
+484 [btpool0-8 - /resources/0?a[0]=2&amp;a[1]=4] DEBUG smartrics.rest.test.fitnesse.fixture.ResourcesServlet  - Resource GET RESPONSE ========= HTTP/1.1 200 
+Query-String: a[0]=2&amp;a[1]=4
+Content-Type: application/xml;charset=ISO-8859-1
+
+
+09:15:01,643 DEBUG [log] - RESPONSE /resources/0  200
+484 [btpool0-8 - /resources/0?a[0]=2&amp;a[1]=4] DEBUG org.mortbay.log  - RESPONSE /resources/0  200
+09:15:01,643 DEBUG [header] - << "HTTP/1.1 200 OK[\r][\n]"
+484 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 200 OK[\r][\n]"
+09:15:01,643 DEBUG [header] - << "HTTP/1.1 200 OK[\r][\n]"
+484 [Thread-1] DEBUG httpclient.wire.header  - << "HTTP/1.1 200 OK[\r][\n]"
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseHeaders(HttpState,HttpConnection)
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,643 DEBUG [HttpParser] - enter HeaderParser.parseHeaders(InputStream, String)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HeaderParser.parseHeaders(InputStream, String)
+09:15:01,643 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,643 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,643 DEBUG [header] - << "Query-String: a[0]=2&amp;a[1]=4[\r][\n]"
+484 [Thread-1] DEBUG httpclient.wire.header  - << "Query-String: a[0]=2&amp;a[1]=4[\r][\n]"
+09:15:01,643 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,643 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,643 DEBUG [header] - << "Content-Type: application/xml;charset=ISO-8859-1[\r][\n]"
+484 [Thread-1] DEBUG httpclient.wire.header  - << "Content-Type: application/xml;charset=ISO-8859-1[\r][\n]"
+09:15:01,643 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,643 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,643 DEBUG [header] - << "Content-Length: 183[\r][\n]"
+484 [Thread-1] DEBUG httpclient.wire.header  - << "Content-Length: 183[\r][\n]"
+09:15:01,643 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,643 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,643 DEBUG [header] - << "Server: Jetty(6.0.2)[\r][\n]"
+484 [Thread-1] DEBUG httpclient.wire.header  - << "Server: Jetty(6.0.2)[\r][\n]"
+09:15:01,643 DEBUG [HttpParser] - enter HttpParser.readLine(InputStream, String)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readLine(InputStream, String)
+09:15:01,643 DEBUG [HttpParser] - enter HttpParser.readRawLine()
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpParser  - enter HttpParser.readRawLine()
+09:15:01,643 DEBUG [header] - << "[\r][\n]"
+484 [Thread-1] DEBUG httpclient.wire.header  - << "[\r][\n]"
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processResponseHeaders(HttpState, HttpConnection)
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.processCookieHeaders(Header[], HttpState, HttpConnection)
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpState, HttpConnection)
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.readResponseBody(HttpConnection)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.readResponseBody(HttpConnection)
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.getResponseInputStream()
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.getResponseInputStream()
+09:15:01,643 DEBUG [HttpMethodBase] - enter HttpMethodBase.canResponseHaveBody(int)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter HttpMethodBase.canResponseHaveBody(int)
+09:15:01,643 DEBUG [HttpMethodBase] - Buffering response body
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Buffering response body
+09:15:01,643 DEBUG [content] - << "<resource>[\n]"
+484 [Thread-1] DEBUG httpclient.wire.content  - << "<resource>[\n]"
+09:15:01,643 DEBUG [content] - << "    <name>a funky name</name>[\n]"
+484 [Thread-1] DEBUG httpclient.wire.content  - << "    <name>a funky name</name>[\n]"
+09:15:01,643 DEBUG [content] - << "    <data>an important message</data>[\n]"
+484 [Thread-1] DEBUG httpclient.wire.content  - << "    <data>an important message</data>[\n]"
+09:15:01,643 DEBUG [content] - << "    <nstag xmlns:ns1='http://smartrics/ns1'>[\n]"
+484 [Thread-1] DEBUG httpclient.wire.content  - << "    <nstag xmlns:ns1='http://smartrics/ns1'>[\n]"
+09:15:01,643 DEBUG [content] - << "        <ns1:number>3</ns1:number>[\n]"
+484 [Thread-1] DEBUG httpclient.wire.content  - << "        <ns1:number>3</ns1:number>[\n]"
+09:15:01,643 DEBUG [content] - << "    </nstag>[\n]"
+484 [Thread-1] DEBUG httpclient.wire.content  - << "    </nstag>[\n]"
+09:15:01,643 DEBUG [content] - << "</resource>"
+484 [Thread-1] DEBUG httpclient.wire.content  - << "</resource>"
+09:15:01,643 DEBUG [HttpMethodBase] - Resorting to protocol version default close connection policy
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Resorting to protocol version default close connection policy
+09:15:01,643 DEBUG [HttpMethodBase] - Should NOT close connection, using HTTP/1.1
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - Should NOT close connection, using HTTP/1.1
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.isResponseAvailable()
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.isResponseAvailable()
+09:15:01,643 DEBUG [HttpConnection] - enter HttpConnection.releaseConnection()
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - enter HttpConnection.releaseConnection()
+09:15:01,643 DEBUG [HttpConnection] - Releasing connection back to connection manager.
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpConnection  - Releasing connection back to connection manager.
+09:15:01,643 DEBUG [HttpMethodBase] - enter getContentCharSet( Header contentheader )
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HttpMethodBase  - enter getContentCharSet( Header contentheader )
+09:15:01,643 DEBUG [HeaderElement] - enter HeaderElement.parseElements(String)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.parseElements(String)
+09:15:01,643 DEBUG [HeaderElement] - enter HeaderElement.parseElements(char[])
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.parseElements(char[])
+09:15:01,643 DEBUG [HeaderElement] - enter HeaderElement.getParameterByName(String)
+484 [Thread-1] DEBUG org.apache.commons.httpclient.HeaderElement  - enter HeaderElement.getParameterByName(String)
+09:15:01,643 DEBUG [RestClientImpl] - response: [200] OK
+Query-String:a[0]=2&amp;a[1]=4
+Content-Type:application/xml;charset=ISO-8859-1
+Content-Length:183
+Server:Jetty(6.0.2)
+
+<resource>
+    <name>a funky name</name>
+    <data>an important message</data>
+    <nstag xmlns:ns1='http://smartrics/ns1'>
+        <ns1:number>3</ns1:number>
+    </nstag>
+</resource>
+484 [Thread-1] DEBUG smartrics.rest.client.RestClientImpl  - response: [200] OK
+Query-String:a[0]=2&amp;a[1]=4
+Content-Type:application/xml;charset=ISO-8859-1
+Content-Length:183
+Server:Jetty(6.0.2)
+
+<resource>
+    <name>a funky name</name>
+    <data>an important message</data>
+    <nstag xmlns:ns1='http://smartrics/ns1'>
+        <ns1:number>3</ns1:number>
+    </nstag>
+</resource>
+09:15:01,674 INFO  [HttpServerFixture] - Stopping server on port 0
+515 [Thread-1] INFO smartrics.rest.test.fitnesse.fixture.HttpServerFixture  - Stopping server on port 0
+09:15:01,674 DEBUG [HttpServer] - Stopping jetty in port 8765
+515 [Thread-1] DEBUG smartrics.rest.test.fitnesse.fixture.HttpServer  - Stopping jetty in port 8765
+09:15:01,674 DEBUG [log] - Stopping org.mortbay.jetty.AbstractConnector$Acceptor@12f0999
+515 [btpool0-1 - Acceptor0 SocketConnector @ 0.0.0.0:8765] DEBUG org.mortbay.log  - Stopping org.mortbay.jetty.AbstractConnector$Acceptor@12f0999
+09:15:01,674 DEBUG [log] - stopped SocketConnector @ 0.0.0.0:8765
+515 [Thread-1] DEBUG org.mortbay.log  - stopped SocketConnector @ 0.0.0.0:8765
+09:15:01,674 DEBUG [log] - stopping Server@8a0d5d
+515 [Thread-1] DEBUG org.mortbay.log  - stopping Server@8a0d5d
+09:15:01,674 DEBUG [log] - stopping org.mortbay.jetty.servlet.Context@e5855a{/,null}
+515 [Thread-1] DEBUG org.mortbay.log  - stopping org.mortbay.jetty.servlet.Context@e5855a{/,null}
+09:15:01,674 DEBUG [log] - stopping SessionHandler@95fd19
+515 [Thread-1] DEBUG org.mortbay.log  - stopping SessionHandler@95fd19
+09:15:01,674 DEBUG [log] - stopping ServletHandler@11b9fb1
+515 [Thread-1] DEBUG org.mortbay.log  - stopping ServletHandler@11b9fb1
+09:15:01,674 DEBUG [log] - stopped smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+515 [Thread-1] DEBUG org.mortbay.log  - stopped smartrics.rest.test.fitnesse.fixture.ResourcesServlet
+09:15:01,674 DEBUG [log] - stopped ServletHandler@11b9fb1
+515 [Thread-1] DEBUG org.mortbay.log  - stopped ServletHandler@11b9fb1
+09:15:01,674 DEBUG [log] - stopped org.mortbay.jetty.servlet.HashSessionManager@913fe2
+515 [Thread-1] DEBUG org.mortbay.log  - stopped org.mortbay.jetty.servlet.HashSessionManager@913fe2
+09:15:01,674 DEBUG [log] - EXCEPTION 
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at org.mortbay.io.ByteArrayBuffer.readFrom(ByteArrayBuffer.java:168)
+	at org.mortbay.io.bio.StreamEndPoint.fill(StreamEndPoint.java:100)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.fill(SocketConnector.java:190)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:277)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:203)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:349)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:217)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:475)
+515 [btpool0-2] DEBUG org.mortbay.log  - EXCEPTION 
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at org.mortbay.io.ByteArrayBuffer.readFrom(ByteArrayBuffer.java:168)
+	at org.mortbay.io.bio.StreamEndPoint.fill(StreamEndPoint.java:100)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.fill(SocketConnector.java:190)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:277)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:203)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:349)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:217)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:475)
+09:15:01,674 DEBUG [log] - Session scavenger exited
+515 [btpool0-0 - Invalidator - ] DEBUG org.mortbay.log  - Session scavenger exited
+09:15:01,674 DEBUG [log] - EXCEPTION 
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at org.mortbay.io.ByteArrayBuffer.readFrom(ByteArrayBuffer.java:168)
+	at org.mortbay.io.bio.StreamEndPoint.fill(StreamEndPoint.java:100)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.fill(SocketConnector.java:190)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:277)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:203)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:349)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:217)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:475)
+515 [btpool0-7] DEBUG org.mortbay.log  - EXCEPTION 
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at org.mortbay.io.ByteArrayBuffer.readFrom(ByteArrayBuffer.java:168)
+	at org.mortbay.io.bio.StreamEndPoint.fill(StreamEndPoint.java:100)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.fill(SocketConnector.java:190)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:277)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:203)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:349)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:217)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:475)
+09:15:01,674 DEBUG [log] - EXCEPTION 
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at org.mortbay.io.ByteArrayBuffer.readFrom(ByteArrayBuffer.java:168)
+	at org.mortbay.io.bio.StreamEndPoint.fill(StreamEndPoint.java:100)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.fill(SocketConnector.java:190)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:277)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:203)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:349)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:217)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:475)
+515 [btpool0-3] DEBUG org.mortbay.log  - EXCEPTION 
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at org.mortbay.io.ByteArrayBuffer.readFrom(ByteArrayBuffer.java:168)
+	at org.mortbay.io.bio.StreamEndPoint.fill(StreamEndPoint.java:100)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.fill(SocketConnector.java:190)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:277)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:203)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:349)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:217)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:475)
+09:15:01,674 DEBUG [log] - EXCEPTION 
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at org.mortbay.io.ByteArrayBuffer.readFrom(ByteArrayBuffer.java:168)
+	at org.mortbay.io.bio.StreamEndPoint.fill(StreamEndPoint.java:100)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.fill(SocketConnector.java:190)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:277)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:203)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:349)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:217)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:475)
+515 [btpool0-5] DEBUG org.mortbay.log  - EXCEPTION 
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at org.mortbay.io.ByteArrayBuffer.readFrom(ByteArrayBuffer.java:168)
+	at org.mortbay.io.bio.StreamEndPoint.fill(StreamEndPoint.java:100)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.fill(SocketConnector.java:190)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:277)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:203)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:349)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:217)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:475)
+09:15:01,674 DEBUG [log] - EXCEPTION 
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at org.mortbay.io.ByteArrayBuffer.readFrom(ByteArrayBuffer.java:168)
+	at org.mortbay.io.bio.StreamEndPoint.fill(StreamEndPoint.java:100)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.fill(SocketConnector.java:190)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:277)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:203)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:349)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:217)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:475)
+515 [btpool0-8] DEBUG org.mortbay.log  - EXCEPTION 
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at org.mortbay.io.ByteArrayBuffer.readFrom(ByteArrayBuffer.java:168)
+	at org.mortbay.io.bio.StreamEndPoint.fill(StreamEndPoint.java:100)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.fill(SocketConnector.java:190)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:277)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:203)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:349)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:217)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:475)
+09:15:01,674 DEBUG [log] - EOF
+515 [btpool0-8] DEBUG org.mortbay.log  - EOF
+09:15:01,674 DEBUG [log] - EXCEPTION 
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at org.mortbay.io.ByteArrayBuffer.readFrom(ByteArrayBuffer.java:168)
+	at org.mortbay.io.bio.StreamEndPoint.fill(StreamEndPoint.java:100)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.fill(SocketConnector.java:190)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:277)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:203)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:349)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:217)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:475)
+515 [btpool0-6] DEBUG org.mortbay.log  - EXCEPTION 
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at org.mortbay.io.ByteArrayBuffer.readFrom(ByteArrayBuffer.java:168)
+	at org.mortbay.io.bio.StreamEndPoint.fill(StreamEndPoint.java:100)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.fill(SocketConnector.java:190)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:277)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:203)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:349)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:217)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:475)
+09:15:01,674 DEBUG [log] - EOF
+515 [btpool0-6] DEBUG org.mortbay.log  - EOF
+09:15:01,674 DEBUG [log] - EXCEPTION 
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at org.mortbay.io.ByteArrayBuffer.readFrom(ByteArrayBuffer.java:168)
+	at org.mortbay.io.bio.StreamEndPoint.fill(StreamEndPoint.java:100)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.fill(SocketConnector.java:190)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:277)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:203)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:349)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:217)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:475)
+515 [btpool0-4] DEBUG org.mortbay.log  - EXCEPTION 
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at org.mortbay.io.ByteArrayBuffer.readFrom(ByteArrayBuffer.java:168)
+	at org.mortbay.io.bio.StreamEndPoint.fill(StreamEndPoint.java:100)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.fill(SocketConnector.java:190)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:277)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:203)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:349)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:217)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:475)
+09:15:01,674 DEBUG [log] - EOF
+515 [btpool0-4] DEBUG org.mortbay.log  - EOF
+09:15:01,674 DEBUG [log] - stopped SessionHandler@95fd19
+515 [Thread-1] DEBUG org.mortbay.log  - stopped SessionHandler@95fd19
+09:15:01,674 DEBUG [log] - EOF
+515 [btpool0-5] DEBUG org.mortbay.log  - EOF
+09:15:01,674 DEBUG [log] - EOF
+515 [btpool0-3] DEBUG org.mortbay.log  - EOF
+09:15:01,674 DEBUG [log] - EOF
+515 [btpool0-7] DEBUG org.mortbay.log  - EOF
+09:15:01,674 DEBUG [log] - EOF
+515 [btpool0-2] DEBUG org.mortbay.log  - EOF
+09:15:01,674 DEBUG [log] - stopping ErrorHandler@15e83f9
+515 [Thread-1] DEBUG org.mortbay.log  - stopping ErrorHandler@15e83f9
+09:15:01,674 DEBUG [log] - stopped ErrorHandler@15e83f9
+515 [Thread-1] DEBUG org.mortbay.log  - stopped ErrorHandler@15e83f9
+09:15:01,674 DEBUG [log] - stopped org.mortbay.jetty.servlet.Context@e5855a{/,null}
+515 [Thread-1] DEBUG org.mortbay.log  - stopped org.mortbay.jetty.servlet.Context@e5855a{/,null}
+09:15:01,674 DEBUG [log] - stopped org.mortbay.jetty.servlet.HashSessionIdManager@bb7465
+515 [Thread-1] DEBUG org.mortbay.log  - stopped org.mortbay.jetty.servlet.HashSessionIdManager@bb7465
+09:15:01,674 DEBUG [log] - stopped org.mortbay.thread.BoundedThreadPool@1662dc8
+515 [Thread-1] DEBUG org.mortbay.log  - stopped org.mortbay.thread.BoundedThreadPool@1662dc8
+09:15:01,674 DEBUG [log] - stopped Server@8a0d5d
+515 [Thread-1] DEBUG org.mortbay.log  - stopped Server@8a0d5d
+09:15:01,690 INFO  [log] - Shutdown hook executing
+531 [Shutdown] INFO org.mortbay.log  - Shutdown hook executing
+09:15:01,690 INFO  [log] - Shutdown hook complete
+531 [Shutdown] INFO org.mortbay.log  - Shutdown hook complete
+}}}----'''Standard Error:'''
+{{{XPath expectations in JSON content are deprecated. Please use JavaScript expressions.
+XPath expectations in JSON content are deprecated. Please use JavaScript expressions.
+}}}

@@ -1,0 +1,26 @@
+!define TEST_SYSTEM {slim}
+
+!1 Rest Fixture Acceptance Test Suite
+
+The !-RestFixture-! supports SLIM as test runner. The format of the test table is basically the same as the one needed for Fit runner with the exception 
+of the first cell on the first row. !-RestFixture-! in fact is a Slim !-TableTable-! therefore the class name needs now to be prefixed with "Table".
+
+!contents -R2 -g
+
+!*> Class Path & Global Defines
+!define COLLAPSE_SETUP {true}
+!define COLLAPSE_TEARDOWN {true}
+
+'''Variables Settings'''
+!define jettyHost {localhost}
+!define jettyPort {8765}
+!define tempDirectory {target/live-docs-temp}
+
+'''Classpath Settings'''
+!path target/classes/
+!path target/test-classes/
+!path target/test-classes/log4j.xml
+!path target/dependencies/*.jar
+
+*!
+

@@ -1,0 +1,2859 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20111024</FitNesseVersion>
+  <rootPath>PostTests</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>3</wrong>
+      <ignores>0</ignores>
+      <exceptions>167</exceptions>
+    </counts>
+    <content><![CDATA[<div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('24');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img24"/>
+	</a>
+&nbsp;
+	<span class="meta">Precompiled Libraries</span>
+	<div class="hidden" id="24"><br/></div>
+</div>
+<h3>POST</h3>
+<br/><br/>Posting an XML should create a resource<br/><br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('25');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img25"/>
+	</a>
+&nbsp;
+	<span class="meta">Note</span>
+	<div class="collapsable" id="25">You set the body for the POST operation with the setBody.<br/>Note there is no <b>let</b> expression instead <b>header</b> can extract the element we want<br/>and save to a normal Fitnesse variable<br/></div>
+</div>
+<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=8077913437736749526>
+	<tr>
+		<td>script</td>
+		<td>smartrics.rest.fitnesse.fixture.RestScriptFixture <span class="error">Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a> <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>set body <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td colspan="2">&lt;resource&gt;&lt;name&gt;test post&lt;/name&gt;&lt;data&gt;some data&lt;/data&gt;&lt;/resource&gt;</td>
+	</tr>
+	<tr>
+		<td>post <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td colspan="2">/resources/</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td>201 <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>ensure <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td>has body</td>
+		<td>no-body</td>
+	</tr>
+	<tr>
+		<td>$id= <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td>header</td>
+		<td>Location:/resources/(.+)</td>
+	</tr>
+</table>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('26');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img26"/>
+	</a>
+&nbsp;
+	<span class="meta">Note</span>
+	<div class="collapsable" id="26">Note there is no <b>let</b> expression instead <b>body</b> can extract the element we want<br/>and save to a normal Fitnesse variable<br/></div>
+</div>
+<br/><br/><div id="test_exceptions5"><H3> <span class="fail">Exceptions</span></H3><br/><a name="scriptTable_1_1"/><b></b><div class="collapse_rim"><div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div><a href="javascript:toggleCollapsable('-3896858153172838912');"><img src="/files/images/collapsableClosed.gif" class="left" id="img-3896858153172838912"/></a>&nbsp;<span class="meta">scriptTable_1_1 </span>
+
+	<div class="hidden" id="-3896858153172838912"><pre>__EXCEPTION__:java.lang.NullPointerException
+	at java.util.Hashtable.get(Hashtable.java:334)
+	at java.beans.PropertyEditorManager.findEditor(PropertyEditorManager.java:76)
+	at fitnesse.slim.ConverterSupport.getConverter(ConverterSupport.java:16)
+	at fitnesse.slim.MethodExecutionResult.toString(MethodExecutionResult.java:88)
+	at fitnesse.slim.VariableStore.replaceSymbolInArg(VariableStore.java:79)
+	at fitnesse.slim.VariableStore.replaceSymbolsInString(VariableStore.java:65)
+	at fitnesse.slim.VariableStore.replaceSymbol(VariableStore.java:53)
+	at fitnesse.slim.VariableStore.replaceSymbols(VariableStore.java:32)
+	at fitnesse.slim.StatementExecutor.replaceSymbols(StatementExecutor.java:210)
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:189)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+</pre></div>
+</div></div><hr/><table border="1" cellspacing="0" _TABLENUMBER=4536023031452015249>
+	<tr>
+		<td>script</td>
+		<td>smartrics.rest.fitnesse.fixture.RestScriptFixture <span class="error">Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>get</td>
+		<td colspan="2">/resources/$id</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td>200 <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>ensure <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td>has body</td>
+		<td>
+ /resource/name[text()='test post']<br/>
+ /resource/data[text()='some data']
+</td>
+	</tr>
+	<tr>
+		<td>$name= <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td>body</td>
+		<td>/resource/name/text()</td>
+	</tr>
+</table>
+<br/>Labels that are set to null are rendered using the default value for null, e.g. the string "null"<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=6773354660752051796>
+	<tr>
+		<td>scenario</td>
+		<td>show null value</td>
+		<td>nullValue</td>
+	</tr>
+	<tr>
+		<td>note</td>
+		<td colspan="2">scenario just so we can see $thisIsNull evaluated</td>
+	</tr>
+</table>
+<br/><script>var existingContent = document.getElementById("test_exceptions5").innerHTML;
+document.getElementById("test_exceptions5").innerHTML = existingContent + "<a name=\"scriptTable_3_1\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-5791030159014774655');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-5791030159014774655\"/></a>&nbsp;<span class=\"meta\">scriptTable_3_1 </span>\n\n\t<div class=\"hidden\" id=\"-5791030159014774655\"><pre>__EXCEPTION__:java.lang.NullPointerException\r\n\tat java.util.Hashtable.get(Hashtable.java:334)\r\n\tat java.beans.PropertyEditorManager.findEditor(PropertyEditorManager.java:76)\r\n\tat fitnesse.slim.ConverterSupport.getConverter(ConverterSupport.java:16)\r\n\tat fitnesse.slim.MethodExecutionResult.toString(MethodExecutionResult.java:88)\r\n\tat fitnesse.slim.VariableStore.replaceSymbolInArg(VariableStore.java:79)\r\n\tat fitnesse.slim.VariableStore.replaceSymbolsInString(VariableStore.java:65)\r\n\tat fitnesse.slim.VariableStore.replaceSymbol(VariableStore.java:53)\r\n\tat fitnesse.slim.VariableStore.replaceSymbols(VariableStore.java:32)\r\n\tat fitnesse.slim.StatementExecutor.replaceSymbols(StatementExecutor.java:210)\r\n\tat fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:189)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)\r\n\tat fitnesse.slim.Statement.call(Statement.java:97)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:77)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Thread.java:662)\r\n</pre></div>\n</div>";
+</script>
+<table border="1" cellspacing="0" _TABLENUMBER=5802352265213842113>
+	<tr>
+		<td>script</td>
+		<td>smartrics.rest.fitnesse.fixture.RestScriptFixture <span class="error">Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>get</td>
+		<td colspan="2">/resources/$id</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td>200 <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>$thisIsNull= <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td>body</td>
+		<td>/resource/somewhereelse/text()</td>
+	</tr>
+	<tr>
+		<td class=pass>show null value</td>
+		<td colspan="2" class=pass>$thisIsNull</td>
+	<TD class=pass><div class="collapse_rim">
+	<a href="javascript:toggleCollapsable('8059429080175139408');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img8059429080175139408"/>
+	</a>
+	<span id="test_status" class=pass>Scenario</span>
+	<div class="hidden" id="8059429080175139408"><table border="1" cellspacing="0" _TABLENUMBER=4111312170645875162 table_name="scriptTable_3_4/scriptTable_2">
+	<tr>
+		<td>scenario</td>
+		<td>show null value</td>
+		<td>nullValue</td>
+	</tr>
+	<tr>
+		<td>note</td>
+		<td colspan="2">scenario just so we can see $thisIsNull evaluated</td>
+	</tr>
+</table></div>
+</div></TD></tr>
+</table>
+<br/>Albeit, the value can be overridden<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=2837730256141050270>
+	<tr>
+		<td><span class="fail">smartrics.rest.fitnesse.fixture.RestFixtureConfig: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:87)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:314)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:296)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:283)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:227)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:140)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:120)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:106)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:86)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:58)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:47)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Thread.java:662)
+</pre></span></td>
+		<td>withBespokeNullRepresentation</td>
+	</tr>
+	<tr>
+		<td>restfixture.null.value.representation</td>
+		<td></td>
+	</tr>
+</table>
+<br/><script>var existingContent = document.getElementById("test_exceptions5").innerHTML;
+document.getElementById("test_exceptions5").innerHTML = existingContent + "<a name=\"scriptTable_5_1\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('5724743274006570274');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img5724743274006570274\"/></a>&nbsp;<span class=\"meta\">scriptTable_5_1 </span>\n\n\t<div class=\"hidden\" id=\"5724743274006570274\"><pre>__EXCEPTION__:java.lang.NullPointerException\r\n\tat java.util.Hashtable.get(Hashtable.java:334)\r\n\tat java.beans.PropertyEditorManager.findEditor(PropertyEditorManager.java:76)\r\n\tat fitnesse.slim.ConverterSupport.getConverter(ConverterSupport.java:16)\r\n\tat fitnesse.slim.MethodExecutionResult.toString(MethodExecutionResult.java:88)\r\n\tat fitnesse.slim.VariableStore.replaceSymbolInArg(VariableStore.java:79)\r\n\tat fitnesse.slim.VariableStore.replaceSymbolsInString(VariableStore.java:65)\r\n\tat fitnesse.slim.VariableStore.replaceSymbol(VariableStore.java:53)\r\n\tat fitnesse.slim.VariableStore.replaceSymbols(VariableStore.java:32)\r\n\tat fitnesse.slim.StatementExecutor.replaceSymbols(StatementExecutor.java:210)\r\n\tat fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:189)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)\r\n\tat fitnesse.slim.Statement.call(Statement.java:97)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:77)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Thread.java:662)\r\n</pre></div>\n</div>";
+</script>
+<table border="1" cellspacing="0" _TABLENUMBER=2155122753070043769>
+	<tr>
+		<td>script</td>
+		<td>smartrics.rest.fitnesse.fixture.RestScriptFixture <span class="error">Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[2]</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+		<td>withBespokeNullRepresentation</td>
+	</tr>
+	<tr>
+		<td>get</td>
+		<td colspan="3">/resources/$id</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td colspan="2">200 <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>$thisIsNull= <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td>body</td>
+		<td colspan="2">/resource/somewhereelse/text()</td>
+	</tr>
+	<tr>
+		<td class=pass>show null value</td>
+		<td colspan="3" class=pass>$thisIsNull</td>
+	<TD class=pass><div class="collapse_rim">
+	<a href="javascript:toggleCollapsable('-5029943018815826930');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-5029943018815826930"/>
+	</a>
+	<span id="test_status" class=pass>Scenario</span>
+	<div class="hidden" id="-5029943018815826930"><table border="1" cellspacing="0" _TABLENUMBER=918438662553562137 table_name="scriptTable_5_4/scriptTable_2">
+	<tr>
+		<td>scenario</td>
+		<td>show null value</td>
+		<td>nullValue</td>
+	</tr>
+	<tr>
+		<td>note</td>
+		<td colspan="2">scenario just so we can see $thisIsNull evaluated</td>
+	</tr>
+</table></div>
+</div></TD></tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=7712294620682406893>
+	<tr>
+		<td><span class="fail">smartrics.rest.fitnesse.fixture.RestFixtureConfig: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:87)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:314)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:296)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:283)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:227)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:140)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:120)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:106)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:86)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:58)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:47)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Thread.java:662)
+</pre></span></td>
+		<td>withBespokeNullRepresentation</td>
+	</tr>
+	<tr>
+		<td>restfixture.null.value.representation</td>
+		<td>NIL</td>
+	</tr>
+</table>
+<br/><script>var existingContent = document.getElementById("test_exceptions5").innerHTML;
+document.getElementById("test_exceptions5").innerHTML = existingContent + "<a name=\"scriptTable_7_1\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('-3039729781030833843');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img-3039729781030833843\"/></a>&nbsp;<span class=\"meta\">scriptTable_7_1 </span>\n\n\t<div class=\"hidden\" id=\"-3039729781030833843\"><pre>__EXCEPTION__:java.lang.NullPointerException\r\n\tat java.util.Hashtable.get(Hashtable.java:334)\r\n\tat java.beans.PropertyEditorManager.findEditor(PropertyEditorManager.java:76)\r\n\tat fitnesse.slim.ConverterSupport.getConverter(ConverterSupport.java:16)\r\n\tat fitnesse.slim.MethodExecutionResult.toString(MethodExecutionResult.java:88)\r\n\tat fitnesse.slim.VariableStore.replaceSymbolInArg(VariableStore.java:79)\r\n\tat fitnesse.slim.VariableStore.replaceSymbolsInString(VariableStore.java:65)\r\n\tat fitnesse.slim.VariableStore.replaceSymbol(VariableStore.java:53)\r\n\tat fitnesse.slim.VariableStore.replaceSymbols(VariableStore.java:32)\r\n\tat fitnesse.slim.StatementExecutor.replaceSymbols(StatementExecutor.java:210)\r\n\tat fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:189)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)\r\n\tat fitnesse.slim.Statement.call(Statement.java:97)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:77)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Thread.java:662)\r\n</pre></div>\n</div>";
+</script>
+<table border="1" cellspacing="0" _TABLENUMBER=1933971073218467114>
+	<tr>
+		<td>script</td>
+		<td>smartrics.rest.fitnesse.fixture.RestScriptFixture <span class="error">Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[2]</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+		<td>withBespokeNullRepresentation</td>
+	</tr>
+	<tr>
+		<td>get</td>
+		<td colspan="3">/resources/$id</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td colspan="2">200 <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>$thisIsNull= <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td>body</td>
+		<td colspan="2">/resource/somewhereelse/text()</td>
+	</tr>
+	<tr>
+		<td class=pass>show null value</td>
+		<td colspan="3" class=pass>$thisIsNull</td>
+	<TD class=pass><div class="collapse_rim">
+	<a href="javascript:toggleCollapsable('-3212151729126380288');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img-3212151729126380288"/>
+	</a>
+	<span id="test_status" class=pass>Scenario</span>
+	<div class="hidden" id="-3212151729126380288"><table border="1" cellspacing="0" _TABLENUMBER=5789225147614017018 table_name="scriptTable_7_4/scriptTable_2">
+	<tr>
+		<td>scenario</td>
+		<td>show null value</td>
+		<td>nullValue</td>
+	</tr>
+	<tr>
+		<td>note</td>
+		<td colspan="2">scenario just so we can see $thisIsNull evaluated</td>
+	</tr>
+</table></div>
+</div></TD></tr>
+</table>
+<br/><br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('27');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img27"/>
+	</a>
+&nbsp;
+	<span class="meta">Json</span>
+	<div class="collapsable" id="27">Expectations can be asserted also in json format for responses whose content type is 'application/json'<br/>Variables may be substituted in the expected result<br/></div>
+</div>
+<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=4507213884900585702>
+	<tr>
+		<td>script</td>
+		<td>smartrics.rest.fitnesse.fixture.RestScriptFixture <span class="error">Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a> <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>set body <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td colspan="2"> { "resource" : { "name" : "test post", "data" : "some data" } } </td>
+	</tr>
+	<tr>
+		<td>post <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td colspan="2">/resources/</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td>201 <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>ensure <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td>has body</td>
+		<td>no-body</td>
+	</tr>
+	<tr>
+		<td>$id= <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td>header</td>
+		<td>Location:/resources/(.+)</td>
+	</tr>
+</table>
+<br/><script>var existingContent = document.getElementById("test_exceptions5").innerHTML;
+document.getElementById("test_exceptions5").innerHTML = existingContent + "<a name=\"scriptTable_9_1\"/><b></b><div class=\"collapse_rim\"><div style=\"float: right;\" class=\"meta\"><a href=\"javascript:expandAll();\">Expand All</a> | <a href=\"javascript:collapseAll();\">Collapse All</a></div><a href=\"javascript:toggleCollapsable('7372554534891812866');\"><img src=\"/files/images/collapsableClosed.gif\" class=\"left\" id=\"img7372554534891812866\"/></a>&nbsp;<span class=\"meta\">scriptTable_9_1 </span>\n\n\t<div class=\"hidden\" id=\"7372554534891812866\"><pre>__EXCEPTION__:java.lang.NullPointerException\r\n\tat java.util.Hashtable.get(Hashtable.java:334)\r\n\tat java.beans.PropertyEditorManager.findEditor(PropertyEditorManager.java:76)\r\n\tat fitnesse.slim.ConverterSupport.getConverter(ConverterSupport.java:16)\r\n\tat fitnesse.slim.MethodExecutionResult.toString(MethodExecutionResult.java:88)\r\n\tat fitnesse.slim.VariableStore.replaceSymbolInArg(VariableStore.java:79)\r\n\tat fitnesse.slim.VariableStore.replaceSymbolsInString(VariableStore.java:65)\r\n\tat fitnesse.slim.VariableStore.replaceSymbol(VariableStore.java:53)\r\n\tat fitnesse.slim.VariableStore.replaceSymbols(VariableStore.java:32)\r\n\tat fitnesse.slim.StatementExecutor.replaceSymbols(StatementExecutor.java:210)\r\n\tat fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:189)\r\n\tat fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)\r\n\tat fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)\r\n\tat fitnesse.slim.Statement.call(Statement.java:97)\r\n\tat fitnesse.slim.Statement.execute(Statement.java:77)\r\n\tat fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)\r\n\tat fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)\r\n\tat fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)\r\n\tat fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)\r\n\tat fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)\r\n\tat fitnesse.slim.SlimServer.serve(SlimServer.java:30)\r\n\tat fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)\r\n\tat java.lang.Thread.run(Thread.java:662)\r\n</pre></div>\n</div>";
+</script>
+<table border="1" cellspacing="0" _TABLENUMBER=6470298992643380860>
+	<tr>
+		<td>script</td>
+		<td>smartrics.rest.fitnesse.fixture.RestScriptFixture <span class="error">Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>get</td>
+		<td colspan="2">/resources/$id.json</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td>200 <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>ensure <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td>has header</td>
+		<td>Content-Type : application/json</td>
+	</tr>
+	<tr>
+		<td>ensure <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td>has body</td>
+		<td>
+ /resource/name[text()='test post']<br/>
+ /resource/data[text()='some data']
+</td>
+	</tr>
+</table>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('28');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img28"/>
+	</a>
+&nbsp;
+	<span class="meta">File uploads</span>
+	<div class="collapsable" id="28">Use the multipartFile property to upload files to a server<br/></div>
+</div>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=2135245031016366701>
+	<tr>
+		<td colspan="3">Action Fixture. <span class="error">Could not invoke constructor for ActionFixture[0]</span></td>
+	</tr>
+	<tr>
+		<td>start</td>
+		<td colspan="2">smartrics.rest.test.fitnesse.fixture.FileUtilFixture</td>
+	</tr>
+	<tr>
+		<td>enter <span class="error">The instance decisionTable_10. does not exist</span></td>
+		<td>content <span class="error">The instance decisionTable_10. does not exist</span></td>
+		<td> { "resource" : { "name" : "test post", "data" : "some data" } } </td>
+	</tr>
+	<tr>
+		<td>enter <span class="error">The instance decisionTable_10. does not exist</span></td>
+		<td>name <span class="error">The instance decisionTable_10. does not exist</span></td>
+		<td>target/live-docs-temp/tempfile</td>
+	</tr>
+	<tr>
+		<td>check <span class="error">The instance decisionTable_10. does not exist</span></td>
+		<td>create <span class="error">The instance decisionTable_10. does not exist</span></td>
+		<td>true</td>
+	</tr>
+	<tr>
+		<td>check <span class="error">The instance decisionTable_10. does not exist</span></td>
+		<td>exists <span class="error">The instance decisionTable_10. does not exist</span></td>
+		<td>true</td>
+	</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=8740420806694812222>
+	<tr>
+		<td>script</td>
+		<td>smartrics.rest.fitnesse.fixture.RestScriptFixture <span class="error">Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a> <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>set multipart file name <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td colspan="2">target/live-docs-temp/tempfile</td>
+	</tr>
+	<tr>
+		<td>post <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td colspan="2">/resources/</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td>200 <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>response body</td>
+		<td>file: { "resource" : { "name" : "test post", "data" : "some data" } } <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+</table>
+<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=5142030987145666910>
+	<tr>
+		<td>script</td>
+		<td>smartrics.rest.fitnesse.fixture.RestScriptFixture <span class="error">Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a> <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>set multipart file name <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td colspan="2">target/live-docs-temp/tempfile</td>
+	</tr>
+	<tr>
+		<td>set multipart file parameter name <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td colspan="2">abc123</td>
+	</tr>
+	<tr>
+		<td>post <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td colspan="2">/resources/</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td>200 <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>response body</td>
+		<td>abc123: { "resource" : { "name" : "test post", "data" : "some data" } } <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+</table>
+<br/>Use simple file upload<br/><table border="1" cellspacing="0" _TABLENUMBER=1690397767622930688>
+	<tr>
+		<td>script</td>
+		<td>smartrics.rest.fitnesse.fixture.RestScriptFixture <span class="error">Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a> <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>set file name <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td colspan="2">target/live-docs-temp/tempfile</td>
+	</tr>
+	<tr>
+		<td>post <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td colspan="2">/resources/</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td>200 <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>response body</td>
+		<td>{ "resource" : { "name" : "test post", "data" : "some data" } } <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=5877912876423654689>
+	<tr>
+		<td colspan="3">Action Fixture. <span class="error">Could not invoke constructor for ActionFixture[0]</span></td>
+	</tr>
+	<tr>
+		<td>start</td>
+		<td colspan="2">smartrics.rest.test.fitnesse.fixture.FileUtilFixture</td>
+	</tr>
+	<tr>
+		<td>enter <span class="error">The instance decisionTable_14. does not exist</span></td>
+		<td>name <span class="error">The instance decisionTable_14. does not exist</span></td>
+		<td>target/live-docs-temp/tempfile</td>
+	</tr>
+	<tr>
+		<td>check <span class="error">The instance decisionTable_14. does not exist</span></td>
+		<td>delete <span class="error">The instance decisionTable_14. does not exist</span></td>
+		<td>true</td>
+	</tr>
+	<tr>
+		<td>check <span class="error">The instance decisionTable_14. does not exist</span></td>
+		<td>exists <span class="error">The instance decisionTable_14. does not exist</span></td>
+		<td>false</td>
+	</tr>
+</table>
+<br/>Other than the aforementioned content types you can emulate form POSTs. <br/>Remember to escape the setBody content cell with ! - -!<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=915580250594784603>
+	<tr>
+		<td>script</td>
+		<td>smartrics.rest.fitnesse.fixture.RestScriptFixture <span class="error">Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]</span></td>
+		<td><a href="http://localhost:8765">http://localhost:8765</a> <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>set header <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td colspan="2">Content-Type : application/x-www-form-urlencoded;charset=UTF-8</td>
+	</tr>
+	<tr>
+		<td>set body <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td colspan="2">name=test%20post&data=some%20data</td>
+	</tr>
+	<tr>
+		<td>post <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td colspan="2">/resources/</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>status code</td>
+		<td>201 <span class="error">The instance scriptTableActor. does not exist</span></td>
+	</tr>
+	<tr>
+		<td>ensure <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td>has body</td>
+		<td>no-body</td>
+	</tr>
+	<tr>
+		<td>$id= <span class="error">The instance scriptTableActor. does not exist</span></td>
+		<td>header</td>
+		<td>Location:/resources/(.+)</td>
+	</tr>
+</table>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=8818208347420878169>
+	<tr>
+		<td><span class="fail">smartrics.rest.fitnesse.fixture.RestFixture: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:87)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:314)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:296)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:283)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:227)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:140)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:120)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:106)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:86)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:58)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:47)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Thread.java:662)
+</pre></span></td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td>/resources/$id</td>
+		<td>200</td>
+		<td></td>
+		<td>
+ /resource/name[text()='test post']
+ /resource/data[text()='some data']
+</td>
+	</tr>
+</table>
+<br/><br/>]]></content>
+    <relativePageName>PostTests</relativePageName>
+    
+        <tables>
+            <table>
+        <name>scriptTable_0</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a> error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set body error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[&lt;resource&gt;&lt;name&gt;test post&lt;/name&gt;&lt;data&gt;some data&lt;/data&gt;&lt;/resource&gt;]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[post error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[/resources/]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[201 error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[ensure error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[has body]]></col>
+                    <col><![CDATA[no-body]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[$id= error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[header]]></col>
+                    <col><![CDATA[Location:/resources/(.+)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_1</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[get]]></col>
+                    <col><![CDATA[/resources/$id]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[ensure error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[has body]]></col>
+                    <col><![CDATA[
+ /resource/name[text()='test post']<br/>
+ /resource/data[text()='some data']
+]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[$name= error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[body]]></col>
+                    <col><![CDATA[/resource/name/text()]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scenarioTable_2</name>
+                <row>
+                    <col><![CDATA[scenario]]></col>
+                    <col><![CDATA[show null value]]></col>
+                    <col><![CDATA[nullValue]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[note]]></col>
+                    <col><![CDATA[scenario just so we can see $thisIsNull evaluated]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_3</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[get]]></col>
+                    <col><![CDATA[/resources/$id]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[$thisIsNull= error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[body]]></col>
+                    <col><![CDATA[/resource/somewhereelse/text()]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[show null value]]></col>
+                    <col><![CDATA[$thisIsNull]]></col>
+                    <col><![CDATA[pass(scenario:scriptTable_3_4/scriptTable_2)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_3_4/scriptTable_2</name>
+                <row>
+                    <col><![CDATA[scenario]]></col>
+                    <col><![CDATA[show null value]]></col>
+                    <col><![CDATA[nullValue]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[note]]></col>
+                    <col><![CDATA[scenario just so we can see $thisIsNull evaluated]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_4</name>
+                <row>
+                    <col><![CDATA[<span class="fail">smartrics.rest.fitnesse.fixture.RestFixtureConfig: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:87)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:314)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:296)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:283)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:227)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:140)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:120)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:106)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:86)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:58)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:47)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Thread.java:662)
+</pre></span>]]></col>
+                    <col><![CDATA[withBespokeNullRepresentation]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[restfixture.null.value.representation]]></col>
+                    <col><![CDATA[]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_5</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[2])]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+                    <col><![CDATA[withBespokeNullRepresentation]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[get]]></col>
+                    <col><![CDATA[/resources/$id]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[$thisIsNull= error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[body]]></col>
+                    <col><![CDATA[/resource/somewhereelse/text()]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[show null value]]></col>
+                    <col><![CDATA[$thisIsNull]]></col>
+                    <col><![CDATA[pass(scenario:scriptTable_5_4/scriptTable_2)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_5_4/scriptTable_2</name>
+                <row>
+                    <col><![CDATA[scenario]]></col>
+                    <col><![CDATA[show null value]]></col>
+                    <col><![CDATA[nullValue]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[note]]></col>
+                    <col><![CDATA[scenario just so we can see $thisIsNull evaluated]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_6</name>
+                <row>
+                    <col><![CDATA[<span class="fail">smartrics.rest.fitnesse.fixture.RestFixtureConfig: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:87)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:314)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:296)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:283)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:227)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:140)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:120)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:106)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:86)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:58)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:47)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Thread.java:662)
+</pre></span>]]></col>
+                    <col><![CDATA[withBespokeNullRepresentation]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[restfixture.null.value.representation]]></col>
+                    <col><![CDATA[NIL]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_7</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[2])]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+                    <col><![CDATA[withBespokeNullRepresentation]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[get]]></col>
+                    <col><![CDATA[/resources/$id]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[$thisIsNull= error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[body]]></col>
+                    <col><![CDATA[/resource/somewhereelse/text()]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[show null value]]></col>
+                    <col><![CDATA[$thisIsNull]]></col>
+                    <col><![CDATA[pass(scenario:scriptTable_7_4/scriptTable_2)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_7_4/scriptTable_2</name>
+                <row>
+                    <col><![CDATA[scenario]]></col>
+                    <col><![CDATA[show null value]]></col>
+                    <col><![CDATA[nullValue]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[note]]></col>
+                    <col><![CDATA[scenario just so we can see $thisIsNull evaluated]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_8</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a> error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set body error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[ { "resource" : { "name" : "test post", "data" : "some data" } } ]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[post error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[/resources/]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[201 error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[ensure error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[has body]]></col>
+                    <col><![CDATA[no-body]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[$id= error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[header]]></col>
+                    <col><![CDATA[Location:/resources/(.+)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_9</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[get]]></col>
+                    <col><![CDATA[/resources/$id.json]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[ensure error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[has header]]></col>
+                    <col><![CDATA[Content-Type : application/json]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[ensure error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[has body]]></col>
+                    <col><![CDATA[
+ /resource/name[text()='test post']<br/>
+ /resource/data[text()='some data']
+]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_10</name>
+                <row>
+                    <col><![CDATA[Action Fixture. error(Could not invoke constructor for ActionFixture[0])]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[start]]></col>
+                    <col><![CDATA[smartrics.rest.test.fitnesse.fixture.FileUtilFixture]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter error(The instance decisionTable_10. does not exist)]]></col>
+                    <col><![CDATA[content error(The instance decisionTable_10. does not exist)]]></col>
+                    <col><![CDATA[ { "resource" : { "name" : "test post", "data" : "some data" } } ]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter error(The instance decisionTable_10. does not exist)]]></col>
+                    <col><![CDATA[name error(The instance decisionTable_10. does not exist)]]></col>
+                    <col><![CDATA[target/live-docs-temp/tempfile]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_10. does not exist)]]></col>
+                    <col><![CDATA[create error(The instance decisionTable_10. does not exist)]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_10. does not exist)]]></col>
+                    <col><![CDATA[exists error(The instance decisionTable_10. does not exist)]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_11</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a> error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set multipart file name error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[target/live-docs-temp/tempfile]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[post error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[/resources/]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[response body]]></col>
+                    <col><![CDATA[file: { "resource" : { "name" : "test post", "data" : "some data" } } error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_12</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a> error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set multipart file name error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[target/live-docs-temp/tempfile]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set multipart file parameter name error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[abc123]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[post error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[/resources/]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[response body]]></col>
+                    <col><![CDATA[abc123: { "resource" : { "name" : "test post", "data" : "some data" } } error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_13</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a> error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set file name error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[target/live-docs-temp/tempfile]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[post error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[/resources/]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[response body]]></col>
+                    <col><![CDATA[{ "resource" : { "name" : "test post", "data" : "some data" } } error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_14</name>
+                <row>
+                    <col><![CDATA[Action Fixture. error(Could not invoke constructor for ActionFixture[0])]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[start]]></col>
+                    <col><![CDATA[smartrics.rest.test.fitnesse.fixture.FileUtilFixture]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[enter error(The instance decisionTable_14. does not exist)]]></col>
+                    <col><![CDATA[name error(The instance decisionTable_14. does not exist)]]></col>
+                    <col><![CDATA[target/live-docs-temp/tempfile]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_14. does not exist)]]></col>
+                    <col><![CDATA[delete error(The instance decisionTable_14. does not exist)]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_14. does not exist)]]></col>
+                    <col><![CDATA[exists error(The instance decisionTable_14. does not exist)]]></col>
+                    <col><![CDATA[false]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>scriptTable_15</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a> error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set header error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[Content-Type : application/x-www-form-urlencoded;charset=UTF-8]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[set body error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[name=test%20post&data=some%20data]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[post error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[/resources/]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[status code]]></col>
+                    <col><![CDATA[201 error(The instance scriptTableActor. does not exist)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[ensure error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[has body]]></col>
+                    <col><![CDATA[no-body]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[$id= error(The instance scriptTableActor. does not exist)]]></col>
+                    <col><![CDATA[header]]></col>
+                    <col><![CDATA[Location:/resources/(.+)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_16</name>
+                <row>
+                    <col><![CDATA[<span class="fail">smartrics.rest.fitnesse.fixture.RestFixture: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: DecisionTables should have at least three rows.
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:23)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:87)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:314)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:296)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:283)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:227)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:140)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:120)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:106)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:86)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:58)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:47)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Thread.java:662)
+</pre></span>]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[GET]]></col>
+                    <col><![CDATA[/resources/$id]]></col>
+                    <col><![CDATA[200]]></col>
+                    <col><![CDATA[]]></col>
+                    <col><![CDATA[
+ /resource/name[text()='test post']
+ /resource/data[text()='some data']
+]]></col>
+          
+        </row>
+        
+      </table>
+      
+    </tables>
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_0_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_1, call, scriptTableActor, setBody, <resource><name>test post</name><data>some data</data></resource>]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_0_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a> error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_0_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_0_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[set body]]></expected>
+                              <evaluationMessage><![CDATA[set body error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_2, call, scriptTableActor, post, /resources/]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_0_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_0_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[post]]></expected>
+                              <evaluationMessage><![CDATA[post error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_3, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_0_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[201]]></expected>
+                              <evaluationMessage><![CDATA[201 error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_4, call, scriptTableActor, hasBody, no-body]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_0_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[ensure error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_0_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_5, callAndAssign, id, scriptTableActor, header, Location:/resources/(.+)]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_0_5</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>SymbolAssignmentExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[$id=]]></expected>
+                              <evaluationMessage><![CDATA[$id= error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_0_5</instructionId>
+          <col>2</col>
+          <row>5</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_1, call, scriptTableActor, get, /resources/$id]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_1_1>scriptTable_1_1</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_1_1>scriptTable_1_1</a>]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_1_1>scriptTable_1_1</a>]]></actual>
+                              <expected><![CDATA[get]]></expected>
+                              <evaluationMessage><![CDATA[get]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_2, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[200]]></expected>
+                              <evaluationMessage><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_3, call, scriptTableActor, hasBody, 
+ /resource/name[text()='test post']<br/>
+ /resource/data[text()='some data']
+]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[ensure error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_1_4, callAndAssign, name, scriptTableActor, body, /resource/name/text()]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>SymbolAssignmentExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[$name=]]></expected>
+                              <evaluationMessage><![CDATA[$name= error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_1_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_1, call, scriptTableActor, get, /resources/$id]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_3_1>scriptTable_3_1</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_3_1>scriptTable_3_1</a>]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_3_1>scriptTable_3_1</a>]]></actual>
+                              <expected><![CDATA[get]]></expected>
+                              <evaluationMessage><![CDATA[get]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_2, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[200]]></expected>
+                              <evaluationMessage><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_3_3, callAndAssign, thisIsNull, scriptTableActor, body, /resource/somewhereelse/text()]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>SymbolAssignmentExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[$thisIsNull=]]></expected>
+                              <evaluationMessage><![CDATA[$thisIsNull= error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_3_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>, withBespokeNullRepresentation]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[2]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[2]]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[2])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_1, call, scriptTableActor, get, /resources/$id]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_5_1>scriptTable_5_1</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_5_1>scriptTable_5_1</a>]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>3</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_5_1>scriptTable_5_1</a>]]></actual>
+                              <expected><![CDATA[withBespokeNullRepresentation]]></expected>
+                              <evaluationMessage><![CDATA[withBespokeNullRepresentation]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_5_1>scriptTable_5_1</a>]]></actual>
+                              <expected><![CDATA[get]]></expected>
+                              <evaluationMessage><![CDATA[get]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_2, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[200]]></expected>
+                              <evaluationMessage><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_5_3, callAndAssign, thisIsNull, scriptTableActor, body, /resource/somewhereelse/text()]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>SymbolAssignmentExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[$thisIsNull=]]></expected>
+                              <evaluationMessage><![CDATA[$thisIsNull= error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_5_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_7_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>, withBespokeNullRepresentation]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[2]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[2]]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[2])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_7_1, call, scriptTableActor, get, /resources/$id]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_7_1>scriptTable_7_1</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_7_1>scriptTable_7_1</a>]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_1</instructionId>
+          <col>3</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_7_1>scriptTable_7_1</a>]]></actual>
+                              <expected><![CDATA[withBespokeNullRepresentation]]></expected>
+                              <evaluationMessage><![CDATA[withBespokeNullRepresentation]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_7_1>scriptTable_7_1</a>]]></actual>
+                              <expected><![CDATA[get]]></expected>
+                              <evaluationMessage><![CDATA[get]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_7_2, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[200]]></expected>
+                              <evaluationMessage><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_7_3, callAndAssign, thisIsNull, scriptTableActor, body, /resource/somewhereelse/text()]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>SymbolAssignmentExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[$thisIsNull=]]></expected>
+                              <evaluationMessage><![CDATA[$thisIsNull= error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_7_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_1, call, scriptTableActor, setBody,  { "resource" : { "name" : "test post", "data" : "some data" } } ]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a> error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[set body]]></expected>
+                              <evaluationMessage><![CDATA[set body error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_2, call, scriptTableActor, post, /resources/]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[post]]></expected>
+                              <evaluationMessage><![CDATA[post error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_3, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[201]]></expected>
+                              <evaluationMessage><![CDATA[201 error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_4, call, scriptTableActor, hasBody, no-body]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[ensure error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_8_5, callAndAssign, id, scriptTableActor, header, Location:/resources/(.+)]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_5</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>SymbolAssignmentExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[$id=]]></expected>
+                              <evaluationMessage><![CDATA[$id= error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_8_5</instructionId>
+          <col>2</col>
+          <row>5</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_9_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_9_1, call, scriptTableActor, get, /resources/$id.json]]]></instruction>
+        <slimResult><![CDATA[Exception: <a href=#scriptTable_9_1>scriptTable_9_1</a>]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_9_1>scriptTable_9_1</a>]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[Exception: <a href=#scriptTable_9_1>scriptTable_9_1</a>]]></actual>
+                              <expected><![CDATA[get]]></expected>
+                              <evaluationMessage><![CDATA[get]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_9_2, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_2</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[200]]></expected>
+                              <evaluationMessage><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_9_3, call, scriptTableActor, hasHeader, Content-Type : application/json]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[ensure error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_9_4, call, scriptTableActor, hasBody, 
+ /resource/name[text()='test post']<br/>
+ /resource/data[text()='some data']
+]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[ensure error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_9_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_0, make, decisionTable_10, ActionFixture]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for ActionFixture[0]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_10_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for ActionFixture[0]]]></actual>
+                              <expected><![CDATA[Action Fixture.]]></expected>
+                              <evaluationMessage><![CDATA[Action Fixture. error(Could not invoke constructor for ActionFixture[0])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_1, call, decisionTable_10, table, [[start, smartrics.rest.test.fitnesse.fixture.FileUtilFixture], [enter, content,  { "resource" : { "name" : "test post", "data" : "some data" } } ], [enter, name, target/live-docs-temp/tempfile], [check, create, true], [check, exists, true]]]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_2, call, decisionTable_10, beginTable]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_3, call, decisionTable_10, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_4, call, decisionTable_10, setStart, enter]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_10_4</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_10. does not exist]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter error(The instance decisionTable_10. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_5, call, decisionTable_10, setSmartricsRestTestFitnesseFixtureFileUtilFixture, content]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_10_5</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_10. does not exist]]></actual>
+                              <expected><![CDATA[content]]></expected>
+                              <evaluationMessage><![CDATA[content error(The instance decisionTable_10. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_6, call, decisionTable_10, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_7, call, decisionTable_10, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_8, call, decisionTable_10, setStart, enter]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_10_8</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_10. does not exist]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter error(The instance decisionTable_10. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_9, call, decisionTable_10, setSmartricsRestTestFitnesseFixtureFileUtilFixture, name]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_10_9</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_10. does not exist]]></actual>
+                              <expected><![CDATA[name]]></expected>
+                              <evaluationMessage><![CDATA[name error(The instance decisionTable_10. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_10, call, decisionTable_10, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_11, call, decisionTable_10, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_12, call, decisionTable_10, setStart, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_10_12</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_10. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_10. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_13, call, decisionTable_10, setSmartricsRestTestFitnesseFixtureFileUtilFixture, create]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_10_13</instructionId>
+          <col>1</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_10. does not exist]]></actual>
+                              <expected><![CDATA[create]]></expected>
+                              <evaluationMessage><![CDATA[create error(The instance decisionTable_10. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_14, call, decisionTable_10, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_15, call, decisionTable_10, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_16, call, decisionTable_10, setStart, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_10_16</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_10. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_10. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_17, call, decisionTable_10, setSmartricsRestTestFitnesseFixtureFileUtilFixture, exists]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_10_17</instructionId>
+          <col>1</col>
+          <row>5</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_10. does not exist]]></actual>
+                              <expected><![CDATA[exists]]></expected>
+                              <evaluationMessage><![CDATA[exists error(The instance decisionTable_10. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_18, call, decisionTable_10, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_10_19, call, decisionTable_10, endTable]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_10. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_11_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_11_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_11_1, call, scriptTableActor, setMultipartFileName, target/live-docs-temp/tempfile]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_11_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a> error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_11_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_11_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[set multipart file name]]></expected>
+                              <evaluationMessage><![CDATA[set multipart file name error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_11_2, call, scriptTableActor, post, /resources/]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_11_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_11_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[post]]></expected>
+                              <evaluationMessage><![CDATA[post error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_11_3, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_11_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[200]]></expected>
+                              <evaluationMessage><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_11_4, call, scriptTableActor, responseBody]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_11_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[file: { "resource" : { "name" : "test post", "data" : "some data" } }]]></expected>
+                              <evaluationMessage><![CDATA[file: { "resource" : { "name" : "test post", "data" : "some data" } } error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_12_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_12_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_12_1, call, scriptTableActor, setMultipartFileName, target/live-docs-temp/tempfile]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_12_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a> error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_12_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_12_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[set multipart file name]]></expected>
+                              <evaluationMessage><![CDATA[set multipart file name error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_12_2, call, scriptTableActor, setMultipartFileParameterName, abc123]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_12_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_12_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[set multipart file parameter name]]></expected>
+                              <evaluationMessage><![CDATA[set multipart file parameter name error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_12_3, call, scriptTableActor, post, /resources/]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_12_3</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_12_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[post]]></expected>
+                              <evaluationMessage><![CDATA[post error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_12_4, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_12_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[200]]></expected>
+                              <evaluationMessage><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_12_5, call, scriptTableActor, responseBody]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_12_5</instructionId>
+          <col>2</col>
+          <row>5</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[abc123: { "resource" : { "name" : "test post", "data" : "some data" } }]]></expected>
+                              <evaluationMessage><![CDATA[abc123: { "resource" : { "name" : "test post", "data" : "some data" } } error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_13_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_13_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_13_1, call, scriptTableActor, setFileName, target/live-docs-temp/tempfile]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_13_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a> error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_13_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_13_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[set file name]]></expected>
+                              <evaluationMessage><![CDATA[set file name error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_13_2, call, scriptTableActor, post, /resources/]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_13_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_13_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[post]]></expected>
+                              <evaluationMessage><![CDATA[post error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_13_3, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_13_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[200]]></expected>
+                              <evaluationMessage><![CDATA[200 error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_13_4, call, scriptTableActor, responseBody]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_13_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[{ "resource" : { "name" : "test post", "data" : "some data" } }]]></expected>
+                              <evaluationMessage><![CDATA[{ "resource" : { "name" : "test post", "data" : "some data" } } error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_0, make, decisionTable_14, ActionFixture]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for ActionFixture[0]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_14_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for ActionFixture[0]]]></actual>
+                              <expected><![CDATA[Action Fixture.]]></expected>
+                              <evaluationMessage><![CDATA[Action Fixture. error(Could not invoke constructor for ActionFixture[0])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_1, call, decisionTable_14, table, [[start, smartrics.rest.test.fitnesse.fixture.FileUtilFixture], [enter, name, target/live-docs-temp/tempfile], [check, delete, true], [check, exists, false]]]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_14. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_2, call, decisionTable_14, beginTable]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_14. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_3, call, decisionTable_14, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_14. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_4, call, decisionTable_14, setStart, enter]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_14. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_14_4</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_14. does not exist]]></actual>
+                              <expected><![CDATA[enter]]></expected>
+                              <evaluationMessage><![CDATA[enter error(The instance decisionTable_14. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_5, call, decisionTable_14, setSmartricsRestTestFitnesseFixtureFileUtilFixture, name]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_14. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_14_5</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_14. does not exist]]></actual>
+                              <expected><![CDATA[name]]></expected>
+                              <evaluationMessage><![CDATA[name error(The instance decisionTable_14. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_6, call, decisionTable_14, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_14. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_7, call, decisionTable_14, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_14. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_8, call, decisionTable_14, setStart, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_14. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_14_8</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_14. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_14. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_9, call, decisionTable_14, setSmartricsRestTestFitnesseFixtureFileUtilFixture, delete]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_14. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_14_9</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_14. does not exist]]></actual>
+                              <expected><![CDATA[delete]]></expected>
+                              <evaluationMessage><![CDATA[delete error(The instance decisionTable_14. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_10, call, decisionTable_14, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_14. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_11, call, decisionTable_14, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_14. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_12, call, decisionTable_14, setStart, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_14. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_14_12</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_14. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_14. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_13, call, decisionTable_14, setSmartricsRestTestFitnesseFixtureFileUtilFixture, exists]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_14. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_14_13</instructionId>
+          <col>1</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_14. does not exist]]></actual>
+                              <expected><![CDATA[exists]]></expected>
+                              <evaluationMessage><![CDATA[exists error(The instance decisionTable_14. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_14, call, decisionTable_14, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_14. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_14_15, call, decisionTable_14, endTable]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_14. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_15_0, make, scriptTableActor, smartrics.rest.fitnesse.fixture.RestScriptFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_15_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1]]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture]]></expected>
+                              <evaluationMessage><![CDATA[smartrics.rest.fitnesse.fixture.RestScriptFixture error(Could not invoke constructor for smartrics.rest.fitnesse.fixture.RestScriptFixture[1])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_15_1, call, scriptTableActor, setHeader, Content-Type : application/x-www-form-urlencoded;charset=UTF-8]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_15_1</instructionId>
+          <col>2</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a> error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_15_1</instructionId>
+          <col>1</col>
+          <row>1</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_15_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[set header]]></expected>
+                              <evaluationMessage><![CDATA[set header error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_15_2, call, scriptTableActor, setBody, name=test%20post&data=some%20data]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_15_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_15_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[set body]]></expected>
+                              <evaluationMessage><![CDATA[set body error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_15_3, call, scriptTableActor, post, /resources/]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_15_3</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_15_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[post]]></expected>
+                              <evaluationMessage><![CDATA[post error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_15_4, call, scriptTableActor, statusCode]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_15_4</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[201]]></expected>
+                              <evaluationMessage><![CDATA[201 error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_15_5, call, scriptTableActor, hasBody, no-body]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_15_5</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>EnsureActionExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[ensure]]></expected>
+                              <evaluationMessage><![CDATA[ensure error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_15_5</instructionId>
+          <col>2</col>
+          <row>5</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_15_6, callAndAssign, id, scriptTableActor, header, Location:/resources/(.+)]]]></instruction>
+        <slimResult><![CDATA[!error:The instance scriptTableActor. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_15_6</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>SymbolAssignmentExpectation</type>
+                    <actual><![CDATA[!error:The instance scriptTableActor. does not exist]]></actual>
+                              <expected><![CDATA[$id=]]></expected>
+                              <evaluationMessage><![CDATA[$id= error(The instance scriptTableActor. does not exist)]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_15_6</instructionId>
+          <col>2</col>
+          <row>6</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

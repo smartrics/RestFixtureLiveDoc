@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20111024</FitNesseVersion>
+  <rootPath>DeleteTests</rootPath>
+    <result>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('74');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img74"/>
+	</a>
+&nbsp;
+	<span class="meta">Included page: <a href="RestFixtureTests.FitTests.SharedTests.SetUp">.RestFixtureTests.FitTests.SharedTests.SetUp</a> <a href="RestFixtureTests.FitTests.SharedTests.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="74"><table border="1" cellspacing="0">
+	<tr>
+		<td colspan="3">Action Fixture</td>
+	</tr>
+	<tr>
+		<td>start</td>
+		<td colspan="2">smartrics.rest.test.fitnesse.fixture.HttpServerFixture</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>is started</td>
+		<td class="pass">true</td>
+	</tr>
+	<tr>
+		<td>press</td>
+		<td colspan="2">reset resources database</td>
+	</tr>
+</table>
+<br/></div>
+</div>
+<br/><h3>DELETE</h3>
+<br/><br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('75');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img75"/>
+	</a>
+&nbsp;
+	<span class="meta">Note</span>
+	<div class="collapsable" id="75">You may not want to specify any expectation neither in the header cell nor in the body cell, as in the GET below<br/></div>
+</div>
+<br/><br/><table border="1" cellspacing="0">
+	<tr>
+		<td>smartrics.rest.fitnesse.fixture.RestFixture</td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>DELETE</td>
+		<td><a href='http://localhost:8765/resources/0'>/resources/0</a></td>
+		<td class="pass">204</td>
+		<td> <span class="fit_grey">Server&nbsp;:&nbsp;Jetty(6.0.2)</span></td>
+		<td class="pass">no-body</td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td><a href='http://localhost:8765/resources/0'>/resources/0</a></td>
+		<td class="pass">404</td>
+		<td> <span class="fit_grey">Content-Length&nbsp;:&nbsp;0<br/>Server&nbsp;:&nbsp;Jetty(6.0.2)</span></td>
+		<td> <span class="fit_grey">no-body</span></td>
+	</tr>
+</table>
+]]></content>
+    <relativePageName>DeleteTests</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

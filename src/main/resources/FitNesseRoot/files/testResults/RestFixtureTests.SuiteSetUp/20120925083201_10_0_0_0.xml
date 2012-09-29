@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20111024</FitNesseVersion>
+  <rootPath>SuiteSetUp</rootPath>
+    <result>
+    <counts>
+      <right>10</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('44');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img44"/>
+	</a>
+&nbsp;
+	<span class="meta">Precompiled Libraries</span>
+	<div class="hidden" id="44"><br/></div>
+</div>
+<span class="meta">variable defined: alias1=http://smartrics/ns1</span>
+<br/><span class="meta">variable defined: alias2=http://smartrics/defns</span>
+<br/><br/><br/><table border="1" cellspacing="0" _TABLENUMBER=2803007246048398890>
+	<tr>
+		<td>script</td>
+		<td colspan="2"><span class="pass">smartrics.rest.test.fitnesse.fixture.HttpServerFixture</span></td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>is started</td>
+		<td><span class="pass">false</span></td>
+	</tr>
+	<tr>
+		<td>start server</td>
+		<td colspan="2">8765</td>
+	</tr>
+	<tr>
+		<td>check</td>
+		<td>is started</td>
+		<td><span class="pass">true</span></td>
+	</tr>
+</table>
+ <br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('45');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img45"/>
+	</a>
+&nbsp;
+	<span class="meta">Configure the RestFixture with named configuration table of key value pairs</span>
+	<div class="collapsable" id="45">Read more about <a href="RestFixtureTests.RestFixtureConfig">RestFixtureConfig</a><br/></div>
+</div>
+<br/><table border="1" cellspacing="0" _TABLENUMBER=7793538940993439528>
+	<tr>
+		<td colspan="2"><span class="pass">Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig</span></td>
+	</tr>
+	<tr>
+		<td>http.client.connection.timeout</td>
+		<td><span class="pass">5000</span></td>
+	</tr>
+	<tr>
+		<td>http.client.use.new.http.uri.factory</td>
+		<td><span class="pass">false</span></td>
+	</tr>
+	<tr>
+		<td>restfixture.display.actual.on.right</td>
+		<td><span class="pass">true</span></td>
+	</tr>
+	<tr>
+		<td>restfixture.display.toggle.for.cells.larger.than</td>
+		<td><span class="pass">200</span></td>
+	</tr>
+	<tr>
+		<td>restfixture.default.headers</td>
+		<td><span class="pass">defHeader&nbsp;:&nbsp;1<br/>anotherDefHeader&nbsp;:&nbsp;2<br/></span></td>
+	</tr>
+	<tr>
+		<td>restfixture.xml.namespace.context</td>
+		<td><span class="pass">ns1alias=${alias1}<br/>defalias=${alias2}<br/></span></td>
+	</tr>
+	<tr>
+		<td>restfixture.content.default.charset</td>
+		<td><span class="pass">UTF-8</span></td>
+	</tr>
+	<tr>
+		<td>restfixture.content.handlers.map</td>
+		<td><span class="pass">application/xml=XML<br/>application/json=JSON<br/>text/plain=TEXT<br/>default=XML<br/>application/x-javascript=JS<br/></span></td>
+	</tr>
+</table>
+]]></content>
+    <relativePageName>SuiteSetUp</relativePageName>
+    
+        <tables>
+            <table>
+        <name>scriptTable_0</name>
+                <row>
+                    <col><![CDATA[script]]></col>
+                    <col><![CDATA[pass(smartrics.rest.test.fitnesse.fixture.HttpServerFixture)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is started]]></col>
+                    <col><![CDATA[pass(false)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[start server]]></col>
+                    <col><![CDATA[8765]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check]]></col>
+                    <col><![CDATA[is started]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>tableTable_1</name>
+                <row>
+                    <col><![CDATA[pass(Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[http.client.connection.timeout]]></col>
+                    <col><![CDATA[pass(5000)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[http.client.use.new.http.uri.factory]]></col>
+                    <col><![CDATA[pass(false)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[restfixture.display.actual.on.right]]></col>
+                    <col><![CDATA[pass(true)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[restfixture.display.toggle.for.cells.larger.than]]></col>
+                    <col><![CDATA[pass(200)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[restfixture.default.headers]]></col>
+                    <col><![CDATA[pass(defHeader&nbsp;:&nbsp;1<br/>anotherDefHeader&nbsp;:&nbsp;2<br/>)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[restfixture.xml.namespace.context]]></col>
+                    <col><![CDATA[pass(ns1alias=${alias1}<br/>defalias=${alias2}<br/>)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[restfixture.content.default.charset]]></col>
+                    <col><![CDATA[pass(UTF-8)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[restfixture.content.handlers.map]]></col>
+                    <col><![CDATA[pass(application/xml=XML<br/>application/json=JSON<br/>text/plain=TEXT<br/>default=XML<br/>application/x-javascript=JS<br/>)]]></col>
+          
+        </row>
+        
+      </table>
+      
+    </tables>
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_0, make, scriptTableActor, smartrics.rest.test.fitnesse.fixture.HttpServerFixture]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_0_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[smartrics.rest.test.fitnesse.fixture.HttpServerFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(smartrics.rest.test.fitnesse.fixture.HttpServerFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_1, call, scriptTableActor, isStarted]]]></instruction>
+        <slimResult><![CDATA[false]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_0_1</instructionId>
+          <col>2</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[false]]></actual>
+                              <expected><![CDATA[false]]></expected>
+                              <evaluationMessage><![CDATA[pass(false)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_2, call, scriptTableActor, startServer, 8765]]]></instruction>
+        <slimResult><![CDATA[/__VOID__/]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_0_2</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ArgumentExpectation</type>
+                                        <evaluationMessage><![CDATA[]]></evaluationMessage>
+                  </expectation>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>scriptTable_0_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+                    <actual><![CDATA[/__VOID__/]]></actual>
+                              <expected><![CDATA[start server]]></expected>
+                              <evaluationMessage><![CDATA[start server]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[scriptTable_0_3, call, scriptTableActor, isStarted]]]></instruction>
+        <slimResult><![CDATA[true]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>scriptTable_0_3</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[true]]></actual>
+                              <expected><![CDATA[true]]></expected>
+                              <evaluationMessage><![CDATA[pass(true)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[tableTable_1_0, make, tableTable_1, smartrics.rest.fitnesse.fixture.RestFixtureConfig]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>tableTable_1_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig]]></expected>
+                              <evaluationMessage><![CDATA[pass(Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[tableTable_1_1, call, tableTable_1, doTable, [[http.client.connection.timeout, 5000], [http.client.use.new.http.uri.factory, false], [restfixture.display.actual.on.right, true], [restfixture.display.toggle.for.cells.larger.than, 200], [restfixture.default.headers, defHeader : 1
+anotherDefHeader : 2
+], [restfixture.xml.namespace.context, ns1alias=${alias1}
+defalias=${alias2}
+], [restfixture.content.default.charset, UTF-8], [restfixture.content.handlers.map, application/xml=XML
+application/json=JSON
+text/plain=TEXT
+default=XML
+application/x-javascript=JS
+]]]]]></instruction>
+        <slimResult><![CDATA[[[, pass:5000], [, pass:false], [, pass:true], [, pass:200], [, pass:defHeader&nbsp;:&nbsp;1<br/>anotherDefHeader&nbsp;:&nbsp;2<br/>], [, pass:ns1alias=${alias1}<br/>defalias=${alias2}<br/>], [, pass:UTF-8], [, pass:application/xml=XML<br/>application/json=JSON<br/>text/plain=TEXT<br/>default=XML<br/>application/x-javascript=JS<br/>]]]]></slimResult>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

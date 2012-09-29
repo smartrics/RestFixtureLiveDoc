@@ -1,0 +1,2098 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20111024</FitNesseVersion>
+  <rootPath>LetTestsV2</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>89</exceptions>
+    </counts>
+    <content><![CDATA[<div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('52');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img52"/>
+	</a>
+&nbsp;
+	<span class="meta">Precompiled Libraries</span>
+	<div class="hidden" id="52"><br/></div>
+</div>
+<br/><div class="collapse_rim">
+	<div style="float: right;" class="meta">
+		<a href="javascript:expandAll();">Expand All</a>
+ | 
+		<a href="javascript:collapseAll();">Collapse All</a>
+	</div>
+	<a href="javascript:toggleCollapsable('53');">
+		<img src="/files/images/collapsableClosed.gif" class="left" id="img53"/>
+	</a>
+&nbsp;
+	<span class="meta">Included page: <a href="RestFixtureTests.SlimTests.SharedTests.SetUp">.RestFixtureTests.SlimTests.SharedTests.SetUp</a> <a href="RestFixtureTests.SlimTests.SharedTests.SetUp?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="hidden" id="53"><table border="1" cellspacing="0" _TABLENUMBER=5146078723694746489>
+	<tr>
+		<td colspan="3">Action Fixture <span class="error">Could not invoke constructor for ActionFixture[0]</span></td>
+	</tr>
+	<tr>
+		<td>start</td>
+		<td colspan="2">smartrics.rest.test.fitnesse.fixture.HttpServerFixture</td>
+	</tr>
+	<tr>
+		<td>check <span class="error">The instance decisionTable_0. does not exist</span></td>
+		<td>is started <span class="error">The instance decisionTable_0. does not exist</span></td>
+		<td>true</td>
+	</tr>
+	<tr>
+		<td>press <span class="error">The instance decisionTable_0. does not exist</span></td>
+		<td colspan="2">reset resources database <span class="error">The instance decisionTable_0. does not exist</span></td>
+	</tr>
+</table>
+<br/></div>
+</div>
+<br/><h3>LET</h3>
+<br/><br/>LET can use now the full power of JavaScript to extract data from the last response parts. The additions<br/>to support the new JavaScript extensions will not break the existing RestFixture API.<br/><br/>The JavaScript extensions can be used to process more effectively JSON <i>Content-Type</i>s.<br/><br/><i>LET can access the Fitnesse Symbols map to extract data previously stored</i><br/><br/>If the context of the let context is <i>js</i> the expression is evaluated as a javascript string. The value assigned<br/>to the let label is the result of the evaluation of the content in the expression cell.<br/><br/>For example:<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=1786617946863019810>
+	<tr>
+		<td><span class="pass">smartrics.rest.fitnesse.fixture.RestFixture</span></td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>message</td>
+		<td>js</td>
+		<td>'Hello, World!'</td>
+		<td>Hello, World!</td>
+	</tr>
+	<tr>
+		<td>let <span class="error">Method setLet[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>sum <span class="error">Method setMessage[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>js <span class="error">Method setJs[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>'2 + 5 = ' + (2 + 5) <span class="error">Method setHelloWorld[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>2 + 5 = 7 <span class="error">Method HelloWorld[0] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+	</tr>
+	<tr>
+		<td>let <span class="error">Method setLet[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>two_expressions <span class="error">Method setMessage[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>js <span class="error">Method setJs[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>a=1;
+'a is ' + a <span class="error">Method setHelloWorld[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>a is 1 <span class="error">Method HelloWorld[0] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+	</tr>
+	<tr>
+		<td>let <span class="error">Method setLet[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>json_expr <span class="error">Method setMessage[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>js <span class="error">Method setJs[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>
+json = {
+    "widget": {
+        "debug": "on",
+        "window": {
+            "title": "Sample Konfabulator Widget",
+            "name": "main_window",
+            "width": 500,
+            "height": 500
+        },
+        "image": { 
+            "src": "Images/Sun.png",
+            "name": "sun1",
+            "hOffset": 250,
+            "vOffset": 250,
+            "alignment": "center"
+        },
+        "text": {
+            "data": "Click Here",
+            "size": 36,
+            "style": "bold",
+            "name": "text1",
+            "hOffset": 250,
+            "vOffset": 100,
+            "alignment": "center",
+            "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
+        }
+    }
+};
+json.widget.image.src
+ <span class="error">Method setHelloWorld[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>Images/Sun.png <span class="error">Method HelloWorld[0] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+	</tr>
+</table>
+<br/>(Example courtesy of <a href="http://json.org/example.html)">http://json.org/example.html)</a><br/><br/>It's also possible to access the FitNesse symbols map. The scope where expression is evaluated contains the <br/>'symbols' object <br/><br/><table border="1" cellspacing="0" _TABLENUMBER=5651343913835103657>
+	<tr>
+		<td><span class="pass">smartrics.rest.fitnesse.fixture.RestFixture</span></td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>setBody</td>
+		<td colspan="4">&lt;resource&gt;&lt;name&gt;Bill&lt;/name&gt;&lt;data&gt;Some data on Bill&lt;/data&gt;&lt;/resource&gt;</td>
+	</tr>
+	<tr>
+		<td>POST <span class="error">Method setSetBody[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>/resources/ <span class="error">Method setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>201</td>
+		<td></td>
+		<td>no-body</td>
+	</tr>
+	<tr>
+		<td>let <span class="error">Method setSetBody[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>id <span class="error">Method setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>header</td>
+		<td>Location:/resources/(.+)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>let <span class="error">Method setSetBody[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>id_string <span class="error">Method setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>js</td>
+		<td>'The id is: ' + symbols.get('id')</td>
+		<td>The id is: %id%</td>
+	</tr>
+</table>
+<br/>The scope also contains the 'response' object, populated with the data from the last Rest response executed<br/><br/>For example<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=7383278719062032136>
+	<tr>
+		<td><span class="pass"><span class="fail">smartrics.rest.fitnesse.fixture.RestFixture: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: Table has 5 header column(s), but row 3 only has 2 column(s).
+	at fitnesse.slimTables.DecisionTable$DecisionTableCaller.checkRow(DecisionTable.java:82)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRow(DecisionTable.java:131)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRows(DecisionTable.java:126)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.call(DecisionTable.java:119)
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:29)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:87)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:314)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:296)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:283)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:227)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:140)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:120)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:106)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:86)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:58)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:47)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Thread.java:662)
+</pre></span></span></td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td>/resources/1</td>
+		<td>200</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>let <span class="error">Method setGET[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>body_value <span class="error">Method setResources1[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>js <span class="error">Method set200[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>response.body</td>
+		<td> <span class="error">Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span> <span class="error">Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+	</tr>
+	<tr>
+		<td>setBody</td>
+		<td colspan="4">&lt;resource&gt;&lt;name&gt;Bill&lt;/name&gt;&lt;data&gt;Some data on Bill&lt;/data&gt;&lt;/resource&gt;</td>
+	</tr>
+	<tr>
+		<td>POST</td>
+		<td>/resources/</td>
+		<td>201</td>
+		<td></td>
+		<td>no-body</td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>status_code_value</td>
+		<td>js</td>
+		<td>response.statusCode</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>status_text_value</td>
+		<td>js</td>
+		<td>response.statusText</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>c_len</td>
+		<td>js</td>
+		<td>response.header0('Content-Length')</td>
+		<td>0</td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>loc_again</td>
+		<td>js</td>
+		<td>response.header('Location', 0)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>h_size</td>
+		<td>js</td>
+		<td>response.headerListSize('Location')</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td>let</td>
+		<td>all_h_size</td>
+		<td>js</td>
+		<td>response.headersSize()</td>
+		<td></td>
+	</tr>
+</table>
+<br/>A particoular case is when the response is JSON (Content-Type : application/json). In such case, the property <b>jsonbody</b><br/>contains the JSON object that can be accessed using the dot notation. For example<br/><br/><table border="1" cellspacing="0" _TABLENUMBER=468608060791752815>
+	<tr>
+		<td><span class="pass">smartrics.rest.fitnesse.fixture.RestFixture</span></td>
+		<td colspan="4"><a href="http://localhost:8765">http://localhost:8765</a></td>
+	</tr>
+	<tr>
+		<td>GET</td>
+		<td>/resources/1.json</td>
+		<td>200</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>let <span class="error">Method setGET[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>body_value <span class="error">Method setResources1Json[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>js <span class="error">Method set200[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>response.jsonbody</td>
+		<td> <span class="error">Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span> <span class="error">Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+	</tr>
+	<tr>
+		<td>let <span class="error">Method setGET[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>body_value <span class="error">Method setResources1Json[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>js <span class="error">Method set200[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+		<td>response.jsonbody.resource.name</td>
+		<td>a funky name <span class="error">Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span> <span class="error">Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span></td>
+	</tr>
+</table>
+<br/><br/><br/>]]></content>
+    <relativePageName>LetTestsV2</relativePageName>
+    
+        <tables>
+            <table>
+        <name>decisionTable_0</name>
+                <row>
+                    <col><![CDATA[Action Fixture error(Could not invoke constructor for ActionFixture[0])]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[start]]></col>
+                    <col><![CDATA[smartrics.rest.test.fitnesse.fixture.HttpServerFixture]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[check error(The instance decisionTable_0. does not exist)]]></col>
+                    <col><![CDATA[is started error(The instance decisionTable_0. does not exist)]]></col>
+                    <col><![CDATA[true]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[press error(The instance decisionTable_0. does not exist)]]></col>
+                    <col><![CDATA[reset resources database error(The instance decisionTable_0. does not exist)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_1</name>
+                <row>
+                    <col><![CDATA[pass(smartrics.rest.fitnesse.fixture.RestFixture)]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[let]]></col>
+                    <col><![CDATA[message]]></col>
+                    <col><![CDATA[js]]></col>
+                    <col><![CDATA['Hello, World!']]></col>
+                    <col><![CDATA[Hello, World!]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[let error(Method setLet[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[sum error(Method setMessage[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[js error(Method setJs[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA['2 + 5 = ' + (2 + 5) error(Method setHelloWorld[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[2 + 5 = 7 error(Method HelloWorld[0] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[let error(Method setLet[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[two_expressions error(Method setMessage[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[js error(Method setJs[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[a=1;
+'a is ' + a error(Method setHelloWorld[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[a is 1 error(Method HelloWorld[0] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[let error(Method setLet[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[json_expr error(Method setMessage[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[js error(Method setJs[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[
+json = {
+    "widget": {
+        "debug": "on",
+        "window": {
+            "title": "Sample Konfabulator Widget",
+            "name": "main_window",
+            "width": 500,
+            "height": 500
+        },
+        "image": { 
+            "src": "Images/Sun.png",
+            "name": "sun1",
+            "hOffset": 250,
+            "vOffset": 250,
+            "alignment": "center"
+        },
+        "text": {
+            "data": "Click Here",
+            "size": 36,
+            "style": "bold",
+            "name": "text1",
+            "hOffset": 250,
+            "vOffset": 100,
+            "alignment": "center",
+            "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
+        }
+    }
+};
+json.widget.image.src
+ error(Method setHelloWorld[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[Images/Sun.png error(Method HelloWorld[0] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_2</name>
+                <row>
+                    <col><![CDATA[pass(smartrics.rest.fitnesse.fixture.RestFixture)]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[setBody]]></col>
+                    <col><![CDATA[&lt;resource&gt;&lt;name&gt;Bill&lt;/name&gt;&lt;data&gt;Some data on Bill&lt;/data&gt;&lt;/resource&gt;]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[POST error(Method setSetBody[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[/resources/ error(Method setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[201]]></col>
+                    <col><![CDATA[]]></col>
+                    <col><![CDATA[no-body]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[let error(Method setSetBody[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[id error(Method setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[header]]></col>
+                    <col><![CDATA[Location:/resources/(.+)]]></col>
+                    <col><![CDATA[]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[let error(Method setSetBody[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[id_string error(Method setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[js]]></col>
+                    <col><![CDATA['The id is: ' + symbols.get('id')]]></col>
+                    <col><![CDATA[The id is: %id%]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_3</name>
+                <row>
+                    <col><![CDATA[<span class="pass"><span class="fail">smartrics.rest.fitnesse.fixture.RestFixture: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: Table has 5 header column(s), but row 3 only has 2 column(s).
+	at fitnesse.slimTables.DecisionTable$DecisionTableCaller.checkRow(DecisionTable.java:82)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRow(DecisionTable.java:131)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRows(DecisionTable.java:126)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.call(DecisionTable.java:119)
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:29)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:87)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:314)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:296)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:283)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:227)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:140)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:120)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:106)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:86)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:58)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:47)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Thread.java:662)
+</pre></span></span>]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[GET]]></col>
+                    <col><![CDATA[/resources/1]]></col>
+                    <col><![CDATA[200]]></col>
+                    <col><![CDATA[]]></col>
+                    <col><![CDATA[]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[let error(Method setGET[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[body_value error(Method setResources1[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[js error(Method set200[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[response.body]]></col>
+                    <col><![CDATA[ error(Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.) error(Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[setBody]]></col>
+                    <col><![CDATA[&lt;resource&gt;&lt;name&gt;Bill&lt;/name&gt;&lt;data&gt;Some data on Bill&lt;/data&gt;&lt;/resource&gt;]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[POST]]></col>
+                    <col><![CDATA[/resources/]]></col>
+                    <col><![CDATA[201]]></col>
+                    <col><![CDATA[]]></col>
+                    <col><![CDATA[no-body]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[let]]></col>
+                    <col><![CDATA[status_code_value]]></col>
+                    <col><![CDATA[js]]></col>
+                    <col><![CDATA[response.statusCode]]></col>
+                    <col><![CDATA[]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[let]]></col>
+                    <col><![CDATA[status_text_value]]></col>
+                    <col><![CDATA[js]]></col>
+                    <col><![CDATA[response.statusText]]></col>
+                    <col><![CDATA[]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[let]]></col>
+                    <col><![CDATA[c_len]]></col>
+                    <col><![CDATA[js]]></col>
+                    <col><![CDATA[response.header0('Content-Length')]]></col>
+                    <col><![CDATA[0]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[let]]></col>
+                    <col><![CDATA[loc_again]]></col>
+                    <col><![CDATA[js]]></col>
+                    <col><![CDATA[response.header('Location', 0)]]></col>
+                    <col><![CDATA[]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[let]]></col>
+                    <col><![CDATA[h_size]]></col>
+                    <col><![CDATA[js]]></col>
+                    <col><![CDATA[response.headerListSize('Location')]]></col>
+                    <col><![CDATA[1]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[let]]></col>
+                    <col><![CDATA[all_h_size]]></col>
+                    <col><![CDATA[js]]></col>
+                    <col><![CDATA[response.headersSize()]]></col>
+                    <col><![CDATA[]]></col>
+          
+        </row>
+        
+      </table>
+            <table>
+        <name>decisionTable_4</name>
+                <row>
+                    <col><![CDATA[pass(smartrics.rest.fitnesse.fixture.RestFixture)]]></col>
+                    <col><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[GET]]></col>
+                    <col><![CDATA[/resources/1.json]]></col>
+                    <col><![CDATA[200]]></col>
+                    <col><![CDATA[]]></col>
+                    <col><![CDATA[]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[let error(Method setGET[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[body_value error(Method setResources1Json[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[js error(Method set200[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[response.jsonbody]]></col>
+                    <col><![CDATA[ error(Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.) error(Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+          
+        </row>
+                <row>
+                    <col><![CDATA[let error(Method setGET[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[body_value error(Method setResources1Json[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[js error(Method set200[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+                    <col><![CDATA[response.jsonbody.resource.name]]></col>
+                    <col><![CDATA[a funky name error(Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.) error(Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></col>
+          
+        </row>
+        
+      </table>
+      
+    </tables>
+    
+    
+    <instructions>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_0, make, decisionTable_0, ActionFixture]]]></instruction>
+        <slimResult><![CDATA[!error:Could not invoke constructor for ActionFixture[0]]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[!error:Could not invoke constructor for ActionFixture[0]]]></actual>
+                              <expected><![CDATA[Action Fixture]]></expected>
+                              <evaluationMessage><![CDATA[Action Fixture error(Could not invoke constructor for ActionFixture[0])]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_1, call, decisionTable_0, table, [[start, smartrics.rest.test.fitnesse.fixture.HttpServerFixture], [check, is started, true], [press, reset resources database]]]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_2, call, decisionTable_0, beginTable]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_3, call, decisionTable_0, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_4, call, decisionTable_0, setStart, check]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_4</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_0. does not exist]]></actual>
+                              <expected><![CDATA[check]]></expected>
+                              <evaluationMessage><![CDATA[check error(The instance decisionTable_0. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_5, call, decisionTable_0, setSmartricsRestTestFitnesseFixtureHttpServerFixture, is started]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_5</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_0. does not exist]]></actual>
+                              <expected><![CDATA[is started]]></expected>
+                              <evaluationMessage><![CDATA[is started error(The instance decisionTable_0. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_6, call, decisionTable_0, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_7, call, decisionTable_0, reset]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_8, call, decisionTable_0, setStart, press]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_8</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_0. does not exist]]></actual>
+                              <expected><![CDATA[press]]></expected>
+                              <evaluationMessage><![CDATA[press error(The instance decisionTable_0. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_9, call, decisionTable_0, setSmartricsRestTestFitnesseFixtureHttpServerFixture, reset resources database]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_0_9</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:The instance decisionTable_0. does not exist]]></actual>
+                              <expected><![CDATA[reset resources database]]></expected>
+                              <evaluationMessage><![CDATA[reset resources database error(The instance decisionTable_0. does not exist)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_10, call, decisionTable_0, execute]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_0_11, call, decisionTable_0, endTable]]]></instruction>
+        <slimResult><![CDATA[!error:The instance decisionTable_0. does not exist]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_0, make, decisionTable_1, smartrics.rest.fitnesse.fixture.RestFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>decisionTable_1_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.RestFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(smartrics.rest.fitnesse.fixture.RestFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_1, call, decisionTable_1, table, [[let, message, js, 'Hello, World!', Hello, World!], [let, sum, js, '2 + 5 = ' + (2 + 5), 2 + 5 = 7], [let, two_expressions, js, a=1;
+'a is ' + a, a is 1], [let, json_expr, js, 
+json = {
+    "widget": {
+        "debug": "on",
+        "window": {
+            "title": "Sample Konfabulator Widget",
+            "name": "main_window",
+            "width": 500,
+            "height": 500
+        },
+        "image": { 
+            "src": "Images/Sun.png",
+            "name": "sun1",
+            "hOffset": 250,
+            "vOffset": 250,
+            "alignment": "center"
+        },
+        "text": {
+            "data": "Click Here",
+            "size": 36,
+            "style": "bold",
+            "name": "text1",
+            "hOffset": 250,
+            "vOffset": 100,
+            "alignment": "center",
+            "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
+        }
+    }
+};
+json.widget.image.src
+, Images/Sun.png]]]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS table[1] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS table[1] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_2, call, decisionTable_1, beginTable]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS beginTable[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_3, call, decisionTable_1, reset]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS reset[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_4, call, decisionTable_1, setLet, let]]]></instruction>
+        <slimResult><![CDATA[!error:Method setLet[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_4</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setLet[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[let]]></expected>
+                              <evaluationMessage><![CDATA[let error(Method setLet[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_5, call, decisionTable_1, setMessage, sum]]]></instruction>
+        <slimResult><![CDATA[!error:Method setMessage[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_5</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setMessage[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[sum]]></expected>
+                              <evaluationMessage><![CDATA[sum error(Method setMessage[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_6, call, decisionTable_1, setJs, js]]]></instruction>
+        <slimResult><![CDATA[!error:Method setJs[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_6</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setJs[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[js]]></expected>
+                              <evaluationMessage><![CDATA[js error(Method setJs[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_7, call, decisionTable_1, setHelloWorld, '2 + 5 = ' + (2 + 5)]]]></instruction>
+        <slimResult><![CDATA[!error:Method setHelloWorld[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_7</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setHelloWorld[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA['2 + 5 = ' + (2 + 5)]]></expected>
+                              <evaluationMessage><![CDATA['2 + 5 = ' + (2 + 5) error(Method setHelloWorld[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_8, call, decisionTable_1, execute]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS execute[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_9, call, decisionTable_1, HelloWorld]]]></instruction>
+        <slimResult><![CDATA[!error:Method HelloWorld[0] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_9</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:Method HelloWorld[0] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[2 + 5 = 7]]></expected>
+                              <evaluationMessage><![CDATA[2 + 5 = 7 error(Method HelloWorld[0] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_10, call, decisionTable_1, reset]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS reset[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_11, call, decisionTable_1, setLet, let]]]></instruction>
+        <slimResult><![CDATA[!error:Method setLet[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_11</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setLet[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[let]]></expected>
+                              <evaluationMessage><![CDATA[let error(Method setLet[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_12, call, decisionTable_1, setMessage, two_expressions]]]></instruction>
+        <slimResult><![CDATA[!error:Method setMessage[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_12</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setMessage[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[two_expressions]]></expected>
+                              <evaluationMessage><![CDATA[two_expressions error(Method setMessage[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_13, call, decisionTable_1, setJs, js]]]></instruction>
+        <slimResult><![CDATA[!error:Method setJs[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_13</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setJs[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[js]]></expected>
+                              <evaluationMessage><![CDATA[js error(Method setJs[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_14, call, decisionTable_1, setHelloWorld, a=1;
+'a is ' + a]]]></instruction>
+        <slimResult><![CDATA[!error:Method setHelloWorld[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_14</instructionId>
+          <col>3</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setHelloWorld[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[a=1;
+'a is ' + a]]></expected>
+                              <evaluationMessage><![CDATA[a=1;
+'a is ' + a error(Method setHelloWorld[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_15, call, decisionTable_1, execute]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS execute[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_16, call, decisionTable_1, HelloWorld]]]></instruction>
+        <slimResult><![CDATA[!error:Method HelloWorld[0] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_16</instructionId>
+          <col>4</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:Method HelloWorld[0] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[a is 1]]></expected>
+                              <evaluationMessage><![CDATA[a is 1 error(Method HelloWorld[0] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_17, call, decisionTable_1, reset]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS reset[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_18, call, decisionTable_1, setLet, let]]]></instruction>
+        <slimResult><![CDATA[!error:Method setLet[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_18</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setLet[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[let]]></expected>
+                              <evaluationMessage><![CDATA[let error(Method setLet[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_19, call, decisionTable_1, setMessage, json_expr]]]></instruction>
+        <slimResult><![CDATA[!error:Method setMessage[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_19</instructionId>
+          <col>1</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setMessage[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[json_expr]]></expected>
+                              <evaluationMessage><![CDATA[json_expr error(Method setMessage[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_20, call, decisionTable_1, setJs, js]]]></instruction>
+        <slimResult><![CDATA[!error:Method setJs[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_20</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setJs[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[js]]></expected>
+                              <evaluationMessage><![CDATA[js error(Method setJs[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_21, call, decisionTable_1, setHelloWorld, 
+json = {
+    "widget": {
+        "debug": "on",
+        "window": {
+            "title": "Sample Konfabulator Widget",
+            "name": "main_window",
+            "width": 500,
+            "height": 500
+        },
+        "image": { 
+            "src": "Images/Sun.png",
+            "name": "sun1",
+            "hOffset": 250,
+            "vOffset": 250,
+            "alignment": "center"
+        },
+        "text": {
+            "data": "Click Here",
+            "size": 36,
+            "style": "bold",
+            "name": "text1",
+            "hOffset": 250,
+            "vOffset": 100,
+            "alignment": "center",
+            "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
+        }
+    }
+};
+json.widget.image.src
+]]]></instruction>
+        <slimResult><![CDATA[!error:Method setHelloWorld[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_21</instructionId>
+          <col>3</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setHelloWorld[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[
+json = {
+    "widget": {
+        "debug": "on",
+        "window": {
+            "title": "Sample Konfabulator Widget",
+            "name": "main_window",
+            "width": 500,
+            "height": 500
+        },
+        "image": { 
+            "src": "Images/Sun.png",
+            "name": "sun1",
+            "hOffset": 250,
+            "vOffset": 250,
+            "alignment": "center"
+        },
+        "text": {
+            "data": "Click Here",
+            "size": 36,
+            "style": "bold",
+            "name": "text1",
+            "hOffset": 250,
+            "vOffset": 100,
+            "alignment": "center",
+            "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
+        }
+    }
+};
+json.widget.image.src
+]]></expected>
+                              <evaluationMessage><![CDATA[
+json = {
+    "widget": {
+        "debug": "on",
+        "window": {
+            "title": "Sample Konfabulator Widget",
+            "name": "main_window",
+            "width": 500,
+            "height": 500
+        },
+        "image": { 
+            "src": "Images/Sun.png",
+            "name": "sun1",
+            "hOffset": 250,
+            "vOffset": 250,
+            "alignment": "center"
+        },
+        "text": {
+            "data": "Click Here",
+            "size": 36,
+            "style": "bold",
+            "name": "text1",
+            "hOffset": 250,
+            "vOffset": 100,
+            "alignment": "center",
+            "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
+        }
+    }
+};
+json.widget.image.src
+ error(Method setHelloWorld[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_22, call, decisionTable_1, execute]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS execute[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_23, call, decisionTable_1, HelloWorld]]]></instruction>
+        <slimResult><![CDATA[!error:Method HelloWorld[0] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_1_23</instructionId>
+          <col>4</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+                    <actual><![CDATA[!error:Method HelloWorld[0] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[Images/Sun.png]]></expected>
+                              <evaluationMessage><![CDATA[Images/Sun.png error(Method HelloWorld[0] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_1_24, call, decisionTable_1, endTable]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS endTable[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_0, make, decisionTable_2, smartrics.rest.fitnesse.fixture.RestFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>decisionTable_2_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.RestFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(smartrics.rest.fitnesse.fixture.RestFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_1, call, decisionTable_2, table, [[setBody, &lt;resource&gt;&lt;name&gt;Bill&lt;/name&gt;&lt;data&gt;Some data on Bill&lt;/data&gt;&lt;/resource&gt;], [POST, /resources/, 201, , no-body], [let, id, header, Location:/resources/(.+), ], [let, id_string, js, 'The id is: ' + symbols.get('id'), The id is: %id%]]]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS table[1] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_2_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS table[1] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_2, call, decisionTable_2, beginTable]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS beginTable[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_3, call, decisionTable_2, reset]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS reset[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_4, call, decisionTable_2, setSetBody, POST]]]></instruction>
+        <slimResult><![CDATA[!error:Method setSetBody[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_2_4</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setSetBody[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[POST]]></expected>
+                              <evaluationMessage><![CDATA[POST error(Method setSetBody[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_5, call, decisionTable_2, setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt, /resources/]]]></instruction>
+        <slimResult><![CDATA[!error:Method setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_2_5</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[/resources/]]></expected>
+                              <evaluationMessage><![CDATA[/resources/ error(Method setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_6, call, decisionTable_2, execute]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS execute[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_7, call, decisionTable_2, reset]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS reset[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_8, call, decisionTable_2, setSetBody, let]]]></instruction>
+        <slimResult><![CDATA[!error:Method setSetBody[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_2_8</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setSetBody[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[let]]></expected>
+                              <evaluationMessage><![CDATA[let error(Method setSetBody[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_9, call, decisionTable_2, setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt, id]]]></instruction>
+        <slimResult><![CDATA[!error:Method setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_2_9</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[id]]></expected>
+                              <evaluationMessage><![CDATA[id error(Method setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_10, call, decisionTable_2, execute]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS execute[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_11, call, decisionTable_2, reset]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS reset[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_12, call, decisionTable_2, setSetBody, let]]]></instruction>
+        <slimResult><![CDATA[!error:Method setSetBody[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_2_12</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setSetBody[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[let]]></expected>
+                              <evaluationMessage><![CDATA[let error(Method setSetBody[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_13, call, decisionTable_2, setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt, id_string]]]></instruction>
+        <slimResult><![CDATA[!error:Method setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_2_13</instructionId>
+          <col>1</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[id_string]]></expected>
+                              <evaluationMessage><![CDATA[id_string error(Method setLtResourceGtLtNameGtBillLtNameGtLtDataGtSomeDataOnBillLtDataGtLtResourceGt[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_14, call, decisionTable_2, execute]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS execute[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_2_15, call, decisionTable_2, endTable]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS endTable[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_3_0, make, decisionTable_3, smartrics.rest.fitnesse.fixture.RestFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_3_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[<span class="fail">smartrics.rest.fitnesse.fixture.RestFixture: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: Table has 5 header column(s), but row 3 only has 2 column(s).
+	at fitnesse.slimTables.DecisionTable$DecisionTableCaller.checkRow(DecisionTable.java:82)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRow(DecisionTable.java:131)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRows(DecisionTable.java:126)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.call(DecisionTable.java:119)
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:29)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:87)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:314)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:296)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:283)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:227)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:140)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:120)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:106)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:86)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:58)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:47)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Thread.java:662)
+</pre></span>]]></expected>
+                              <evaluationMessage><![CDATA[<span class="pass"><span class="fail">smartrics.rest.fitnesse.fixture.RestFixture: Bad table: <br/><pre>fitnesse.slimTables.SlimTable$SyntaxError: Table has 5 header column(s), but row 3 only has 2 column(s).
+	at fitnesse.slimTables.DecisionTable$DecisionTableCaller.checkRow(DecisionTable.java:82)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRow(DecisionTable.java:131)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.invokeRows(DecisionTable.java:126)
+	at fitnesse.slimTables.DecisionTable$FixtureCaller.call(DecisionTable.java:119)
+	at fitnesse.slimTables.DecisionTable.appendInstructions(DecisionTable.java:29)
+	at fitnesse.slimTables.SlimTable.appendInstructions(SlimTable.java:87)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.createInstructions(SlimTestSystem.java:314)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processTablesAndGetHtml(SlimTestSystem.java:296)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.processAllTablesOnPage(SlimTestSystem.java:283)
+	at fitnesse.responders.run.slimResponder.SlimTestSystem.runTestsAndGenerateHtml(SlimTestSystem.java:227)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestSystemPages(MultipleTestsRunner.java:140)
+	at fitnesse.responders.run.MultipleTestsRunner.startTestSystemAndExecutePages(MultipleTestsRunner.java:120)
+	at fitnesse.responders.run.MultipleTestsRunner.executePagesInTestSystem(MultipleTestsRunner.java:106)
+	at fitnesse.responders.run.MultipleTestsRunner.internalExecuteTestPages(MultipleTestsRunner.java:86)
+	at fitnesse.responders.run.MultipleTestsRunner.executeTestPages(MultipleTestsRunner.java:58)
+	at fitnesse.responders.run.SuiteResponder.performExecution(SuiteResponder.java:47)
+	at fitnesse.responders.run.TestResponder.doSending(TestResponder.java:45)
+	at fitnesse.responders.ChunkingResponder.startSending(ChunkingResponder.java:67)
+	at fitnesse.responders.ChunkingResponder.access$000(ChunkingResponder.java:17)
+	at fitnesse.responders.ChunkingResponder$RespondingRunnable.run(ChunkingResponder.java:106)
+	at java.lang.Thread.run(Thread.java:662)
+</pre></span></span>]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_3_1, call, decisionTable_3, table, [[GET, /resources/1, 200, , ], [let, body_value, js, response.body, ], [setBody, &lt;resource&gt;&lt;name&gt;Bill&lt;/name&gt;&lt;data&gt;Some data on Bill&lt;/data&gt;&lt;/resource&gt;], [POST, /resources/, 201, , no-body], [let, status_code_value, js, response.statusCode, ], [let, status_text_value, js, response.statusText, ], [let, c_len, js, response.header0('Content-Length'), 0], [let, loc_again, js, response.header('Location', 0), ], [let, h_size, js, response.headerListSize('Location'), 1], [let, all_h_size, js, response.headersSize(), ]]]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS table[1] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_3_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS table[1] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_3_2, call, decisionTable_3, beginTable]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS beginTable[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_3_3, call, decisionTable_3, reset]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS reset[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_3_4, call, decisionTable_3, setGET, let]]]></instruction>
+        <slimResult><![CDATA[!error:Method setGET[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_3_4</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setGET[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[let]]></expected>
+                              <evaluationMessage><![CDATA[let error(Method setGET[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_3_5, call, decisionTable_3, setResources1, body_value]]]></instruction>
+        <slimResult><![CDATA[!error:Method setResources1[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_3_5</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setResources1[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[body_value]]></expected>
+                              <evaluationMessage><![CDATA[body_value error(Method setResources1[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_3_6, call, decisionTable_3, set200, js]]]></instruction>
+        <slimResult><![CDATA[!error:Method set200[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_3_6</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method set200[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[js]]></expected>
+                              <evaluationMessage><![CDATA[js error(Method set200[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_3_7, call, decisionTable_3, set, ]]]></instruction>
+        <slimResult><![CDATA[!error:Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_3_7</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[]]></expected>
+                              <evaluationMessage><![CDATA[ error(Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_3_8, call, decisionTable_3, set, ]]]></instruction>
+        <slimResult><![CDATA[!error:Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_3_8</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[ <span class="error">Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span>]]></expected>
+                              <evaluationMessage><![CDATA[ error(Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.) error(Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_3_9, call, decisionTable_3, execute]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS execute[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_0, make, decisionTable_4, smartrics.rest.fitnesse.fixture.RestFixture, <a href="http://localhost:8765">http://localhost:8765</a>]]]></instruction>
+        <slimResult><![CDATA[OK]]></slimResult>
+                <expectation>
+          <status>right</status>
+          <instructionId>decisionTable_4_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+                    <actual><![CDATA[OK]]></actual>
+                              <expected><![CDATA[smartrics.rest.fitnesse.fixture.RestFixture]]></expected>
+                              <evaluationMessage><![CDATA[pass(smartrics.rest.fitnesse.fixture.RestFixture)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_1, call, decisionTable_4, table, [[GET, /resources/1.json, 200, , ], [let, body_value, js, response.jsonbody, ], [let, body_value, js, response.jsonbody.resource.name, a funky name]]]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS table[1] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_1</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS table[1] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></actual>
+                              <expected><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></expected>
+                              <evaluationMessage><![CDATA[<a href="http://localhost:8765">http://localhost:8765</a>]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_2, call, decisionTable_4, beginTable]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS beginTable[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_3, call, decisionTable_4, reset]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS reset[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_4, call, decisionTable_4, setGET, let]]]></instruction>
+        <slimResult><![CDATA[!error:Method setGET[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_4</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setGET[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[let]]></expected>
+                              <evaluationMessage><![CDATA[let error(Method setGET[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_5, call, decisionTable_4, setResources1Json, body_value]]]></instruction>
+        <slimResult><![CDATA[!error:Method setResources1Json[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_5</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setResources1Json[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[body_value]]></expected>
+                              <evaluationMessage><![CDATA[body_value error(Method setResources1Json[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_6, call, decisionTable_4, set200, js]]]></instruction>
+        <slimResult><![CDATA[!error:Method set200[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_6</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method set200[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[js]]></expected>
+                              <evaluationMessage><![CDATA[js error(Method set200[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_7, call, decisionTable_4, set, ]]]></instruction>
+        <slimResult><![CDATA[!error:Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_7</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[]]></expected>
+                              <evaluationMessage><![CDATA[ error(Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_8, call, decisionTable_4, set, ]]]></instruction>
+        <slimResult><![CDATA[!error:Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_8</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[ <span class="error">Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span>]]></expected>
+                              <evaluationMessage><![CDATA[ error(Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.) error(Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_9, call, decisionTable_4, execute]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS execute[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_10, call, decisionTable_4, reset]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS reset[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_11, call, decisionTable_4, setGET, let]]]></instruction>
+        <slimResult><![CDATA[!error:Method setGET[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_11</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setGET[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[let]]></expected>
+                              <evaluationMessage><![CDATA[let error(Method setGET[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_12, call, decisionTable_4, setResources1Json, body_value]]]></instruction>
+        <slimResult><![CDATA[!error:Method setResources1Json[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_12</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method setResources1Json[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[body_value]]></expected>
+                              <evaluationMessage><![CDATA[body_value error(Method setResources1Json[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_13, call, decisionTable_4, set200, js]]]></instruction>
+        <slimResult><![CDATA[!error:Method set200[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_13</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method set200[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[js]]></expected>
+                              <evaluationMessage><![CDATA[js error(Method set200[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_14, call, decisionTable_4, set, a funky name]]]></instruction>
+        <slimResult><![CDATA[!error:Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_14</instructionId>
+          <col>4</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[a funky name]]></expected>
+                              <evaluationMessage><![CDATA[a funky name error(Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_15, call, decisionTable_4, set, a funky name]]]></instruction>
+        <slimResult><![CDATA[!error:Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></slimResult>
+                <expectation>
+          <status>ignored</status>
+          <instructionId>decisionTable_4_15</instructionId>
+          <col>4</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+                    <actual><![CDATA[!error:Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.]]></actual>
+                              <expected><![CDATA[a funky name <span class="error">Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.</span>]]></expected>
+                              <evaluationMessage><![CDATA[a funky name error(Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.) error(Method set[1] not found in smartrics.rest.fitnesse.fixture.RestFixture.)]]></evaluationMessage>
+                  </expectation>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_16, call, decisionTable_4, execute]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS execute[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+            <instructionResult>
+        <instruction><![CDATA[[decisionTable_4_17, call, decisionTable_4, endTable]]]></instruction>
+        <slimResult><![CDATA[__EXCEPTION__:fitnesse.slim.SlimError: message:<<NO_METHOD_IN_CLASS endTable[0] smartrics.rest.fitnesse.fixture.RestFixture.>>
+	at fitnesse.slim.MethodExecutionResult$NoMethod.returnValue(MethodExecutionResult.java:27)
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:179)
+	at fitnesse.slim.Statement.callMethodAtIndex(Statement.java:104)
+	at fitnesse.slim.Statement.call(Statement.java:97)
+	at fitnesse.slim.Statement.execute(Statement.java:77)
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:36)
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:81)
+	at fitnesse.slim.SlimServer.processTheInstructions(SlimServer.java:73)
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:57)
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:43)
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:30)
+	at fitnesse.socketservice.SocketService$ServerRunner.run(SocketService.java:95)
+	at java.lang.Thread.run(Thread.java:662)
+]]></slimResult>
+        
+      </instructionResult>
+      
+    </instructions>
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+

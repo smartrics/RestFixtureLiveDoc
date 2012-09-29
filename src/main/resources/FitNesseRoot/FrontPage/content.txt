@@ -1,0 +1,11 @@
+!3 Before you start
+Make sure you have run
+  {{{mvn clean install}}} in the rest-fixture-live-docs's parent project.  This will put your application plus its dependencies onto the classpath of the !-FitNesse-! testrunner.  You will also need to do this whenever you have changed your application and want to test it through !-FitNesse-!.  For development, you can also  use the Trinidad test runner to test in-process.  This ''won't'' require running mvn install.
+
+!2 Main Content
+ * RestFixtureTests
+   * Rest Fixture Live Documentation
+   
+
+   
+   

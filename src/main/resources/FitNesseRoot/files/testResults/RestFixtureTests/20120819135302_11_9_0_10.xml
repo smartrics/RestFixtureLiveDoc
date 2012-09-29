@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20111024</FitNesseVersion>
+  <rootPath>RestFixtureTests</rootPath>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.ScriptFixtureTests.DeleteTests</name>
+    <date>08/19/2012 13:53:02</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.ScriptFixtureTests.DeleteTests?pageHistory&amp;resultDate=20120819135302</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>11</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.ScriptFixtureTests.GetTests</name>
+    <date>08/19/2012 13:53:02</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.ScriptFixtureTests.GetTests?pageHistory&amp;resultDate=20120819135302</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>82</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.ScriptFixtureTests.JavascriptExpectations</name>
+    <date>08/19/2012 13:53:02</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.ScriptFixtureTests.JavascriptExpectations?pageHistory&amp;resultDate=20120819135302</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>55</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.ScriptFixtureTests.OverrideContentHandlers</name>
+    <date>08/19/2012 13:53:02</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.ScriptFixtureTests.OverrideContentHandlers?pageHistory&amp;resultDate=20120819135302</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>24</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.ScriptFixtureTests.PostTests</name>
+    <date>08/19/2012 13:53:02</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.ScriptFixtureTests.PostTests?pageHistory&amp;resultDate=20120819135302</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>3</wrong>
+      <ignores>0</ignores>
+      <exceptions>167</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.ScriptFixtureTests.PutTests</name>
+    <date>08/19/2012 13:53:03</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.ScriptFixtureTests.PutTests?pageHistory&amp;resultDate=20120819135303</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>23</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.SharedTests.SuiteSetUp</name>
+    <date>08/19/2012 13:53:03</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.SharedTests.SuiteSetUp?pageHistory&amp;resultDate=20120819135303</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>51</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.SharedTests.CollapseableContent</name>
+    <date>08/19/2012 13:53:03</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.SharedTests.CollapseableContent?pageHistory&amp;resultDate=20120819135303</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>17</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.SharedTests.DeleteTests</name>
+    <date>08/19/2012 13:53:03</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.SharedTests.DeleteTests?pageHistory&amp;resultDate=20120819135303</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>27</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.SharedTests.GetTests</name>
+    <date>08/19/2012 13:53:03</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.SharedTests.GetTests?pageHistory&amp;resultDate=20120819135303</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>7</wrong>
+      <ignores>0</ignores>
+      <exceptions>27</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.SharedTests.JavascriptExpectations</name>
+    <date>08/19/2012 13:53:03</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.SharedTests.JavascriptExpectations?pageHistory&amp;resultDate=20120819135303</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>63</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.SharedTests.LetTests</name>
+    <date>08/19/2012 13:53:03</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.SharedTests.LetTests?pageHistory&amp;resultDate=20120819135303</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>109</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.SharedTests.LetTestsV2</name>
+    <date>08/19/2012 13:53:03</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.SharedTests.LetTestsV2?pageHistory&amp;resultDate=20120819135303</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>89</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.SharedTests.OverrideContentHandlers</name>
+    <date>08/19/2012 13:53:03</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.SharedTests.OverrideContentHandlers?pageHistory&amp;resultDate=20120819135303</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>3</wrong>
+      <ignores>0</ignores>
+      <exceptions>17</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.SharedTests.PostTests</name>
+    <date>08/19/2012 13:53:03</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.SharedTests.PostTests?pageHistory&amp;resultDate=20120819135303</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>7</wrong>
+      <ignores>0</ignores>
+      <exceptions>173</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.SharedTests.PutTests</name>
+    <date>08/19/2012 13:53:04</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.SharedTests.PutTests?pageHistory&amp;resultDate=20120819135304</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>29</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.SharedTests.SequenceDiagrams</name>
+    <date>08/19/2012 13:53:04</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.SharedTests.SequenceDiagrams?pageHistory&amp;resultDate=20120819135304</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>2</wrong>
+      <ignores>0</ignores>
+      <exceptions>121</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.SlimTests.SharedTests.SuiteTearDown</name>
+    <date>08/19/2012 13:53:04</date>
+    <pageHistoryLink>RestFixtureTests.SlimTests.SharedTests.SuiteTearDown?pageHistory&amp;resultDate=20120819135304</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>23</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.FitTests.SharedTests.SuiteSetUp</name>
+    <date>08/19/2012 13:53:04</date>
+    <pageHistoryLink>RestFixtureTests.FitTests.SharedTests.SuiteSetUp?pageHistory&amp;resultDate=20120819135304</pageHistoryLink>
+    <counts>
+      <right>10</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.FitTests.SharedTests.CollapseableContent</name>
+    <date>08/19/2012 13:53:04</date>
+    <pageHistoryLink>RestFixtureTests.FitTests.SharedTests.CollapseableContent?pageHistory&amp;resultDate=20120819135304</pageHistoryLink>
+    <counts>
+      <right>3</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.FitTests.SharedTests.DeleteTests</name>
+    <date>08/19/2012 13:53:05</date>
+    <pageHistoryLink>RestFixtureTests.FitTests.SharedTests.DeleteTests?pageHistory&amp;resultDate=20120819135305</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.FitTests.SharedTests.GetTests</name>
+    <date>08/19/2012 13:53:05</date>
+    <pageHistoryLink>RestFixtureTests.FitTests.SharedTests.GetTests?pageHistory&amp;resultDate=20120819135305</pageHistoryLink>
+    <counts>
+      <right>24</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.FitTests.SharedTests.JavascriptExpectations</name>
+    <date>08/19/2012 13:53:05</date>
+    <pageHistoryLink>RestFixtureTests.FitTests.SharedTests.JavascriptExpectations?pageHistory&amp;resultDate=20120819135305</pageHistoryLink>
+    <counts>
+      <right>16</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.FitTests.SharedTests.LetTests</name>
+    <date>08/19/2012 13:53:06</date>
+    <pageHistoryLink>RestFixtureTests.FitTests.SharedTests.LetTests?pageHistory&amp;resultDate=20120819135306</pageHistoryLink>
+    <counts>
+      <right>13</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.FitTests.SharedTests.LetTestsV2</name>
+    <date>08/19/2012 13:53:06</date>
+    <pageHistoryLink>RestFixtureTests.FitTests.SharedTests.LetTestsV2?pageHistory&amp;resultDate=20120819135306</pageHistoryLink>
+    <counts>
+      <right>17</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.FitTests.SharedTests.OverrideContentHandlers</name>
+    <date>08/19/2012 13:53:06</date>
+    <pageHistoryLink>RestFixtureTests.FitTests.SharedTests.OverrideContentHandlers?pageHistory&amp;resultDate=20120819135306</pageHistoryLink>
+    <counts>
+      <right>8</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.FitTests.SharedTests.PostTests</name>
+    <date>08/19/2012 13:53:06</date>
+    <pageHistoryLink>RestFixtureTests.FitTests.SharedTests.PostTests?pageHistory&amp;resultDate=20120819135306</pageHistoryLink>
+    <counts>
+      <right>31</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.FitTests.SharedTests.PutTests</name>
+    <date>08/19/2012 13:53:06</date>
+    <pageHistoryLink>RestFixtureTests.FitTests.SharedTests.PutTests?pageHistory&amp;resultDate=20120819135306</pageHistoryLink>
+    <counts>
+      <right>8</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.FitTests.SharedTests.SequenceDiagrams</name>
+    <date>08/19/2012 13:53:06</date>
+    <pageHistoryLink>RestFixtureTests.FitTests.SharedTests.SequenceDiagrams?pageHistory&amp;resultDate=20120819135306</pageHistoryLink>
+    <counts>
+      <right>1</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>6</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>RestFixtureTests.FitTests.SharedTests.SuiteTearDown</name>
+    <date>08/19/2012 13:53:06</date>
+    <pageHistoryLink>RestFixtureTests.FitTests.SharedTests.SuiteTearDown?pageHistory&amp;resultDate=20120819135306</pageHistoryLink>
+    <counts>
+      <right>2</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+  </pageHistoryReference>
+    <finalCounts>
+    <right>11</right>
+    <wrong>9</wrong>
+    <ignores>0</ignores>
+    <exceptions>10</exceptions>
+  </finalCounts>
+
+</suiteResults>
+
