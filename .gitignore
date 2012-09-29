@@ -1,0 +1,6 @@
+target/
+.classpath
+.project
+FitNesseRoot
+*.log
+.settings
