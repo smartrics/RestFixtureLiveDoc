@@ -1,0 +1,6 @@
+| Fit Rest Fixture |http://${jettyHost}:${jettyPort}|
+|setBody|<resource><name>test post</name><data>some data</data></resource>|
+|POST   | /resources | 201 | | no-body |
+|let    | id | header | Location:/resources/(.+) | |
+
+

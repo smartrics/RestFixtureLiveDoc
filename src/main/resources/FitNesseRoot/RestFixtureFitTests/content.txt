@@ -1,0 +1,24 @@
+!1 Rest Fixture Acceptance Test Suite
+
+Tests in this subdirectory are executed with the default Fit Runner.
+
+!contents -g
+
+
+!*> Class Path & Global Defines
+!define COLLAPSE_SETUP {true}
+!define COLLAPSE_TEARDOWN {true}
+
+'''Variables Settings'''
+!define jettyHost {localhost}
+!define jettyPort {8765}
+!define tempDirectory {target/live-docs-temp}
+
+'''Classpath Settings'''
+!path target/classes/
+!path target/test-classes/
+!path target/test-classes/log4j.xml
+!path target/dependencies/*.jar
+
+*!
+
