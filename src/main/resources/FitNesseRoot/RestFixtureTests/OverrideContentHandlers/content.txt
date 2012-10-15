@@ -19,7 +19,7 @@ Content types not recogised will be mapped to the default content handler (XML).
 
 For example, XML handler is used for for content types of application/xml; hence XPaths can be used to set expectations:
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/0 | 200 | Content-Type : application/xml;.+ |!-
  /resource/name[text()='a funky name'] <br/>
  /resource/data[text()='an important message']
@@ -27,11 +27,11 @@ For example, XML handler is used for for content types of application/xml; hence
 
 Bespoke mapping can be defined in the config using the config key '''restfixture.content.handlers.map'''
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig-!  | overridesContentHandlerConfig |
+| Table: Rest Fixture Config  | overridesContentHandlerConfig |
 | restfixture.content.handlers.map | !-
 application/xml=TEXT
 -!|
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}| overridesContentHandlerConfig |
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| overridesContentHandlerConfig |
 |GET    | /resources/0 | 200 | Content-Type : application/xml;.+ |<resource>[\s.]*<name>a funky name</name>[\s\w\d<>/=\:'.]*</resource>[\s]*|
 

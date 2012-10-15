@@ -9,5 +9,5 @@ If the value of the property is negative the toggle button will not be rendered.
 
 Currently only large HTTP response content cells (if the actual value is displayed) are enabled for toggling.
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/100 | 200 | |!-/resource/type[text()='large content']-! |

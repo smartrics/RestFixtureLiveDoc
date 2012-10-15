@@ -9,7 +9,7 @@ The following cell indicate:
 returns at least one node
 ****!
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/0 | 200 | Content-Length : [\d]+ |!-
  /resource/name[text()='a funky name'] <br/>
  /resource/data[text()='an important message']
@@ -19,7 +19,7 @@ returns at least one node
 A GET (as all other verbs) accepts absolute resource paths.  
 ****!
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | http://${jettyHost}:${jettyPort}/resources/0 | 200 | Content-Length : [\d]+ |!-
  /resource/name[text()='a funky name'] <br/>
  /resource/data[text()='an important message']
@@ -27,7 +27,7 @@ A GET (as all other verbs) accepts absolute resource paths.
 
 A GET request properly handles query strings. In this example the stub resource echoes the query string in a Query-String header
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/0?param=echome | 200 | !-Content-Length : [\d]+
 Query-String : param=echome -! |!-
  /resource/name[text()='a funky name'] <br/>
@@ -40,7 +40,7 @@ Get a non existing resource should not find it
 Instead of XPaths you can specify 'no-body' if the operation is expected to return an empty body
 ****!
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/20 | 404 | Content-Length : 0 | no-body |
 |GET    | /resources/20.json | 404 | Content-Length : 0 | no-body |
 
@@ -48,7 +48,7 @@ Instead of XPaths you can specify 'no-body' if the operation is expected to retu
 Namespaces are supported by declaring the alias/uri map in the RestFixtureConfig, using the key restfixture.xml.namespace.context (See SuiteSetup)
 ****!
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/0 | 200 | Content-Length : [\d]+ |!-
  /resource/nstag/ns1alias:number[text()='3']
 -!|
@@ -58,7 +58,7 @@ Namespaces are supported by declaring the alias/uri map in the RestFixtureConfig
 Expectations can be asserted also in json format for responses whose content type is 'application/json' or 'application/x-javascript'
 ****!
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/1.json | 200 |Content-Type : application/json;charset=ISO-8859-1 |!-
  /resource/name[text()='a funky name'] <br/>
  /resource/data[text()='an important message']
@@ -70,8 +70,8 @@ A query string can contain parameter arrays and they are correctly handled by Re
 
 To allow correct handling of array parameters a new configuration option must be set: *http.client.use.new.http.uri.factory*
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig-!  | withArrayParametersSupport|
+| Table: Rest Fixture Config  | withArrayParametersSupport|
 | http.client.use.new.http.uri.factory | true |
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}| withArrayParametersSupport |
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| withArrayParametersSupport |
 |GET    | /resources/0?a[0]=2&a[1]=4 | 200 | | |

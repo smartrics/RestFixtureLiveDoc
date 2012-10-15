@@ -9,7 +9,7 @@ The follwoing cell indicates where to get the data from. That is either the ''he
 Then the expression to extract the value to be assigned to he variable. For ''header'' it has to be a regular expression, for _body_ it
 has to be an XPath whose execution must return a String node.
 ***!
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |setBody|<resource><name>test post</name><data>some data</data></resource>|
 |POST   | /resources | 201 | | no-body |
 |let    | id | header | Location:/resources/(.+) | |
@@ -29,7 +29,7 @@ Labels are implemented on top of the Fitnesse symbols map. So every label set vi
 If a label starts with $, the $ is ignored.
 ***!
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/%id% | 200 | |!-
  /resource/name[text()='test post']<br/>
  /resource/data[text()='some data']
@@ -39,25 +39,25 @@ If a label starts with $, the $ is ignored.
 
 Labels that are set to null are rendered using the default value for null, e.g. the string "null"
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/%id% | 200 | | |
 |let    | thisIsNull | body | /resource/somewhereelse/text() | |
 |comment| this is null: '%thisIsNull%' |
 
 Albeit, the value can be overridden
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig-!  | withBespokeNullRepresentation |
+| Table: Rest Fixture Config  | withBespokeNullRepresentation |
 | restfixture.null.value.representation | !--! |
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}| withBespokeNullRepresentation |
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| withBespokeNullRepresentation |
 |GET    | /resources/%id% | 200 | | |
 |let    | thisIsNull | body | /resource/somewhereelse/text() | |
 |comment| this is null: '%thisIsNull%' |
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig-!  | withBespokeNullRepresentation |
+| Table: Rest Fixture Config  | withBespokeNullRepresentation |
 | restfixture.null.value.representation | !-NIL-! |
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}| withBespokeNullRepresentation |
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| withBespokeNullRepresentation |
 |GET    | /resources/%id% | 200 | | |
 |let    | thisIsNull | body | /resource/somewhereelse/text() | |
 |comment| this is null: '%thisIsNull%' |
@@ -67,12 +67,12 @@ Albeit, the value can be overridden
 Expectations can be asserted also in json format for responses whose content type is 'application/json'
 Variables may be substitued in the expected result
 ****!
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |setBody|!- { "resource" : { "name" : "test post", "data" : "some data" } } -!|
 |POST   | /resources/ | 201 | | no-body |
 |let    | id | header | Location:/resources/(.+) | |
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/%id%.json | 200 |Content-Type : application/json |!-
   /resource/name[text()='test post'] <br/>
   /resource/data[text()='some data']
@@ -88,17 +88,17 @@ Use the multipartFile property to upload files to a server
 |check|create| true |
 |check|exists| true |
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |setMultipartFileName|${tempDirectory}/tempfile|
 |POST   | /resources/ | 200 | | file: { "resource" : { "name" : "test post", "data" : "some data" } }|
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |setMultipartFileName|${tempDirectory}/tempfile|
 |setMultipartFileParameterName|abc123|
 |POST   | /resources/ | 200 | | abc123: { "resource" : { "name" : "test post", "data" : "some data" } }|
 
 Use simple file upload
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |setFileName|${tempDirectory}/tempfile|
 |POST   | /resources/ | 200 | | { "resource" : { "name" : "test post", "data" : "some data" } }|
 
@@ -111,13 +111,13 @@ Use simple file upload
 Other than the aforementioned content types you can emulate form POSTs. 
 Remember to escape the setBody content cell with !- -!
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |setHeader|Content-Type : application/x-www-form-urlencoded;charset=UTF-8|
 |setBody|!-name=test%20post&data=some%20data-!|
 |POST   | /resources | 201 | | no-body |
 |let    | id | header | Location:/resources/(.+) | |
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/%id% | 200 | |!-
  /resource/name[text()='test post']
  /resource/data[text()='some data']
@@ -125,14 +125,14 @@ Remember to escape the setBody content cell with !- -!
 
 Header values can also be substituted with symbols previously defined:
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |let      | contenttype | const | application/x-www-form-urlencoded;charset=UTF-8| | 
 |setHeader|Content-Type : %contenttype%|
 |setBody|!-name=test%20post&data=some%20data-!|
 |POST   | /resources | 201 | | no-body |
 |let    | id | header | Location:/resources/(.+) | |
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/%id% | 200 | |!-
  /resource/name[text()='test post']
  /resource/data[text()='some data']

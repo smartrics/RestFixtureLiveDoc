@@ -5,8 +5,8 @@ A query string can contain parameter arrays and they are correctly handled by Re
 
 To allow correct handling of array parameters a new configuration option must be set: *http.client.use.new.http.uri.factory*
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixtureConfig-!  | withArrayParametersSupport|
+| Table: Rest Fixture Config | withArrayParametersSupport|
 | http.client.use.new.http.uri.factory | true |
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}| withArrayParametersSupport |
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| withArrayParametersSupport |
 |GET    | /resources/0?a[0]=2&a[1]=4 | 200 | | |

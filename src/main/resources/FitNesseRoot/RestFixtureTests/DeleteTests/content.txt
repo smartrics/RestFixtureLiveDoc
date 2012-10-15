@@ -4,6 +4,6 @@
 You may not want to specify any expectation neither in the header cell nor in the body cell, as in the GET below
 ***!
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |DELETE | /resources/0 | 204 | | no-body |
 |GET    | /resources/0 | 404 | | |

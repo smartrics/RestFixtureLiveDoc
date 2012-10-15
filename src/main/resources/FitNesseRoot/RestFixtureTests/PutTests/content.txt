@@ -5,7 +5,7 @@ This test shows how to pass bespoke headers in the request. In this specific cas
 following PUT and GET can match it the response.
 ***!
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |setBody|<resource><name>name being updated</name><data>data being updated</data></resource>|
 |setHeader|Echo-Header : echoed|
 |PUT | /resources/0 | 200 | Echo-Header : echoed | no-body |

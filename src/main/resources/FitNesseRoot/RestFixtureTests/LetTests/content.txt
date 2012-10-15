@@ -4,7 +4,7 @@ Usages of LET (See also RestFixtureTests.SlimTests.PostTests for more examples)
 
 ''LET used to extract values from header, using regular expressions''
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |setBody|<resource><name>Bill</name><data>Some data on Bill</data></resource>|
 |POST   | /resources/ | 201 | | no-body |
 |let    | id | header | Location:/resources/(.+) | |
@@ -20,7 +20,7 @@ Labels are global and can be shared across rest fixture instances.
 Here follows an usage of the previously extracted ''id''.
 This example also shows how to use let to extract data from the XML body of a response using XPath.
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/%id% | 200 | |!-
  /resource/name[text()='Bill']<br/>
  /resource/data[text()='Some data on Bill']
@@ -29,7 +29,7 @@ This example also shows how to use let to extract data from the XML body of a re
 
 ...or from a JSON body
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/1.json | 200 |Content-Type : application/json|!-
  /resource/name[text()='a funky name']<br/>
  /resource/data[text()='an important message']
@@ -54,7 +54,7 @@ Look at the source code of this page to see that the resource URI
 for the GET method below is defined as '''%resType%/%id%'''
 ***!
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | %resType%/%id% | 200 | | |
 |let    | $symName | body | /resource/name/text() | |
 
@@ -63,7 +63,7 @@ can be shared across various fixtures.
 
 ''LET defines symbols in the Fixture Symbol map if label starts with $''
 
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/%id% | 200 | | |
 |let    | $symName | body | /resource/name/text() | |
 
@@ -83,6 +83,6 @@ This fixture sets ''symbolName=/resources''...
 |symbolValue|/resources|
 
 ... then the value is used by the !-RestFixture-!
-| !-Table:smartrics.rest.fitnesse.fixture.RestFixture-! |http://${jettyHost}:${jettyPort}|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | %aNameOfASymbol%/%id% | 200 | | |
 
