@@ -4,3 +4,4 @@ target/
 *.log
 .settings
 src/main/resources/FitNesseRoot/files/testResults
+/FitNesseRoot
