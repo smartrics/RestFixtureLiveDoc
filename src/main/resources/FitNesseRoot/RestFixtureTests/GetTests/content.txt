@@ -28,8 +28,8 @@ A GET (as all other verbs) accepts absolute resource paths.
 A GET request properly handles query strings. In this example the stub resource echoes the query string in a Query-String header
 
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
-|GET    | /resources/0?param=echome | 200 | !-Content-Length : [\d]+
-Query-String : param=echome -! |!-
+|GET    | !-/resources/0?param=echome&something=else&another=parameter-! | 200 | !-Content-Length : [\d]+
+Query-String : param=echome&something=else&another=parameter -! |!-
  /resource/name[text()='a funky name'] <br/>
  /resource/data[text()='an important message']
 -!|

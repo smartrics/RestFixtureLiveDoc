@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import fitnesse.junit.JUnitHelper;
 
-//@Ignore
+@Ignore
 public class InProcessRestFixtureLiveDocTest {
 
 	JUnitHelper helper;
