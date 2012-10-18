@@ -26,6 +26,6 @@ public class InProcessRestFixtureLiveDocTest {
 
 	@Test
 	public void restFixtureTests() throws Exception {
-		helper.assertSuitePasses("RestFixtureTests.OverrideContentHandlers");
+		helper.assertSuitePasses("RestFixtureTests");
 	}
 }
