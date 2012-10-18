@@ -3,8 +3,9 @@
 
 | Import |
 | smartrics.rest.fitnesse.fixture |
+| smartrics.rest.test.fitnesse.fixture| 
 
-| script |!-smartrics.rest.test.fitnesse.fixture.HttpServerFixture-!|
+| script |Http Server Fixture |
 | check | is started | false |
 | start server | ${jettyPort} |
 | check | is started | true |
