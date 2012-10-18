@@ -19,12 +19,18 @@ A variable <code>jsonbody</code> is defined holding the JSON in the response.
 The test passes if the result of the evaluation of the cell is a boolean.
 
 | Fit Rest Fixture |http://${jettyHost}:${jettyPort}|
-|GET    | /resources/%id%.json | 200 |Content-Type : application/json |!-<pre>
+|GET    | /resources/%id%.json | 200 |Content-Type : application/json |!-
 jsonbody.resource.name=="test post" && jsonbody.resource.data=="some data" 
-</pre>-!|
-|GET    | /resources/%id%.json | 200 |Content-Type : application/json |!-<pre>
+-!|
+
+It is possible to specify multiple assertions, one for each line. 
+The test passes if each line evaluates to true.
+
+| Fit Rest Fixture |http://${jettyHost}:${jettyPort}|
+|GET    | /resources/%id%.json | 200 |Content-Type : application/json |!-
 jsonbody.resource.name.length>=0 
-</pre>-!|
+jsonbody.resource.name.length<1000
+-!|
 | let   | content | js |  response.body | |
 
 | Fit Rest Fixture |http://${jettyHost}:${jettyPort}|
