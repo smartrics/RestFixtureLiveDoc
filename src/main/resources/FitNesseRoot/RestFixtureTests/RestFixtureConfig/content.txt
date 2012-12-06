@@ -37,7 +37,7 @@ Default configuration parameters for each !-RestFixture-! instance
 |{{{http.basicauth.password}}}| password for basic authentication (RestClient proxy configutation)|  
 |{{{http.client.connection.timeout}}}| client timeout for http connection (default 3s)|
 |{{{http.client.use.new.http.uri.factory}}}| If set to true the Rest Fixture uses a more relaxed validation rule to validate URIs. It, for example, allows array parameters in the query string. Defaults to false.|
-|{{{restfixture.requests.follow.redirects}}}|If set to true the underlying client is instructed to follow redirects for the requests in the current fixture. Defaults to true.|
+|{{{restfixture.requests.follow.redirects}}}|If set to true the underlying client is instructed to follow redirects for the requests in the current fixture. This setting is not applied to POST and PUT (for which redirection is set to false). Defaults to true.|
 |{{{restfixture.resource.uris.are.escaped}}}|if true, RestFixture will assume that the resource uris are already escaped. If false, resource uri will be escaped. Defaults to false.|
 |{{{restfixture.display.actual.on.right}}}|if true, the actual value of the header or body in an expectation cell is displayed even when the expectation is met.|
 |{{{restfixture.display.content.collapsed.larger.than}}}|minimum lenght of the content of a cell to enable a toggle on/off button (-1 to disable)|
