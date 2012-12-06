@@ -61,6 +61,12 @@ public class ResourcesServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         LOG.debug("Resource GET REQUEST ========= " + req.toString());
         String uri = sanitise(req.getRequestURI());
+        boolean isRedirect = isRedirect(uri);
+        if(isRedirect) {
+        	uri = redirectTo(uri);
+        	doRedirect(resp, uri);
+        	return;
+        }
         String id = getId(uri);
         String type = getType(uri);
         String extension = getExtension(uri);
@@ -87,7 +93,15 @@ public class ResourcesServlet extends HttpServlet {
         }
     }
 
-    private void echoQString(HttpServletRequest req, HttpServletResponse resp) {
+    private String redirectTo(String uri) {
+		return uri.replace("/redirect", "");
+	}
+
+	private boolean isRedirect(String uri) {
+		return uri.contains("/redirect");
+	}
+
+	private void echoQString(HttpServletRequest req, HttpServletResponse resp) {
         String qstring = req.getQueryString();
         if (qstring != null) {
             resp.setHeader("Query-String", qstring);
@@ -109,6 +123,11 @@ public class ResourcesServlet extends HttpServlet {
             s = ";charset=" + optCharset;
         }
         resp.addHeader("Content-Type", "application/" + extension + s);
+    }
+    
+    private void doRedirect(HttpServletResponse resp, String uri) {
+        resp.setStatus(HttpServletResponse.SC_MOVED_PERMANENTLY);
+        resp.addHeader("Location", uri);
     }
 
     private void list(HttpServletResponse resp, String type, String extension) throws IOException {

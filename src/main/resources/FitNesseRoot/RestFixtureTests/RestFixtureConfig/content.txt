@@ -21,19 +21,25 @@ Uses the config name confname: smartrics.rest.fitnesse.fixture.RestFixtureConfig
 RestFixture accesses the config passed by name as second parameter to the fixture or the default, if no name is passed: 
 
 {{{
-|smartrics.rest.fitnesse.fixture.RestFixture|http://localhost:7070|
+|Table: Rest Fixture|http://localhost:7070|
 }}}
 
 or 
 
 {{{
-|smartrics.rest.fitnesse.fixture.RestFixture|http://localhost:7070|confname|
+|Table: Rest Fixture|http://localhost:7070|confname|
 }}}
 
 Default configuration parameters for each !-RestFixture-! instance
-|{{{http.client.connection.timeout}}}| the client http timeout|
+|{{{http.proxy.host}}}| http proxy host name (RestClient proxy configutation)|
+|{{{http.proxy.port}}}| http proxy host port (RestClient proxy configutation)| 
+|{{{http.basicauth.username}}}| username for basic authentication (RestClient proxy configutation)| 
+|{{{http.basicauth.password}}}| password for basic authentication (RestClient proxy configutation)|  
+|{{{http.client.connection.timeout}}}| client timeout for http connection (default 3s)|
 |{{{http.client.use.new.http.uri.factory}}}| If set to true the Rest Fixture uses a more relaxed validation rule to validate URIs. It, for example, allows array parameters in the query string. Defaults to false.|
-|{{{restfixture.display.actual.on.right}}}|wether the actual value of headers and body are displayed when an expectation is met|
+|{{{restfixture.requests.follow.redirects}}}|If set to true the underlying client is instructed to follow redirects for the requests in the current fixture. Defaults to true.|
+|{{{restfixture.resource.uris.are.escaped}}}|if true, RestFixture will assume that the resource uris are already escaped. If false, resource uri will be escaped. Defaults to false.|
+|{{{restfixture.display.actual.on.right}}}|if true, the actual value of the header or body in an expectation cell is displayed even when the expectation is met.|
 |{{{restfixture.display.content.collapsed.larger.than}}}|minimum lenght of the content of a cell to enable a toggle on/off button (-1 to disable)|
 |{{{restfixture.default.headers}}}|list of http headers passed to each REST request (overridden by '''setHeader''')|
 |{{{restfixture.xml.namespace.context}}}|list of key/value defining a namespace context. (keys represent aliases used in !-XPaths-!, values are the ns URI as per xml)|

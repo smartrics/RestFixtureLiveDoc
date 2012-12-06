@@ -75,3 +75,20 @@ To allow correct handling of array parameters a new configuration option must be
 
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}| withArrayParametersSupport |
 |GET    | /resources/0?a[0]=2&a[1]=4 | 200 | | |
+
+
+!**** Follow redirects setting
+To allow redirects to be followed automatically or not the configuration paramerer {{{restfixture.requests.follow.redirects}}} needs to be set (defaults to true)
+****!
+| Table: Rest Fixture Config  | withFollowRedirect|
+| restfixture.requests.follow.redirects | false |
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| withFollowRedirect |
+|GET    | /resources/redirect/0 | 301 | Location: /resources/0 | no-body |
+
+| Table: Rest Fixture Config  | withFollowRedirect|
+| restfixture.requests.follow.redirects | true |
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| withFollowRedirect |
+|GET    | /resources/redirect/0 | 200 | | |
+
