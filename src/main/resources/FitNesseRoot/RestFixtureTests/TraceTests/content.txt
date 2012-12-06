@@ -1,0 +1,6 @@
+!3 TRACE
+
+TRACE requests are supported too:
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
+|TRACE | /resources/0 | 200 | Content-Type : message/http | |
