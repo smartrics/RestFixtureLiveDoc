@@ -1,0 +1,10 @@
+!3 HEAD
+
+Head requests should return no-body but the headers list should match that of the equivalent GET operation. 
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
+|GET | /resources/0 | 200 | Content-Length : [\d+] | |
+|let    | length | header | Content-Length:(.+) | |
+|let    | type | header | Content-Type:(.+) | |
+|HEAD | /resources/0 | 200 | Content-Length : %length% | no-body |
+|HEAD | /resources/0 | 200 | Content-Type: %type% | no-body |
