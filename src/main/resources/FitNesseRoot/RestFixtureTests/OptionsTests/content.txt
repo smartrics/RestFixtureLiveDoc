@@ -1,0 +1,7 @@
+!3 OPTIONS
+
+Options requests are supported too:
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
+|OPTIONS | /resources/0 | 200 |!-Allow:.+
+Content-Length : 0-! | no-body |
