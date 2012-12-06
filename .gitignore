@@ -4,5 +4,6 @@ target/
 *.log
 .settings
 src/main/resources/FitNesseRoot/files/testResults
-/FitNesseRoot
+src/main/resources/FitNesseRoot/ErrorLogs
 src/main/resources/FitNesseRoot/RecentChanges
+FitNesseRoot/

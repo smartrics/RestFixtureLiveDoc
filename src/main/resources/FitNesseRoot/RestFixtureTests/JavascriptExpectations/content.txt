@@ -28,8 +28,9 @@ The test passes if each line evaluates to true.
 
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/%id%.json | 200 |Content-Type : application/json |!-
-jsonbody.resource.name.length>=0 
-jsonbody.resource.name.length<1000
+jsonbody.resource.name.length >= 0 
+jsonbody.resource.name.length < 1000
+jsonbody.resource.name.length < jsonbody.resource.name.length+1
 -!|
 | let   | content | js |  response.body | |
 

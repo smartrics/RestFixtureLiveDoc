@@ -13,7 +13,7 @@ of the first cell on the first row. !-RestFixture-! in fact is a Slim !-TableTab
 
 '''Variables Settings'''
 !define jettyHost {localhost}
-!define jettyPort {8765}
+!define jettyPort {9876}
 !define tempDirectory {target/live-docs-temp}
 
 '''Classpath Settings'''

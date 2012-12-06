@@ -20,6 +20,7 @@
  */
 package smartrics.rest.fitnesse.fixture;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -28,6 +29,7 @@ import fitnesse.junit.FitNesseSuite.FitnesseDir;
 import fitnesse.junit.FitNesseSuite.Name;
 import fitnesse.junit.FitNesseSuite.OutputDir;
 
+@Ignore
 @RunWith(FitNesseSuite.class)
 @Name("RestFixtureTests")
 @FitnesseDir("src/main/resources")

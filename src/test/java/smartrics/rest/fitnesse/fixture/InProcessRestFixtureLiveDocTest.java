@@ -3,15 +3,16 @@ package smartrics.rest.fitnesse.fixture;
 import java.io.File;
 
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
 import fitnesse.junit.JUnitHelper;
 
-@Ignore
+//@Ignore
 public class InProcessRestFixtureLiveDocTest {
 
-	JUnitHelper helper;
+	private JUnitHelper helper;
 
 	@Before
 	public void prepare() {
@@ -19,7 +20,7 @@ public class InProcessRestFixtureLiveDocTest {
 		helper.setPort(9090);
 	}
 
-	@Test
+	//@Test
 	public void restFixtureFitTests() throws Exception {
 		helper.assertSuitePasses("RestFixtureFitTests");
 	}
