@@ -11,7 +11,7 @@ Tests in this subdirectory are executed with the default Fit Runner.
 
 '''Variables Settings'''
 !define jettyHost {localhost}
-!define jettyPort {8765}
+!define jettyPort {7654}
 !define tempDirectory {target/live-docs-temp}
 
 '''Classpath Settings'''

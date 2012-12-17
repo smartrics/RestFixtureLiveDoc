@@ -163,6 +163,14 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<forkMode>always</forkMode>
+					<runOrder>random</runOrder>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 	<reporting>
@@ -170,9 +178,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
-				<configuration>
-					<!-- place your configuration here -->
-				</configuration>
 			</plugin>
 		</plugins>
 	</reporting>

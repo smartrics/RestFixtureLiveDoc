@@ -31,8 +31,8 @@ This example also shows how to use let to extract data from the XML body of a re
 
 | Fit Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/1.json | 200 |Content-Type : application/json|!-
- /resource/name[text()='a funky name']<br/>
- /resource/data[text()='an important message']
+jsonbody.resource.name=='a funky name' <br/>
+jsonbody.resource.data=='an important message'
  -! |
 |let    | name | body | /resource/name/text() | |
 

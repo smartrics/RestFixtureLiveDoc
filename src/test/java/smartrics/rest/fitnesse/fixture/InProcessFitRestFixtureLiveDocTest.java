@@ -8,7 +8,7 @@ import org.junit.Test;
 import fitnesse.junit.JUnitHelper;
 
 //@Ignore
-public class InProcessRestFixtureLiveDocTest {
+public class InProcessFitRestFixtureLiveDocTest {
 
 	private JUnitHelper helper;
 
@@ -19,7 +19,8 @@ public class InProcessRestFixtureLiveDocTest {
 	}
 
 	@Test
-	public void restFixtureTests() throws Exception {
-		helper.assertSuitePasses("RestFixtureTests");
+	public void restFixtureFitTests() throws Exception {
+		helper.assertSuitePasses("RestFixtureFitTests");
 	}
+
 }

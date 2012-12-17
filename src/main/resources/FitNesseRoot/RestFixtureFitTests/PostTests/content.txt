@@ -74,8 +74,8 @@ Variables may be substitued in the expected result
 
 | Fit Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/%id%.json | 200 |Content-Type : application/json |!-
-  /resource/name[text()='test post'] <br/>
-  /resource/data[text()='some data']
+jsonbody.resource.name=='test post' <br/>
+jsonbody.resource.data=='some data'
 -!|
 
 !**** File uploads
