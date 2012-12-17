@@ -22,14 +22,13 @@ package smartrics.rest.test.fitnesse.fixture;
 
 import javax.servlet.http.HttpServlet;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.apache.log4j.BasicConfigurator;
 import org.mortbay.jetty.Connector;
 import org.mortbay.jetty.Server;
 import org.mortbay.jetty.bio.SocketConnector;
 import org.mortbay.jetty.servlet.Context;
 import org.mortbay.jetty.servlet.ServletHolder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Wrapper to jetty providing the sample application used by RestFixture CATs.
@@ -39,12 +38,14 @@ import org.mortbay.jetty.servlet.ServletHolder;
  */
 public class HttpServer {
 
-    private static final Log LOG = LogFactory.getLog(HttpServer.class);
+    private static final Logger LOG = LoggerFactory.getLogger(HttpServer.class);
     private Server server = null;
     private int port;
 
+    /**
+     * @param port the server port where clients need to connec to.
+     */
     public HttpServer(int port) {
-        BasicConfigurator.configure();
         server = new Server();
         server.setStopAtShutdown(true);
         setPort(port);
@@ -54,6 +55,10 @@ public class HttpServer {
         return server;
     }
 
+    /**
+     * stops the server.
+     * @return a stop message.
+     */
     public String stop() {
         String ret = null;
         LOG.debug("Stopping jetty in port " + getPort());

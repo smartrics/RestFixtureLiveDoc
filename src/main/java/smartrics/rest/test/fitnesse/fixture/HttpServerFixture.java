@@ -20,8 +20,8 @@
  */
 package smartrics.rest.test.fitnesse.fixture;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import fit.ActionFixture;
 
@@ -33,7 +33,7 @@ import fit.ActionFixture;
  */
 public class HttpServerFixture extends ActionFixture {
 
-    private static final Log LOG = LogFactory.getLog(HttpServerFixture.class);
+    private static final Logger LOG = LoggerFactory.getLogger(HttpServerFixture.class);
     private int port;
     private static HttpServer server;
 

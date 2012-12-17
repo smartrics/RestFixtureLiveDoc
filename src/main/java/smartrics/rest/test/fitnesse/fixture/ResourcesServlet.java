@@ -32,8 +32,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.oreilly.servlet.multipart.FilePart;
 import com.oreilly.servlet.multipart.MultipartParser;
@@ -47,7 +47,7 @@ import com.oreilly.servlet.multipart.Part;
  * 
  */
 public class ResourcesServlet extends HttpServlet {
-    private static final Log LOG = LogFactory.getLog(ResourcesServlet.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ResourcesServlet.class);
     public static final String CONTEXT_ROOT = "/resources";
     private static final long serialVersionUID = -7012866414216034826L;
     private static final String DEF_CHARSET = "ISO-8859-1";
