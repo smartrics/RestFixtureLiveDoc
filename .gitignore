@@ -2,6 +2,7 @@ target/
 .classpath
 .project
 *.log
+*.log.*
 .settings
 src/main/resources/FitNesseRoot/files/testResults
 src/main/resources/FitNesseRoot/ErrorLogs
