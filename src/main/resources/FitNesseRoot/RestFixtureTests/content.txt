@@ -19,7 +19,6 @@ of the first cell on the first row. !-RestFixture-! in fact is a Slim !-TableTab
 '''Classpath Settings'''
 !path target/classes/
 !path target/test-classes/
-!path target/test-classes/log4j.xml
 !path target/dependencies/*.jar
 
 *!

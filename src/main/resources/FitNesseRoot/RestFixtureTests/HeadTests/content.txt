@@ -1,5 +1,3 @@
-!3 HEAD
-
 Head requests should return no-body but the headers list should match that of the equivalent GET operation. 
 
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}|

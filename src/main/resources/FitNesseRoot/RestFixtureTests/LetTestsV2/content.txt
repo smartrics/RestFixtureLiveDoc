@@ -1,5 +1,3 @@
-!3 LET
-
 LET can use now the full power of !-JavaScript-! to extract data from the last response parts. The additions
 to support the new !-JavaScript-! extensions will not break the existing !-RestFixture-! API.
 
@@ -59,6 +57,7 @@ It's also possible to access the !-FitNesse-! symbols map. The scope where expre
 |POST   | /resources/ | 201 | | no-body |
 |let    | id | header | Location:/resources/(.+) | |
 |let    | id_string | js | 'The id is: ' + symbols.get('id') |  The id is: %id% |
+
 
 The scope also contains the 'response' object, populated with the data from the last Rest response executed
 

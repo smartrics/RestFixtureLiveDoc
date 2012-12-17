@@ -1,5 +1,3 @@
-!3 PUT
-
 !*** Note
 This test shows how to pass bespoke headers in the request. In this specific case, the stub echoes back the 'Echo-Header', so that the 
 following PUT and GET can match it the response.

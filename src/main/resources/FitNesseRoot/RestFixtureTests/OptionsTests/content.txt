@@ -1,5 +1,3 @@
-!3 OPTIONS
-
 Options requests are supported too:
 
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}|

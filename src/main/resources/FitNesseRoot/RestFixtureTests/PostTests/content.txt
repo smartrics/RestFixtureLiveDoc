@@ -1,5 +1,3 @@
-!3 POST
-
 Posting an XML should create a resource
 
 !*** Note

@@ -1,5 +1,3 @@
-!3 DELETE
-
 !*** Note
 You may not want to specify any expectation neither in the header cell nor in the body cell, as in the GET below
 ***!

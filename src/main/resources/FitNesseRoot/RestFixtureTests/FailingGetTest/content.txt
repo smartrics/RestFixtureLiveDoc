@@ -1,4 +1,3 @@
-
 !**** Rest requests with query string containing array parameters
 A query string can contain parameter arrays and they are correctly handled by Rest Fixture.
 ****!

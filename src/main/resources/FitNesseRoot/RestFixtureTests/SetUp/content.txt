@@ -1,5 +1,3 @@
-
 | script |!-smartrics.rest.test.fitnesse.fixture.HttpServerFixture-!|
 | check | is started | true |
 | reset resources database |
-
