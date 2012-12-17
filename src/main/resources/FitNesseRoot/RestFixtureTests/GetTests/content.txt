@@ -58,8 +58,8 @@ Expectations can be asserted also in json format for responses whose content typ
 
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/1.json | 200 |Content-Type : application/json;charset=ISO-8859-1 |!-
- /resource/name[text()='a funky name'] <br/>
- /resource/data[text()='an important message']
+jsonbody.resource.name=='a funky name' <br/>
+jsonbody.resource.data=='an important message'
 -!|
 
 !**** Rest requests with query string containing array parameters
