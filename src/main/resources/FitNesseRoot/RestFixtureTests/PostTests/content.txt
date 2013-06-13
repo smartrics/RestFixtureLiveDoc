@@ -8,7 +8,8 @@ Then the expression to extract the value to be assigned to he variable. For ''he
 has to be an XPath whose execution must return a String node.
 ***!
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
-|setBody|<resource><name>test post</name><data>some data</data></resource>|
+| let | name | const | test post | |
+|setBody|<resource><name>%name%</name><data>some data</data></resource>|
 |POST   | /resources | 201 | | no-body |
 |let    | id | header | Location:/resources/(.+) | |
 
