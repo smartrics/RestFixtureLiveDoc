@@ -39,10 +39,6 @@
 		<name>smartrics</name>
 		<url>http://smartrics.blogspot.com</url>
 	</organization>
-	<ciManagement>
-		<system>Fazend Hudson</system>
-		<url>http://jenkins.fazend.com:8080/job/RestFixtureLiveDoc</url>
-	</ciManagement>
 	<issueManagement>
 		<system>GitHub Issues</system>
 		<url>https://github.com/smartrics/RestFixtureLiveDoc/issues</url>
@@ -191,7 +187,6 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
 					<forkMode>always</forkMode>
-					<runOrder>random</runOrder>
 				</configuration>
 			</plugin>
 		</plugins>
