@@ -72,6 +72,7 @@ public class ResourcesServlet extends HttpServlet {
         String extension = getExtension(uri);
         echoHeader(req, resp);
         echoQString(req, resp);
+        setCookieHeaderIssue118(req, resp);
         try {
             if (id == null) {
                 list(resp, type, extension);
@@ -207,6 +208,10 @@ public class ResourcesServlet extends HttpServlet {
         resp.getOutputStream().write("".getBytes());
         resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
         // resp.setHeader("Content-Lenght", "0");
+    }
+
+    private void setCookieHeaderIssue118(HttpServletRequest req, HttpServletResponse resp) {
+        resp.setHeader("Set-Cookie", "JSESSIONID=\"5D9A85ABEBFA96ACF903C24EC42C3F5C.${aaa.yyy}\"; Version=1; Path=/yyy");
     }
 
     private void echoHeader(HttpServletRequest req, HttpServletResponse resp) {

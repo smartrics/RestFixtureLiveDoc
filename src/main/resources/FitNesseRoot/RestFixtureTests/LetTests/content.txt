@@ -40,12 +40,12 @@ Label values can be accessed from code using '''new Variables().get("labelname")
 
 ''LET resolves names from Fixture Symbol map if not found in the local map''
 
-!-LetTestActionFixture-! allows to get/set values in the Fixture Symbol map
+!-LetTestSupport -! allows to get/set values in the Fixture Symbol map
 
 
-| script |!-smartrics.rest.test.fitnesse.fixture.LetTestActionFixture-!|
-|symbolName|resType|
-|symbolValue|/resources|
+| script |!-smartrics.rest.test.fitnesse.fixture.LetTestSupport-!|
+|assign|/resources|
+|$resType=|value|
 
 !*** Note
 Look at the source code of this page to see that the resource URI
@@ -56,9 +56,9 @@ for the GET method below is defined as '''%resType%/%id%'''
 |GET    | %resType%/%id% | 200 | | |
 |let    | theName | body | /resource/name/text() | |
 
-| script |!-smartrics.rest.test.fitnesse.fixture.LetTestActionFixture-!|
-|symbolName|theName|
-| check |symbolValue|Bill|
+| script |!-smartrics.rest.test.fitnesse.fixture.LetTestSupport-!|
+|assign| $theName |
+| check |value |Bill|
 
 Other fixtures can set a value in the symbol map with ''Fixture.setSymbol''.
 The RestFixture can then pick them up
@@ -66,9 +66,9 @@ The RestFixture can then pick them up
 This fixture sets ''symbolName=/resources''...
 
 
-| script |!-smartrics.rest.test.fitnesse.fixture.LetTestActionFixture-!|
-|symbolName|aNameOfASymbol|
-|symbolValue|/resources|
+| script |!-smartrics.rest.test.fitnesse.fixture.LetTestSupport-!|
+|assign|/resources|
+|$aNameOfASymbol=| value|
 
 ... then the value is used by the !-RestFixture-!
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}|

@@ -22,6 +22,11 @@ package smartrics.rest.test.fitnesse.fixture;
 
 import fit.ActionFixture;
 import fit.Fixture;
+import fitnesse.slim.StatementExecutorConsumer;
+import fitnesse.slim.StatementExecutorInterface;
+import smartrics.rest.fitnesse.fixture.support.SlimVariables;
+
+import java.util.List;
 
 /**
  * Supports Let CATs by providing a simple interface to FitNesse symbols map.
@@ -31,16 +36,19 @@ import fit.Fixture;
  */
 public class LetTestActionFixture extends ActionFixture {
 	private String symbolName;
+	private StatementExecutorInterface exec;
 
 	public void symbolName(String name) {
 		this.symbolName = name;
 	}
 
 	public String symbolValue() {
+
 		return (String) Fixture.getSymbol(symbolName);
 	}
 
 	public void symbolValue(String val) {
 		Fixture.setSymbol(symbolName, val);
 	}
+
 }

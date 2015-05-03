@@ -84,4 +84,11 @@ contains the JSON object that can be accessed using the dot notation. For exampl
 |let    | body_value | js | response.jsonbody.resource.name | a funky name |
 
 
+Reproducing https://github.com/smartrics/RestFixture/issues/118
 
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
+|GET      | /resources/1.json | 200 | | |
+|let      | loginSessionId | header |Set-Cookie:(.+) | |
+|let      | loginSessionId2 | js | symbols.get('loginSessionId').replace('{', '\\{') | |
+|setHeader| Set-Cookie:%loginSessionId2% | |
+|GET      | /resources/1.json | 200 | | |
