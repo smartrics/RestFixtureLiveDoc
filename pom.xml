@@ -65,8 +65,7 @@
 		<dependency>
 			<groupId>smartrics.restfixture</groupId>
 			<artifactId>smartrics-RestFixture</artifactId>
-			<!--<version>${project.version}</version>-->
-			<version>4.0</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.fitnesse</groupId>
@@ -196,7 +195,17 @@
 				</configuration>
 			</plugin>
 		</plugins>
-	</build>
+    </build>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
 	<reporting>
 		<plugins>
 			<plugin>
