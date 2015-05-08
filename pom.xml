@@ -65,7 +65,8 @@
 		<dependency>
 			<groupId>smartrics.restfixture</groupId>
 			<artifactId>smartrics-RestFixture</artifactId>
-			<version>${project.version}</version>
+			<!--<version>${project.version}</version>-->
+			<version>4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.fitnesse</groupId>
