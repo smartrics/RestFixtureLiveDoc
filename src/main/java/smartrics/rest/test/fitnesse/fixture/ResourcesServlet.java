@@ -211,7 +211,7 @@ public class ResourcesServlet extends HttpServlet {
     }
 
     private void setCookieHeaderIssue118(HttpServletRequest req, HttpServletResponse resp) {
-        resp.setHeader("Set-Cookie", "JSESSIONID=\"5D9A85ABEBFA96ACF903C24EC42C3F5C.${aaa.yyy}\"; Version=1; Path=/yyy");
+        resp.setHeader("Set-Cookie", "JID=\"ABC.${a.y}\"; ");
     }
 
     private void echoHeader(HttpServletRequest req, HttpServletResponse resp) {
