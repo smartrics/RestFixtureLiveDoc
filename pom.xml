@@ -185,7 +185,7 @@
 				<artifactId>maven-gpg-plugin</artifactId>
 				<configuration>
 					<!-- comment this to skip sign during install -->
-					<skip>false</skip>
+					<skip>true</skip>
 				</configuration>
 				<executions>
 					<execution>
