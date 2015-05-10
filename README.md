@@ -9,7 +9,7 @@ Download LiveDoc
 ----------------
 
 LiveDoc is available for download from
-[![Maven Central](http://search.maven.org/remotecontent?filepath=smartrics/restfixture/smartrics-RestFixture-LiveDoc/4.0/smartrics-RestFixture-LiveDoc-4.0-documentation.zip)](http://search.maven.org/remotecontent?filepath=smartrics/restfixture/smartrics-RestFixture-LiveDoc/4.0/smartrics-RestFixture-LiveDoc-4.0-documentation.zip)
+[Maven Central](http://search.maven.org/remotecontent?filepath=smartrics/restfixture/smartrics-RestFixture-LiveDoc/4.0/smartrics-RestFixture-LiveDoc-4.0-documentation.zip)
 
 ```xml
 <dependency>
@@ -47,10 +47,3 @@ mvn package
 ```
 
 to generate the distributable zip file.
-
-
-
-The files are also published to [![Maven Central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22smartrics-RestFixture-LiveDoc%22)](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22smartrics-RestFixture-LiveDoc%22) and obtainable via
-
-
-
