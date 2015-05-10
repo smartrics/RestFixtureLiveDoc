@@ -8,8 +8,8 @@ A suite of FitNesse tests built with the RestFixture, to document the RestFixtur
 Download LiveDoc
 ----------------
 
-LiveDoc is available for download from
-[Maven Central](http://search.maven.org/remotecontent?filepath=smartrics/restfixture/smartrics-RestFixture-LiveDoc/4.0/smartrics-RestFixture-LiveDoc-4.0-documentation.zip)
+LiveDoc is available for download from Maven Central
+[smartrics-RestFixture-LiveDoc-4.0-documentation.zip](http://search.maven.org/remotecontent?filepath=smartrics/restfixture/smartrics-RestFixture-LiveDoc/4.0/smartrics-RestFixture-LiveDoc-4.0-documentation.zip)
 
 ```xml
 <dependency>
