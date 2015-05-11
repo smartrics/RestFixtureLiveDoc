@@ -16,6 +16,7 @@ Read more about RestFixtureConfig
 | Table: Rest Fixture Config  |
 | http.client.connection.timeout | 5000 |
 | http.client.use.new.http.uri.factory | false |
+| restfixture.absolute.url.in.full | false |
 | restfixture.display.actual.on.right | true |
 | restfixture.display.toggle.for.cells.larger.than | 200 |
 | restfixture.default.headers | !-defHeader : 1

@@ -1,0 +1,42 @@
+-------------------------------
+
+*Unable to set header using let variable containing text with curly braces* https://github.com/smartrics/RestFixture/issues/118
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
+|GET      | /resources/1.json | 200 | | |
+|let      | loginSessionId | header |Set-Cookie:(.+) | |
+|comment  | use below hack to work around isse 118 for Rest Fixture 4.0 or below |
+|let      | loginSessionId2 | js | ""+symbols.get('loginSessionId').replace('{', '\\{') | |
+|setHeader| Set-Cookie:%loginSessionId2% | |
+|comment  | issue 118 fixed |
+|setHeader| Set-Cookie:%loginSessionId% | |
+|GET      | /resources/1.json | 200 | | |
+
+-------------------------------
+
+*Render full URL for REST requests #120* https://github.com/smartrics/RestFixture/issues/120
+
+When you execute a RestFixture table only the path from the URL is currently rendered from column 2
+Ideally we would like to see a full URL here
+
+The behaviour of the formatter controlling how the cells in position 1 is determined by the config property {{{restfixture.absolute.url.in.full}}} which by default is set to false.
+
+In the following table (see source) the path to /resources/0 is {{{http://${jettyHost}:${jettyPort}/resources/0}}} and by default is should be rendered as {{{/resources/0}}}
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
+|HEAD | http://${jettyHost}:${jettyPort}/resources/0 | | | |
+
+The config property is now set explicitly like in the case below.
+
+| Table: Rest Fixture Config  | withRestfixtureAbsoluteUrlInFull |
+| restfixture.absolute.url.in.full | true |
+
+With the property set, each absolute URL is rendered correctly in full
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| withRestfixtureAbsoluteUrlInFull |
+| comment | the following URI should be in full as absolute |
+|HEAD | http://${jettyHost}:${jettyPort}/resources/0 | | | |
+| comment | the following URI should be NOT in full as relative |
+|HEAD | /resources/0 | | | |
+
+The property can also be set in the default config (see SuiteSetUp), as such, taking effect in each fixture.

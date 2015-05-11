@@ -83,15 +83,3 @@ contains the JSON object that can be accessed using the dot notation. For exampl
 |let    | body_value | js | response.jsonbody |  |
 |let    | body_value | js | response.jsonbody.resource.name | a funky name |
 
-
-Reproducing https://github.com/smartrics/RestFixture/issues/118
-
-| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
-|GET      | /resources/1.json | 200 | | |
-|let      | loginSessionId | header |Set-Cookie:(.+) | |
-|comment  | use below hack to work around isse 118 for Rest Fixture 4.0 or below |
-|let      | loginSessionId2 | js | ""+symbols.get('loginSessionId').replace('{', '\\{') | |
-|setHeader| Set-Cookie:%loginSessionId2% | |
-|comment  | issue 118 fixed |
-|setHeader| Set-Cookie:%loginSessionId% | |
-|GET      | /resources/1.json | 200 | | |
