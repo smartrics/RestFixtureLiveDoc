@@ -22,11 +22,12 @@ Ideally we would like to see a full URL here
 The behaviour of the formatter controlling how the cells in position 1 is determined by the
 config property {{{restfixture.display.absolute.url.in.full}}} which by default is set to true.
 
-In the following table (see source) the path to /resources/0 is {{{http://${jettyHost}:${jettyPort}/resources/0}}}
-and by default is should be rendered in full
+In the following table (see source) the path to /resources/0 is {{{%proto%://${jettyHost}:${jettyPort}/resources/0}}}
+and by default is should be rendered in full (the label 'proto' is assigned via let.)
 
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
-|HEAD | http://${jettyHost}:${jettyPort}/resources/0 | | | |
+| let | proto | const | http | |
+|HEAD | %proto%://${jettyHost}:${jettyPort}/resources/0 | | | |
 
 The config property is now set explicitly set to 'false'.
 
@@ -37,7 +38,7 @@ With the property set, each absolute URL is rendered correctly only showing the 
 
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}| withRestFixtureAbsoluteUrlInFullSetToFalse |
 | comment | the following URI should be NOT shown in full |
-|HEAD | http://${jettyHost}:${jettyPort}/resources/0 | | | |
+|HEAD | %proto%://${jettyHost}:${jettyPort}/resources/0 | | | |
 | comment | the following URI should be NOT in full and it is correctly shown in relative |
 |HEAD | /resources/0 | | | |
 
