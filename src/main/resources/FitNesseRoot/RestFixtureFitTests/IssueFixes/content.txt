@@ -1,0 +1,12 @@
+!3 Issue #141 - Passing LET Symbol to fit column fixture https://github.com/smartrics/RestFixture/issues/141
+
+| Fit Rest Fixture |http://${jettyHost}:${jettyPort}|
+|GET    | /resources/0 | 200 | Content-Length : [\d]+ |!-
+ /resource/name[text()='a funky name'] <br/>
+ /resource/data[text()='an important message']
+-!|
+|let|status_code|js|response.statusCode||
+
+!|smartrics.rest.test.fitnesse.fixture.ColumnFixtureTest|
+|returnCode=|=isSuccess()|
+|status_code|true|
