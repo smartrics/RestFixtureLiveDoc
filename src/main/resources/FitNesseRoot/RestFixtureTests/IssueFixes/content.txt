@@ -1,6 +1,6 @@
--------------------------------
+!******> #118 Unable to set header using let variable containing text with curly braces
 
-*Unable to set header using let variable containing text with curly braces* https://github.com/smartrics/RestFixture/issues/118
+https://github.com/smartrics/RestFixture/issues/118
 
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET      | /resources/1.json | 200 | | |
@@ -11,10 +11,11 @@
 |comment  | issue 118 fixed |
 |setHeader| Set-Cookie:%loginSessionId% | |
 |GET      | /resources/1.json | 200 | | |
+*****!
 
--------------------------------
+!******> #120 Render full URL for REST requests
 
-*Render full URL for REST requests #120* https://github.com/smartrics/RestFixture/issues/120
+https://github.com/smartrics/RestFixture/issues/120
 
 When you execute a RestFixture table only the path from the URL is currently rendered from column 2
 Ideally we would like to see a full URL here
@@ -44,9 +45,11 @@ With the property set, each absolute URL is rendered correctly only showing the 
 
 The property can also be set in the default config (see SuiteSetUp), as such, taking effect in each fixture.
 
---------------------------------------------------
+*****!
 
-*Let method not working in smartrics-RestFixture-4.0 #123* https://github.com/smartrics/RestFixture/issues/120
+!******> #123 Let method not working in smartrics-RestFixture-4.0
+
+https://github.com/smartrics/RestFixture/issues/120
 
 When I try to execute the following using smartrics-RestFixture-4.0, i get the following error, while the same works fine with smartrics-RestFixture-3.0
 Error:
@@ -59,28 +62,35 @@ java.lang.RuntimeException: Method named let threw an exception when executing.
 |setHeader|Content-Type: application/json|
 |POST| /resources | 201 | | |
 |let|length|header|Content-LengthX:(.+) | |
+*****!
 
---------------------------------------------------
+!******> #129 Expectation on headers not met
 
-*Expectation on headers not met #129* https://github.com/smartrics/RestFixture/issues/129
+https://github.com/smartrics/RestFixture/issues/129
 
 |Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |setBody| {"dummy":"body"} |
 |setHeader|Content-Type: application/json|
 |POST| /resources | 201 | !- Location : /resources/3 -!| |
+*****!
 
---------------------------------------------------
-*get.symbols not working as expected #143* https://github.com/smartrics/RestFixture/issues/143
+!******> #143 get.symbols not working as expected
+
+https://github.com/smartrics/RestFixture/issues/143
 
 |Table:Rest Fixture |http://${jettyHost}:${jettyPort}|
 |let| foo | const | "a"a" | |
 |let|y|js| String(symbols.get('foo')).replace(/"/g, "\\\"")||
+*****!
 
---------------------------------------------------
-*Setting multiple headers where at least one value in name/value pair is a variable, variable not populated #155* https://github.com/smartrics/RestFixture/issues/155
+!******> #155 Setting multiple headers where at least one value in name/value pair is a variable, variable not populated
+
+https://github.com/smartrics/RestFixture/issues/155
 
 !define MIMETYPE {application/json}
 
 |Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |setHeader|Content-Type: ${MIMETYPE}|
 |HEAD | /resources/0 | | | |
+*****!
+
