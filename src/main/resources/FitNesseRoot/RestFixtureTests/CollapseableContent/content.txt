@@ -9,3 +9,9 @@ Currently only large HTTP response content cells (if the actual value is display
 
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/100 | 200 | |!-/resource/type[text()='large content']-! |
+
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
+|GET    | /resources/200 | 200 | |!-/resource/type[text()='one liner']-! |
+
+

@@ -20,6 +20,8 @@
  */
 package smartrics.rest.test.fitnesse.fixture;
 
+import org.apache.commons.lang.StringUtils;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -133,8 +135,16 @@ public class Resources {
         sb.append("       </part>\n");
         sb.append("   </data>\n");
         sb.append("</resource>\n");
-
         add("/resources", new Resource("100", sb.toString()));
+        sb = new StringBuffer();
+        sb.append("<resource>\n");
+        sb.append("   <name>long foo</name>\n");
+        sb.append("   <type>one liner</type>\n");
+        sb.append("   <data>\n");
+        sb.append(StringUtils.repeat("0", 200));
+        sb.append("   </data>\n");
+        sb.append("</resource>\n");
+        add("/resources", new Resource("200", sb.toString()));
     }
 
     private synchronized int newCounter() {
