@@ -10,3 +10,7 @@ target/
 src/main/resources/FitNesseRoot/files/testResults
 src/main/resources/FitNesseRoot/ErrorLogs
 src/main/resources/FitNesseRoot/RecentChanges
+src/main/resources/FitNesseRoot/properties
+src/main/resources/FitNesseRoot/updateDoNotCopyOverList
+src/main/resources/FitNesseRoot/updateList
+
