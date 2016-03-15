@@ -1,5 +1,5 @@
 LET can use now the full power of !-JavaScript-! to extract data from the last response parts. The additions
-to support the new !-JavaScript-! extensions will not break the existing !-RestFixture-! API.
+to support the new !-JavaScript-! extensions will not break the existing .RestFixture. API.
 
 The !-JavaScript-! extensions can be used to process more effectively JSON ''Content-Type''s.
 

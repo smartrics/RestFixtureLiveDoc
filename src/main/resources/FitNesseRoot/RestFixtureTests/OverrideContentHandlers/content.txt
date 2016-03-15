@@ -1,4 +1,4 @@
-!-RestFixture-! uses three content handlers to parse and set expectations used to verify the behaviour of HTTP calls. 
+.RestFixture uses three content handlers to parse and set expectations used to verify the behaviour of HTTP calls.
 These are the handlers currently available:
  * '''XML''' interprets the body as an xml string and allows XPath expressions as expectations on that content
  * '''JSON''' interprets the body as a JSON string and allows expectations to be written in JavaScript.

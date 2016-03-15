@@ -4,7 +4,7 @@
 | enter | start server | ${jettyPort} |
 | check | is started | true |
 
-Default configuration parameters for each !-RestFixture-! instance
+Default configuration parameters for each .RestFixture instance
  * '''http.client.connection.timeout''' the client http timeout
  * '''http.client.use.new.http.uri.factory''' If set to true the Rest Fixture uses a more relaxed validation rule to validate URIs. It, for example, allows array parameters in the query string. Defaults to false.
  * '''restfixture.display.actual.on.right''' whether the actual value of headers and body are displayed when an expectation is met
@@ -12,7 +12,7 @@ Default configuration parameters for each !-RestFixture-! instance
  * '''restfixture.display.content.collapsed.larger.than''' minimum lenght of the content of a cell to enable a toggle on/off button (-1 to disable)
  * '''restfixture.default.headers''' list of http headers passed to each REST request (overridden by '''setHeader''')
  * '''restfixture.xml.namespace.context''' list of key/value defining a namespace context. (keys represent aliases used in !-XPaths-!, values are the ns URI as per xml)
- * '''restfixture.content.handlers.map''' key-value-pair mapping a Content-Type to a !-RestFixture-! content handler.
+ * '''restfixture.content.handlers.map''' key-value-pair mapping a Content-Type to a .RestFixture content handler.
  * '''restfixture.content.default.charset''' the default charset to use if the response doesn't specify one in the result. If this property isn't specified, it defaults to !-Charset.defaultCharset().name()-!.
  * '''restfixture.null.value.representation''' value used to replace the default Fitnesse symbols value for null (default is the string 'null')
  

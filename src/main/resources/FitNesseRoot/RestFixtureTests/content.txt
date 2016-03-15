@@ -2,10 +2,10 @@
 
 !1 Rest Fixture Acceptance Test Suite
 
-The !-RestFixture-! supports SLIM as test runner. The format of the test table is basically the same as the one needed for Fit runner with the exception 
-of the first cell on the first row. !-RestFixture-! in fact is a Slim !-TableTable-! therefore the class name needs now to be prefixed with "Table".
+The .RestFixture supports SLIM as test runner. The format of the test table is basically the same as the one needed for Fit runner with the exception
+of the first cell on the first row. .RestFixture in fact is a Slim !-TableTable-! therefore the class name needs now to be prefixed with "Table".
 
-!contents -R2 -g
+!contents -R1 -g
 
 !*> Class Path & Global Defines
 !define COLLAPSE_SETUP {true}

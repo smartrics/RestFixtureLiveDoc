@@ -10,10 +10,12 @@
 | start server | ${jettyPort} |
 | check | is started | true |
  
-!**** Configure the !-RestFixture-! with named configuration table of key value pairs
-Read more about RestFixtureConfig
+!**** Configure the .RestFixture with named configuration table of key value pairs
+Read more about .RestFixtureConfig
 ****!
 | Table: Rest Fixture Config  |
+| http.basicauth.username | foo |
+| http.basicauth.password | bar |
 | http.client.connection.timeout | 5000 |
 | http.client.use.new.http.uri.factory | false |
 | restfixture.display.absolute.url.in.full | true |

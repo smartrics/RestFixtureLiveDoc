@@ -1,12 +1,12 @@
 !3 Expectations in Javascript on responses with content type application/json
 
-As of !-RestFixture-! Version 2, a javascript engine is embedded to allow expectations in Javascript on response body contents in JSON format.
+As of .RestFixture Version 2, a javascript engine is embedded to allow expectations in Javascript on response body contents in JSON format.
 
 !**** XPaths and JSON
 For backward compatibility XPath expressions are maintained and executed
 ****!
 
-After a successful response is received with content type "application/json" the expectation cell in a RestFixture row is 
+After a successful response is received with content type "application/json" the expectation cell in a .RestFixture row is
 interpreted as a string with Javascript and executed within the context of the response body.
 
 | Fit Rest Fixture |http://${jettyHost}:${jettyPort}|

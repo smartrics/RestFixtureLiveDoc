@@ -18,7 +18,7 @@ Uses the config name confname: smartrics.rest.fitnesse.fixture.RestFixtureConfig
 |... |... |
 
 
-RestFixture accesses the config passed by name as second parameter to the fixture or the default, if no name is passed: 
+.RestFixture accesses the config passed by name as second parameter to the fixture or the default, if no name is passed:
 
 {{{
 |Table: Rest Fixture|http://localhost:7070|
@@ -30,7 +30,7 @@ or
 |Table: Rest Fixture|http://localhost:7070|confname|
 }}}
 
-Default configuration parameters for each !-RestFixture-! instance
+Default configuration parameters for each .RestFixture instance
 |{{{http.proxy.host}}}| http proxy host name (RestClient proxy configutation)|
 |{{{http.proxy.port}}}| http proxy host port (RestClient proxy configutation)| 
 |{{{http.basicauth.username}}}| username for basic authentication (RestClient proxy configutation)| 
@@ -38,12 +38,12 @@ Default configuration parameters for each !-RestFixture-! instance
 |{{{http.client.connection.timeout}}}| client timeout for http connection (default 3s)|
 |{{{http.client.use.new.http.uri.factory}}}| If set to true the Rest Fixture uses a more relaxed validation rule to validate URIs. It, for example, allows array parameters in the query string. Defaults to false.|
 |{{{restfixture.requests.follow.redirects}}}|If set to true the underlying client is instructed to follow redirects for the requests in the current fixture. This setting is not applied to POST and PUT (for which redirection is set to false). Defaults to true.|
-|{{{restfixture.resource.uris.are.escaped}}}|if true, RestFixture will assume that the resource uris are already escaped. If false, resource uri will be escaped. Defaults to false.|
+|{{{restfixture.resource.uris.are.escaped}}}|if true, .RestFixture will assume that the resource uris are already escaped. If false, resource uri will be escaped. Defaults to false.|
 |{{{restfixture.display.actual.on.right}}}|if true, the actual value of the header or body in an expectation cell is displayed even when the expectation is met.|
 |{{{restfixture.display.absolute.url.in.full}}}|if true, resource URLs expressed as absolute will be displayed/rendered in full.|
 |{{{restfixture.display.content.collapsed.larger.than}}}|minimum lenght of the content of a cell to enable a toggle on/off button (-1 to disable)|
 |{{{restfixture.default.headers}}}|list of http headers passed to each REST request (overridden by '''setHeader''')|
 |{{{restfixture.xml.namespace.context}}}|list of key/value defining a namespace context. (keys represent aliases used in !-XPaths-!, values are the ns URI as per xml)|
-|{{{restfixture.content.handlers.map}}}|key-value-pair mapping a Content-Type to a !-RestFixture-! content handler.|
+|{{{restfixture.content.handlers.map}}}|key-value-pair mapping a Content-Type to a .RestFixture. content handler.|
 |{{{restfixture.content.default.charset}}}|the default charset to use if the response doesn't specify one in the result. If this property isn't specified, it defaults to !-Charset.defaultCharset().name()-!.|
 |{{{restfixture.null.value.representation}}}|value used to replace the default Fitnesse symbols value for null (default is the string 'null')|

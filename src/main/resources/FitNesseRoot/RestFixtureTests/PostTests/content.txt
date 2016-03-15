@@ -23,7 +23,7 @@ Label values can be accessed from code using '''new Variables().get("labelname")
 ***!
 
 !*** Note on fit.Fixture symbol map
-Labels are implemented on top of the Fitnesse symbols map. So every label set via !-RestFixture-! is accessible via '''fit.Fixture.getSymbol()'''.
+Labels are implemented on top of the Fitnesse symbols map. So every label set via .RestFixture is accessible via '''fit.Fixture.getSymbol()'''.
 
 If a label starts with $, the $ is ignored.
 ***!

@@ -15,7 +15,7 @@ assigned as value to the label ''id''.
 Labels are global and can be shared across rest fixture instances.
 
 ''LET used to extract values from XML body via XPath''
-''Values are re-usable across instances of !-RestFixture-!'' 
+''Values are re-usable across instances of .RestFixture''
 
 Here follows an usage of the previously extracted ''id''.
 This example also shows how to use let to extract data from the XML body of a response using XPath.
@@ -64,7 +64,7 @@ for the GET method below is defined as '''%resType%/%id%'''
 | check |symbolValue|Bill|
 
 Other fixtures can set a value in the symbol map with ''Fixture.setSymbol''.
-The RestFixture can then pick them up
+The .RestFixture can then pick them up
 
 This fixture sets ''symbolName=/resources''...
 
@@ -73,7 +73,7 @@ This fixture sets ''symbolName=/resources''...
 | enter |symbolName|aNameOfASymbol|
 | enter |symbolValue|/resources|
 
-... then the value is used by the !-RestFixture-!
+... then the value is used by the .RestFixture
 | Fit Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | %aNameOfASymbol%/%id% | 200 | | |
 
