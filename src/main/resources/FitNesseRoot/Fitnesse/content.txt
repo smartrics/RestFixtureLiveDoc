@@ -1,3 +1,7 @@
-Go to FrontPage
+!1 FitNesse
 
-!contents -R2 -g -p -f -h
+Below this page you can find all the content provided as part of the FitNesse distribution.
+
+!contents -g
+!path classes
+!path lib/*.jar
