@@ -1,0 +1,11 @@
+The .RestFixture is a [[FitNesse][http://fitnesse.org]] fixture that allows developers and/or product owners to write
+test fixtures for REST services with simplicity in mind. The idea is to write tests that are self documenting and easy
+to write and read, without the need to write Java code.
+
+The fixture allows test writers to express tests as actions (any of the allowed HTTP methods) to operate on resource
+URIs and express expectations on the content of the return code, headers and body. All without writing one single line
+of Java code.
+
+And it also works as a living/executable documentation of the API.
+
+More at https://github.com/smartrics/RestFixture
