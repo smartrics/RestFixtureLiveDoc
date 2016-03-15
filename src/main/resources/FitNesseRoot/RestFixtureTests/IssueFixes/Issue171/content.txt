@@ -1,27 +1,9 @@
-!3 [[Issue #170][https://github.com/smartrics/RestFixture/issues/170]] How to extract data from html response
+!3 [[Issue #171][https://github.com/smartrics/RestFixture/issues/171]] The resource URL is encoded after .RestFixture table execution
 
-| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
-|let      | HTML | const | !-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
-<head>
-<title>ACS Simulator</title>
-<link rel="stylesheet" type="text/css" href="https://www.datacash.com/CSS/application.css" />
-<style type="text/css">
-<!--/* <![CDATA[ */
-.acs_iframe_size {
-    width: 390px;
-    height: 400px;
-}
+| Table: Rest Fixture Config | assume_uri_is_escaped |
+| restfixture.resource.uris.are.escaped | true|
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| assume_uri_is_escaped |
+|GET    | /resources/0/text%3A%2F%2Feventis.nl%2Ftext | |  | |
 
 
-
-/* ]]> */-->
-</style>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-</head>
-<body>
-
--!| |
-|let| TITLE | xml |  | |

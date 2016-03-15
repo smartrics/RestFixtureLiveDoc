@@ -1,6 +1,4 @@
-!******> #118 Unable to set header using let variable containing text with curly braces
-
-https://github.com/smartrics/RestFixture/issues/118
+!3 [[Issue #118][https://github.com/smartrics/RestFixture/issues/118]] Unable to set header using let variable containing text with curly braces
 
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET      | /resources/1.json | 200 | | |
@@ -11,5 +9,3 @@ https://github.com/smartrics/RestFixture/issues/118
 |comment  | issue 118 fixed |
 |setHeader| Set-Cookie:%loginSessionId% | |
 |GET      | /resources/1.json | 200 | | |
-*****!
-
