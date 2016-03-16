@@ -3,6 +3,6 @@
 |Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |setBody| {"dummy":"body"} |
 |setHeader|Content-Type: application/json|
-|POST| /resources | 201 | !- Location : /resources/3 -!| |
+|POST| /resources | 201 | !- Location : /resources/\d -!| |
 
 
