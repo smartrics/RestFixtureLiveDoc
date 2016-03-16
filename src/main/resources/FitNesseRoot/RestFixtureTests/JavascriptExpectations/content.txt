@@ -20,15 +20,15 @@ The test passes if the result of the evaluation of the cell is a boolean.
 
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/%id%.json | 200 |Content-Type : application/json |!-
-jsonbody.resource.name=="test post" && jsonbody.resource.data=="some data" 
+jsonbody.resource.name=="test post" && jsonbody.resource.data=="some data"
 -!|
 
-It is possible to specify multiple assertions, one for each line. 
+It is possible to specify multiple assertions, one for each line.
 The test passes if each line evaluates to true.
 
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/%id%.json | 200 |Content-Type : application/json |!-
-jsonbody.resource.name.length >= 0 
+jsonbody.resource.name.length >= 0
 jsonbody.resource.name.length < 1000
 jsonbody.resource.name.length < jsonbody.resource.name.length+1
 -!|
@@ -39,14 +39,25 @@ jsonbody.resource.name.length < jsonbody.resource.name.length+1
 |POST   | /resources/ | 201 | | no-body |
 |let    | id | header | Location:/resources/(.+) | |
 
-In some cases may be useful to force evaluation of the expectation cell as a javascript block. 
+In some cases may be useful to force evaluation of the expectation cell as a javascript block.
 By embedding the <code>/* javascript */</code> comment, the whole expectation cell will be parsed and evaluated entirely using the javascript interpreter.
 
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |GET    | /resources/%id%.json | 200 |Content-Type : application/json |!-<pre>
 /* javascript */
 var concat = jsonbody.resource.name + " and " + jsonbody.resource.data
-concat=="test post and some data" 
+concat=="test post and some data"
 </pre>-!|
 | let   | content | js |  response.body | |
 
+It is possible to inject external javascript scripts by setting the "restfixture.javascript.imports.map" property to a map value (script name=script path).
+The path to the script can be to a file in the filesystem or to an racheable URL
+
+| Table: Rest Fixture Config |  imp |
+| restfixture.javascript.imports.map | !-
+sampleJs=src/main/resources/FitNesseRoot/files/javascript/sample.js
+jsonpath=src/main/resources/FitNesseRoot/files/javascript/jsonpath-0.8.0.js-! |
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| imp |
+|GET    | /resources/%id%.json | 200 |Content-Type : application/json |JSONPath.eval(jsonbody, "$..resource.name") == "test post"|
+| let   | sum | js | var sum = sampleAdd(1, 2); sum;| |
