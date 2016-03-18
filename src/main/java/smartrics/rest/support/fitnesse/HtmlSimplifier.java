@@ -31,7 +31,7 @@ public class HtmlSimplifier {
 	}
 
 	/**
-	 * Simplifies an html block; adds title as in between <code>&lt;h1></code>
+	 * Simplifies an html block; adds title as in between <code>&lt;h1&gt;</code>
 	 * tag.
 	 * 
 	 * @param title
