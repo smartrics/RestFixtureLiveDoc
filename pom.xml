@@ -9,7 +9,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>smartrics.restfixture</groupId>
 	<artifactId>smartrics-RestFixture-LiveDoc</artifactId>
-	<version>4.1-SNAPSHOT</version>
+	<version>4.1</version>
 	<name>RestFixture Live Documentation</name>
 	<url>https://github.com/smartrics/RestFixtureLiveDoc</url>
 	<properties>
@@ -185,8 +185,8 @@
 				<artifactId>maven-gpg-plugin</artifactId>
 				<version>1.4</version>
 				<configuration>
-					<!-- comment this to skip sign during install -->
-					<skip>true</skip>
+					<!-- comment this to skip sign during install - ->
+					<skip>true</skip -->
 				</configuration>
 				<executions>
 					<execution>
