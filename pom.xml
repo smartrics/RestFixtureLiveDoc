@@ -67,11 +67,11 @@
 			<artifactId>smartrics-RestFixture</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.fitnesse</groupId>
-			<artifactId>fitnesse</artifactId>
-			<version>20150424</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.fitnesse</groupId>-->
+			<!--<artifactId>fitnesse</artifactId>-->
+			<!--<version>20150424</version>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
