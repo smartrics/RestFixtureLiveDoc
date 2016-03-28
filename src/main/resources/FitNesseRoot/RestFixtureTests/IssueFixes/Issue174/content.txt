@@ -1,0 +1,9 @@
+!3 [[Issue #171][https://github.com/smartrics/RestFixture/issues/171]] The resource URL is encoded after .RestFixture table execution
+
+| Table: Rest Fixture Config | assume_uri_is_escaped |
+| restfixture.resource.uris.are.escaped | true|
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| assume_uri_is_escaped |
+|GET    | /resources/0/text%3A%2F%2Feventis.nl%2Ftext | |  | |
+
+
