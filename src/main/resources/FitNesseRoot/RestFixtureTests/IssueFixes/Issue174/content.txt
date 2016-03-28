@@ -1,9 +1,71 @@
-!3 [[Issue #171][https://github.com/smartrics/RestFixture/issues/171]] The resource URL is encoded after .RestFixture table execution
+!3 [[Issue #174][https://github.com/smartrics/RestFixture/issues/174]] Using multiple fixtures together
 
-| Table: Rest Fixture Config | assume_uri_is_escaped |
-| restfixture.resource.uris.are.escaped | true|
+The issue reports that symbols can't be shared across fixtures when .RestFixture is used.
 
-| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| assume_uri_is_escaped |
-|GET    | /resources/0/text%3A%2F%2Feventis.nl%2Ftext | |  | |
+This fixture is a decision table simply used to define four different values in the slim shared map of symbols.
+The fixture class allows setting a value and then getting it back:
+{{{
+public class DecisionFixtureTest {
+    private String value;
 
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    public String value() {
+        return value;
+    }
+}
+}}}
+
+In this case we define two symbols for URIs (one success and one fail) and two symbols for return code.
+
+The table is defined as 
+
+{{{
+!| decision fixture test                |
+| value         | value?                |
+| /resources/0  | $foundResourceUri=    |
+| 200           | $successCode=         |
+| /resources/99 | $notFoundResourceUri= |
+| 404           | $notFoundCode=        |
+}}}
+
+!| decision fixture test                |
+| value         | value?                |
+| /resources/0  | $foundResourceUri=    |
+| 200           | $successCode=         |
+| /resources/99 | $notFoundResourceUri= |
+| 404           | $notFoundCode=        |
+
+
+Symbols defined in the above table are then used in rest fixture. This demonstrates that .RestFixture accepts symbols and can resolve them. The table is defined as
+
+{{{
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| |
+|GET    | $foundResourceUri     | $successCode  |  |  |
+|let    | ok_status_code        | js            | response.statusCode |  |
+|GET    | $notFoundResourceUri  | $notFoundCode |  |  |
+|let    | not_found_status_code | js            | response.statusCode |  |
+}}}
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| |
+|GET    | $foundResourceUri     | $successCode  |  |  |
+|let    | ok_status_code        | js            | response.statusCode |  |
+|GET    | $notFoundResourceUri  | $notFoundCode |  |  |
+|let    | not_found_status_code | js            | response.statusCode |  |
+
+The fixture above then defines - via "let" command - two more symbols: "ok_status_code" and "not_found_status_code". The two symbols are re-used in a new instaance of the decision fixture test below, defined as:
+
+{{{
+!| decision fixture test          |
+| value                  | value? |
+| $ok_status_code        | 200    |
+| $not_found_status_code | 404    |
+}}}
+
+!| decision fixture test          |
+| value                  | value? |
+| $ok_status_code        | 200    |
+| $not_found_status_code | 404    |
 
