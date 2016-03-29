@@ -1,0 +1,24 @@
+!3 [[Issue #176][https://github.com/smartrics/RestFixture/issues/176]] Deep compare JSON object
+
+The question is how to compare JSON objects in the response. .RestFixture doesn't provide, off the shelf, any method.
+But a deep compare of JSON objects can be easily achieved in [[~JavaScript][http://www.w3schools.com/js/]]
+(see [[this ~StackOverflow question][http://stackoverflow.com/questions/1068834/object-comparison-in-javascript]]).
+
+So, using the ability to include at runtime a [[~JavaScript][http://www.w3schools.com/js/]] file (from .RestFixture [[4.1][http://mvnrepository.com/artifact/smartrics.restfixture/smartrics-RestFixture/4.1]] onwards), we can
+include the [[deepCompare function][https://github.com/smartrics/RestFixtureLiveDoc/blob/master/src/main/resources/FitNesseRoot/files/javascript/deepCompare.js]]
+and use it to perform the equality check on json objects
+
+| Table: Rest Fixture Config |  with-deepCompare.js |
+| restfixture.javascript.imports.map | !-deepCompare=src/main/resources/FitNesseRoot/files/javascript/deepCompare.js-! |
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| with-deepCompare.js |
+|GET    | /resources/1.json | 200 |Content-Type : application/json | !- /* javascript */
+var expectedJson = {
+    'resource' : {
+        'name' : 'a funky name',
+        'data' : 'an important message'
+    }
+};
+deepCompare(jsonbody, expectedJson);
+-!|
+
