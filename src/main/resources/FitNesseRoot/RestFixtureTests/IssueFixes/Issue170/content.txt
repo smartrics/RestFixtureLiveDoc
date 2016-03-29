@@ -1,0 +1,11 @@
+!3 [[Issue #170][https://github.com/smartrics/RestFixture/issues/170]] How to validate HTML
+
+The issue refers to inability to extract XPath from html. Actually the html redefines the default namespace so the default namespace must be redefined accordingly for XPath to work.
+
+|Table: Rest Fixture Config | conf | 
+| restfixture.xml.namespace.context | !-default=http://www.foo.org/-!|
+
+
+|Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
+| GET | /files/support/issue170.html |  | | | 
+| let | title | body | /html/head/title/text() | |

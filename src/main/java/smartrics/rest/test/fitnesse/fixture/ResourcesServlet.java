@@ -20,35 +20,29 @@
  */
 package smartrics.rest.test.fitnesse.fixture;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
+import com.oreilly.servlet.multipart.FilePart;
+import com.oreilly.servlet.multipart.MultipartParser;
+import com.oreilly.servlet.multipart.ParamPart;
+import com.oreilly.servlet.multipart.Part;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import sun.misc.IOUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.oreilly.servlet.multipart.FilePart;
-import com.oreilly.servlet.multipart.MultipartParser;
-import com.oreilly.servlet.multipart.ParamPart;
-import com.oreilly.servlet.multipart.Part;
+import java.io.*;
+import java.net.URLDecoder;
 
 /**
  * The controller.
- * 
+ *
  * @author smartrics
- * 
  */
 public class ResourcesServlet extends HttpServlet {
-	private static final Logger LOG = LoggerFactory.getLogger(ResourcesServlet.class);
     public static final String CONTEXT_ROOT = "/resources";
+    private static final Logger LOG = LoggerFactory.getLogger(ResourcesServlet.class);
     private static final long serialVersionUID = -7012866414216034826L;
     private static final String DEF_CHARSET = "ISO-8859-1";
     private final Resources resources = Resources.getInstance();
@@ -62,47 +56,62 @@ public class ResourcesServlet extends HttpServlet {
         LOG.debug("Resource GET REQUEST ========= " + req.toString());
         String uri = sanitise(req.getRequestURI());
         boolean isRedirect = isRedirect(uri);
-        if(isRedirect) {
-        	uri = redirectTo(uri);
-        	doRedirect(resp, uri);
-        	return;
+        if (isRedirect) {
+            uri = redirectTo(uri);
+            doRedirect(resp, uri);
+            return;
         }
-        String id = getId(uri);
-        String type = getType(uri);
-        String extension = getExtension(uri);
-        echoHeader(req, resp);
-        echoQString(req, resp);
-        setCookieHeaderIssue118(req, resp);
-        try {
-            if (id == null) {
-                list(resp, type, extension);
-                headers(resp, extension, DEF_CHARSET);
-            } else if (resources.get(type, id) == null) {
-                notFound(resp);
-            } else {
-                if (resources.get(type, id).isDeleted()) {
+        if (uri.startsWith("/files/support")) {
+            final String name = "FitNesseRoot" + uri;
+            if(name.endsWith("html")) {
+                resp.addHeader("Content-Type", "text/html");
+            } else if(name.endsWith("txt")) {
+                resp.addHeader("Content-Type", "text/plain");
+            } else if(name.endsWith("json")) {
+                resp.addHeader("Content-Type", "application/json");
+            } else if(name.endsWith("xml")) {
+                resp.addHeader("Content-Type", "application/xml");
+            }
+            InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(name);
+            resp.getOutputStream().write(convertStreamToString(is).getBytes());
+        } else {
+            String id = getId(uri);
+            String type = getType(uri);
+            String extension = getExtension(uri);
+            echoHeader(req, resp);
+            echoQString(req, resp);
+            setCookieHeaderIssue118(req, resp);
+            try {
+                if (id == null) {
+                    list(resp, type, extension);
+                    headers(resp, extension, DEF_CHARSET);
+                } else if (resources.get(type, id) == null) {
                     notFound(resp);
                 } else {
-                    found(resp, type, id);
-                    headers(resp, extension, DEF_CHARSET);
+                    if (resources.get(type, id).isDeleted()) {
+                        notFound(resp);
+                    } else {
+                        found(resp, type, id);
+                        headers(resp, extension, DEF_CHARSET);
+                    }
                 }
+            } catch (RuntimeException e) {
+                resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
+            } finally {
+                LOG.debug("Resource GET RESPONSE ========= " + resp.toString());
             }
-        } catch (RuntimeException e) {
-            resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
-        } finally {
-            LOG.debug("Resource GET RESPONSE ========= " + resp.toString());
         }
     }
 
     private String redirectTo(String uri) {
-		return uri.replace("/redirect", "");
-	}
+        return uri.replace("/redirect", "");
+    }
 
-	private boolean isRedirect(String uri) {
-		return uri.contains("/redirect");
-	}
+    private boolean isRedirect(String uri) {
+        return uri.contains("/redirect");
+    }
 
-	private void echoQString(HttpServletRequest req, HttpServletResponse resp) {
+    private void echoQString(HttpServletRequest req, HttpServletResponse resp) {
         String qstring = req.getQueryString();
         if (qstring != null) {
             resp.setHeader("Query-String", qstring);
@@ -125,7 +134,7 @@ public class ResourcesServlet extends HttpServlet {
         }
         resp.addHeader("Content-Type", "application/" + extension + s);
     }
-    
+
     private void doRedirect(HttpServletResponse resp, String uri) {
         resp.setStatus(HttpServletResponse.SC_MOVED_PERMANENTLY);
         resp.addHeader("Location", uri);
@@ -355,10 +364,10 @@ public class ResourcesServlet extends HttpServlet {
         StringBuffer sb = new StringBuffer();
         sb.append("<resource>").append("\n");
         String[] kvpArray = content.split("&");
-        for(String e : kvpArray) {
+        for (String e : kvpArray) {
             String[] kvp = e.split("=");
             sb.append("<").append(kvp[0]).append(">");
-            if(kvp.length>1) {
+            if (kvp.length > 1) {
                 sb.append(URLDecoder.decode(kvp[1], encoding));
             }
             sb.append("</").append(kvp[0]).append(">").append("\n");
@@ -395,4 +404,8 @@ public class ResourcesServlet extends HttpServlet {
         return content;
     }
 
+    static String convertStreamToString(java.io.InputStream is) {
+        java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
+        return s.hasNext() ? s.next() : "";
+    }
 }
