@@ -1,6 +1,15 @@
 !3 [[Issue #170][https://github.com/smartrics/RestFixture/issues/170]] How to validate HTML
 
-The issue refers to inability to extract XPath from html. Actually the html redefines the default namespace so the default namespace must be redefined accordingly for XPath to work.
+The issue refers to inability to extract XPath from html.
+Actually the html in the Issue #170 redefines the default namespace.
+{{{
+<html xmlns="http://www.foo.org/">
+<head>
+<title>ACS Simulator</title>
+...
+}}}
+
+This is not supported by XPath and .RestFixture
 
 |Table: Rest Fixture |http://${jettyHost}:${jettyPort} |
 | GET | /files/support/issue170.html |  | | |
