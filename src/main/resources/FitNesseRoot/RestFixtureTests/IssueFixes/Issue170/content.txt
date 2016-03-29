@@ -9,8 +9,11 @@ Actually the html in the Issue #170 redefines the default namespace.
 ...
 }}}
 
-This is not supported by XPath and .RestFixture
+As such the namespace must be defined for the XPath:
 
-|Table: Rest Fixture |http://${jettyHost}:${jettyPort} |
+|Table: Rest Fixture Config | conf |
+|restfixture.xml.namespace.context| !- defalias=http://www.foo.org/ -! |
+
+|Table: Rest Fixture |http://${jettyHost}:${jettyPort} | conf |
 | GET | /files/support/issue170.html |  | | |
-| let | title | body | //title/text() | |
+| let | title | body | //defalias:title/text() | |
