@@ -1,0 +1,1 @@
+.RestFixtureConfig is a fixture used to create a map of properties to configure .RestFixture  
