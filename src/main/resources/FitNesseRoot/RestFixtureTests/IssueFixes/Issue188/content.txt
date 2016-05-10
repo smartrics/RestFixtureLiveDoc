@@ -1,0 +1,10 @@
+!3 [[Issue #189][https://github.com/smartrics/RestFixture/issues/189]] Restfixture.default.headers does not work in 4.2 and 4.1 version branch
+
+In Suite Setup we have the default headers setup. Headers shoud be verified servers side
+
+| Table: Rest Fixture Config | url_esc |
+| restfixture.resource.uris.are.escaped | true |
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| url_esc |
+|GET    | !-/resources/%2F_1.json-! | 200 |Content-Type : application/json | |
+
