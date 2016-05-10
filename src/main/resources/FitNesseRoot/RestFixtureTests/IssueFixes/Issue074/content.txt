@@ -1,0 +1,6 @@
+!3 [[Issue #74][https://github.com/smartrics/RestFixture/issues/74]] Added disabling optimisation for large js expressions
+
+!define COMMAND_PATTERN {java -Xmx2048M -cp %p %m}
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
+|GET      | /resources/large?size=10485760 | 200 | | jsonbody.content.length==10485760 |

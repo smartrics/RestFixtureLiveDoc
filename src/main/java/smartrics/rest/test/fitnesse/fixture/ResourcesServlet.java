@@ -26,7 +26,6 @@ import com.oreilly.servlet.multipart.ParamPart;
 import com.oreilly.servlet.multipart.Part;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sun.misc.IOUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -51,6 +50,11 @@ public class ResourcesServlet extends HttpServlet {
         LOG.info("Resources: " + resources.toString());
     }
 
+    static String convertStreamToString(java.io.InputStream is) {
+        java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
+        return s.hasNext() ? s.next() : "";
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         LOG.debug("Resource GET REQUEST ========= " + req.toString());
@@ -63,17 +67,25 @@ public class ResourcesServlet extends HttpServlet {
         }
         if (uri.startsWith("/files/support")) {
             final String name = "FitNesseRoot" + uri;
-            if(name.endsWith("html")) {
+            if (name.endsWith("html")) {
                 resp.addHeader("Content-Type", "text/html");
-            } else if(name.endsWith("txt")) {
+            } else if (name.endsWith("txt")) {
                 resp.addHeader("Content-Type", "text/plain");
-            } else if(name.endsWith("json")) {
+            } else if (name.endsWith("json")) {
                 resp.addHeader("Content-Type", "application/json");
-            } else if(name.endsWith("xml")) {
+            } else if (name.endsWith("xml")) {
                 resp.addHeader("Content-Type", "application/xml");
             }
             InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(name);
             resp.getOutputStream().write(convertStreamToString(is).getBytes());
+        } else if (uri.contains("/large")) {
+            final String size = req.getParameter("size");
+            int bytes = 1024 * 1024; // bytes
+            if (size != null) {
+                bytes = Integer.parseInt(size);
+            }
+            resp.addHeader("Content-Type", "application/json");
+            resp.getOutputStream().write(largeResource(bytes).getBytes());
         } else {
             String id = getId(uri);
             String type = getType(uri);
@@ -101,6 +113,14 @@ public class ResourcesServlet extends HttpServlet {
                 LOG.debug("Resource GET RESPONSE ========= " + resp.toString());
             }
         }
+    }
+
+    private String largeResource(int bytes) {
+        StringBuilder b = new StringBuilder();
+        for (int i = 0; i < bytes; i++) {
+            b.append("A");
+        }
+        return "{ 'content' : '" + b.toString() + "' }";
     }
 
     private String redirectTo(String uri) {
@@ -402,10 +422,5 @@ public class ResourcesServlet extends HttpServlet {
         }
         String content = sBuff.toString();
         return content;
-    }
-
-    static String convertStreamToString(java.io.InputStream is) {
-        java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
-        return s.hasNext() ? s.next() : "";
     }
 }
