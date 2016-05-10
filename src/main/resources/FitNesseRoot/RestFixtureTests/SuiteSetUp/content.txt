@@ -1,6 +1,10 @@
 !define ns1 {!-http://smartrics/ns1-!}
 !define defns {!-http://smartrics/defns-!}
 
+
+!define COMMAND_PATTERN {java -Xmx2048M -cp %p %m}
+
+
 | Import |
 | smartrics.rest.fitnesse.fixture |
 | smartrics.rest.test.fitnesse.fixture| 
