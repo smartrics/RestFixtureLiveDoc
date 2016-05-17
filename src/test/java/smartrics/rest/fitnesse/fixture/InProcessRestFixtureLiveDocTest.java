@@ -20,6 +20,6 @@ public class InProcessRestFixtureLiveDocTest {
 
 	@Test
 	public void restFixtureTests() throws Exception {
-		helper.assertSuitePasses("RestFixtureTests.LetTestsV2");
+		helper.assertSuitePasses("RestFixtureTests");
 	}
 }
