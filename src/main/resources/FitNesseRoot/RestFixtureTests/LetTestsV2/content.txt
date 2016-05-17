@@ -49,8 +49,8 @@ json.widget.image.src
 
 (Example courtesy of http://json.org/example.html)
 
-It's also possible to access the !-FitNesse-! symbols map. The scope where expression is evaluated contains the 
-'symbols' object 
+It's also possible to access the !-FitNesse-! symbols map. The scope where expression is evaluated contains the
+'symbols' object
 
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
 |setBody|<resource><name>Bill</name><data>Some data on Bill</data></resource>|
@@ -58,6 +58,14 @@ It's also possible to access the !-FitNesse-! symbols map. The scope where expre
 |let    | id | header | Location:/resources/(.+) | |
 |let    | id_string | js | 'The id is: ' + symbols.get('id') |  The id is: %id% |
 
+Symbols that don't exist return null (or, in fact, the null representation set via the
+'restfixture.null.value.representation' confuguration variable.
+
+| Table: Rest Fixture Config | reassing_null_representation |
+| restfixture.null.value.representation | da_nil_123 |
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| reassing_null_representation |
+|let    | x | js | String(symbols.get('doesnt_exist')) | da_nil_123 |
 
 The scope also contains the 'response' object, populated with the data from the last Rest response executed
 
