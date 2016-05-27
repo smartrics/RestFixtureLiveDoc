@@ -1,0 +1,9 @@
+!3 [[Issue #191][https://github.com/smartrics/RestFixture/issues/191]] Issue in converting the Map to JSON on the output
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
+|GET    | /map | 200 |Content-Type : application/json | !-
+    jsonbody.map['1'].name == 'fred'
+    jsonbody.map['2'].surname == 'bogart'
+    Object.keys(jsonbody.map).length == 3
+-!|
+

@@ -86,6 +86,9 @@ public class ResourcesServlet extends HttpServlet {
             }
             resp.addHeader("Content-Type", "application/json");
             resp.getOutputStream().write(largeResource(bytes).getBytes());
+        } else if(uri.contains("/map")){
+            resp.addHeader("Content-Type", "application/json");
+            resp.getOutputStream().write(mapResource().getBytes());
         } else {
             String id = getId(uri);
             String type = getType(uri);
@@ -113,6 +116,17 @@ public class ResourcesServlet extends HttpServlet {
                 LOG.debug("Resource GET RESPONSE ========= " + resp.toString());
             }
         }
+    }
+
+    private String mapResource() {
+        StringBuilder b = new StringBuilder(
+                "{\n" +
+                "    '1' : { 'name': 'fred', 'surname' : 'stone' },\n" +
+                "    '2' : { 'name': 'marta', 'surname' : 'bogart' },\n" +
+                "    '3' : { 'name': 'foo', 'surname' : 'bar' }\n" +
+                "  }\n"
+        );
+        return "{ 'map' : " + b.toString() + "}";
     }
 
     private String largeResource(int bytes) {
