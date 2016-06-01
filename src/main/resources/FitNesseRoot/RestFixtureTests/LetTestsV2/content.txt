@@ -61,9 +61,11 @@ It's also possible to access the !-FitNesse-! symbols map. The scope where expre
 Symbols that don't exist return null (or, in fact, the null representation set via the
 'restfixture.null.value.representation' confuguration variable.
 
+|comment|
 | Table: Rest Fixture Config | reassing_null_representation |
 | restfixture.null.value.representation | da_nil_123 |
 
+|comment|
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}| reassing_null_representation |
 |let    | x | js | String(symbols.get('doesnt_exist')) | da_nil_123 |
 
