@@ -47,3 +47,10 @@ mvn package
 ```
 
 to generate the distributable zip file.
+
+Run with -DwithLatestFitnesse to execute the tests with the latest version of Fitnesse:
+
+```
+mvn test -DwithLatestFitnesse
+```
+
