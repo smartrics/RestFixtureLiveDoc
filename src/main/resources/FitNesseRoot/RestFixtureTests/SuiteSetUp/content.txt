@@ -30,6 +30,7 @@ anotherDefHeader : 2
 | restfixture.content.handlers.map | !-application/xml=XML
 application/json=JSON
 text/plain=TEXT
+application/txt=JSON
 default=XML
 application/x-javascript=JS
 -!|

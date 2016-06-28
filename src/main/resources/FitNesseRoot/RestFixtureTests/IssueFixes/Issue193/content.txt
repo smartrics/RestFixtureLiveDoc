@@ -1,0 +1,14 @@
+!3 [[Issue #193][https://github.com/smartrics/RestFixture/issues/193] Multiple regex expressions
+
+Is there a way to test with multiple regex repressions on one REST GET query returning plain text?
+
+The response may be large, so specifying long text sequences to skip may overwhelm the evaluator.
+
+|Comment|
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
+|comment| this test will fail unless multiline regex is implemented |
+|GET    | /resources/1.txt |  |  | !-
+.+"name".+
+.+"resource".+
+-!|
+
