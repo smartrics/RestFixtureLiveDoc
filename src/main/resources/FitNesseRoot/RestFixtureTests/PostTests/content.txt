@@ -77,36 +77,6 @@ jsonbody.resource.name=='test post' <br/>
 jsonbody.resource.data=='some data'
 -!|
 
-!**** File uploads
-Use the multipartFile property to upload files to a server
-****!
-
-| script |!-smartrics.rest.test.fitnesse.fixture.FileUtilFixture-!|
-|content|!- { "resource" : { "name" : "test post", "data" : "some data" } } -!|
-|name|${tempDirectory}/tempfile|
-|check|create| true |
-|check|exists| true |
-
-| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
-|setMultipartFileName|${tempDirectory}/tempfile|
-|POST   | /resources/ | 200 | | file: { "resource" : { "name" : "test post", "data" : "some data" } }|
-
-| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
-|setMultipartFileName|${tempDirectory}/tempfile|
-|setMultipartFileParameterName|abc123|
-|POST   | /resources/ | 200 | | abc123: { "resource" : { "name" : "test post", "data" : "some data" } }|
-
-Use simple file upload
-| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
-|setFileName|${tempDirectory}/tempfile|
-|POST   | /resources/ | 200 | | { "resource" : { "name" : "test post", "data" : "some data" } }|
-
-
-| script |!-smartrics.rest.test.fitnesse.fixture.FileUtilFixture-!|
-|name|${tempDirectory}/tempfile|
-|check|delete| true |
-|check|exists| false |
-
 Other than the aforementioned content types you can emulate form POSTs. 
 Remember to escape the setBody content cell with !- -!
 

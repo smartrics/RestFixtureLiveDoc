@@ -1,0 +1,21 @@
+Ability to POST multipart entities
+
+!**** Multiple file uploads
+Multiple multipart uploads
+****!
+
+The method available up to version 4.1 and based on ```setMultipartFileName/setMultipartFileParameterName``` is deprecated.
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
+|comment| the content type header is recognised by the remote server to parse the uploaded content |
+|setHeader| !- Content-Type: multipart/form-data -! |
+|addMultipartFile| src/test/resources/MultipleMultipartTests/resource2.json | jsonfile |
+|addMultipartFile| src/test/resources/MultipleMultipartTests/resource1.xml| xmlfile |  application/xml |
+|addMultipartString| !-{
+    "resource": {
+    "name": "Bob",
+    "data": "Bobs data"
+    }
+} -!| json | application/json |
+|comment| In this case the backend server just echoes back the multiple multipart uploaded content for demo purposes |
+| POST |/resources | 200 | | |

@@ -20,10 +20,6 @@
  */
 package smartrics.rest.test.fitnesse.fixture;
 
-import com.oreilly.servlet.multipart.FilePart;
-import com.oreilly.servlet.multipart.MultipartParser;
-import com.oreilly.servlet.multipart.ParamPart;
-import com.oreilly.servlet.multipart.Part;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -325,37 +321,6 @@ public class ResourcesServlet extends HttpServlet {
     private void processMultiPart(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         PrintWriter out = resp.getWriter();
         resp.setContentType("text/plain");
-        MultipartParser mp = new MultipartParser(req, 2048);
-        Part part = null;
-        while ((part = mp.readNextPart()) != null) {
-            String name = part.getName().trim();
-            if (part.isParam()) {
-                // it's a parameter part
-                ParamPart paramPart = (ParamPart) part;
-                String value = paramPart.getStringValue().trim();
-                LOG.info("param; name=" + name + ", value=" + value);
-                out.print("param; name=" + name + ", value=" + value);
-            } else if (part.isFile()) {
-                // it's a file part
-                FilePart filePart = (FilePart) part;
-                String fileName = filePart.getFileName();
-                if (fileName != null) {
-                    // the part actually contained a file
-                    // StringWriter sw = new StringWriter();
-                    // long size = filePart.writeTo(new File(System
-                    // .getProperty("java.io.tmpdir")));
-                    ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                    long size = filePart.writeTo(baos);
-                    LOG.info("file; name=" + name + "; filename=" + fileName + ", filePath=" + filePart.getFilePath() + ", content type=" + filePart.getContentType() + ", size="
-                            + size);
-                    out.print(String.format("%s: %s", name, new String(baos.toByteArray()).trim()));
-                } else {
-                    // the field did not contain a file
-                    LOG.info("file; name=" + name + "; EMPTY");
-                }
-                out.flush();
-            }
-        }
         resp.setStatus(HttpServletResponse.SC_OK);
     }
 
@@ -369,10 +334,10 @@ public class ResourcesServlet extends HttpServlet {
             String contentType = req.getContentType();
             if (contentType.equals("application/octet-stream")) {
                 LOG.debug("Resource POST REQUEST is a file upload");
-                processFileUpload(req, resp);
+                writeUploaded(req, resp);
             } else if (contentType.startsWith("multipart")) {
                 LOG.debug("Resource POST REQUEST is a multipart file upload");
-                processMultiPart(req, resp);
+                writeUploaded(req, resp);
             } else {
                 String content = getContent(req.getInputStream());
                 if (contentType.contains("application/x-www-form-urlencoded")) {
@@ -418,7 +383,7 @@ public class ResourcesServlet extends HttpServlet {
         resp.addHeader("Location", type + "/" + newResource.getId());
     }
 
-    private void processFileUpload(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    private void writeUploaded(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         InputStream is = req.getInputStream();
         PrintWriter out = resp.getWriter();
         resp.setContentType("text/plain");

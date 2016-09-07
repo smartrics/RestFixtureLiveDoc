@@ -14,6 +14,7 @@
 	<url>https://github.com/smartrics/RestFixtureLiveDoc</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<smartrics.RestFixture.version>4.2</smartrics.RestFixture.version>
 	</properties>
 	<licenses>
 		<license>
@@ -267,7 +268,7 @@
                     <groupId>smartrics.restfixture</groupId>
                     <artifactId>smartrics-RestFixture</artifactId>
                     <!--<version>${project.version}</version>-->
-                    <version>4.1</version>
+                    <version>${smartrics.RestFixture.version}</version>
                     <exclusions>
                         <exclusion>
                             <groupId>org.fitnesse</groupId>
@@ -295,7 +296,7 @@
                     <groupId>smartrics.restfixture</groupId>
                     <artifactId>smartrics-RestFixture</artifactId>
                     <!--<version>${project.version}</version>-->
-                    <version>4.1</version>
+                    <version>${smartrics.RestFixture.version}</version>
                 </dependency>
             </dependencies>
         </profile>
