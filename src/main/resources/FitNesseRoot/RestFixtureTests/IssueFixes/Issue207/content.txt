@@ -1,0 +1,10 @@
+!3 [[Issue #207][https://github.com/smartrics/RestFixture/issues/207] Unable to set baseUrl using symbol
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
+|let    | host | const | http://${jettyHost}:${jettyPort} | |
+
+| Table: Rest Fixture | $host|
+|GET    | /resources/0 | 200 | Content-Length : [\d]+ |!-
+ /resource/name[text()='a funky name'] <br/>
+ /resource/data[text()='an important message']
+-!|
