@@ -14,7 +14,7 @@
 	<url>https://github.com/smartrics/RestFixtureLiveDoc</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<smartrics.RestFixture.version>4.2</smartrics.RestFixture.version>
+		<smartrics.RestFixture.version>4.3</smartrics.RestFixture.version>
 	</properties>
 	<licenses>
 		<license>
