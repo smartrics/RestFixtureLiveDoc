@@ -61,3 +61,15 @@ jsonpath=src/main/resources/FitNesseRoot/files/javascript/jsonpath-0.8.0.js-! |
 | Table: Rest Fixture |http://${jettyHost}:${jettyPort}| imp |
 |GET    | /resources/%id%.json | 200 |Content-Type : application/json |JSONPath.eval(jsonbody, "$..resource.name") == "test post"|
 | let   | sum | js | var sum = sampleAdd(1, 2); sum;| |
+
+It's possible to disable the optimisation of Javascript processing if that's desired
+
+| Table: Rest Fixture Config |  imp |
+| restfixture.response.optimisation.threshold | 0 |
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}| imp |
+|GET    | /resources/%id%.json | 200 |Content-Type : application/json |!-
+jsonbody.resource.name.length >= 0
+jsonbody.resource.name.length < 1000
+jsonbody.resource.name.length < jsonbody.resource.name.length+1
+-!|
