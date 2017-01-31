@@ -151,7 +151,7 @@
 				<version>1.4</version>
 				<configuration>
 					<!-- comment this to skip sign during install -->
-					<skip>false</skip>
+					<skip>true</skip>
 				</configuration>
 				<executions>
 					<execution>
