@@ -206,7 +206,7 @@
 					<systemProperties>
 						<prevent.system.exit>true</prevent.system.exit>
 					</systemProperties>
-					<forkMode>always</forkMode>
+					<forkCount>0</forkCount>
 				</configuration>
 			</plugin>
 			<plugin>
