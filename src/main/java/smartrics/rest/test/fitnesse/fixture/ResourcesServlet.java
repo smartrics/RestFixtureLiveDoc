@@ -266,6 +266,7 @@ public class ResourcesServlet extends HttpServlet {
         String uri = sanitise(req.getRequestURI());
         String type = getType(uri);
         echoHeader(req, resp);
+        echoQString(req, resp);
         String id = getId(uri);
         Resource resource = resources.get(type, id);
         if (resource != null) {
@@ -285,6 +286,7 @@ public class ResourcesServlet extends HttpServlet {
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         LOG.debug("Resource PUT REQUEST ========= " + req.toString());
         echoHeader(req, resp);
+        echoQString(req, resp);
         String uri = sanitise(req.getRequestURI());
         String id = getId(uri);
         String type = getType(uri);
@@ -328,6 +330,7 @@ public class ResourcesServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         LOG.debug("Resource POST REQUEST ========= " + req.toString());
         echoHeader(req, resp);
+        echoQString(req, resp);
         String uri = sanitise(req.getRequestURI());
         String type = getType(uri);
         try {

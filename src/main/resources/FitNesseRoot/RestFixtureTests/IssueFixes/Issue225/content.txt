@@ -1,0 +1,9 @@
+!3 [[Issue #225][https://github.com/smartrics/RestFixture/issues/225]] Unable to bypass url encoding
+
+| Table: Rest Fixture |http://${jettyHost}:${jettyPort}|
+|setBody|<resource><name>name being updated</name><data>data being updated</data></resource>|
+|setHeader|Echo-Header : echoed|
+|let | queryString | const | Policy=%7B%22Version%22%3A%222012-10-17%22%2C%22Statement%22%3A%5B3A%221%22%2C%22Effect%2A%22Allow%22%2CAction%22%3A%5B%22s3%3AObject%ThanEquals%22%3A%7B%22s3%3Acontent-length-range%22%3221073741824%22%5D%7D%7D%7D%5D%7D | |
+|PUT | /resources/0?%queryString% | 200 |  |  |
+|let | queryString2 | header | Query-String:(.+) | |
+|evalJs | String(symbols.get('queryString')) == String(symbols.get('queryString2')) | |
