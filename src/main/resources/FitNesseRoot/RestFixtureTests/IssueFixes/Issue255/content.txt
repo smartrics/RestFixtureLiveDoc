@@ -1,0 +1,8 @@
+!3 [[Issue #255][https://github.com/smartrics/RestFixture/issues/255]] Json assertion failing with IlegalArgumentException
+
+!define myBody {!-
+jsonbody.resource.name=='a funky name'
+-!}
+
+|Table: Rest Fixture |http://${jettyHost}:${jettyPort} | conf |
+| GET | /resources/1.json |  |  |   ${myBody} |
