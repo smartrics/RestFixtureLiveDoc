@@ -4,6 +4,5 @@
 |restfixture.xml.namespace.context| !-defns=http://namespace.abc.defghi.com/common/v2_4_1/order-! |
 
 |Table: Rest Fixture |http://${jettyHost}:${jettyPort} | conf |
-| GET | /order |  |  |  |
-| let | ver | body | //defns:Version/text() |  |
+| GET | /order |  |  | //defns:Version[text()='2.0'] |
 
