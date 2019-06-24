@@ -29,7 +29,7 @@ import org.junit.runner.RunWith;
 
 @Ignore
 @RunWith(FitNesseSuite.class)
-@Name("RestFixtureTests")
+@Name("RestFixtureTests.IssueFixes.Issue053")
 @FitNesseRunner.FitnesseDir("src/main/resources")
 @FitNesseRunner.OutputDir("target/fitnesse-reports")
 public class RestFixtureLiveDocumentationTest {

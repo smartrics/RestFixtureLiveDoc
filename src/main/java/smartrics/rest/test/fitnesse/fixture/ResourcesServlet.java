@@ -61,7 +61,11 @@ public class ResourcesServlet extends HttpServlet {
             doRedirect(resp, uri);
             return;
         }
-        if (uri.startsWith("/files/support")) {
+        if (uri.startsWith("/order")) {
+            resp.addHeader("Content-Type", "application/xml");
+            resp.getOutputStream().write(sampleOrder().getBytes());
+        }
+        else if (uri.startsWith("/files/support")) {
             final String name = "FitNesseRoot" + uri;
             if (name.endsWith("html")) {
                 resp.addHeader("Content-Type", "text/html");
@@ -229,6 +233,20 @@ public class ResourcesServlet extends HttpServlet {
         resp.getOutputStream().write(buffer.toString().getBytes());
         // resp.setHeader("Content-Lenght",
         // Integer.toString(buffer.toString().getBytes().length));
+    }
+
+    private String sampleOrder() {
+       return "<Order xmlns='http://namespace.abc.defghi.com/common/v2_4_1/order' version='2.4.1' type='TEST' ID='123456789'>"+
+       "    <Header>"+
+       "        <SourceService>"+
+       "            <Application>"+
+       "                <Name>xxxx</Name>"+
+       "                <Version>2.0</Version>"+
+       "            </Application>"+
+       "            <Locale country='US' language='en'/>"+
+       "        </SourceService>"+
+       "    </Header>"+
+       "</Order>";
     }
 
     private String getType(String uri) {

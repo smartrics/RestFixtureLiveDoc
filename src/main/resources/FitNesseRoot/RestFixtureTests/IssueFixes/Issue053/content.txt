@@ -1,0 +1,9 @@
+!3 [[Issue #74][https://github.com/smartrics/RestFixture/issues/53]] Using namespace!
+
+|Table: Rest Fixture Config | conf |
+|restfixture.xml.namespace.context| !-defns=http://namespace.abc.defghi.com/common/v2_4_1/order-! |
+
+|Table: Rest Fixture |http://${jettyHost}:${jettyPort} | conf |
+| GET | /order |  |  |  |
+| let | ver | body | //defns:Version/text() |  |
+
