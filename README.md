@@ -54,3 +54,7 @@ Run with -DwithLatestFitnesse to execute the tests with the latest version of Fi
 mvn test -DwithLatestFitnesse
 ```
 
+How to use RestFixture Live Documentation
+-------------
+
+ - [fitnesse - workflow of creating tests using RestFixture - Stack Overflow](https://stackoverflow.com/questions/35753103/workflow-of-creating-tests-using-restfixture)
