@@ -22,18 +22,18 @@ package smartrics.rest.test.fitnesse.fixture;
 
 import static smartrics.rest.test.fitnesse.fixture.ServletUtils.sanitiseUri;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.util.Enumeration;
 import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.httpclient.Header;
-import org.apache.commons.httpclient.HttpParser;
 
 import smartrics.rest.client.RestResponse;
 
@@ -55,18 +55,19 @@ public class StubsServlet extends HttpServlet {
 		if (method.equals("POST") && uri.endsWith("/responses")) {
 			nextResponse = new RestResponse();
 			InputStream is = req.getInputStream();
-			String line = HttpParser.readLine(is, Charset.defaultCharset()
-					.name());
+			BufferedReader reader = new BufferedReader(new InputStreamReader(is, Charset.defaultCharset()));
+			String line = reader.readLine();
 			String[] incipit = line.split(" ");
 			nextResponse.setStatusCode(Integer.valueOf(incipit[0]));
-			Header[] headers = HttpParser.parseHeaders(is, Charset
-					.defaultCharset().name());
-			for (Header h : headers) {
-				nextResponse.addHeader(h.getName(), h.getValue());
+
+			Enumeration<String> headerNames = req.getHeaderNames();
+			while (headerNames.hasMoreElements()) {
+				String headerName = headerNames.nextElement();
+				nextResponse.addHeader(headerName, req.getHeader(headerName));
 			}
-			line = HttpParser.readLine(is, Charset.defaultCharset().name());
+			line = reader.readLine();
 			while (line.trim().length() < 1) {
-				line = HttpParser.readLine(is, Charset.defaultCharset().name());
+				line = reader.readLine();
 			}
 			// check content length and decide how much body you need to parse
 			List<smartrics.rest.client.RestData.Header> cl = nextResponse

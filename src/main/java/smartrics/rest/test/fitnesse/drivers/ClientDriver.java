@@ -20,13 +20,15 @@
  */
 package smartrics.rest.test.fitnesse.drivers;
 
-import org.apache.commons.httpclient.HttpClient;
 
+import org.apache.http.impl.client.HttpClientBuilder;
 import smartrics.rest.client.RestClient;
 import smartrics.rest.client.RestClientImpl;
 import smartrics.rest.client.RestRequest;
 import smartrics.rest.client.RestRequest.Method;
 import smartrics.rest.client.RestResponse;
+
+import java.util.concurrent.TimeUnit;
 
 public class ClientDriver {
 
@@ -35,7 +37,7 @@ public class ClientDriver {
     }
 
     public static void postForm(String[] args) {
-        RestClient c = new RestClientImpl(new HttpClient());
+        RestClient c = buildRestClient();
         RestRequest req = new RestRequest();
         req.setBody("name=n&data=d1");
         req.setResource("/resources/");
@@ -45,8 +47,13 @@ public class ClientDriver {
         System.out.println("=======>\n" + res + "\n<=======");
     }
 
+    private static RestClientImpl buildRestClient() {
+        return new RestClientImpl(HttpClientBuilder.create()
+                .setConnectionTimeToLive(60, TimeUnit.MILLISECONDS).build());
+    }
+
     public static void postXml(String[] args) {
-        RestClient c = new RestClientImpl(new HttpClient());
+        RestClient c = buildRestClient();
         RestRequest req = new RestRequest();
 
         req.setBody("<resource><name>n</name><data>d1</data></resource>");
